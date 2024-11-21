@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "itemName": "Health Potion",
+      "description": "Restores 50 health points.",
+      "iconPath": "Badge_1",
+      "isCollected": true
+    },
+    {
+      "id": 2,
+      "itemName": "Mana Potion",
+      "description": "Restores 30 mana points.",
+      "iconPath": "Badge_2",
+      "isCollected": true
+    },
+    {
+      "id": 3,
+      "itemName": "Sword",
+      "description": "A basic sword for combat.",
+      "iconPath": "Badge_3",
+      "isCollected": false
+    },
+    {
+      "id": 4,
+      "itemName": "Spear",
+      "description": "A basic spear for combat.",
+      "iconPath": "Badge_4",
+      "isCollected": true
+    },
+    {
+      "id": 5,
+      "itemName": "Gun",
+      "description": "A basic gun for combat.",
+      "iconPath": "Badge_5",
+      "isCollected": false
+    },
+    {
+      "id": 6,
+      "itemName": "RPG",
+      "description": "A basic rpg for combat.",
+      "iconPath": "Badge_6",
+      "isCollected": true
+    }
+  ]
+}
