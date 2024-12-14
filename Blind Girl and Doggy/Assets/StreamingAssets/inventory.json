@@ -1,0 +1,109 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "itemName": "Apple pie",
+      "description": "It looks so delicious that I want to sneak a bite!",
+      "iconPath": "Badge_1",
+      "isCollected": false
+    },
+    {
+      "id": 2,
+      "itemName": "Acorn",
+      "description": "Not just a snack for squirrels, it’s a weapon in disguise.",
+      "iconPath": "Badge_2",
+      "isCollected": false
+    },
+    {
+      "id": 3,
+      "itemName": "Gloves",
+      "description": "For when you don’t want to touch gross stuff with your bare hands.",
+      "iconPath": "Badge_3",
+      "isCollected": false
+    },
+    {
+      "id": 4,
+      "itemName": "Screwdriver",
+      "description": "Is it for prying open doors?",
+      "iconPath": "Badge_4",
+      "isCollected": false
+    },
+    {
+      "id": 5,
+      "itemName": "Stairway Key",
+      "description": "The VIP pass to the second floor.",
+      "iconPath": "Badge_5",
+      "isCollected": false
+    },
+    {
+      "id": 6,
+      "itemName": "Ladder",
+      "description": "When your goal is out of reach, let this do the climbing for you.",
+      "iconPath": "Badge_6",
+      "isCollected": true
+    },
+    {
+      "id": 7,
+      "itemName": "Cheese",
+      "description": "It's said to be a mouse's favorite treat.",
+      "iconPath": "Badge_7",
+      "isCollected": false
+    },
+    {
+      "id": 8,
+      "itemName": "Oil",
+      "description": "Perfect for cooking, but maybe useful for something else too?",
+      "iconPath": "Badge_8",
+      "isCollected": false
+    },
+    {
+      "id": 9,
+      "itemName": "Plunger",
+      "description": "For when the toilet refuses to cooperate.",
+      "iconPath": "Badge_9",
+      "isCollected": false
+    },
+    {
+      "id": 10,
+      "itemName": "Clock Hands",
+      "description": "When the short hand and the long hand come together, the clock works perfectly.",
+      "iconPath": "Badge_10",
+      "isCollected": false
+    },
+    {
+      "id": 11,
+      "itemName": "Crowbar",
+      "description": "The universal problem solver. Every house needs one.",
+      "iconPath": "Badge_11",
+      "isCollected": false
+    },
+    {
+      "id": 12,
+      "itemName": "Flower coin 1",
+      "description": "They’re definitely the key to something big.",
+      "iconPath": "Badge_12",
+      "isCollected": false
+    },
+    {
+      "id": 13,
+      "itemName": "Flower coin 2",
+      "description": "They’re definitely the key to something big.",
+      "iconPath": "Badge_13",
+      "isCollected": false
+    },
+    {
+      "id": 14,
+      "itemName": "Flower coin 3",
+      "description": "They’re definitely the key to something big.",
+      "iconPath": "Badge_14",
+      "isCollected": false
+    },
+    {
+      "id": 15,
+      "itemName": "Exit key",
+      "description": "Your ticket out of here — don’t lose it!",
+      "iconPath": "Badge_15",
+      "isCollected": false
+    }
+  ]
+}
