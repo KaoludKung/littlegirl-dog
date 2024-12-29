@@ -6,7 +6,7 @@ public class SoundFXManager : MonoBehaviour
 {
     public static SoundFXManager instance;
     public AudioSource soundFXPrefab;
-    private AudioSource loopAudioSource;
+    //private AudioSource loopAudioSource;
 
     private void Awake()
     {

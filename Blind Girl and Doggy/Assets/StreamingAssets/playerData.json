@@ -10,5 +10,6 @@
     "z": 0.0
   },
   "sceneName": "Forest",
+  "isNewGame":  false,
   "hearts": 1
 }

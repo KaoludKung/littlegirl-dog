@@ -10,13 +10,15 @@ public class PlayerData
     public Vector3 girlPosition;
     public Vector3 dogPosition;
     public string sceneName;
+    public bool isNewGame;
     public int hearts;
 
-    public PlayerData(Vector3 girlPosition, Vector3 dogPosition, string sceneName, int hearts)
+    public PlayerData(Vector3 girlPosition, Vector3 dogPosition, string sceneName,bool isNewGame ,int hearts)
     {
         this.girlPosition = girlPosition;
         this.dogPosition = dogPosition;
         this.sceneName = sceneName;
+        this.isNewGame = isNewGame;
         this.hearts = hearts;
     }
 }
@@ -95,6 +97,11 @@ public class PlayerDataManager : JsonManager<PlayerData>
         return playerData != null ? playerData.dogPosition : Vector3.zero;
     }
 
+    public bool GetIsNewGame()
+    {
+        return playerData != null ? playerData.isNewGame : false;
+    }
+
     public int GetHearts()
     {
         return playerData != null ? playerData.hearts : 0;
@@ -126,6 +133,16 @@ public class PlayerDataManager : JsonManager<PlayerData>
         {
             playerData.sceneName = newSceneName;
             Debug.Log($"Updated scene name to: {newSceneName}");
+            SavePlayerData();
+        }
+    }
+
+    public void UpdateNewGame(bool isNewGame)
+    {
+        if (playerData != null)
+        {
+            playerData.isNewGame = isNewGame;
+            Debug.Log($"Updated hearts to: {isNewGame}");
             SavePlayerData();
         }
     }

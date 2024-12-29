@@ -9,35 +9,7 @@ public class SoundMixerManager : MonoBehaviour
     
     private void Start()
     {
-        if (PlayerPrefs.HasKey("masterVolume"))
-        {
-            float masterVolume = PlayerPrefs.GetFloat("masterVolume");
-            SetMasterVolume(masterVolume);
-        }
-        else
-        {
-            SetMasterVolume(1.0f);
-        }
-
-        if (PlayerPrefs.HasKey("musicVolume"))
-        {
-            float musicVolume = PlayerPrefs.GetFloat("musicVolume");
-            SetMusicVolume(musicVolume);
-        }
-        else
-        {
-            SetMusicVolume(1.0f);
-        }
-
-        if (PlayerPrefs.HasKey("soundFXVolume"))
-        {
-            float soundFXVolume = PlayerPrefs.GetFloat("soundFXVolume");
-            SetSoundFXVolume(soundFXVolume);
-        }
-        else
-        {
-            SetSoundFXVolume(1.0f);
-        }
+        InitializeVolumeSettings();
     }
 
     public void SetMasterVolume(float level)
@@ -52,7 +24,7 @@ public class SoundMixerManager : MonoBehaviour
         }
         
         PlayerPrefs.SetFloat("masterVolume", level);
-      //Debug.Log("masterVolume: " + level);
+        Debug.Log("masterVolume: " + level);
     }
 
     public void SetMusicVolume(float level)
@@ -67,7 +39,7 @@ public class SoundMixerManager : MonoBehaviour
         }
 
         PlayerPrefs.SetFloat("musicVolume", level);
-     //Debug.Log("musicVolume: " + level);
+        Debug.Log("musicVolume: " + level);
     }
 
     public void SetSoundFXVolume(float level)
@@ -82,6 +54,27 @@ public class SoundMixerManager : MonoBehaviour
         }
 
         PlayerPrefs.SetFloat("soundFXVolume", level);
-      //Debug.Log("soundFXVolume: " + level); 
+        Debug.Log("soundFXVolume: " + level); 
+    }
+
+    public void InitializeVolumeSettings()
+    {
+        if (PlayerPrefs.HasKey("masterVolume") && PlayerPrefs.HasKey("musicVolume") && PlayerPrefs.HasKey("soundFXVolume"))
+        {
+            float masterVolume = PlayerPrefs.GetFloat("masterVolume");
+            float musicVolume = PlayerPrefs.GetFloat("musicVolume");
+            float soundFXVolume = PlayerPrefs.GetFloat("soundFXVolume");
+
+            SetMasterVolume(masterVolume);
+            SetMusicVolume(musicVolume);
+            SetSoundFXVolume(soundFXVolume);
+        }
+        else
+        {
+            SetMasterVolume(1.0f);
+            SetMusicVolume(1.0f);
+            SetSoundFXVolume(1.0f);
+        }
+
     }
 }

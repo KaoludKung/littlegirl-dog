@@ -51,7 +51,7 @@ public class Loading : MonoBehaviour
 
             for (int i = 0; i < 3; i++)
             {
-                textLoading.text += "."; // ???????????????
+                textLoading.text += ".";
                 yield return new WaitForSeconds(0.3f);
             }
 
