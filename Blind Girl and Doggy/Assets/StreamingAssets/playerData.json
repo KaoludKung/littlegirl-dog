@@ -9,7 +9,7 @@
     "y": 0.0,
     "z": 0.0
   },
-  "sceneName": "Forest",
-  "isNewGame":  false,
+  "sceneName": "",
+  "isNewGame":  true,
   "hearts": 1
 }

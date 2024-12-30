@@ -41,5 +41,26 @@ public abstract class JsonManager<T> : MonoBehaviour
             Debug.LogError("Failed to save JSON data: " + ex.Message);
         }
     }
+
+    protected void DeleteJson()
+    {
+        try
+        {
+            if (File.Exists(savePath))
+            {
+                File.Delete(savePath);
+                Debug.Log("JSON file deleted successfully: " + savePath);
+            }
+            else
+            {
+                Debug.LogWarning("No JSON file found to delete at: " + savePath);
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError("Failed to delete JSON file: " + ex.Message);
+        }
+    }
+
 }
 

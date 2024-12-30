@@ -82,6 +82,12 @@ public class PlayerDataManager : JsonManager<PlayerData>
         SaveJson(jsonData);
     }
 
+    public void DeletePlayerData()
+    {
+        DeleteJson();
+        //InitializePaths("playerData.json");
+    }
+
     public string GetSceneName()
     {
         return playerData != null ? playerData.sceneName : string.Empty;

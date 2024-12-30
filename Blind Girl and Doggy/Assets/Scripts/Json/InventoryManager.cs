@@ -8,7 +8,7 @@ public class InventoryManager : JsonManager<InventoryData>
 {
     public static InventoryManager Instance { get; private set; }
     private List<InventoryItem> items = new List<InventoryItem>();
-    private int maxItems = 9;
+    private int maxItems = 6;
     private InventoryUI inventoryUI;
 
     public List<InventoryItem> Items
@@ -92,6 +92,12 @@ public class InventoryManager : JsonManager<InventoryData>
         string jsonData = JsonUtility.ToJson(new InventoryData(items), true);
         SaveJson(jsonData);
 
+    }
+
+    public void DeleteInventory()
+    {
+        DeleteJson();
+        //InitializePaths("inventory.json");
     }
 
     public void AddItem(int itemId)

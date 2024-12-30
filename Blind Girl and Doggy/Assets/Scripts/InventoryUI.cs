@@ -8,11 +8,10 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private GameObject itemSlotPrefab;
     [SerializeField] private Transform itemSlotContainer;
-    [SerializeField] private Button openButton;
-    [SerializeField] private Button closeButton;
     [SerializeField] private Image itemImage;
     [SerializeField] private TextMeshProUGUI itemNameText;
     [SerializeField] private TextMeshProUGUI descriptionText;
+
     [SerializeField] private Sprite emptySprite;
     [SerializeField] private AudioClip clickClip;
 
@@ -27,23 +26,25 @@ public class InventoryUI : MonoBehaviour
     {
         Initialize();
         inventory = FindObjectOfType<InventoryManager>();
-        openButton.onClick.AddListener(() => ToggleInventory());
-        closeButton.onClick.AddListener(() => ToggleInventory());
         UpdateInventoryUI();
     }
 
-   
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
+        {
+
+        }
+    }
+
+    void UpdateItemMenu()
+    {
+
+    }
+
+
     public void ToggleInventory()
     {
-        if (openButton.gameObject.activeSelf)
-        {
-            openButton.gameObject.SetActive(false);
-        }
-        else
-        {
-            openButton.gameObject.SetActive(true);
-        }
-
         inventoryPanel.SetActive(!inventoryPanel.activeSelf);
         SoundFXManager.instance.PlaySoundFXClip(clickClip, transform, false, 1.0f);
 
@@ -121,16 +122,7 @@ public class InventoryUI : MonoBehaviour
         itemImage.sprite = emptySprite;
         itemNameText.text = "";
         descriptionText.text = "";
-        inventoryPanel.SetActive(false);
-
-        if (!EventManager.Instance.IsEventTriggered(1))
-        {
-            openButton.gameObject.SetActive(false);
-        }
-        else
-        {
-            openButton.gameObject.SetActive(true);
-        }
+        //inventoryPanel.SetActive(false);
     }
    
 }

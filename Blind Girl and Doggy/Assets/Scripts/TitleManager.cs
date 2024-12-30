@@ -29,11 +29,6 @@ public class TitleManager : MonoBehaviour
     {
         StartCoroutine(ShowIntro());
         UpdateMenu();
-
-        if (PlayerDataManager.Instance.GetIsNewGame())
-        {
-
-        }
     }
 
     // Update is called once per frame
@@ -89,6 +84,8 @@ public class TitleManager : MonoBehaviour
                 backgroundNight.SetActive(true);
                 musicSource.clip = clips[2];
                 musicSource.Play();
+                PlayerDataManager.Instance.DeletePlayerData();
+                InventoryManager.Instance.DeleteInventory();
                 StartCoroutine(MoveOn("Prologue", 1.5f));
                 PlayerDataManager.Instance.UpdateNewGame(false);
             }
@@ -189,10 +186,9 @@ public class TitleManager : MonoBehaviour
 
     void UpdateMenu()
     {
-        // ???????????????????????????????????????
         if (currentIndex == 1 && PlayerDataManager.Instance.GetIsNewGame())
         {
-            currentIndex = (currentIndex + 1) % titleOptions.Count; // ???????????????????
+            currentIndex = (currentIndex + 1) % titleOptions.Count;
         }
 
         for (int i = 0; i < titleOptions.Count; i++)

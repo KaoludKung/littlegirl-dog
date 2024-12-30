@@ -106,4 +106,7 @@ public class PauseMenu : MonoBehaviour
     {
         //SceneManager.ChangeScene("Forest", SceneManager.SceneOption.WithSound);
     }
+
+   
+
 }
