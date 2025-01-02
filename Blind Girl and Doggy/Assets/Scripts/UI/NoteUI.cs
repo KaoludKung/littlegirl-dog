@@ -22,9 +22,6 @@ public class NoteUI : MonoBehaviour
     public bool isActive { get; private set; }
 
     private NoteManager note;
-    private InventoryUI inventoryUI;
-    private PauseManager pauseManager;
-
     private int currentIndex = 0;
     private List<GameObject> noteSlots = new List<GameObject>();
     private List<NoteItem> allNotes = new List<NoteItem>();
@@ -35,8 +32,6 @@ public class NoteUI : MonoBehaviour
     private void Awake()
     {
         note = FindObjectOfType<NoteManager>();
-        inventoryUI = FindObjectOfType<InventoryUI>();
-        pauseManager = FindObjectOfType<PauseManager>();
     }
 
     void Start()
@@ -49,12 +44,12 @@ public class NoteUI : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (!notePanel.activeSelf && !inventoryUI.isActive && !pauseManager.isActive)
+            if (!notePanel.activeSelf && !UIManager.Instance.IsAnyUIActive)
             {
                 isActive = true;
                 SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1.0f);
                 StartCoroutine(ToggleNotePanel());
-                Time.timeScale = 0.0f;
+                UIManager.Instance.ToggleTimeScale(true);
                 currentIndex = 0;
                 noteProgess.fillAmount = Mathf.Max((float)currentIndex / (allNotes.Count - 1), 0.1f);
             }
@@ -64,8 +59,7 @@ public class NoteUI : MonoBehaviour
         {
             SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1.0f);
             StartCoroutine(ToggleNotePanel());
-            Time.timeScale = 1.0f;
-            isActive = false;
+            StartCoroutine(Delay());
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow) && notePanel.activeSelf)
@@ -172,6 +166,16 @@ public class NoteUI : MonoBehaviour
         if (notePanel.activeSelf)
         {
             UpdateNoteUI();
+        }
+    }
+
+    IEnumerator Delay()
+    {
+        if (isActive)
+        {
+            yield return new WaitForSecondsRealtime(0.3f);
+            isActive = false;
+            UIManager.Instance.ToggleTimeScale(false);
         }
     }
 

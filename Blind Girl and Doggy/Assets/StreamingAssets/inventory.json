@@ -40,7 +40,7 @@
       "itemName": "Ladder",
       "iconPath": "Items/ladder",
       "description": "When your goal is out of reach, let this do the climbing for you.",
-      "isCollected": true
+      "isCollected": false
     },
     {
       "id": 7,

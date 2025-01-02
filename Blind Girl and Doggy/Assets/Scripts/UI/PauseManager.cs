@@ -15,22 +15,13 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private AudioClip[] clips;
 
     public bool isActive { get; private set; }
-
-    private InventoryUI inventoryUI;
-    private NoteUI noteUI;
-
     private bool isPaused = false;
     private bool isPressed = false;
     private bool isAlert = false;
     private int currentIndex = 0;
     private string baseText = "It's time to relax!!!";
 
-    private void Awake()
-    {
-        inventoryUI = FindObjectOfType<InventoryUI>();
-        noteUI = FindObjectOfType<NoteUI>();
-    }
-
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +33,7 @@ public class PauseManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
         {
-            if (!isPaused && !pausePanel.activeSelf && !inventoryUI.isActive && !noteUI.isActive)
+            if (!isPaused && !pausePanel.activeSelf && !UIManager.Instance.IsAnyUIActive)           
             {
                 isActive = true;
                 PauseGame();
@@ -133,7 +124,7 @@ public class PauseManager : MonoBehaviour
         isPaused = !isPaused;
         pausePanel.SetActive(!pausePanel.activeSelf);
         SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1);
-        Time.timeScale = 0;
+        UIManager.Instance.ToggleTimeScale(true);
 
         StopAllCoroutines();
 
@@ -175,7 +166,7 @@ public class PauseManager : MonoBehaviour
         isPressed = false;
         yield return new WaitForSecondsRealtime(clips[1].length);
         pausePanel.SetActive(!pausePanel.activeSelf);
-        Time.timeScale = 1;
+        UIManager.Instance.ToggleTimeScale(false);
         isActive = false;
     }
 

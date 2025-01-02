@@ -18,12 +18,9 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private AudioClip[] clips; // 0: selected, 1: pressed
 
     private InventoryManager inventory;
-    private PauseManager pauseManager;
-    private NoteUI noteUI;
-
+  
     public bool isActive { get; private set; }
 
-   
     private int currentIndex = 0;
     private const int columns = 3; // columns in Inventory
     private const int rows = 2;    // rows in Inventory
@@ -33,9 +30,7 @@ public class InventoryUI : MonoBehaviour
     private void Awake()
     {
         inventory = FindObjectOfType<InventoryManager>();
-        noteUI = FindObjectOfType<NoteUI>();
-        pauseManager = FindObjectOfType<PauseManager>();
-
+  
     }
 
     void Start()
@@ -48,12 +43,12 @@ public class InventoryUI : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
         {
-            if (!inventoryPanel.activeSelf && !noteUI.isActive && !pauseManager.isActive)
+            if (!inventoryPanel.activeSelf && !UIManager.Instance.IsAnyUIActive)
             {
                 isActive = true;
                 SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1.0f);
                 StartCoroutine(ToggleInventory());
-                Time.timeScale = 0.0f;
+                UIManager.Instance.ToggleTimeScale(false);
             }     
         }
 
@@ -61,8 +56,7 @@ public class InventoryUI : MonoBehaviour
         {
             SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1.0f);
             StartCoroutine(ToggleInventory());
-            Time.timeScale = 1.0f;
-            isActive = false;
+            StartCoroutine(Delay());
         }
 
         if (inventoryPanel.activeSelf)
@@ -191,6 +185,17 @@ public class InventoryUI : MonoBehaviour
         if (inventoryPanel.activeSelf)
         {
             UpdateInventoryUI();
+        }
+
+    }
+
+    IEnumerator Delay()
+    {
+        if (isActive)
+        {
+            yield return new WaitForSecondsRealtime(0.3f);
+            isActive = false;
+            UIManager.Instance.ToggleTimeScale(false);
         }
     }
 }

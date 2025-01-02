@@ -11,6 +11,7 @@ public class TitleManager : MonoBehaviour
     [SerializeField] private GameObject popUp;
     [SerializeField] private GameObject backgroundNight;
     [SerializeField] private GameObject[] cutsceneObject; // [0] title name, [1] press z, [2] option grid, [3] credit 
+    [SerializeField] private Animator[] animator;
 
     [SerializeField] private List<TitleOption> titleOptions;
     [SerializeField] private Sprite[] defaultIcon;
@@ -24,11 +25,18 @@ public class TitleManager : MonoBehaviour
     private bool isPressed = false;
     private bool isAlert = false;
 
+    private void Awake()
+    {
+        animator[0].SetBool("isWalk", true);
+        animator[1].SetBool("isWalk", true);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(ShowIntro());
         UpdateMenu();
+        musicSource.PlayDelayed(1.5f);
     }
 
     // Update is called once per frame
@@ -107,9 +115,8 @@ public class TitleManager : MonoBehaviour
 
     IEnumerator ShowIntro()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(1.5f);
         cutsceneObject[0].SetActive(true);
-        musicSource.Play();
         yield return new WaitForSeconds(2.5f);
         cutsceneObject[1].SetActive(true);
     }
