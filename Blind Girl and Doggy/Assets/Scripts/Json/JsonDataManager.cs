@@ -15,7 +15,6 @@ public abstract class JsonManager<T> : MonoBehaviour
         streamingAssetsPath = Path.Combine(Application.streamingAssetsPath, fileName);
     }
 
-
     protected string LoadJson(string path)
     {
         try

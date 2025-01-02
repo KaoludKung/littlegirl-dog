@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "noteName": "Note 1",
+      "noteDate": "Day 7 of July, Year XX15",
+      "noteDetail": "Mother said it will take several days to take care of business in the big city. She asked me to take good care of my sibling. I hope Mother comes back soon. I miss her so much.",
+      "isCollected": false
+    },
+    {
+      "id": 2,
+      "noteName": "Note 2",
+      "noteDate": "Day 10 of July, Year XX15",
+      "noteDetail": "It's been a few days, and Mother still hasn't returned. We're starting to worry that something might have happened to her. The fear is slowly replacing hope now.",
+      "isCollected": false
+    },
+    {
+      "id": 3,
+      "noteName": "Note 3",
+      "noteDate": "Day 10 of July, Year XX15",
+      "noteDetail": "",
+      "isCollected": false
+    },
+    {
+      "id": 4,
+      "noteName": "Note 4",
+      "noteDate": "Day 10 of August, Year XX15",
+      "noteDetail": "A month has passed, and now we truly feel that Mother has abandoned us. There has been no news or any sign from her. We are heartbroken. Why did Mother do this to us? Did we do something wrong? We're so sorry. Please, come back.",
+      "isCollected": false
+    },
+    {
+      "id": 5,
+      "noteName": "Note 5",
+      "noteDate": "Day 25 of August, Year XX15",
+      "noteDetail": "We decided to start farming to survive, but farming is so hard for kids like us. I wonder what Mother is doing now. Is she living a good life?",
+      "isCollected": false
+    },
+    {
+      "id": 6,
+      "noteName": "Note 6",
+      "noteDate": "Day 4 of March, Year XX22",
+      "noteDetail": "I decided to separate from my sibling to find a better way. Staying here is too much suffering. I chose to live in the forest, hoping it would be better, but I’m afraid it won’t.",
+      "isCollected": false
+    },
+    {
+      "id": 7,
+      "noteName": "Note 7",
+      "noteDate": "Day 12 of March, Year XX22",
+      "noteDetail": "Living in the forest is really tough, and there’s a strange creature that almost killed me. The world is so cruel. I miss Mother so much, but now I have no choice but to keep moving forward. I hope my sibling is okay.",
+      "isCollected": false
+    },
+    {
+      "id": 8,
+      "noteName": "Note 8",
+      "noteDate": "Day 12 of March, Year XX30",
+      "noteDetail": "After living this boring life in the forest, it seems someone has moved nearby, so I won't feel so lonely. But when I saw who it was, I realized it was our mother. She’s been living comfortably in a mansion while we’ve been struggling to survive. I won’t let her get away with this. Just wait, I’ll make her feel every ounce of the pain we’ve suffered. Ha ha, she’ll regret abandoning us.",
+      "isCollected": false
+    },
+    {
+      "id": 9,
+      "noteName": "Note 9",
+      "noteDate": "Day 13 of May, Year XX30",
+      "noteDetail": "Lately, she’s been spending time with a kid, and if I take care of that child, it’ll surely bring her pain. I just need to wait for the right moment. But the child looks so familiar.",
+      "isCollected": false
+    }
+  ]
+}

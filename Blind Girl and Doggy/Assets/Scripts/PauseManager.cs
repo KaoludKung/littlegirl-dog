@@ -14,11 +14,22 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private Sprite[] pauseSprite;
     [SerializeField] private AudioClip[] clips;
 
+    public bool isActive { get; private set; }
+
+    private InventoryUI inventoryUI;
+    private NoteUI noteUI;
+
     private bool isPaused = false;
     private bool isPressed = false;
     private bool isAlert = false;
     private int currentIndex = 0;
     private string baseText = "It's time to relax!!!";
+
+    private void Awake()
+    {
+        inventoryUI = FindObjectOfType<InventoryUI>();
+        noteUI = FindObjectOfType<NoteUI>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -31,8 +42,9 @@ public class PauseManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
         {
-            if (!isPaused)
+            if (!isPaused && !pausePanel.activeSelf && !inventoryUI.isActive && !noteUI.isActive)
             {
+                isActive = true;
                 PauseGame();
             }      
         }
@@ -164,6 +176,7 @@ public class PauseManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(clips[1].length);
         pausePanel.SetActive(!pausePanel.activeSelf);
         Time.timeScale = 1;
+        isActive = false;
     }
 
     void OpenSetting()

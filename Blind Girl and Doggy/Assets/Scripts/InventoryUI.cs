@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
+using System.Collections;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -13,19 +14,33 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI descriptionText;
 
     [SerializeField] private Sprite emptySprite;
-    [SerializeField] private AudioClip clickClip;
+    [SerializeField] private Sprite[] slotSelect;
+    [SerializeField] private AudioClip[] clips; // 0: selected, 1: pressed
 
     private InventoryManager inventory;
+    private PauseManager pauseManager;
+    private NoteUI noteUI;
+
+    public bool isActive { get; private set; }
+
+   
+    private int currentIndex = 0;
+    private const int columns = 3; // columns in Inventory
+    private const int rows = 2;    // rows in Inventory
+    private List<GameObject> itemSlots = new List<GameObject>();
+    private List<InventoryItem> collectedItems = new List<InventoryItem>(); 
 
     private void Awake()
     {
         inventory = FindObjectOfType<InventoryManager>();
+        noteUI = FindObjectOfType<NoteUI>();
+        pauseManager = FindObjectOfType<PauseManager>();
+
     }
 
     void Start()
     {
         Initialize();
-        inventory = FindObjectOfType<InventoryManager>();
         UpdateInventoryUI();
     }
 
@@ -33,24 +48,46 @@ public class InventoryUI : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
         {
-
+            if (!inventoryPanel.activeSelf && !noteUI.isActive && !pauseManager.isActive)
+            {
+                isActive = true;
+                SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1.0f);
+                StartCoroutine(ToggleInventory());
+                Time.timeScale = 0.0f;
+            }     
         }
-    }
 
-    void UpdateItemMenu()
-    {
-
-    }
-
-
-    public void ToggleInventory()
-    {
-        inventoryPanel.SetActive(!inventoryPanel.activeSelf);
-        SoundFXManager.instance.PlaySoundFXClip(clickClip, transform, false, 1.0f);
+        if(Input.GetKeyDown(KeyCode.X) && inventoryPanel.activeSelf)
+        {
+            SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1.0f);
+            StartCoroutine(ToggleInventory());
+            Time.timeScale = 1.0f;
+            isActive = false;
+        }
 
         if (inventoryPanel.activeSelf)
         {
-            UpdateInventoryUI();
+            if (Input.GetKeyDown(KeyCode.LeftArrow)) MoveHighlight(-1, 0);
+            if (Input.GetKeyDown(KeyCode.RightArrow)) MoveHighlight(1, 0);
+            if (Input.GetKeyDown(KeyCode.UpArrow)) MoveHighlight(0, -1);
+            if (Input.GetKeyDown(KeyCode.DownArrow)) MoveHighlight(0, 1);
+        }
+    }
+
+    void MoveHighlight(int x, int y)
+    {
+        int newRow = currentIndex / columns + y;
+        int newColumn = currentIndex % columns + x;
+
+        if (newRow >= 0 && newRow < rows && newColumn >= 0 && newColumn < columns)
+        {
+            int newIndex = newRow * columns + newColumn;
+            if (newIndex < itemSlots.Count)
+            {
+                currentIndex = newIndex;
+                UpdateItemMenu();
+                SoundFXManager.instance.PlaySoundFXClip(clips[0], transform, false, 1.0f);
+            }
         }
     }
 
@@ -60,9 +97,9 @@ public class InventoryUI : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+        itemSlots.Clear();
 
-        List<InventoryItem> collectedItems = new List<InventoryItem>();
-
+        collectedItems.Clear();
         foreach (var item in inventory.Items)
         {
             if (item.isCollected)
@@ -74,47 +111,69 @@ public class InventoryUI : MonoBehaviour
         for (int i = 0; i < inventory.MaxItems; i++)
         {
             GameObject itemSlot = Instantiate(itemSlotPrefab, itemSlotContainer);
+            itemSlots.Add(itemSlot);
 
             if (i < collectedItems.Count)
             {
                 InventoryItem item = collectedItems[i];
-                Button itemButton = itemSlot.GetComponent<Button>();
                 var itemImage = itemSlot.transform.Find("item_image").GetComponent<Image>();
 
                 if (itemImage != null)
                     itemImage.sprite = item.GetIcon();
-
-                if (itemButton != null)
-                    itemButton.onClick.AddListener(() => ShowItemDescription(item));
             }
             else
             {
                 var itemImage = itemSlot.transform.Find("item_image").GetComponent<Image>();
                 if (itemImage != null)
                     itemImage.sprite = emptySprite;
+            }
+        }
 
-                Button itemButton = itemSlot.GetComponent<Button>();
-                if (itemButton != null)
+        currentIndex = 0; // Reset highlight to first slot
+        UpdateItemMenu();
+    }
+
+    void UpdateItemMenu()
+    {
+        for (int i = 0; i < itemSlots.Count; i++)
+        {
+            var slot = itemSlots[i];
+            var slotImage = slot.GetComponent<Image>();
+
+            if (i == currentIndex)
+            {
+                slotImage.sprite = slotSelect[1];
+
+                if (i < collectedItems.Count)
                 {
-                    itemButton.onClick.RemoveAllListeners();
-                    itemButton.transition = Selectable.Transition.None;
+                    ShowItemDescription(collectedItems[i]);
                 }
+                else
+                {
+                    ClearItemDescription();
+                }
+            }
+            else
+            {
+                slotImage.sprite = slotSelect[0];
             }
         }
     }
 
-
     private void ShowItemDescription(InventoryItem item)
     {
-        SoundFXManager.instance.PlaySoundFXClip(clickClip, transform, false, 1.0f);
-
         if (itemImage != null)
             itemImage.sprite = item.GetIcon();
 
         itemNameText.text = item.itemName;
         descriptionText.text = item.description;
+    }
 
-        Debug.Log($"Showing description for: {item.itemName}");
+    private void ClearItemDescription()
+    {
+        itemImage.sprite = emptySprite;
+        itemNameText.text = "";
+        descriptionText.text = "";
     }
 
     void Initialize()
@@ -122,7 +181,18 @@ public class InventoryUI : MonoBehaviour
         itemImage.sprite = emptySprite;
         itemNameText.text = "";
         descriptionText.text = "";
-        //inventoryPanel.SetActive(false);
     }
-   
+
+    IEnumerator ToggleInventory()
+    {
+        yield return new WaitForSecondsRealtime(0.1f);
+        inventoryPanel.SetActive(!inventoryPanel.activeSelf);
+        
+        if (inventoryPanel.activeSelf)
+        {
+            UpdateInventoryUI();
+        }
+    }
 }
+
+

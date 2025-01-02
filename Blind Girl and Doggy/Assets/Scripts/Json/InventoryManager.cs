@@ -46,7 +46,6 @@ public class InventoryManager : JsonManager<InventoryData>
             return;
         }
         Instance = this;
-
         DontDestroyOnLoad(gameObject);
 
         InitializePaths("inventory.json");
@@ -62,11 +61,11 @@ public class InventoryManager : JsonManager<InventoryData>
             {
                 File.Copy(streamingAssetsPath, persistentPath);
                 LoadInventory(persistentPath);
-                Debug.Log("Copied default event data to Persistent Data Path.");
+                Debug.Log("Copied default inventory data to Persistent Data Path.");
             }
             else
             {
-                Debug.LogError("Default event data not found in StreamingAssets.");
+                Debug.LogError("Default inventory data not found in StreamingAssets.");
             }
         }
     }
@@ -123,8 +122,6 @@ public class InventoryManager : JsonManager<InventoryData>
             Debug.Log("Item not found in inventory data");
         }
     }
-
-
 
     public void RemoveItem(int itemId)
     {

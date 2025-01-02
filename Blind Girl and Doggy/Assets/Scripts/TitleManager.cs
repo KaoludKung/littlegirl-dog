@@ -86,6 +86,7 @@ public class TitleManager : MonoBehaviour
                 musicSource.Play();
                 PlayerDataManager.Instance.DeletePlayerData();
                 InventoryManager.Instance.DeleteInventory();
+                NoteManager.Instance.DeleteNote();
                 StartCoroutine(MoveOn("Prologue", 1.5f));
                 PlayerDataManager.Instance.UpdateNewGame(false);
             }
