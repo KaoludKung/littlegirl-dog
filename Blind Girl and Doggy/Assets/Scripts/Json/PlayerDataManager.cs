@@ -11,14 +11,16 @@ public class PlayerData
     public Vector3 dogPosition;
     public string sceneName;
     public bool isNewGame;
+    public bool isSpined;
     public int hearts;
 
-    public PlayerData(Vector3 girlPosition, Vector3 dogPosition, string sceneName,bool isNewGame ,int hearts)
+    public PlayerData(Vector3 girlPosition, Vector3 dogPosition, string sceneName,bool isNewGame,bool isSpined ,int hearts)
     {
         this.girlPosition = girlPosition;
         this.dogPosition = dogPosition;
         this.sceneName = sceneName;
         this.isNewGame = isNewGame;
+        this.isSpined = isSpined;
         this.hearts = hearts;
     }
 }
@@ -108,6 +110,11 @@ public class PlayerDataManager : JsonManager<PlayerData>
         return playerData != null ? playerData.isNewGame : false;
     }
 
+    public bool GetIsSpined()
+    {
+        return playerData != null ? playerData.isSpined : false;
+    }
+
     public int GetHearts()
     {
         return playerData != null ? playerData.hearts : 0;
@@ -119,7 +126,7 @@ public class PlayerDataManager : JsonManager<PlayerData>
         {
             playerData.girlPosition = newPosition;
             Debug.Log($"Updated girl's position to: {newPosition}");
-            SavePlayerData();
+            //SavePlayerData();
         }
     }
 
@@ -129,7 +136,7 @@ public class PlayerDataManager : JsonManager<PlayerData>
         {
             playerData.dogPosition = newPosition;
             Debug.Log($"Updated dog's position to: {newPosition}");
-            SavePlayerData();
+            //SavePlayerData();
         }
     }
 
@@ -139,7 +146,7 @@ public class PlayerDataManager : JsonManager<PlayerData>
         {
             playerData.sceneName = newSceneName;
             Debug.Log($"Updated scene name to: {newSceneName}");
-            SavePlayerData();
+            //SavePlayerData();
         }
     }
 
@@ -148,8 +155,18 @@ public class PlayerDataManager : JsonManager<PlayerData>
         if (playerData != null)
         {
             playerData.isNewGame = isNewGame;
-            Debug.Log($"Updated hearts to: {isNewGame}");
-            SavePlayerData();
+            Debug.Log($"Updated newgame to: {isNewGame}");
+            //SavePlayerData();
+        }
+    }
+
+    public void UpdateIsSpined(bool isSpined)
+    {
+        if (playerData != null)
+        {
+            playerData.isSpined = isSpined;
+            Debug.Log($"Updated isSpined to: {isSpined}");
+            //SavePlayerData();
         }
     }
 
@@ -159,7 +176,7 @@ public class PlayerDataManager : JsonManager<PlayerData>
         {
             playerData.hearts = newHearts;
             Debug.Log($"Updated hearts to: {newHearts}");
-            SavePlayerData();
+            //SavePlayerData();
         }
     }
 

@@ -3,8 +3,8 @@ using UnityEngine.Playables;
 
 public class TimelineManager : EventObject
 {
-    [SerializeField] private int nextEventID;
     [SerializeField] private PlayableDirector timeline;
+    [SerializeField] private GameObject uiManagerObject;
     
     private GirlControl girlControl;
     private DogControl dogControl;
@@ -17,9 +17,13 @@ public class TimelineManager : EventObject
 
     void Start()
     {
-        dogControl.SetIsStart(false);
-        girlControl.SetIsStart(false);
-
+        if (dogControl != null && girlControl != null && uiManagerObject != null)
+        {
+            uiManagerObject.SetActive(false);
+            dogControl.SetIsStart(false);
+            girlControl.SetIsStart(false);
+        }
+    
         timeline.stopped += OnTimelineStopped;
         StartTimeline();
     }
@@ -31,9 +35,14 @@ public class TimelineManager : EventObject
 
     void OnTimelineStopped(PlayableDirector director)
     {
-        EventManager.Instance.UpdateEventDataTrigger(nextEventID, true);
-        dogControl.SetIsStart(true);
-        girlControl.SetIsStart(true);
-        Debug.Log("Timeline stopped, isSomethingActive = false");
+        EventManager.Instance.UpdateEventDataTrigger(TriggerEventID, true);
+        
+        if(dogControl != null && girlControl != null && uiManagerObject != null)
+        {
+            uiManagerObject.SetActive(true);
+            dogControl.SetIsStart(true);
+            girlControl.SetIsStart(true);
+        }
+
     }
 }

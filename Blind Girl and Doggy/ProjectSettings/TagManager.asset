@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -38,6 +39,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: background
+    uniqueID: 3445921835
+    locked: 0
+  - name: foreground-2
+    uniqueID: 1972439993
+    locked: 0
+  - name: foreground-1
+    uniqueID: 3162544459
+    locked: 0
+  - name: decoration
+    uniqueID: 1821660635
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

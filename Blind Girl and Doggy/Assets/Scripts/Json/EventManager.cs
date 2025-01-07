@@ -10,15 +10,15 @@ public class EventData
     public string nameEvent;
     public string type;
     public bool trigger;
-    public bool hasExecuted;
+    //public bool hasExecuted;
 
-    public EventData(int id, string nameEvent, string type, bool trigger = false, bool hasExecuted = false)
+    public EventData(int id, string nameEvent, string type, bool trigger = false)
     {
         this.id = id;
         this.nameEvent = nameEvent;
         this.type = type;
         this.trigger = trigger;
-        this.hasExecuted = hasExecuted;
+        //this.hasExecuted = hasExecuted;
     }
 }
 
@@ -98,6 +98,7 @@ public class EventManager : JsonManager<EventData>
         }
     }
 
+    /*
     public void UpdataEventDataExcuted(int eventId, bool newhasExecutedStatus)
     {
         EventData eventData = eventList.Find(e => e.id == eventId);
@@ -111,7 +112,7 @@ public class EventManager : JsonManager<EventData>
         {
             Debug.LogWarning($"Event with ID '{eventId}' not found.");
         }
-    }
+    }*/
 
     public List<EventData> GetEventList() => eventList;
 
@@ -129,6 +130,7 @@ public class EventManager : JsonManager<EventData>
         
     }
 
+    /*
     public bool IsHasExcuted(int eventId)
     {
         EventData eventData = eventList.Find(e => e.id == eventId);
@@ -142,6 +144,7 @@ public class EventManager : JsonManager<EventData>
         return false;
 
     }
+    */
 
 }
 

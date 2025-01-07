@@ -20,6 +20,7 @@ public class DogController : MonoBehaviour
 
     public AudioSource WalkSource => walkSource;
     public bool IsMoving => isMoving;
+    private Animator animator;
     
     private void Awake()
     {
@@ -32,13 +33,14 @@ public class DogController : MonoBehaviour
     void Start()
     {
         isMoving = false;
-        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Character"), LayerMask.NameToLayer("Character"), true);
+        //Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Character"), LayerMask.NameToLayer("Character"), true);
         isWalkingSoundPlaying = false;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        if (!isMoving && isInTrigger && currentEventObject != null && Input.GetKeyDown(KeyCode.W) && !EventManager.Instance.IsHasExcuted(currentEventObject.GetEventId()))
+        if (!isMoving && isInTrigger && currentEventObject != null && Input.GetKeyDown(KeyCode.W))
         {
             //EventManager.Instance.UpdateEventDataTrigger(currentEventObject.GetEventId() + 1, true);
             //EventManager.Instance.UpdateEventDataTrigger(currentEventObject.GetEventId(), true);
@@ -47,9 +49,10 @@ public class DogController : MonoBehaviour
             Debug.Log("Event ID: " + currentEventObject.GetEventId());
         }
 
-        if (!isRegeneratingStamina && staminaSlider.value < staminaSlider.maxValue)
+        //!isRegeneratingStamina && staminaSlider.value < staminaSlider.maxValue
+        if (!isRegeneratingStamina)
         {
-            StartCoroutine(IncreaseStamina());
+            //StartCoroutine(IncreaseStamina());
             isRegeneratingStamina = true;
         }
 
@@ -91,14 +94,15 @@ public class DogController : MonoBehaviour
         {
             isMoving = true;
             transform.position += new Vector3(horizontal * speed * Time.deltaTime, 0, 0);
+            animator.SetBool("isWalk", true);
 
             if (horizontal < 0)
             {
-                transform.localScale = new Vector3(-2, 2, 2);
+                transform.localScale = new Vector3(-1, 1, 1);
             }
             else if (horizontal > 0)
             {
-                transform.localScale = new Vector3(2, 2, 2);
+                transform.localScale = new Vector3(1, 1, 1);
             }
 
             if (!isWalkingSoundPlaying)
@@ -110,6 +114,7 @@ public class DogController : MonoBehaviour
         else
         {
             isMoving = false;
+            animator.SetBool("isWalk", false);
 
             if (isWalkingSoundPlaying)
             {
@@ -156,8 +161,10 @@ public class DogController : MonoBehaviour
         }
     }
 
+    /*
     IEnumerator IncreaseStamina()
     {
+
         while (staminaSlider.value < staminaSlider.maxValue)
         {
             yield return new WaitForSeconds(8.0f);
@@ -165,7 +172,7 @@ public class DogController : MonoBehaviour
         }
         isRegeneratingStamina = false;
     }
-
+    */
 
     void OnCollisionEnter2D(Collision2D collision)
     {

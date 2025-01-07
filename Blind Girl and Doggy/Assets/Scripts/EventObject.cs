@@ -5,6 +5,7 @@ using UnityEngine;
 public class EventObject : MonoBehaviour
 {
     [SerializeField] protected int eventID;
+    [SerializeField] protected int TriggerEventID;
 
     public int GetEventId()
     {

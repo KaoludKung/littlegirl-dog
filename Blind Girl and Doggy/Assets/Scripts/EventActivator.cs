@@ -24,7 +24,8 @@ public class EventActivator : MonoBehaviour
 
             foreach (EventData eventData in events)
             {
-                if (eventData.trigger && !eventData.hasExecuted) 
+                //eventData.trigger && !eventData.hasExecuted
+                if (eventData.trigger) 
                 {
                     foreach (GameObject obj in eventObjects)
                     {
@@ -32,7 +33,7 @@ public class EventActivator : MonoBehaviour
                         if (eventObject != null && eventObject.GetEventId() == eventData.id)
                         {
                             obj.SetActive(true); 
-                            eventData.hasExecuted = true; 
+                            //eventData.hasExecuted = true; 
                             Debug.Log($"Activated object for event: {eventData.nameEvent}");
                         }
                     }

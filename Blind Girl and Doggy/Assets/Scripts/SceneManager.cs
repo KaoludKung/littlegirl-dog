@@ -9,22 +9,25 @@ public class SceneManager : MonoBehaviour
     //[SerializeField] private SceneOption sceneOption;
     public static SceneManager instance;
 
+
     private void Awake()
     {
-        instance = this;
-    }
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+        instance = this;
     }
 
     public void ChangeScene(string sceneName)
     {
         PlayerDataManager.Instance.UpdateSceneName(sceneName);
+        EventManager.Instance.SaveEventData();
         InventoryManager.Instance.SaveInventory();
         PlayerDataManager.Instance.SavePlayerData();
+        NoteManager.Instance.SaveNote();
         UnityEngine.SceneManagement.SceneManager.LoadScene("Loading");  
     }
 

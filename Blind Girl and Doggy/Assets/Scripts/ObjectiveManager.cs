@@ -55,6 +55,7 @@ public class ObjectiveManager : EventObject
         {
             count = 0;
 
+            /*
             for (int i = 0; i < actionID.Length; i++)
             {
                 bool hasExecuted = EventManager.Instance.IsHasExcuted(actionID[i]);
@@ -65,7 +66,7 @@ public class ObjectiveManager : EventObject
                 {
                     count++;
                 }
-            }
+            }*/
 
             Debug.Log($"Count: {count}, Required: {actionID.Length}");
 

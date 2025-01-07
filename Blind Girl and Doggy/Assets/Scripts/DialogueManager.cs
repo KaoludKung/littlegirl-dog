@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor.Animations;
 
 public class DialogueManager : EventObject
 {
-    [SerializeField] private int nextEventID;
-    [SerializeField] private float speed;
+    [SerializeField] private float speed = 0.05f;
     [SerializeField] private float durationUnlock = 0;
-
     [SerializeField] private Conversation conversation;
     [SerializeField] private DialogueOption dialogueOption;
+    [SerializeField] private Animator[] animators;
 
     private int index;
     private int charIndex;
@@ -20,35 +20,44 @@ public class DialogueManager : EventObject
     private bool isWriting;
     private bool isSkipping;
 
-    private GirlControl girlControl;
-    private DogControl dogControl;
-    private DialogueUI dialogueUI;
+    [SerializeField] private DialogueUI dialogueUI;
+    [SerializeField] private GameObject uiManagerObject;
+
+    //private GirlControl girlControl;
+    //private DogControl dogControl;
 
     void Start()
     {
-        girlControl = FindObjectOfType<GirlControl>();
-        dogControl = FindObjectOfType<DogControl>();
-        dialogueUI = FindObjectOfType<DialogueUI>();
+        if (uiManagerObject != null)
+            uiManagerObject.SetActive(false);
 
+        //girlControl = FindObjectOfType<GirlControl>();
+        //dogControl = FindObjectOfType<DogControl>();
+        //dialogueUI = FindObjectOfType<DialogueUI>();
+
+        /*
         if (dogControl != null && girlControl != null)
         {
             dogControl.SetIsStart(false);
             girlControl.SetIsStart(false);
-        }
+        }*/
 
         if (!started && !EventManager.Instance.IsEventTriggered(eventID))
             return;
 
         started = true;
         GetDialogue(0);
+
     }
 
     void Update()
     {
+        /*
         if (!started || !EventManager.Instance.IsEventTriggered(eventID))
             return;
+        */
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             if (isWriting)
             {
@@ -83,6 +92,22 @@ public class DialogueManager : EventObject
         string currentName = conversation.lines[i].character.fullname;
         string currentText = conversation.lines[i].text;
         Sprite currentSprite = conversation.lines[i].character.portrait;
+
+        if(dialogueOption == DialogueOption.FullDisplay)
+        {
+            for (i = 0; i < animators.Length; i++)
+            {
+                if (animators[i] != null && animators[i].gameObject.name == currentName)
+                {
+                    animators[i].SetInteger(conversation.lines[i].character.animationCondition, conversation.lines[i].character.conditionID);
+                }
+            }
+        }
+        else
+        {
+            Debug.Log("No Animation");
+        }
+       
 
         dialogueUI.ShowDialogue(currentName, currentText, currentSprite, dialogueOption);
         StartCoroutine(Writing());
@@ -119,22 +144,29 @@ public class DialogueManager : EventObject
         StopAllCoroutines();
         dialogueUI.TogglePanel(false);
         dialogueUI.InitializeText();
-
-        Invoke("UnlockMovement", durationUnlock);
+        StartCoroutine(UnlockAndContinue());
     }
 
-    private void UnlockMovement()
+    
+    private IEnumerator UnlockAndContinue()
     {
-        EventManager.Instance.UpdateEventDataTrigger(nextEventID, true);
+        yield return new WaitForSeconds(durationUnlock);
 
+        EventManager.Instance.UpdateEventDataTrigger(TriggerEventID, true);
+
+        yield return new WaitForSeconds(2.5f);
+
+        if (uiManagerObject != null)
+            uiManagerObject.SetActive(true);
+
+        /*
         if (dogControl != null && girlControl != null)
         {
             dogControl.SetIsStart(true);
             girlControl.SetIsStart(true);
-        }
+        }*/
     }
 }
-
 
 
 public enum DialogueOption

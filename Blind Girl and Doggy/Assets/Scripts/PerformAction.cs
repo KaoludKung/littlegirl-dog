@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class PerformAction : EventObject, Interactable
 {
-    [SerializeField] private int nextEventID;
     [SerializeField] private int itemID;
     [SerializeField] private AudioClip actionClip;
     [SerializeField] private Slider progressSlider;
@@ -98,10 +97,10 @@ public class PerformAction : EventObject, Interactable
 
     IEnumerator FinalizeEvent()
     {
-        EventManager.Instance.UpdataEventDataExcuted(eventID, true);
+        //EventManager.Instance.UpdataEventDataExcuted(eventID, true);
 
-        if (nextEventID != 0)
-            EventManager.Instance.UpdateEventDataTrigger(nextEventID, true);
+        if (TriggerEventID != 0)
+            EventManager.Instance.UpdateEventDataTrigger(TriggerEventID, true);
 
         if (actionType == ActionType.Short)
         {

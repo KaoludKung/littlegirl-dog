@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: LittleGirl_Idle1
   m_EditorClassIdentifier: 
   fullname: Margarte
-  portrait: {fileID: 0}
-  typing: {fileID: 0}
-  animation: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 470ba37f6c473e049b0241b87ede3fbd, type: 3}
+  typing: {fileID: 8300000, guid: 4f007bd903a844f4cbf2759f57b9a7c3, type: 3}
+  animatorController: {fileID: 9100000, guid: d8e2f1d8830b1c244884ecbce595cd0d, type: 2}
+  animationCondition: IdleVariant
+  conditionID: 0
