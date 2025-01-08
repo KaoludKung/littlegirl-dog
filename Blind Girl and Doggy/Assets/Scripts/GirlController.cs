@@ -11,28 +11,32 @@ public class GirlController : MonoBehaviour
     [SerializeField] private AudioClip barkClip;
     [SerializeField] private AudioClip walkClip;
     [SerializeField] private Transform dogTransform;
-    [SerializeField] private GameObject interactionIcon;
-    [SerializeField] private Texture2D cursorTexture;
     [SerializeField] private DogController dogControlller;
-    [SerializeField] private Slider progressSlider;
+    [SerializeField] private GameObject interactionIcon;
+    [SerializeField] private Image progressFill;
+    [SerializeField] private GameObject progressSlider;
 
     private bool isBarking;
     private bool isMoving;
+    public bool isActive { get; private set; }
 
     private AudioSource walkSource;
+    private Animator animator;
     private Vector3 targetPosition;
     private Vector3 originalScale;
     private bool isWalkingSoundPlaying;
     private Interactable currentInteractable;
 
-    public bool IsMoving => isMoving;
     public bool IsBarking => isBarking;
-    public AudioSource WalkSource => walkSource;
+    public bool IsMoving => isMoving;
+    public Animator Animator => animator;
+    public GameObject InteractionIcon => interactionIcon;
 
     private void Awake()
     {
-        //SetIsStart(true);
+        isActive = true;
         walkSource = GetComponent<AudioSource>();
+        animator = GetComponent<Animator>();
         walkSource.clip = walkClip;
     }
 
@@ -44,11 +48,6 @@ public class GirlController : MonoBehaviour
         isWalkingSoundPlaying = false;
         originalScale = transform.localScale;
 
-        if (barkClip == null)
-        {
-            Debug.LogError("barkSource is not assigned.");
-        }
-
         if (interactionIcon != null)
         {
             interactionIcon.gameObject.SetActive(false);
@@ -57,23 +56,25 @@ public class GirlController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(1) && !EventSystem.current.IsPointerOverGameObject() && !isBarking && !isMoving && dogControlller.staminaSlider.value > 0)
+        if (Input.GetKeyDown(KeyCode.Z) && isActive)
         {
-            if (barkClip != null)
+            if (!dogControlller.IsMoving && !isBarking && dogControlller.staminaFill.fillAmount > 0)
             {
-                StartCoroutine(HandleClickAndMove());
+                StartCoroutine(HandleMove());
             } 
         }
 
-        if (Input.GetMouseButtonDown(2) && !EventSystem.current.IsPointerOverGameObject() && !isBarking && !isMoving)
+        if (Input.GetKeyDown(KeyCode.X) && !dogControlller.IsMoving && isActive)
         {
-            if (currentInteractable != null)
+            if (currentInteractable != null && !isMoving)
             {
                 Debug.Log("Performing action with: " + currentInteractable);
                 currentInteractable.Interact();
+                StartCoroutine(BarkTwice());
             }
             else
             {
+                StartCoroutine(BarkTwice());
                 Debug.Log("Bruh");
             }
         }
@@ -81,6 +82,117 @@ public class GirlController : MonoBehaviour
         if (isMoving)
         {
             MoveTowardsTarget();
+        }
+    }
+
+    IEnumerator BarkTwice()
+    {
+        int i = 0;
+        dogControlller.staminaFill.fillAmount -= 0.1f;
+
+        while (i < 2)
+        {
+            dogControlller.Animator.SetInteger("BarkType", 1);
+            SoundFXManager.instance.PlaySoundFXClip(barkClip, dogTransform, true, 1.0f, 20.0f, 60.0f);
+            yield return new WaitForSeconds(barkClip.length);
+            dogControlller.Animator.SetInteger("BarkType", 0);
+            i++;
+        }     
+    }
+
+    IEnumerator HandleMove()
+    {
+        isBarking = true;
+        targetPosition = dogControlller.transform.position;
+        dogControlller.staminaFill.fillAmount -= 0.1f;
+        SoundFXManager.instance.PlaySoundFXClip(barkClip, dogTransform, true, 1.0f, 20.0f, 60.0f);
+        dogControlller.Animator.SetInteger("BarkType", 1);
+        yield return new WaitForSeconds(barkClip.length);
+        dogControlller.Animator.SetInteger("BarkType", 0);
+
+        if (!isMoving)
+        {
+            isMoving = true;
+            
+            if (!isWalkingSoundPlaying)
+            {
+                isWalkingSoundPlaying = true;
+                StartCoroutine(PlayWalkSound());
+            }
+        }
+    }
+
+    void MoveTowardsTarget()
+    {
+        if (Vector3.Distance(transform.position, targetPosition) >= distance)
+        {
+            if (targetPosition.x < transform.position.x)
+            {
+                transform.localScale = new Vector3(-originalScale.x, originalScale.y, originalScale.z);
+            }
+            else if (targetPosition.x > transform.position.x)
+            {
+                transform.localScale = new Vector3(originalScale.x, originalScale.y, originalScale.z);
+            }
+
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+            animator.SetBool("isWalk", true);
+        }
+        else
+        {
+            isMoving = false;
+            walkSource.loop = false;
+            animator.SetBool("isWalk", false);
+        }
+    }
+
+    IEnumerator PlayWalkSound()
+    {
+        if (walkClip != null)
+        {
+            walkSource.loop = true;
+            walkSource.Play();
+
+            while (isMoving)
+            {
+                yield return null;
+            }
+
+            walkSource.loop = false;
+            isWalkingSoundPlaying = false;
+            isBarking = false;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Interactable"))
+        {
+            Debug.Log("Entering Interactable: " + other.gameObject.name);
+            currentInteractable = other.GetComponent<Interactable>();
+
+            if (currentInteractable != null)
+            {
+                interactionIcon.gameObject.SetActive(true);
+                Debug.Log("Interaction icon shown.");
+            }
+            else
+            {
+                Debug.Log("Current interactable is null or interaction icon is not set.");
+            }
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Interactable"))
+        {
+            if (interactionIcon != null)
+            {
+                interactionIcon.gameObject.SetActive(false);
+                Debug.Log("Interaction icon hidden.");
+            }
+            currentInteractable = null;
         }
     }
 
@@ -103,106 +215,8 @@ public class GirlController : MonoBehaviour
         }
     }
 
-    IEnumerator HandleClickAndMove()
+    public void SetIsActive(bool value)
     {
-        isBarking = true;
-        targetPosition = dogControlller.transform.position;
-        dogControlller.staminaSlider.value -= 0.2f;
-        SoundFXManager.instance.PlaySoundFXClip(barkClip, dogTransform, true, 1.0f, 20.0f, 60.0f);
-        yield return new WaitForSeconds(barkClip.length);
-
-        if (!isMoving)
-        {
-            isMoving = true;
-
-            if (!isWalkingSoundPlaying)
-            {
-                isWalkingSoundPlaying = true;
-                StartCoroutine(PlayWalkSound());
-            }
-        }
-
-        isBarking = false;
+        isActive = value;
     }
-
-    void MoveTowardsTarget()
-    {
-        if (Vector3.Distance(transform.position, targetPosition) >= distance)
-        {
-            if (targetPosition.x < transform.position.x)
-            {
-                transform.localScale = new Vector3(-originalScale.x, originalScale.y, originalScale.z);
-            }
-            else if (targetPosition.x > transform.position.x)
-            {
-                transform.localScale = new Vector3(originalScale.x, originalScale.y, originalScale.z);
-            }
-
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
-        }
-        else
-        {
-            isMoving = false;
-            walkSource.loop = false;
-        }
-    }
-
-    IEnumerator PlayWalkSound()
-    {
-        if (walkClip != null)
-        {
-            walkSource.loop = true;
-            walkSource.Play();
-
-            while (isMoving)
-            {
-                yield return null;
-            }
-
-            walkSource.loop = false;
-            isWalkingSoundPlaying = false;
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Interactable"))
-        {
-            Debug.Log("Entering Interactable: " + other.gameObject.name);
-            currentInteractable = other.GetComponent<Interactable>();
-
-            if (currentInteractable != null)
-            {
-                Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
-                Debug.Log("Cursor changed.");
-                interactionIcon.gameObject.SetActive(true);
-                Debug.Log("Interaction icon shown.");
-            }
-            else
-            {
-                Debug.Log("Current interactable is null or interaction icon is not set.");
-                Debug.Log("Current interactable is null.");
-            }
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Interactable"))
-        {
-            if (interactionIcon != null)
-            {
-                interactionIcon.gameObject.SetActive(false);
-                Debug.Log("Interaction icon hidden.");
-            }
-            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-            currentInteractable = null;
-        }
-    }
-
-    /*
-    public void SetIsStart(bool value)
-    {
-        isStart = value;
-    }*/
 }

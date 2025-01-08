@@ -47,6 +47,8 @@ public class NoteUI : MonoBehaviour
             if (!notePanel.activeSelf && !UIManager.Instance.IsAnyUIActive)
             {
                 isActive = true;
+                CharacterManager.Instance.SoundPause();
+                CharacterManager.Instance.SetIsActive(false);
                 SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1.0f);
                 StartCoroutine(ToggleNotePanel());
                 UIManager.Instance.ToggleTimeScale(true);
@@ -176,6 +178,8 @@ public class NoteUI : MonoBehaviour
             yield return new WaitForSecondsRealtime(0.3f);
             isActive = false;
             UIManager.Instance.ToggleTimeScale(false);
+            CharacterManager.Instance.SoundUnPause();
+            CharacterManager.Instance.SetIsActive(true);
         }
     }
 

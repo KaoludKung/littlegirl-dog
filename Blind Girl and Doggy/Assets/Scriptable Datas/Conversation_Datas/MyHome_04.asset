@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0dc24e6a77c5a9438a97135c1d8511f, type: 3}
+  m_Name: MyHome_04
+  m_EditorClassIdentifier: 
+  titleName: 
+  lines:
+  - character: {fileID: 0}
+    text: All done, Mommy.
+  - character: {fileID: 0}
+    text: Alright, you're all set to go. Just remember, you'll have to go through
+      the forest to reach her house.
+  - character: {fileID: 0}
+    text: "It won\u2019t take too long, but please be careful along the way, okay?\r"
+  - character: {fileID: 0}
+    text: "No need to worry, I\u2019ve got Bruno by my side."
+  - character: {fileID: 0}
+    text: "By the way, what\u2019s in the basket?"
+  - character: {fileID: 0}
+    text: Apple pie.
+  - character: {fileID: 0}
+    text: Wow, that looks so yummy!
+  - character: {fileID: 0}
+    text: "No, sweetheart. You mustn\u2019t eat the snacks in the basket at all because
+      she should be the first one to enjoy this delicious treat. "
+  - character: {fileID: 0}
+    text: Do you understand?
+  - character: {fileID: 0}
+    text: Aww, I understand, Mommy.
+  - character: {fileID: 0}
+    text: Good. Safe travels.

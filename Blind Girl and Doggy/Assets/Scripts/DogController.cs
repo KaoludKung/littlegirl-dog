@@ -7,25 +7,25 @@ public class DogController : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     [SerializeField] private AudioClip walkClip;
-    public Slider staminaSlider;
+    public Image staminaFill;
+
+    public bool isActive { get; private set; }
 
     private AudioSource walkSource;
-    private EventObject currentEventObject;
-
-    private bool isStart;
+    private Animator animator;
     private bool isMoving;
     private bool isWalkingSoundPlaying;
     private bool isRegeneratingStamina = false;
-    private bool isInTrigger = false;
 
-    public AudioSource WalkSource => walkSource;
+    public Animator Animator => animator;
     public bool IsMoving => isMoving;
-    private Animator animator;
-    
+
+
     private void Awake()
     {
-        SetIsStart(true);
+        isActive = true;
         walkSource = GetComponent<AudioSource>();
+        animator = GetComponent<Animator>();
         walkSource.clip = walkClip;
     }
 
@@ -33,57 +33,22 @@ public class DogController : MonoBehaviour
     void Start()
     {
         isMoving = false;
-        //Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Character"), LayerMask.NameToLayer("Character"), true);
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Character"), LayerMask.NameToLayer("Character"), true);
         isWalkingSoundPlaying = false;
-        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        if (!isMoving && isInTrigger && currentEventObject != null && Input.GetKeyDown(KeyCode.W))
+        if (!isRegeneratingStamina && staminaFill.fillAmount < 1.0f)
         {
-            //EventManager.Instance.UpdateEventDataTrigger(currentEventObject.GetEventId() + 1, true);
-            //EventManager.Instance.UpdateEventDataTrigger(currentEventObject.GetEventId(), true);
-            //EventManager.Instance.UpdataEventDataExcuted(currentEventObject.GetEventId(), true);
-            SoundFXManager.instance.PlaySoundFXClip(walkClip, transform, false, 1.0f);
-            Debug.Log("Event ID: " + currentEventObject.GetEventId());
-        }
-
-        //!isRegeneratingStamina && staminaSlider.value < staminaSlider.maxValue
-        if (!isRegeneratingStamina)
-        {
-            //StartCoroutine(IncreaseStamina());
+            StartCoroutine(IncreaseStamina());
             isRegeneratingStamina = true;
         }
 
-        if (isStart)
+        if (isActive)
         {
             MoveCharacterWithKeyboard();
         }
-    }
-
-    void LateUpdate()
-    {
-        if (staminaSlider != null)
-        {
-            if (transform.localScale.x < 0)
-            {
-                staminaSlider.transform.localScale = new Vector3(-Mathf.Abs(staminaSlider.transform.localScale.x),
-                                                                  staminaSlider.transform.localScale.y,
-                                                                  staminaSlider.transform.localScale.z);
-            }
-            else
-            {
-                staminaSlider.transform.localScale = new Vector3(Mathf.Abs(staminaSlider.transform.localScale.x),
-                                                                  staminaSlider.transform.localScale.y,
-                                                                  staminaSlider.transform.localScale.z);
-            }
-        }
-    }
-
-    private void FixedUpdate()
-    {
-        
     }
 
     void MoveCharacterWithKeyboard()
@@ -124,26 +89,6 @@ public class DogController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        currentEventObject = other.GetComponent<EventObject>();
-        if (currentEventObject != null)
-        {
-            isInTrigger = true;
-            Debug.Log("Entered Trigger with Event ID: " + currentEventObject.GetEventId());
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.GetComponent<EventObject>() != null)
-        {
-            isInTrigger = false;
-            currentEventObject = null;
-            Debug.Log("Exited Trigger");
-        }
-    }
-
     IEnumerator PlayWalkSound()
     {
         if (walkClip != null)
@@ -161,18 +106,17 @@ public class DogController : MonoBehaviour
         }
     }
 
-    /*
+
     IEnumerator IncreaseStamina()
     {
-
-        while (staminaSlider.value < staminaSlider.maxValue)
+        while (staminaFill.fillAmount < 1.0f)
         {
-            yield return new WaitForSeconds(8.0f);
-            staminaSlider.value += 0.1f;
+            yield return new WaitForSeconds(3.0f);
+            staminaFill.fillAmount += 0.1f;
         }
         isRegeneratingStamina = false;
     }
-    */
+
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -190,10 +134,9 @@ public class DogController : MonoBehaviour
         }
     }
 
-    public void SetIsStart(bool value)
+    public void SetIsActive(bool value)
     {
-        isStart = value;
+        isActive = value;
     }
-
 
 }

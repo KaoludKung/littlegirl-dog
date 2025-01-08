@@ -11,6 +11,8 @@ public class DialogueManager : EventObject
     [SerializeField] private float durationUnlock = 0;
     [SerializeField] private Conversation conversation;
     [SerializeField] private DialogueOption dialogueOption;
+    [SerializeField] private DialogueUI dialogueUI;
+    [SerializeField] private GameObject uiManagerObject;
     [SerializeField] private Animator[] animators;
 
     private int index;
@@ -20,27 +22,12 @@ public class DialogueManager : EventObject
     private bool isWriting;
     private bool isSkipping;
 
-    [SerializeField] private DialogueUI dialogueUI;
-    [SerializeField] private GameObject uiManagerObject;
-
-    //private GirlControl girlControl;
-    //private DogControl dogControl;
 
     void Start()
     {
+        CharacterManager.Instance.SetIsActive(false);
         if (uiManagerObject != null)
             uiManagerObject.SetActive(false);
-
-        //girlControl = FindObjectOfType<GirlControl>();
-        //dogControl = FindObjectOfType<DogControl>();
-        //dialogueUI = FindObjectOfType<DialogueUI>();
-
-        /*
-        if (dogControl != null && girlControl != null)
-        {
-            dogControl.SetIsStart(false);
-            girlControl.SetIsStart(false);
-        }*/
 
         if (!started && !EventManager.Instance.IsEventTriggered(eventID))
             return;
@@ -52,11 +39,6 @@ public class DialogueManager : EventObject
 
     void Update()
     {
-        /*
-        if (!started || !EventManager.Instance.IsEventTriggered(eventID))
-            return;
-        */
-
         if (Input.GetKeyDown(KeyCode.Z))
         {
             if (isWriting)
@@ -93,13 +75,14 @@ public class DialogueManager : EventObject
         string currentText = conversation.lines[i].text;
         Sprite currentSprite = conversation.lines[i].character.portrait;
 
-        if(dialogueOption == DialogueOption.FullDisplay)
+        if (dialogueOption == DialogueOption.FullDisplay)
         {
-            for (i = 0; i < animators.Length; i++)
+            foreach (Animator animator in animators)
             {
-                if (animators[i] != null && animators[i].gameObject.name == currentName)
+                if (animator != null && animator.gameObject.name == currentName)
                 {
-                    animators[i].SetInteger(conversation.lines[i].character.animationCondition, conversation.lines[i].character.conditionID);
+                    animator.SetInteger(conversation.lines[i].character.animationCondition, conversation.lines[i].character.conditionID);
+                    break;
                 }
             }
         }
@@ -151,20 +134,12 @@ public class DialogueManager : EventObject
     private IEnumerator UnlockAndContinue()
     {
         yield return new WaitForSeconds(durationUnlock);
-
         EventManager.Instance.UpdateEventDataTrigger(TriggerEventID, true);
-
-        yield return new WaitForSeconds(2.5f);
 
         if (uiManagerObject != null)
             uiManagerObject.SetActive(true);
+        CharacterManager.Instance.SetIsActive(true);
 
-        /*
-        if (dogControl != null && girlControl != null)
-        {
-            dogControl.SetIsStart(true);
-            girlControl.SetIsStart(true);
-        }*/
     }
 }
 

@@ -36,6 +36,7 @@ public class PauseManager : MonoBehaviour
             if (!isPaused && !pausePanel.activeSelf && !UIManager.Instance.IsAnyUIActive)           
             {
                 isActive = true;
+                CharacterManager.Instance.SetIsActive(false);
                 PauseGame();
             }      
         }
@@ -121,6 +122,7 @@ public class PauseManager : MonoBehaviour
 
     void PauseGame()
     {
+        CharacterManager.Instance.SoundPause();
         isPaused = !isPaused;
         pausePanel.SetActive(!pausePanel.activeSelf);
         SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1);
@@ -159,7 +161,6 @@ public class PauseManager : MonoBehaviour
        
     }
 
-
     IEnumerator ResumeGame()
     {
         isPaused = !isPaused;
@@ -167,7 +168,9 @@ public class PauseManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(clips[1].length);
         pausePanel.SetActive(!pausePanel.activeSelf);
         UIManager.Instance.ToggleTimeScale(false);
+        CharacterManager.Instance.SoundPause();
         isActive = false;
+        CharacterManager.Instance.SetIsActive(true);
     }
 
     void OpenSetting()

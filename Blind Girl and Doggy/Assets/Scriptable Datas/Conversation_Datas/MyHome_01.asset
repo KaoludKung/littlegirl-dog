@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0dc24e6a77c5a9438a97135c1d8511f, type: 3}
+  m_Name: MyHome_01
+  m_EditorClassIdentifier: 
+  titleName: 
+  lines:
+  - character: {fileID: 11400000, guid: 618b9c0c975a3b845bb2022b59147aea, type: 2}
+    text: Margarete, have you read the letter from that neighbor?
+  - character: {fileID: 11400000, guid: a178a33e62adcc14d9408084c0c0ca0e, type: 2}
+    text: Yes, Mommy. I was thinking of going to visit her.
+  - character: {fileID: 11400000, guid: 07db9fa52606dfa4ab40855d2cfb5783, type: 2}
+    text: .....
+  - character: {fileID: 11400000, guid: 618b9c0c975a3b845bb2022b59147aea, type: 2}
+    text: "That\u2019s wonderful, but before you leave, could you please take the
+      snacks I made from the basket in the kitchen?"
+  - character: {fileID: 11400000, guid: f0ebaf5b173e2be4996ddf9f14201427, type: 2}
+    text: Alright, then I should summon my buddy first.
+  - character: {fileID: 11400000, guid: a178a33e62adcc14d9408084c0c0ca0e, type: 2}
+    text: Freund, if you hear my call, appear before me, as I request it all!

@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 439898a6769cb494fb284aa331202590, type: 3}
   m_Name: Dog_Idle1
   m_EditorClassIdentifier: 
-  fullname: Bruno
+  fullname: Freund
   portrait: {fileID: 21300000, guid: ca35e27b64981884888ced408899d756, type: 3}
   typing: {fileID: 8300000, guid: 5412a492768a9b644bdf814cc593b782, type: 3}
-  animatorController: {fileID: 9100000, guid: 389f5de2bc7703b4a87161b3a3cbe6f1, type: 2}
   animationCondition: IdleVariant
   conditionID: 0

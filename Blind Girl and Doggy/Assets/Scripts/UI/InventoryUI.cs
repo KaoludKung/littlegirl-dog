@@ -46,6 +46,8 @@ public class InventoryUI : MonoBehaviour
             if (!inventoryPanel.activeSelf && !UIManager.Instance.IsAnyUIActive)
             {
                 isActive = true;
+                CharacterManager.Instance.SoundPause();
+                CharacterManager.Instance.SetIsActive(false);
                 SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1.0f);
                 StartCoroutine(ToggleInventory());
                 UIManager.Instance.ToggleTimeScale(false);
@@ -196,6 +198,8 @@ public class InventoryUI : MonoBehaviour
             yield return new WaitForSecondsRealtime(0.3f);
             isActive = false;
             UIManager.Instance.ToggleTimeScale(false);
+            CharacterManager.Instance.SoundUnPause();
+            CharacterManager.Instance.SetIsActive(true);
         }
     }
 }

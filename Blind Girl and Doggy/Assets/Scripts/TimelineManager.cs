@@ -5,23 +5,13 @@ public class TimelineManager : EventObject
 {
     [SerializeField] private PlayableDirector timeline;
     [SerializeField] private GameObject uiManagerObject;
-    
-    private GirlControl girlControl;
-    private DogControl dogControl;
-
-    private void Awake()
-    {
-        girlControl = FindObjectOfType<GirlControl>();
-        dogControl = FindObjectOfType<DogControl>();
-    }
-
+   
     void Start()
     {
-        if (dogControl != null && girlControl != null && uiManagerObject != null)
+        if (uiManagerObject != null)
         {
             uiManagerObject.SetActive(false);
-            dogControl.SetIsStart(false);
-            girlControl.SetIsStart(false);
+            CharacterManager.Instance.SetIsActive(false);
         }
     
         timeline.stopped += OnTimelineStopped;
@@ -37,11 +27,10 @@ public class TimelineManager : EventObject
     {
         EventManager.Instance.UpdateEventDataTrigger(TriggerEventID, true);
         
-        if(dogControl != null && girlControl != null && uiManagerObject != null)
+        if(uiManagerObject != null)
         {
             uiManagerObject.SetActive(true);
-            dogControl.SetIsStart(true);
-            girlControl.SetIsStart(true);
+            CharacterManager.Instance.SetIsActive(true);
         }
 
     }

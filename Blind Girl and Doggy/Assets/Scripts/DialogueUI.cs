@@ -96,9 +96,24 @@ public class DialogueUI : MonoBehaviour
     {
         if (typingSound != null && typingSound.isPlaying)
         {
-            typingSound.Stop();
+            StartCoroutine(FadeOutSound());
         }
     }
 
-   
+    private IEnumerator FadeOutSound()
+    {
+        float startVolume = typingSound.volume;
+
+        while (typingSound.volume > 0)
+        {
+            typingSound.volume -= startVolume * Time.deltaTime / 0.5f;
+            yield return null;
+        }
+
+        typingSound.Stop();
+        typingSound.volume = startVolume;
+    }
+
+
+
 }

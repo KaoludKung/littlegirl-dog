@@ -1,33 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Teleport : MonoBehaviour, Interactable
 {
     [SerializeField] private TeleportOption teleportOption;
-    [SerializeField] private GameObject theGirl;
-    [SerializeField] private GameObject theDog;
+    [SerializeField] private GameObject[] objects;
     [SerializeField] private int cameraID;
     [SerializeField] private Vector2 girl_TeleportPosition;
     [SerializeField] private Vector2 dog_TeleportPosition;
+    [SerializeField] private AudioClip teleportClip;
+    [SerializeField] private Sprite alertSprite;
 
-    [SerializeField] private AudioSource teleportSound;
-    
-
-    private GirlControl girlControl;
+    private GirlController girlController;
+    private DogController dogController;
     private CameraSwitcher cameraSwitcher;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        girlControl = FindObjectOfType<GirlControl>();
+        girlController = FindObjectOfType<GirlController>();
+        dogController = FindObjectOfType<DogController>();
         cameraSwitcher = FindObjectOfType<CameraSwitcher>();
     }
 
     public void Interact()
     {
-        if (girlControl != null && !girlControl.IsMoving && !girlControl.IsBarking)
+        //girlControl != null && !girlControl.IsMoving && !girlControl.IsBarking
+        if (!girlController.IsMoving && !girlController.IsBarking)
         {
+            CharacterManager.Instance.SetIsActive(false);
             StartCoroutine(HandleTeleport());
         }
         else
@@ -38,19 +42,32 @@ public class Teleport : MonoBehaviour, Interactable
 
     private IEnumerator HandleTeleport()
     {
+        girlController.Animator.SetBool("isInteract", true);
 
-        if (teleportSound != null && teleportOption == TeleportOption.PlaySound)
+        if (teleportOption == TeleportOption.PlaySound)
         {
-            teleportSound.Play();
+            SoundFXManager.instance.PlaySoundFXClip(teleportClip, transform, false, 1.0f);
             yield return new WaitForSeconds(1.5f); 
         }
 
-  
-        theGirl.transform.position = girl_TeleportPosition;
-        theDog.transform.position = dog_TeleportPosition;
+        objects[0].transform.position = girl_TeleportPosition;
+        objects[1].transform.position = dog_TeleportPosition;
 
         cameraSwitcher.SwitchCamera(cameraID);
         Debug.Log("Performing Action Teleport");
+
+        girlController.Animator.SetBool("isInteract", false);
+
+        yield return new WaitForSecondsRealtime(1.0f);
+        CharacterManager.Instance.SetIsActive(true);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            girlController.InteractionIcon.GetComponent<SpriteRenderer>().sprite = alertSprite;
+        }
     }
 
     enum TeleportOption
