@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0dc24e6a77c5a9438a97135c1d8511f, type: 3}
   m_Name: MyHome_01
   m_EditorClassIdentifier: 
-  titleName: 
+  titleName: MyHome_01
   lines:
   - character: {fileID: 11400000, guid: 618b9c0c975a3b845bb2022b59147aea, type: 2}
     text: Margarete, have you read the letter from that neighbor?
@@ -25,5 +25,5 @@ MonoBehaviour:
       snacks I made from the basket in the kitchen?"
   - character: {fileID: 11400000, guid: f0ebaf5b173e2be4996ddf9f14201427, type: 2}
     text: Alright, then I should summon my buddy first.
-  - character: {fileID: 11400000, guid: a178a33e62adcc14d9408084c0c0ca0e, type: 2}
+  - character: {fileID: 11400000, guid: f0ebaf5b173e2be4996ddf9f14201427, type: 2}
     text: Freund, if you hear my call, appear before me, as I request it all!

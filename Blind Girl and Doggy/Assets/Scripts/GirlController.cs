@@ -18,6 +18,7 @@ public class GirlController : MonoBehaviour
 
     private bool isBarking;
     private bool isMoving;
+    private bool isInteract;
     public bool isActive { get; private set; }
 
     private AudioSource walkSource;
@@ -66,7 +67,7 @@ public class GirlController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.X) && !dogControlller.IsMoving && isActive)
         {
-            if (currentInteractable != null && !isMoving)
+            if (currentInteractable != null && !isMoving && !isInteract)
             {
                 Debug.Log("Performing action with: " + currentInteractable);
                 currentInteractable.Interact();
@@ -88,7 +89,7 @@ public class GirlController : MonoBehaviour
     IEnumerator BarkTwice()
     {
         int i = 0;
-        dogControlller.staminaFill.fillAmount -= 0.1f;
+        dogControlller.staminaFill.fillAmount -= 0.15f;
 
         while (i < 2)
         {
@@ -104,7 +105,7 @@ public class GirlController : MonoBehaviour
     {
         isBarking = true;
         targetPosition = dogControlller.transform.position;
-        dogControlller.staminaFill.fillAmount -= 0.1f;
+        dogControlller.staminaFill.fillAmount -= 0.05f;
         SoundFXManager.instance.PlaySoundFXClip(barkClip, dogTransform, true, 1.0f, 20.0f, 60.0f);
         dogControlller.Animator.SetInteger("BarkType", 1);
         yield return new WaitForSeconds(barkClip.length);
@@ -166,7 +167,7 @@ public class GirlController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Interactable"))
+        if (other.CompareTag("Interactable") && !isInteract)
         {
             Debug.Log("Entering Interactable: " + other.gameObject.name);
             currentInteractable = other.GetComponent<Interactable>();
@@ -218,5 +219,10 @@ public class GirlController : MonoBehaviour
     public void SetIsActive(bool value)
     {
         isActive = value;
+    }
+
+    public void SetIsInteract(bool value)
+    {
+        isInteract = value;
     }
 }

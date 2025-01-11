@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MyHome.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/ForestDay.unity
+    guid: 42843221fa360c241a46284e0caef61a
+  - enabled: 1
+    path: Assets/Scenes/ForestNight.unity
+    guid: 66972159a803a814bb17f087b87a8092
   m_configObjects: {}

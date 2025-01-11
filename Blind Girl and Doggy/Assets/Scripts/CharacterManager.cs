@@ -7,6 +7,7 @@ public class CharacterManager : MonoBehaviour
     public static CharacterManager Instance { get; private set; }
     private GirlController girlController;
     private DogController dogController;
+    [SerializeField] private GameObject staminaBar;
 
     private void Awake()
     {
@@ -21,12 +22,30 @@ public class CharacterManager : MonoBehaviour
         Instance = this;
     }
 
+    public void CheckIsActive()
+    {
+        if(girlController.isActive || dogController.isActive)
+        {
+            girlController.SetIsActive(false);
+            dogController.SetIsActive(false);
+        }
+    }
+
     public void SetIsActive(bool i)
     {
         if (girlController != null && dogController != null)
         {
             girlController.SetIsActive(i);
             dogController.SetIsActive(i);
+        }     
+    }
+
+    public void SetActiveUIPlayer(bool u)
+    {
+        if (staminaBar != null)
+        {
+            staminaBar.SetActive(u);
+            Debug.Log("It's real.");
         }
     }
 

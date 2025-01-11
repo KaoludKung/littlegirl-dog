@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EventActivator : MonoBehaviour
 {
-    [SerializeField] private float checkInterval; 
-    [SerializeField] private List<GameObject> eventObjects; 
+    [SerializeField] private float checkInterval;
+    [SerializeField] private List<GameObject> eventObjects;
 
     private void Start()
     {
@@ -20,21 +20,21 @@ public class EventActivator : MonoBehaviour
 
             EventManager eventManager = EventManager.Instance;
             List<EventData> events = eventManager.GetEventList();
-            bool allActivated = true; 
+            bool allActivated = true;
+
+            eventObjects.RemoveAll(obj => obj == null);
 
             foreach (EventData eventData in events)
             {
-                //eventData.trigger && !eventData.hasExecuted
-                if (eventData.trigger) 
+                if (eventData.trigger)
                 {
                     foreach (GameObject obj in eventObjects)
                     {
                         EventObject eventObject = obj.GetComponent<EventObject>();
                         if (eventObject != null && eventObject.GetEventId() == eventData.id)
                         {
-                            obj.SetActive(true); 
-                            //eventData.hasExecuted = true; 
-                            Debug.Log($"Activated object for event: {eventData.nameEvent}");
+                            obj.SetActive(true);
+                            //Debug.Log($"Activated object for event: {eventData.nameEvent}");
                         }
                     }
                 }
@@ -52,10 +52,11 @@ public class EventActivator : MonoBehaviour
             if (allActivated)
             {
                 Debug.Log("All event objects have been activated. Stopping EventActivator.");
-                yield break; 
+                yield break;
             }
 
             yield return new WaitForSeconds(checkInterval);
         }
     }
+
 }

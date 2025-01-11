@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public bool IsAnyUIActive => inventoryUI.isActive || noteUI.isActive || pauseManager.isActive;
+    public bool IsAnyUIActive => inventoryUI.isActive == true || noteUI.isActive == true || pauseManager.isActive == true;
     public static UIManager Instance { get; private set; }
 
     private InventoryUI inventoryUI;

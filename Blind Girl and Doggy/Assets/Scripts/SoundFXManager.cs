@@ -33,7 +33,8 @@ public class SoundFXManager : MonoBehaviour
 
         audioSource.Play();
         float clipLength = audioSource.clip.length;
-        Destroy(audioSource.gameObject, clipLength);
+        //Destroy(audioSource.gameObject, clipLength);
+        StartCoroutine(DestroyAudioSource(audioSource.gameObject, clipLength));
     }
 
     public void PlayRandomSoundFXClip(AudioClip[] audioClip, Transform spawnTransform, bool spatialBlend, float volume, float? minDistance = null, float? maxDistance = null)
@@ -58,7 +59,14 @@ public class SoundFXManager : MonoBehaviour
 
         audioSource.Play();
         float clipLength = audioSource.clip.length;
-        Destroy(audioSource.gameObject, clipLength);
+        StartCoroutine(DestroyAudioSource(audioSource.gameObject,clipLength));
+        //Destroy(audioSource.gameObject, clipLength);
+    }
+
+    IEnumerator DestroyAudioSource(GameObject Object, float duration)
+    {
+        yield return new WaitForSecondsRealtime(duration);
+        Destroy(Object);
     }
 
 }

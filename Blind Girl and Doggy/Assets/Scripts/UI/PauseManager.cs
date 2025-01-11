@@ -25,6 +25,7 @@ public class PauseManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isActive = false;
         StartCoroutine(TypePauseText());
     }
 
@@ -168,8 +169,9 @@ public class PauseManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(clips[1].length);
         pausePanel.SetActive(!pausePanel.activeSelf);
         UIManager.Instance.ToggleTimeScale(false);
-        CharacterManager.Instance.SoundPause();
         isActive = false;
+        yield return new WaitForSecondsRealtime(0.3f);
+        CharacterManager.Instance.SoundPause();
         CharacterManager.Instance.SetIsActive(true);
     }
 

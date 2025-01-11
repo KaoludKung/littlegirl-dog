@@ -30,7 +30,19 @@ public class NoteManager : JsonManager<NoteData>
     public static NoteManager Instance { get; private set; }
     private List<NoteItem> items = new List<NoteItem>();
     private int maxItems = 9;
-    private NoteUI inventoryUI;
+    private NoteUI noteUI;
+    public NoteUI NoteUI
+    {
+        get
+        {
+            if (noteUI == null || !noteUI.gameObject.activeInHierarchy)
+            {
+                noteUI = FindObjectOfType<NoteUI>();
+            }
+            return noteUI;
+        }
+    }
+
 
     public List<NoteItem> Items
     {
@@ -59,7 +71,7 @@ public class NoteManager : JsonManager<NoteData>
 
     private void Awake()
     {
-        inventoryUI = FindObjectOfType<NoteUI>();
+        //noteUI = FindObjectOfType<NoteUI>();
 
         if (Instance != null && Instance != this)
         {
@@ -131,7 +143,7 @@ public class NoteManager : JsonManager<NoteData>
             {
                 itemToAdd.isCollected = true;
                 Debug.Log("Item collected: " + itemToAdd.noteName);
-                inventoryUI.UpdateNoteUI();
+                NoteUI.UpdateNoteUI();
                 //SaveInventory();
             }
             else

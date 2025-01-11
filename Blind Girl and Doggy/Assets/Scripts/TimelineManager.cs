@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -5,13 +6,15 @@ public class TimelineManager : EventObject
 {
     [SerializeField] private PlayableDirector timeline;
     [SerializeField] private GameObject uiManagerObject;
-   
+    [SerializeField] private bool playerEnable = false;
+
     void Start()
     {
+        CharacterManager.Instance.SetIsActive(false);
+        CharacterManager.Instance.SetActiveUIPlayer(false);
         if (uiManagerObject != null)
         {
             uiManagerObject.SetActive(false);
-            CharacterManager.Instance.SetIsActive(false);
         }
     
         timeline.stopped += OnTimelineStopped;
@@ -26,12 +29,23 @@ public class TimelineManager : EventObject
     void OnTimelineStopped(PlayableDirector director)
     {
         EventManager.Instance.UpdateEventDataTrigger(TriggerEventID, true);
-        
-        if(uiManagerObject != null)
-        {
-            uiManagerObject.SetActive(true);
-            CharacterManager.Instance.SetIsActive(true);
-        }
+        StartCoroutine(UnlockPlayer());
+       
+    }
 
+    private IEnumerator UnlockPlayer()
+    {
+        if (playerEnable)
+        {
+            yield return new WaitForSeconds(1.5f);
+
+            CharacterManager.Instance.SetIsActive(true);
+            CharacterManager.Instance.SetActiveUIPlayer(true);
+
+            if (uiManagerObject != null)
+            {
+                uiManagerObject.SetActive(true);
+            }
+        }
     }
 }

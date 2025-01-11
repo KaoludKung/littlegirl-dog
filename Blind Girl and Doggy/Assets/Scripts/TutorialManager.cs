@@ -1,29 +1,100 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TutorialManager : EventObject
 {
-    [SerializeField] private int nextEventID;
     [SerializeField] private GameObject tutorialPanel;
-    [SerializeField] private AudioClip closeSound;
+    // 0: next 1: previous 2: exit
+    [SerializeField] private GameObject[] tutorialIcon;
+    [SerializeField] private Sprite[] tutorialImage;
+    [SerializeField] private AudioClip[] clips;
+    [SerializeField] private GameObject uiManagerObject;
+    [SerializeField] private bool playerEnable = false;
 
-    private AudioSource audioSource;
+    private int currentIndex = 0;
 
-    private void Awake()
+    void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        CharacterManager.Instance.SetIsActive(false);
+        CharacterManager.Instance.SetActiveUIPlayer(false);
+        if (uiManagerObject != null)
+            uiManagerObject.SetActive(false);
+
+        tutorialIcon[0].SetActive(false);
+        tutorialPanel.SetActive(true);
+        SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1);
+        UpdateMenu();
     }
 
-
-    public void ClosePopUp()
+    void Update()
     {
-        if (tutorialPanel != null)
-            tutorialPanel.SetActive(false);
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && tutorialPanel.activeSelf && currentIndex != 0)
+        {
+            currentIndex = (currentIndex - 1);
+            SoundFXManager.instance.PlaySoundFXClip(clips[0], transform, false, 1);
+            UpdateMenu();
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow) && tutorialPanel.activeSelf && currentIndex != tutorialImage.Length - 1)
+        {
+            currentIndex = (currentIndex + 1);
+            SoundFXManager.instance.PlaySoundFXClip(clips[0], transform, false, 1);
+            UpdateMenu();
+        }
 
-        SoundFXManager.instance.PlaySoundFXClip(closeSound, transform, false, 1.0f);
-        EventManager.Instance.UpdateEventDataTrigger(nextEventID, true);
+        if (Input.GetKeyDown(KeyCode.X) && tutorialPanel.activeSelf && tutorialIcon[2].activeSelf)
+        {
+            StartCoroutine(ClosePopUp());
+        }
     }
 
-   
+    IEnumerator ClosePopUp()
+    {
+        SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1);
+        tutorialPanel.SetActive(false);
+        EventManager.Instance.UpdateEventDataTrigger(TriggerEventID, true);
+
+        yield return new WaitForSeconds(1.0f);
+
+        if (playerEnable)
+        {
+            CharacterManager.Instance.SetIsActive(true);
+            CharacterManager.Instance.SetActiveUIPlayer(true);
+            if (uiManagerObject != null)
+                uiManagerObject.SetActive(true);
+        }
+    }
+
+    void UpdateMenu()
+    {
+        for (int i = 0; i < tutorialImage.Length; i++)
+        {
+            if(i == currentIndex)
+            {
+                tutorialPanel.GetComponent<Image>().sprite = tutorialImage[i];
+            }
+        }
+
+        if (currentIndex == 0)
+        {
+            tutorialIcon[0].SetActive(false);
+            tutorialIcon[1].SetActive(true);
+            tutorialIcon[2].SetActive(false);
+        }
+        else if (currentIndex == tutorialImage.Length - 1)
+        {
+            tutorialIcon[0].SetActive(true);
+            tutorialIcon[1].SetActive(false);
+            tutorialIcon[2].SetActive(true);
+        }
+        else
+        {
+            tutorialIcon[0].SetActive(true);
+            tutorialIcon[1].SetActive(true);
+            tutorialIcon[2].SetActive(false);
+        }
+
+    }
+
 }

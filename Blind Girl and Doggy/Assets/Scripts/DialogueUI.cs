@@ -71,7 +71,7 @@ public class DialogueUI : MonoBehaviour
         {
             typingSound.clip = character.typing;
 
-            if (character.fullname == "Dog")
+            if (character.fullname == "Freund")
             {
                 if (!isPlayingOneShot)
                 {

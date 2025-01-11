@@ -18,6 +18,7 @@ public class NoteUI : MonoBehaviour
 
     [SerializeField] private Sprite[] slotSelect;
     [SerializeField] private AudioClip[] clips; // 0: selected, 1: pressed
+    [SerializeField] private bool isUnlock = true;
 
     public bool isActive { get; private set; }
 
@@ -27,7 +28,6 @@ public class NoteUI : MonoBehaviour
     private List<NoteItem> allNotes = new List<NoteItem>();
 
     private const int visibleSlots = 3;
-
  
     private void Awake()
     {
@@ -44,7 +44,7 @@ public class NoteUI : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (!notePanel.activeSelf && !UIManager.Instance.IsAnyUIActive)
+            if (!notePanel.activeSelf && isUnlock && !UIManager.Instance.IsAnyUIActive)
             {
                 isActive = true;
                 CharacterManager.Instance.SoundPause();
@@ -183,4 +183,8 @@ public class NoteUI : MonoBehaviour
         }
     }
 
+    public void Unlock(bool n)
+    {
+        isUnlock = n;
+    }
 }

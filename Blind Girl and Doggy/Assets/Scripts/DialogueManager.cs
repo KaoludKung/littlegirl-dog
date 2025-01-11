@@ -14,6 +14,8 @@ public class DialogueManager : EventObject
     [SerializeField] private DialogueUI dialogueUI;
     [SerializeField] private GameObject uiManagerObject;
     [SerializeField] private Animator[] animators;
+    [SerializeField] private bool resetAnimation = false;
+    [SerializeField] private bool playerEnable = false;
 
     private int index;
     private int charIndex;
@@ -26,6 +28,7 @@ public class DialogueManager : EventObject
     void Start()
     {
         CharacterManager.Instance.SetIsActive(false);
+        CharacterManager.Instance.SetActiveUIPlayer(false);
         if (uiManagerObject != null)
             uiManagerObject.SetActive(false);
 
@@ -116,6 +119,9 @@ public class DialogueManager : EventObject
 
         dialogueUI.StopSound();
         dialogueUI.ToggleArrow(true);
+
+        yield return new WaitForSeconds(0.5f);
+
         isWriting = false;
         waitForNext = true;
     }
@@ -136,10 +142,25 @@ public class DialogueManager : EventObject
         yield return new WaitForSeconds(durationUnlock);
         EventManager.Instance.UpdateEventDataTrigger(TriggerEventID, true);
 
-        if (uiManagerObject != null)
-            uiManagerObject.SetActive(true);
-        CharacterManager.Instance.SetIsActive(true);
+        if (resetAnimation)
+        {
+            for (int i = 0; i < animators.Length; i++)
+            {
+                animators[i].SetInteger("IdleVariant", 0);
+            }
+        }
 
+        if (playerEnable)
+        {
+            yield return new WaitForSeconds(1.0f);
+            
+            if (uiManagerObject != null)
+                uiManagerObject.SetActive(true);
+
+            CharacterManager.Instance.SetIsActive(true);
+            CharacterManager.Instance.SetActiveUIPlayer(true);
+        }
+       
     }
 }
 

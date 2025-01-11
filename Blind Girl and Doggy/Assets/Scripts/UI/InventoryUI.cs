@@ -16,9 +16,10 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private Sprite emptySprite;
     [SerializeField] private Sprite[] slotSelect;
     [SerializeField] private AudioClip[] clips; // 0: selected, 1: pressed
-
+    [SerializeField] private bool isUnlock = true;
+    
     private InventoryManager inventory;
-  
+   
     public bool isActive { get; private set; }
 
     private int currentIndex = 0;
@@ -26,6 +27,8 @@ public class InventoryUI : MonoBehaviour
     private const int rows = 2;    // rows in Inventory
     private List<GameObject> itemSlots = new List<GameObject>();
     private List<InventoryItem> collectedItems = new List<InventoryItem>(); 
+    
+    public List<InventoryItem> CollectedItems => collectedItems;
 
     private void Awake()
     {
@@ -43,14 +46,14 @@ public class InventoryUI : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
         {
-            if (!inventoryPanel.activeSelf && !UIManager.Instance.IsAnyUIActive)
+            if (!inventoryPanel.activeSelf && isUnlock &&!UIManager.Instance.IsAnyUIActive)
             {
                 isActive = true;
                 CharacterManager.Instance.SoundPause();
                 CharacterManager.Instance.SetIsActive(false);
                 SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1.0f);
                 StartCoroutine(ToggleInventory());
-                UIManager.Instance.ToggleTimeScale(false);
+                UIManager.Instance.ToggleTimeScale(true);
             }     
         }
 
@@ -201,6 +204,11 @@ public class InventoryUI : MonoBehaviour
             CharacterManager.Instance.SoundUnPause();
             CharacterManager.Instance.SetIsActive(true);
         }
+    }
+
+    public void Unlock(bool n)
+    {
+        isUnlock = n;
     }
 }
 

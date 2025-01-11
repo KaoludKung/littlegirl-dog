@@ -10,6 +10,18 @@ public class InventoryManager : JsonManager<InventoryData>
     private List<InventoryItem> items = new List<InventoryItem>();
     private int maxItems = 6;
     private InventoryUI inventoryUI;
+    public InventoryUI InventoryUI
+    {
+        get
+        {
+            if (inventoryUI == null || !inventoryUI.gameObject.activeInHierarchy)
+            {
+                inventoryUI = FindObjectOfType<InventoryUI>();
+            }
+            return inventoryUI;
+        }
+    }
+
 
     public List<InventoryItem> Items
     {
@@ -38,7 +50,7 @@ public class InventoryManager : JsonManager<InventoryData>
 
     private void Awake()
     {
-        inventoryUI = FindObjectOfType<InventoryUI>();
+        //inventoryUI = FindObjectOfType<InventoryUI>();
 
         if (Instance != null && Instance != this)
         {
@@ -109,7 +121,7 @@ public class InventoryManager : JsonManager<InventoryData>
             {
                 itemToAdd.isCollected = true;
                 Debug.Log("Item collected: " + itemToAdd.itemName);
-                inventoryUI.UpdateInventoryUI();
+                InventoryUI.UpdateInventoryUI();
                 //SaveInventory();
             }
             else
@@ -131,7 +143,7 @@ public class InventoryManager : JsonManager<InventoryData>
             if (itemToRemove.isCollected)
             {
                 itemToRemove.isCollected = false;
-                inventoryUI.UpdateInventoryUI();
+                InventoryUI.UpdateInventoryUI();
                 Debug.Log("Remove a item from inventory");
                 //SaveInventory();
             }

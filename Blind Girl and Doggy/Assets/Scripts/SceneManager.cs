@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class SceneManager : MonoBehaviour 
 {
-    //[SerializeField] private string sceneName;
-    //[SerializeField] private AudioClip sceneClip;
-    //[SerializeField] private SceneOption sceneOption;
     public static SceneManager instance;
-
 
     private void Awake()
     {
@@ -24,7 +20,7 @@ public class SceneManager : MonoBehaviour
     public void ChangeScene(string sceneName)
     {
         PlayerDataManager.Instance.UpdateSceneName(sceneName);
-        EventManager.Instance.SaveEventData();
+        //EventManager.Instance.SaveEventData();
         InventoryManager.Instance.SaveInventory();
         PlayerDataManager.Instance.SavePlayerData();
         NoteManager.Instance.SaveNote();

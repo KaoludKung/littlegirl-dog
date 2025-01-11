@@ -14,7 +14,6 @@ public class Teleport : MonoBehaviour, Interactable
     [SerializeField] private Sprite alertSprite;
 
     private GirlController girlController;
-    private DogController dogController;
     private CameraSwitcher cameraSwitcher;
 
 
@@ -22,7 +21,6 @@ public class Teleport : MonoBehaviour, Interactable
     void Start()
     {
         girlController = FindObjectOfType<GirlController>();
-        dogController = FindObjectOfType<DogController>();
         cameraSwitcher = FindObjectOfType<CameraSwitcher>();
     }
 
