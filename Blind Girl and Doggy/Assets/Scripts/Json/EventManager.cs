@@ -83,6 +83,12 @@ public class EventManager : JsonManager<EventData>
         SaveJson(jsonData);
     }
 
+    public void DeleteEventData()
+    {
+        DeleteJson();
+        //InitializePaths("inventory.json");
+    }
+
     public void UpdateEventDataTrigger(int eventId, bool newTriggerStatus)
     {
         EventData eventData = eventList.Find(e => e.id == eventId);

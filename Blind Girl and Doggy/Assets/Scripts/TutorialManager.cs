@@ -14,11 +14,16 @@ public class TutorialManager : EventObject
     [SerializeField] private bool playerEnable = false;
 
     private int currentIndex = 0;
+    private DogController dogController;
 
     void Start()
     {
+        dogController = FindAnyObjectByType<DogController>();
+
         CharacterManager.Instance.SetIsActive(false);
         CharacterManager.Instance.SetActiveUIPlayer(false);
+        CharacterManager.Instance.SoundPause();
+
         if (uiManagerObject != null)
             uiManagerObject.SetActive(false);
 
@@ -59,8 +64,10 @@ public class TutorialManager : EventObject
 
         if (playerEnable)
         {
+            dogController.Animator.SetBool("isWalk", false);
             CharacterManager.Instance.SetIsActive(true);
             CharacterManager.Instance.SetActiveUIPlayer(true);
+            CharacterManager.Instance.SoundUnPause();
             if (uiManagerObject != null)
                 uiManagerObject.SetActive(true);
         }

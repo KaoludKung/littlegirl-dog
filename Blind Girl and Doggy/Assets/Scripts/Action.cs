@@ -69,6 +69,9 @@ public class Action : EventObject, Interactable
                 case ActionType.UseItemLong:
                     StartCoroutine(UseItemLong());
                     break;
+                case ActionType.ActiveNoAnimation:
+                    StartCoroutine(ActiveEventNoAnimation());
+                    break;
                 case ActionType.ActiveEvent:
                     StartCoroutine(ActiveEvent());
                     break;
@@ -159,7 +162,7 @@ public class Action : EventObject, Interactable
                 girlController.Animator.SetBool("isInteract", false);
                 StartCoroutine(FinalizeAction());
             }
-            else if(!inventoryItem.isCollected && InventoryUI.CollectedItems.Count < 7)
+            else if (!inventoryItem.isCollected && InventoryUI.CollectedItems.Count < 7)
             {
                 InventoryManager.Instance.AddItem(itemID);
                 progressBar.SetActive(false);
@@ -179,9 +182,17 @@ public class Action : EventObject, Interactable
                 actionText.text = "";
             }
         }
+    }  
         
-        
+    IEnumerator ActiveEventNoAnimation()
+    {
+        if(actionClips != null)
+            SoundFXManager.instance.PlaySoundFXClip(actionClips, transform, false, 1.0f);
+
+        StartCoroutine(FinalizeAction());
+        yield return new WaitForSeconds(1.5f);
     }
+
 
     IEnumerator ActiveEvent()
     {
@@ -210,11 +221,11 @@ public class Action : EventObject, Interactable
         EventManager.Instance.UpdateEventDataTrigger(TriggerEventID, true);
         actionText.text = actionResult;
 
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
         CharacterManager.Instance.SetIsActive(true);
         girlController.SetIsInteract(false);
 
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(2.0f);
         actionText.text = "";
         
         yield return null;
@@ -255,6 +266,7 @@ public enum ActionType
     PickUp,
     UseItemShort,
     UseItemLong,
+    ActiveNoAnimation,
     ActiveEvent,
     TakeNote,
     Exit

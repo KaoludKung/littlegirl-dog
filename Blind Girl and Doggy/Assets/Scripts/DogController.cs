@@ -15,6 +15,7 @@ public class DogController : MonoBehaviour
     private bool isMoving;
     private bool isWalkingSoundPlaying;
     private bool isRegeneratingStamina = false;
+    private Interactable currentInteractable;
 
     public Animator Animator => animator;
     public bool IsMoving => isMoving;
@@ -22,7 +23,7 @@ public class DogController : MonoBehaviour
 
     private void Awake()
     {
-        isActive = true;
+        isActive = false;
         walkSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         walkSource.clip = walkClip;
@@ -47,6 +48,18 @@ public class DogController : MonoBehaviour
         if (isActive)
         {
             MoveCharacterWithKeyboard();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q) && isActive)
+        {
+            if (currentInteractable != null && !isMoving)
+            {
+                currentInteractable.Interact();
+            }
+            else
+            {
+                Debug.Log("Bruh");
+            }
         }
     }
 
@@ -114,6 +127,23 @@ public class DogController : MonoBehaviour
             staminaFill.fillAmount += 0.1f;
         }
         isRegeneratingStamina = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Spots"))
+        {
+            currentInteractable = collision.GetComponent<Interactable>();
+
+            if (currentInteractable != null)
+            {
+                Debug.Log("There is spots");
+            }
+            else
+            {
+                Debug.Log("There is not spots");
+            }
+        }
     }
 
 

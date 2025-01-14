@@ -35,7 +35,7 @@ public class GirlController : MonoBehaviour
 
     private void Awake()
     {
-        isActive = true;
+        isActive = false;
         walkSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         walkSource.clip = walkClip;
@@ -75,7 +75,7 @@ public class GirlController : MonoBehaviour
             }
             else
             {
-                StartCoroutine(BarkTwice());
+                //StartCoroutine(BarkTwice());
                 Debug.Log("Bruh");
             }
         }
@@ -105,7 +105,7 @@ public class GirlController : MonoBehaviour
     {
         isBarking = true;
         targetPosition = dogControlller.transform.position;
-        dogControlller.staminaFill.fillAmount -= 0.05f;
+        dogControlller.staminaFill.fillAmount -= 0.1f;
         SoundFXManager.instance.PlaySoundFXClip(barkClip, dogTransform, true, 1.0f, 20.0f, 60.0f);
         dogControlller.Animator.SetInteger("BarkType", 1);
         yield return new WaitForSeconds(barkClip.length);
@@ -169,13 +169,13 @@ public class GirlController : MonoBehaviour
     {
         if (other.CompareTag("Interactable") && !isInteract)
         {
-            Debug.Log("Entering Interactable: " + other.gameObject.name);
+            //Debug.Log("Entering Interactable: " + other.gameObject.name);
             currentInteractable = other.GetComponent<Interactable>();
 
             if (currentInteractable != null)
             {
                 interactionIcon.gameObject.SetActive(true);
-                Debug.Log("Interaction icon shown.");
+                //Debug.Log("Interaction icon shown.");
             }
             else
             {
@@ -191,7 +191,7 @@ public class GirlController : MonoBehaviour
             if (interactionIcon != null)
             {
                 interactionIcon.gameObject.SetActive(false);
-                Debug.Log("Interaction icon hidden.");
+                //Debug.Log("Interaction icon hidden.");
             }
             currentInteractable = null;
         }

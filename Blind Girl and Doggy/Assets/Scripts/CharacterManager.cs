@@ -8,6 +8,7 @@ public class CharacterManager : MonoBehaviour
     private GirlController girlController;
     private DogController dogController;
     [SerializeField] private GameObject staminaBar;
+    [SerializeField] private GameObject heartIcon;
 
     private void Awake()
     {
@@ -45,7 +46,13 @@ public class CharacterManager : MonoBehaviour
         if (staminaBar != null)
         {
             staminaBar.SetActive(u);
-            Debug.Log("It's real.");
+            //Debug.Log("It's real.");
+        }
+
+        if(heartIcon != null)
+        {
+            heartIcon.SetActive(u);
+            //.Log("It's real.");
         }
     }
 

@@ -4,27 +4,17 @@ using UnityEngine;
 
 public class RandomSound : MonoBehaviour
 {
-    private AudioSource audioSoure;
-    public AudioClip[] clips;
-    private int clipIndex;
-
-    private int randomTime;
-    public int minRandomtime;
-    public int maxRandomtime;
+    [SerializeField] private AudioClip[] clips;
+    [SerializeField] private int  minRandomtime;
+    [SerializeField] private int maxRandomtime;
+    [SerializeField] private float minDistance;
+    [SerializeField] private float maxDistance;
+    [SerializeField] private bool spitalBlend;
 
     // Start is called before the first frame update
     void Start()
     {
-        audioSoure = gameObject.GetComponent<AudioSource>();
-
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            StartCoroutine(PlaySound());
-        }
+        StartCoroutine(PlayRandomSound());
     }
 
     private void OnTriggerExit(Collider other)
@@ -36,17 +26,13 @@ public class RandomSound : MonoBehaviour
 
     }
 
-    IEnumerator PlaySound()
+    IEnumerator PlayRandomSound()
     {
-        randomTime = Random.Range(minRandomtime, maxRandomtime);
-        yield return new WaitForSeconds(randomTime);
-        Debug.Log("Time: " + randomTime);
+        int r = Random.Range(minRandomtime, maxRandomtime);
+        yield return new WaitForSeconds(r);
+        SoundFXManager.instance.PlayRandomSoundFXClip(clips, transform, spitalBlend, 1.0f, minDistance, maxDistance);
 
-        clipIndex = Random.Range(0, clips.Length - 1);
-        audioSoure.volume = Random.Range(0.4f, 0.6f);
-        audioSoure.PlayOneShot(clips[clipIndex], 1f);
-
-        StartCoroutine(PlaySound());
-
+        yield return new WaitForSeconds(3.5f);
+        StartCoroutine(PlayRandomSound());
     }
 }

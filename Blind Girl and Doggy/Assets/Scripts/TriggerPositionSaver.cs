@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class TriggerPositionSaver : MonoBehaviour
 {
+    [SerializeField] Vector3 positionGirl;
     private Vector3 positionAtTrigger;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.CompareTag("Player"))  // ???????????? tag ???? "Player"
+        if (collision.CompareTag("Dog"))
         {
-            positionAtTrigger = other.transform.position;
-
-            Debug.Log("Player entered trigger at position: " + positionAtTrigger);
+            positionAtTrigger = collision.transform.position;
+            PlayerDataManager.Instance.UpdateDogPosition(positionAtTrigger);
+            PlayerDataManager.Instance.UpdateGirlPosition(positionGirl);
+            PlayerDataManager.Instance.SavePlayerData();
+            Destroy(gameObject);
         }
     }
 

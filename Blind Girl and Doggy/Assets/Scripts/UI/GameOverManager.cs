@@ -1,0 +1,191 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+public class GameOverManager : MonoBehaviour
+{
+    [SerializeField] private List<GameOverOption> gameoverOptions;
+    [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private Image gameOverTitle;
+    [SerializeField] private Sprite[] gameoverSprite;
+    [SerializeField] private AudioClip[] clips;
+    [SerializeField] private Transform[] character;
+    [SerializeField] private string sceneName;
+
+    public static GameOverManager instance;
+    private DogController dogController;
+    private GirlController girlController;
+    private int currentIndex = 0;
+    private bool isPressed = false;
+    public bool isActive { get; private set; }
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        UpdateMenu();
+        girlController = FindObjectOfType<GirlController>();
+        dogController = FindObjectOfType<DogController>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(PlayerDataManager.Instance.GetHearts() == 0)
+        {
+            gameoverOptions[0].gameoverText.text = "Retry";
+            gameOverTitle.sprite = gameoverSprite[3];
+        }
+        else
+        {
+            gameoverOptions[0].gameoverText.text = "Respawn";
+            gameOverTitle.sprite = gameoverSprite[4];
+        }
+
+        if (!isPressed)
+        {
+            if (Input.GetKeyDown(KeyCode.UpArrow) && gameOverPanel.activeSelf)
+            {
+                currentIndex = (currentIndex - 1 + gameoverOptions.Count) % gameoverOptions.Count;
+                SoundFXManager.instance.PlaySoundFXClip(clips[0], transform, false, 1);
+                UpdateMenu();
+            }
+            else if (Input.GetKeyDown(KeyCode.DownArrow) && gameOverPanel.activeSelf)
+            {
+                currentIndex = (currentIndex + 1) % gameoverOptions.Count;
+                SoundFXManager.instance.PlaySoundFXClip(clips[0], transform, false, 1);
+                UpdateMenu();
+            }
+
+            if (Input.GetKeyDown(KeyCode.Z) && gameOverPanel.activeSelf)
+            {
+                StartCoroutine(SelectOption());
+            }
+        }
+        
+    }
+
+    void UpdateMenu()
+    {
+        for (int i = 0; i < gameoverOptions.Count; i++)
+        {
+            GameOverOption option = gameoverOptions[i];
+
+            if (i == currentIndex)
+            {
+                option.buttonImage.sprite = gameoverSprite[1];
+            }
+            else
+            {
+                option.buttonImage.sprite = gameoverSprite[0];
+            }
+        }
+    }
+
+    IEnumerator SelectOption()
+    {
+        isPressed = true;
+        SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1);
+
+        for (int i = 0; i < gameoverOptions.Count; i++)
+        {
+            GameOverOption option = gameoverOptions[i];
+
+            if (i == currentIndex)
+            {
+                option.buttonImage.sprite = gameoverSprite[2];
+
+                yield return new WaitForSecondsRealtime(0.5f);
+
+                option.buttonImage.sprite = gameoverSprite[2];
+            }
+        }
+
+        yield return new WaitForSecondsRealtime(0.3f);
+
+
+        if(PlayerDataManager.Instance.GetHearts() == 0)
+        {
+            switch (currentIndex)
+            {
+                case 0:
+                    StartCoroutine(Retry());
+                    break;
+                case 1:
+                    StartCoroutine(ExitToMenu());
+                    break;
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            switch (currentIndex)
+            {
+                case 0:
+                    StartCoroutine(Respawn());
+                    break;
+                case 1:
+                    StartCoroutine(ExitToMenu());
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    IEnumerator Retry()
+    {
+        yield return new WaitForSecondsRealtime(clips[1].length);
+        SceneManager.instance.ChangeScene(sceneName);
+
+    }
+
+    IEnumerator Respawn()
+    {
+        character[0].position = PlayerDataManager.Instance.GetDogPosition();
+        character[1].position = PlayerDataManager.Instance.GetGirlPosition();
+        yield return new WaitForSecondsRealtime(2.0f);
+        isPressed = false;
+
+        girlController.Animator.SetBool("isWalk", false);
+        girlController.Animator.SetBool("isInteract", false);
+        dogController.Animator.SetBool("isWalk", false);
+        dogController.Animator.SetBool("isDig", false);
+        dogController.Animator.SetInteger("BarkType", 0);
+
+        CharacterManager.Instance.SetIsActive(true);
+        isActive = false;
+        OpenPanel();
+    }
+
+    IEnumerator ExitToMenu()
+    {
+        yield return new WaitForSecondsRealtime(clips[1].length + 0.5f);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Title");
+    }
+
+    public void OpenPanel()
+    {
+        gameOverPanel.SetActive(!gameOverPanel.activeSelf);
+    }
+
+    public void SetIsActive(bool g)
+    {
+        isActive = g;
+    }
+}
+
+[System.Serializable]
+public class GameOverOption
+{
+    public TextMeshProUGUI gameoverText;
+    public Image buttonImage;
+
+}

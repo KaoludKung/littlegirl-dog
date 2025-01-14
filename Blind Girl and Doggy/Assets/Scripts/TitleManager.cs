@@ -27,6 +27,12 @@ public class TitleManager : MonoBehaviour
 
     private void Awake()
     {
+        
+    }
+
+    private void StartWalking()
+    {
+        Time.timeScale = 1;
         animator[0].SetBool("isWalk", true);
         animator[1].SetBool("isWalk", true);
     }
@@ -34,6 +40,7 @@ public class TitleManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Invoke(nameof(StartWalking), 0.3f);
         StartCoroutine(ShowIntro());
         UpdateMenu();
         musicSource.PlayDelayed(1.5f);
@@ -119,11 +126,15 @@ public class TitleManager : MonoBehaviour
         cutsceneObject[0].SetActive(true);
         yield return new WaitForSeconds(2.5f);
         cutsceneObject[1].SetActive(true);
+        //cutsceneObject[4].SetActive(true);
+        //cutsceneObject[5].SetActive(true);
     }
 
     IEnumerator PressToStart()
     {
         cutsceneObject[1].SetActive(false);
+        //cutsceneObject[4].SetActive(false);
+        //cutsceneObject[5].SetActive(false);
         SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1);
         yield return new WaitForSeconds(clips[1].length);
         cutsceneObject[2].SetActive(true);

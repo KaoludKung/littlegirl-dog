@@ -6,6 +6,7 @@ public class SetActive : MonoBehaviour
 {
     [SerializeField] private SetType setType;
     [SerializeField] private GameObject targetObject;
+    [SerializeField] private float duration = 0;
     [SerializeField] private int cameraID = 0;
 
     private CameraSwitcher cameraSwitcher;
@@ -18,12 +19,19 @@ public class SetActive : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(setType == SetType.setactive)
+        StartCoroutine(ActiveNow());
+    }
+
+    IEnumerator ActiveNow()
+    {
+        yield return new WaitForSeconds(duration);
+
+        if (setType == SetType.setactive)
         {
             targetObject.SetActive(!targetObject.activeSelf);
         }
 
-        if(setType == SetType.switchcamera)
+        if (setType == SetType.switchcamera)
         {
             cameraSwitcher.SwitchCamera(cameraID);
         }

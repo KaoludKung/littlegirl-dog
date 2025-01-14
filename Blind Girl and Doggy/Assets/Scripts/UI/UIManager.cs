@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public bool IsAnyUIActive => inventoryUI.isActive == true || noteUI.isActive == true || pauseManager.isActive == true;
+    public bool IsAnyUIActive => inventoryUI.isActive == true || noteUI.isActive == true || pauseManager.isActive == true || GameOverManager?.isActive == true;
     public static UIManager Instance { get; private set; }
 
     private InventoryUI inventoryUI;
     private NoteUI noteUI;
     private PauseManager pauseManager;
+    private GameOverManager GameOverManager;
 
     private void Awake()
     {
         inventoryUI = FindObjectOfType<InventoryUI>();
         noteUI = FindObjectOfType<NoteUI>();
         pauseManager = FindObjectOfType<PauseManager>();
+        GameOverManager = FindObjectOfType<GameOverManager>();
 
         if (Instance != null && Instance != this)
         {

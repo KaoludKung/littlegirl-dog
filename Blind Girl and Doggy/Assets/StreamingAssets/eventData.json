@@ -10,90 +10,90 @@
       "id": 1,
       "nameEvent": "My Home",
       "type": "SceneManager",
-      "trigger": true
-    },
-    {
-      "id": 2,
-      "nameEvent": "",
-      "type": "",
       "trigger": false
     },
     {
+      "id": 2,
+      "nameEvent": "MyHome_01",
+      "type": "Dialogue",
+      "trigger": true
+    },
+    {
       "id": 3,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "MyHome_02",
+      "type": "Dialogue",
       "trigger": false
     },
     {
       "id": 4,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Dog is Running",
+      "type": "Timeline",
       "trigger": false
     },
     {
       "id": 5,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "MyHome_03",
+      "type": "Dialogue",
       "trigger": false
     },
     {
       "id": 6,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "How To Play Part 1",
+      "type": "Tutorial",
       "trigger": false
     },
     {
       "id": 7,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Help Margarete get the snack basket",
+      "type": "Objective",
       "trigger": false
     },
     {
       "id": 8,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Get the snack basket",
+      "type": "Action",
       "trigger": false
     },
     {
       "id": 9,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Go back and talk to Mommy",
+      "type": "Objective",
       "trigger": false
     },
     {
       "id": 10,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Talk to Mommy",
+      "type": "Action",
       "trigger": false
     },
     {
       "id": 11,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "MyHome_04",
+      "type": "Dialogue",
       "trigger": false
     },
     {
       "id": 12,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Leave the house",
+      "type": "Objective",
       "trigger": false
     },
     {
       "id": 13,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Leave the house",
+      "type": "Action",
       "trigger": false
     },
     {
       "id": 14,
-      "nameEvent": "",
-      "type": "",
-      "trigger": false
+      "nameEvent": "ForestDay_01",
+      "type": "Dialogue",
+      "trigger": true
     },
     {
       "id": 15,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Safely guide Margarete out of the forest",
+      "type": "Objective",
       "trigger": false
     },
     {

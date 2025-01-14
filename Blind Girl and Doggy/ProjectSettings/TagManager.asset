@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Wall
   - Interactable
+  - Dog
+  - Spots
   layers:
   - Default
   - TransparentFX
@@ -49,6 +51,9 @@ TagManager:
   - name: foreground-1
     uniqueID: 3162544459
     locked: 0
+  - name: spots
+    uniqueID: 2777005453
+    locked: 0
   - name: decoration
     uniqueID: 1821660635
     locked: 0
@@ -57,4 +62,7 @@ TagManager:
     locked: 0
   - name: player
     uniqueID: 1762614773
+    locked: 0
+  - name: front
+    uniqueID: 3629673073
     locked: 0

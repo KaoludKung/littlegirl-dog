@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.IO;
 
 public class Loading : MonoBehaviour
 {
@@ -9,6 +10,24 @@ public class Loading : MonoBehaviour
     private string baseText = "Loading";
     private bool isLoading = true;
     private string sceneName;
+
+    private string streamingAssetsPathA;
+    private string streamingAssetsPathB;
+    private string streamingAssetsPathC;
+    private string streamingAssetsPathD;
+
+    private void Awake()
+    {
+        streamingAssetsPathA = Path.Combine(Application.persistentDataPath, "playerData.json");
+        streamingAssetsPathB = Path.Combine(Application.persistentDataPath, "eventData.json");
+        streamingAssetsPathC = Path.Combine(Application.persistentDataPath, "note.json");
+        streamingAssetsPathD = Path.Combine(Application.streamingAssetsPath, "inventory.json");
+
+        PlayerDataManager.Instance.LoadPlayerData(streamingAssetsPathA);
+        EventManager.Instance.LoadEventData(streamingAssetsPathB);
+        NoteManager.Instance.LoadNote(streamingAssetsPathC);
+        InventoryManager.Instance.LoadInventory(streamingAssetsPathD);
+    }
 
     // Start is called before the first frame update
     void Start()
