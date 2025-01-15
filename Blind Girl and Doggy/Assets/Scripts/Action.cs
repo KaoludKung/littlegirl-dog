@@ -7,7 +7,6 @@ using TMPro;
 public class Action : EventObject, Interactable
 {
     [SerializeField] ActionType actionType;
-    [SerializeField] TextMeshProUGUI actionText;
     [SerializeField] string actionResult;
     [SerializeField] int itemID = 0;
     [SerializeField] Sprite alertSprite;
@@ -18,8 +17,10 @@ public class Action : EventObject, Interactable
     [SerializeField] string sceneName = "None";
 
     private GirlController girlController;
+    private NoteItem noteItem;
     private InventoryItem inventoryItem;
     private InventoryUI inventoryUI;
+    private ActionText actionText;
     private AudioSource AudioSource;
 
     public InventoryUI InventoryUI
@@ -40,6 +41,7 @@ public class Action : EventObject, Interactable
     private void Awake()
     {
         girlController = FindObjectOfType<GirlController>();
+        actionText = FindObjectOfType<ActionText>();
         AudioSource = GetComponent<AudioSource>();
     }
 
@@ -47,7 +49,7 @@ public class Action : EventObject, Interactable
     void Start()
     {
         inventoryItem = InventoryManager.Instance.GetItemByID(itemID);
-        actionText.text = "";
+        noteItem = NoteManager.Instance.GetItemByID(itemID);
     }
 
     public void Interact()
@@ -76,6 +78,7 @@ public class Action : EventObject, Interactable
                     StartCoroutine(ActiveEvent());
                     break;
                 case ActionType.TakeNote:
+                    StartCoroutine(TakeNote());
                     break;
                 case ActionType.Exit:
                     StartCoroutine(Exit());
@@ -102,12 +105,10 @@ public class Action : EventObject, Interactable
             else
             {
                 girlController.Animator.SetBool("isInteract", true);
-                actionText.text = "Oops, Your inventory is full.";
+                actionText.ActionDisplay("Oops, Your inventory is full.");
                 CharacterManager.Instance.SetIsActive(true);
                 girlController.Animator.SetBool("isInteract", false);
                 girlController.SetIsInteract(false);
-                yield return new WaitForSeconds(4.0f);
-                actionText.text = "";
 
             }
         }
@@ -172,17 +173,28 @@ public class Action : EventObject, Interactable
             else
             {
                 girlController.Animator.SetBool("isInteract", true);
-                actionText.text = "Oops, Your inventory is full.";
+                actionText.ActionDisplay("Oops, Your inventory is full.");
                 progressBar.SetActive(false);
                 isComplete = false;
                 CharacterManager.Instance.SetIsActive(true);
                 girlController.Animator.SetBool("isInteract", false);
                 girlController.SetIsInteract(false);
-                yield return new WaitForSeconds(4.0f);
-                actionText.text = "";
             }
         }
     }  
+
+    IEnumerator TakeNote()
+    {
+        if (!noteItem.isCollected)
+        {
+            NoteManager.Instance.AddItem(itemID);
+            girlController.Animator.SetBool("isInteract", true);
+            SoundFXManager.instance.PlaySoundFXClip(actionClips, transform, false, 1.0f);
+            yield return new WaitForSeconds(actionClips.length);
+            girlController.Animator.SetBool("isInteract", false);
+            StartCoroutine(FinalizeAction());
+        }
+    }
         
     IEnumerator ActiveEventNoAnimation()
     {
@@ -219,15 +231,13 @@ public class Action : EventObject, Interactable
     IEnumerator FinalizeAction()
     {
         EventManager.Instance.UpdateEventDataTrigger(TriggerEventID, true);
-        actionText.text = actionResult;
+        actionText.ActionDisplay(actionResult);
+        //actionText.text = actionResult;
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         CharacterManager.Instance.SetIsActive(true);
         girlController.SetIsInteract(false);
 
-        yield return new WaitForSeconds(2.0f);
-        actionText.text = "";
-        
         yield return null;
         Destroy(gameObject);
     }

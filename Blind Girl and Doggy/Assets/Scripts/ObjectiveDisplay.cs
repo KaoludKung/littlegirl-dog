@@ -25,7 +25,7 @@ public class ObjectiveDisplay : EventObject
         for (int i = 0; i <= objectiveName.Length; i++)
         {
             objectiveText.text = objectiveName.Substring(0, i);
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.05f);
         }
 
         audioSource.Stop();

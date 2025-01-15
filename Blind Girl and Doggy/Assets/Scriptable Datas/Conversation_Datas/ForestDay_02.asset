@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: ForestDay_02
   m_EditorClassIdentifier: 
   titleName: Forest_Day_02
-  lines: []
+  lines:
+  - character: {fileID: 11400000, guid: a178a33e62adcc14d9408084c0c0ca0e, type: 2}
+    text: Why are you barking so much? Is something wrong?

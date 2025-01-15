@@ -1235,6 +1235,7 @@ GameObject:
   - component: {fileID: 149112340}
   - component: {fileID: 149112342}
   - component: {fileID: 149112341}
+  - component: {fileID: 149112343}
   m_Layer: 5
   m_Name: dialogue_UI
   m_TagString: Untagged
@@ -1375,6 +1376,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &149112343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149112339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00394b045772b9345a9889372ee0382f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a_text: {fileID: 498199428}
 --- !u!1 &168513475
 GameObject:
   m_ObjectHideFlags: 0
@@ -4665,9 +4679,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1065448687}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -615, y: -494}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 345, y: 46}
   m_SizeDelta: {x: 600, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &498199428
@@ -4699,7 +4713,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 5913979
+    rgba: 4284104059
   m_fontColor: {r: 0.48235297, g: 0.2392157, b: 0.3529412, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -5179,7 +5193,6 @@ MonoBehaviour:
   eventID: 8
   TriggerEventID: 9
   actionType: 4
-  actionText: {fileID: 498199428}
   actionResult: You have picked up the basket. Press Shift to open the inventory.
   itemID: 0
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
@@ -5326,7 +5339,6 @@ MonoBehaviour:
   eventID: 13
   TriggerEventID: 14
   actionType: 6
-  actionText: {fileID: 498199428}
   actionResult: 
   itemID: 0
   alertSprite: {fileID: 21300000, guid: 1236c2a08ce1e264c9735e092837c6de, type: 3}
@@ -10655,7 +10667,6 @@ MonoBehaviour:
   eventID: 10
   TriggerEventID: 11
   actionType: 3
-  actionText: {fileID: 498199428}
   actionResult: 
   itemID: 0
   alertSprite: {fileID: 21300000, guid: 336977fd503f9c4439f4aab4e7f67e49, type: 3}
@@ -14419,7 +14430,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 38467fa143ac1404192c9aad6ab1d1e1, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -16045,7 +16056,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ea476b974fac3604fbf9f12dded9243f, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -18426,9 +18437,9 @@ RectTransform:
   - {fileID: 673655085}
   m_Father: {fileID: 1065448687}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1783.6666, y: 464.53088}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -137.3334, y: -70}
   m_SizeDelta: {x: 68, y: 808.8351}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1965901456
@@ -18581,9 +18592,9 @@ RectTransform:
   - {fileID: 1411314392}
   m_Father: {fileID: 1065448687}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 752, y: 464}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -208, y: -80}
   m_SizeDelta: {x: 128, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1984767605

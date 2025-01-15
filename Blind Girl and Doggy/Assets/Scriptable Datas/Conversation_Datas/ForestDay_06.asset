@@ -10,11 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0dc24e6a77c5a9438a97135c1d8511f, type: 3}
-  m_Name: ForestDay_04
+  m_Name: ForestDay_06
   m_EditorClassIdentifier: 
-  titleName: Forest_Day_04
-  lines:
-  - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
-    text: He seems like a strange person.
-  - character: {fileID: 11400000, guid: f0ebaf5b173e2be4996ddf9f14201427, type: 2}
-    text: Never mind, let's continue on our way.
+  titleName: Forest_Day_06
+  lines: []

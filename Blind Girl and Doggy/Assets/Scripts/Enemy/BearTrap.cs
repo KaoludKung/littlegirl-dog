@@ -37,7 +37,7 @@ public class BearTrap : EventObject
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Dog") || collision.CompareTag("Player"))
+        if (collision.CompareTag("Dog") && !isDestroy)
         {
             StartCoroutine(TrapWorking());
             SoundFXManager.instance.PlaySoundFXClip(trap_clip, transform, false, 1.0f);
@@ -49,7 +49,7 @@ public class BearTrap : EventObject
     {
         animator.speed = 1f;
         animator.Play("Trap");
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
         animator.Play("Trap", -1, 0f);
         animator.speed = 0f;
     }
@@ -57,8 +57,8 @@ public class BearTrap : EventObject
     IEnumerator TrapDisable()
     {
         animator.speed = 1f;
-        animator.Play("Trap");
-        yield return new WaitForSeconds(1.0f);
+        animator.Play("Trap", -1, 0f); 
+        yield return new WaitForSeconds(0.5f);
         animator.speed = 0f;
     }
 }

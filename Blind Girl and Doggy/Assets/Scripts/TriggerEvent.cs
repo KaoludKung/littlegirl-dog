@@ -6,6 +6,7 @@ public class TriggerEvent : MonoBehaviour
 {
     [SerializeField] int eventID;
     [SerializeField] float duration = 0;
+    [SerializeField] string tags = "Dog";
     [SerializeField] GameObject triggerGameObject;
     [SerializeField] GameObject gameooverPanel;
     private bool isActive = false;
@@ -20,7 +21,7 @@ public class TriggerEvent : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Dog") || collision.CompareTag("Player"))
+        if (collision.CompareTag(tags))
         {
             if (!isActive && EventManager.Instance.IsEventTriggered(eventID))
             {
@@ -36,11 +37,16 @@ public class TriggerEvent : MonoBehaviour
 
         if (isActive)
         {
-            triggerGameObject.SetActive(true);
+            if (!gameooverPanel.activeSelf)
+            {
+                triggerGameObject.SetActive(true);
+                Destroy(gameObject);
+            }
+            else
+            {
+                Debug.Log("Game Over Panel is active. Event cancelled.");
+            }
         }
-
-        yield return null;
-        Destroy(gameObject);
-        
     }
+
 }
