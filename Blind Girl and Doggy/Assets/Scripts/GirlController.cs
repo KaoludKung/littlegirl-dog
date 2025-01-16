@@ -216,6 +216,11 @@ public class GirlController : MonoBehaviour
         }
     }
 
+    public void SetIsMoving(bool value)
+    {
+        isMoving = value;
+    }
+
     public void SetIsActive(bool value)
     {
         isActive = value;

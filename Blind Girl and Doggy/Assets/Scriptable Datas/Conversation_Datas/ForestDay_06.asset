@@ -13,4 +13,42 @@ MonoBehaviour:
   m_Name: ForestDay_06
   m_EditorClassIdentifier: 
   titleName: Forest_Day_06
-  lines: []
+  lines:
+  - character: {fileID: 11400000, guid: 116f88c1bca8ea447a81aa1c193093c4, type: 2}
+    text: Yikes!!!
+  - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
+    text: Hey there, little one.
+  - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
+    text: Who are you?
+  - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
+    text: Before you ask my name, you should introduce yourself first.
+  - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
+    text: "I\u2019m so sorry, my name is Mar...."
+  - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
+    text: "I\u2019m Mr. Schlemmer, the gourmet wolf."
+  - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
+    text: But others like to say I resemble a fox more.
+  - character: {fileID: 11400000, guid: 116f88c1bca8ea447a81aa1c193093c4, type: 2}
+    text: Hey! You introduced yourself before I could!
+  - character: {fileID: 11400000, guid: 116f88c1bca8ea447a81aa1c193093c4, type: 2}
+    text: Wait a second... you're a wolf?
+  - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
+    text: "Don\u2019t tell me you\u2019re going to eat me?"
+  - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
+    text: "Oh no, don\u2019t worry. Human meat would make me sick."
+  - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
+    text: "But that\u2019s not important."
+  - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
+    text: "You\u2019ve gone off the path, little one. Why aren\u2019t you hurrying
+      to leave the forest?\r\n"
+  - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
+    text: "I wanted to pick some flowers for my neighbor. I was looking for a flower
+      field around here. Once I\u2019m done, I\u2019ll leave right away."
+  - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
+    text: Hm... this is crazy, but if you say so...
+  - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
+    text: "You\u2019ve picked the flowers, right?"
+  - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
+    text: All done!
+  - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
+    text: "Good. Then hurry to your neighbor\u2019s house. It\u2019s getting late."

@@ -7,17 +7,36 @@ public class ObjectiveDisplay : EventObject
 {
     [SerializeField] private string objectiveName = "Objective:";
     [SerializeField] private TextMeshProUGUI objectiveText;
+    [SerializeField] private GameObject uiManager;
+    [SerializeField] bool isEnable = false;
     private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
+        if (isEnable)
+        {
+            uiManager.SetActive(true);
+        }
+
         objectiveText.text = "";
         audioSource = GetComponent<AudioSource>();
         StartCoroutine(TypeObjectiveText());
     }
 
-    
+    private void Update()
+    {
+        if (UIManager.Instance.IsAnyUIActive)
+        {
+            audioSource.Pause();
+        }
+        else
+        {
+            audioSource.UnPause();
+        }
+    }
+
+
     private IEnumerator TypeObjectiveText()
     {
         audioSource.Play();
