@@ -13,6 +13,7 @@ public class Bridge : MonoBehaviour
     private Vector3[] bridgePosition;
     private Vector3 ropePosition;
     private Rigidbody2D rb;
+    private BoxCollider2D boxCollider;
     private GirlController controller;
 
     // Start is called before the first frame update
@@ -20,6 +21,7 @@ public class Bridge : MonoBehaviour
     {
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Character"), LayerMask.NameToLayer("Bridge"), true);
         rb = rope.GetComponent<Rigidbody2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
         controller = FindObjectOfType<GirlController>();
         bridgePosition = new Vector3[bridge.Length];
         ropePosition = rope.position;
@@ -32,16 +34,21 @@ public class Bridge : MonoBehaviour
 
     }
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") || collision.CompareTag("Dog"))
         {
-            charactersOnBridge++;
-            if (charactersOnBridge > 1)
-            {
-                StartCoroutine(DestroyBridge());
-            }
+              charactersOnBridge++;
+              if(charactersOnBridge > 1)
+              {
+                  StartCoroutine(Wait());
+                  StartCoroutine(DestroyBridge());
+                  StartCoroutine(Death());
+              }
+         
         }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -52,12 +59,20 @@ public class Bridge : MonoBehaviour
         }
     }
 
-    IEnumerator DestroyBridge()
+    public IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(1.5f);
+        controller.SetIsMoving(false);
+        controller.Animator.SetBool("isWalk", false);
+        controller.Animator.SetBool("isDeath", true);
+    }
+
+    public IEnumerator DestroyBridge()
     {
         yield return new WaitForSeconds(1.5f);
 
-        controller.SetIsMoving(false);
-        controller.Animator.SetBool("isWalk", false);
+        //controller.SetIsMoving(false);
+        //controller.Animator.SetBool("isWalk", false);
 
         floor.SetActive(false);
         SoundFXManager.instance.PlaySoundFXClip(breakClip, transform, false, 1.0f);
@@ -66,15 +81,18 @@ public class Bridge : MonoBehaviour
         {
             rb.bodyType = RigidbodyType2D.Dynamic;
         }
+    }
 
-        yield return new WaitForSeconds(0.5f);
+    public IEnumerator Death()
+    {
+        yield return new WaitForSeconds(2.0f);
         HeartManager.instance.HeartDecrease();
         yield return new WaitForSeconds(1.5f);
 
         StartCoroutine(ResetBridge());
     }
 
-    IEnumerator ResetBridge()
+    public IEnumerator ResetBridge()
     {
         floor.SetActive(true);
 
@@ -124,4 +142,10 @@ public class Bridge : MonoBehaviour
         //StartCoroutine(DestroyBridge());
     }
 
+    public void SetBoxCollider(bool b)
+    {
+        boxCollider.enabled = b;
+    }
+
 }
+

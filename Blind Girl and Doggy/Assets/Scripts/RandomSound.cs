@@ -11,28 +11,32 @@ public class RandomSound : MonoBehaviour
     [SerializeField] private float maxDistance;
     [SerializeField] private bool spitalBlend;
 
+    private GameOverManager gameover;
+
     // Start is called before the first frame update
     void Start()
     {
+        gameover = FindObjectOfType<GameOverManager>();
         StartCoroutine(PlayRandomSound());
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            StopAllCoroutines();
-        }
-
     }
 
     IEnumerator PlayRandomSound()
     {
-        int r = Random.Range(minRandomtime, maxRandomtime);
-        yield return new WaitForSeconds(r);
-        SoundFXManager.instance.PlayRandomSoundFXClip(clips, transform, spitalBlend, 1.0f, minDistance, maxDistance);
+        while (true)
+        {
+            if (!gameover.isActive)
+            {
+                int r = Random.Range(minRandomtime, maxRandomtime);
+                yield return new WaitForSeconds(r);
 
-        yield return new WaitForSeconds(3.5f);
-        StartCoroutine(PlayRandomSound());
+                if(!gameover.isActive)
+                    SoundFXManager.instance.PlayRandomSoundFXClip(clips, transform, spitalBlend, 1.0f, minDistance, maxDistance);
+            }
+            else
+            {
+                yield return null;
+            }
+        }
     }
+
 }

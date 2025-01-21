@@ -73,4 +73,24 @@ public class CharacterManager : MonoBehaviour
             dogController.GetComponent<AudioSource>().UnPause();
         }
     }
+
+    public void PauseAllSound()
+    {
+        AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
+
+        foreach (AudioSource audio in allAudioSources)
+        {
+            audio.Pause();
+        }
+    }
+
+    public void UnpauseAllSound()
+    {
+        AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
+
+        foreach (AudioSource audio in allAudioSources)
+        {
+            audio.UnPause();
+        }
+    }
 }

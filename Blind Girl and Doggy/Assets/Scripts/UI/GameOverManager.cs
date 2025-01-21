@@ -154,12 +154,26 @@ public class GameOverManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(2.0f);
         isPressed = false;
 
-        girlController.Animator.SetBool("isWalk", false);
-        girlController.Animator.SetBool("isInteract", false);
-        dogController.Animator.SetBool("isWalk", false);
-        dogController.Animator.SetBool("isDig", false);
+        foreach (AnimatorControllerParameter parameter in girlController.Animator.parameters)
+        {
+            if (parameter.type == AnimatorControllerParameterType.Bool)
+            {
+                girlController.Animator.SetBool(parameter.name, false);
+            }
+        }
+
+        foreach (AnimatorControllerParameter parameter in dogController.Animator.parameters)
+        {
+            if (parameter.type == AnimatorControllerParameterType.Bool)
+            {
+                dogController.Animator.SetBool(parameter.name, false);
+            }
+        }
+
         dogController.Animator.SetInteger("BarkType", 0);
 
+        yield return new WaitForSecondsRealtime(0.2f);
+        CharacterManager.Instance.UnpauseAllSound();
         CharacterManager.Instance.SetIsActive(true);
         isActive = false;
         OpenPanel();
@@ -174,6 +188,15 @@ public class GameOverManager : MonoBehaviour
     public void OpenPanel()
     {
         gameOverPanel.SetActive(!gameOverPanel.activeSelf);
+
+        if (!gameOverPanel.activeSelf)
+        {
+            CharacterManager.Instance.PauseAllSound();
+        }
+        else
+        {
+            CharacterManager.Instance.UnpauseAllSound();
+        }
     }
 
     public void SetIsActive(bool g)

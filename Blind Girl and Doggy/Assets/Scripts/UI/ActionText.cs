@@ -16,12 +16,17 @@ public class ActionText : MonoBehaviour
     public void ActionDisplay(string result)
     {
         a_text.text = result;
-        StartCoroutine(ResetDisplay());
+        StartCoroutine(ResetDisplay(result));
     }
 
-    IEnumerator ResetDisplay()
+    IEnumerator ResetDisplay(string result)
     {
-        yield return new WaitForSeconds(3.5f);
-        a_text.text = "";
+        yield return new WaitForSeconds(5.0f);
+
+        if(a_text.text == result)
+        {
+            a_text.text = "";
+        }
+
     }
 }

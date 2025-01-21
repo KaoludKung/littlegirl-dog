@@ -266,6 +266,8 @@ MonoBehaviour:
   TriggerEventID: 8
   objectiveName: 'Objective: Help Margarete get the snack basket'
   objectiveText: {fileID: 1165992753}
+  uiManager: {fileID: 451269379}
+  isEnable: 1
 --- !u!82 &33431487
 AudioSource:
   m_ObjectHideFlags: 0
@@ -803,6 +805,8 @@ MonoBehaviour:
   TriggerEventID: 10
   objectiveName: 'Objective: Go back and talk to Mommy'
   objectiveText: {fileID: 1165992753}
+  uiManager: {fileID: 451269379}
+  isEnable: 1
 --- !u!114 &107032344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15643,6 +15647,8 @@ MonoBehaviour:
   TriggerEventID: 13
   objectiveName: 'Objective: Leave the house'
   objectiveText: {fileID: 1165992753}
+  uiManager: {fileID: 451269379}
+  isEnable: 1
 --- !u!1 &1697944712
 GameObject:
   m_ObjectHideFlags: 0

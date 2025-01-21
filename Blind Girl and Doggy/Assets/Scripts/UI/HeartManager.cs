@@ -9,6 +9,8 @@ public class HeartManager : MonoBehaviour
     [SerializeField] AudioClip failedSound;
     public static HeartManager instance;
 
+    private DogController dogController;
+    private GirlController girlController;
 
     private void Awake()
     {
@@ -18,6 +20,8 @@ public class HeartManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        dogController = FindObjectOfType<DogController>();
+        girlController = FindObjectOfType<GirlController>();
         InitializetHeart();
     }
 
@@ -62,6 +66,17 @@ public class HeartManager : MonoBehaviour
         CharacterManager.Instance.SoundPause();
         GameOverManager.instance.SetIsActive(true);
 
+        foreach (AnimatorControllerParameter parameter in dogController.Animator.parameters)
+        {
+            if (parameter.type == AnimatorControllerParameterType.Bool)
+            {
+                dogController.Animator.SetBool(parameter.name, false);
+            }
+        }
+
+        dogController.Animator.SetInteger("BarkType", 0);
+        dogController.Animator.SetBool("isDeath", true);
+
         int heart = PlayerDataManager.Instance.GetHearts() - 1;
         PlayerDataManager.Instance.UpdateHearts(heart);
         PlayerDataManager.Instance.SavePlayerData();
@@ -81,8 +96,24 @@ public class HeartManager : MonoBehaviour
     IEnumerator Death()
     {
         SoundFXManager.instance.PlaySoundFXClip(failedSound, transform, false, 1.0f);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.2f);
         GameOverManager.instance.OpenPanel();
+    }
+
+    public void ResetGirlAnimation()
+    {
+        foreach (AnimatorControllerParameter parameter in girlController.Animator.parameters)
+        {
+            if (parameter.type == AnimatorControllerParameterType.Bool)
+            {
+                girlController.Animator.SetBool(parameter.name, false);
+            }
+        }
+    }
+
+    public void GirlDeath()
+    {
+        girlController.Animator.SetBool("isDeath", true);
     }
 
 }

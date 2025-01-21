@@ -7,6 +7,8 @@ public class DogController : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     [SerializeField] private AudioClip walkClip;
+    [SerializeField] private Image dogIcon;
+    [SerializeField] private Sprite[] dogSprite;
     public Image staminaFill;
     public bool isActive { get; private set; }
 
@@ -14,7 +16,7 @@ public class DogController : MonoBehaviour
     private Animator animator;
     private bool isMoving;
     private bool isDigging;
-    private bool isWalkingSoundPlaying;
+    //private bool isWalkingSoundPlaying;
     private bool isRegeneratingStamina = false;
     private Interactable currentInteractable;
 
@@ -41,6 +43,8 @@ public class DogController : MonoBehaviour
 
     void Update()
     {
+        ChangeIcon();
+
         if (!isRegeneratingStamina && staminaFill.fillAmount < 1.0f)
         {
             StartCoroutine(IncreaseStamina());
@@ -62,6 +66,18 @@ public class DogController : MonoBehaviour
             {
                 Debug.Log("Bruh");
             }
+        }
+    }
+
+    void ChangeIcon()
+    {
+        if(staminaFill.fillAmount != 0.0f)
+        {
+            dogIcon.sprite = dogSprite[0];
+        }
+        else
+        {
+            dogIcon.sprite = dogSprite[1];
         }
     }
 
@@ -116,7 +132,7 @@ public class DogController : MonoBehaviour
             }
 
             walkSource.loop = false;
-            isWalkingSoundPlaying = false;
+            //isWalkingSoundPlaying = false;
         }
     }
 
@@ -164,7 +180,7 @@ public class DogController : MonoBehaviour
         if (collision.gameObject.CompareTag("Wall"))
         {
             isMoving = false;
-            isWalkingSoundPlaying = false;
+            //isWalkingSoundPlaying = false;
 
             if (walkSource.isPlaying)
             {

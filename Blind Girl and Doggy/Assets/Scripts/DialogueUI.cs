@@ -77,7 +77,7 @@ public class DialogueUI : MonoBehaviour
                 {
                     isPlayingOneShot = true;
                     typingSound.PlayOneShot(character.typing);
-                    Debug.Log("One Shot");
+                    //Debug.Log("One Shot");
                     StartCoroutine(ResetOneShotFlag());
                 }
             }
@@ -86,7 +86,7 @@ public class DialogueUI : MonoBehaviour
                 if (!typingSound.isPlaying)
                 {
                     typingSound.Play();
-                    Debug.Log("Loop");
+                    //Debug.Log("Loop");
                 }
             }
         }

@@ -16,16 +16,17 @@ public class Frog : MonoBehaviour
 
     private IEnumerator PlayAnimationAndSoundRandomly()
     {
-        float randomInterval = Random.Range(minInterval, maxInterval);
-        yield return new WaitForSeconds(randomInterval);
+        while (true)
+        {
+            float randomInterval = Random.Range(minInterval, maxInterval);
+            yield return new WaitForSeconds(randomInterval);
 
-        SoundFXManager.instance.PlaySoundFXClip(ribbit, transform, true, 1.0f, 5, 10);
-        animator.SetBool("isSmile", true);
+            SoundFXManager.instance.PlaySoundFXClip(ribbit, transform, true, 1.0f, 5, 10);
+            animator.SetBool("isSmile", true);
 
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+            yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
 
-        animator.SetBool("isSmile", false);
-        StartCoroutine(PlayAnimationAndSoundRandomly());
-
+            animator.SetBool("isSmile", false);
+        }
     }
 }
