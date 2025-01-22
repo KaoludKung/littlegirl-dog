@@ -102,7 +102,7 @@ public class TitleManager : MonoBehaviour
                 PlayerDataManager.Instance.DeletePlayerData();
                 InventoryManager.Instance.DeleteInventory();
                 NoteManager.Instance.DeleteNote();
-                StartCoroutine(MoveOn("Prologue", 1.5f));
+                StartCoroutine(MoveOn("Prologue", 2.0f));
                 PlayerDataManager.Instance.UpdateNewGame(false);
             }
             else if (Input.GetKeyDown(KeyCode.X))
@@ -286,7 +286,7 @@ public class TitleManager : MonoBehaviour
 
     void QuitGame()
     {
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
         Debug.Log("Quit Game");
     }

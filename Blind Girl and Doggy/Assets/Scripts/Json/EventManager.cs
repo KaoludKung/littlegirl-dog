@@ -86,7 +86,7 @@ public class EventManager : JsonManager<EventData>
     public void DeleteEventData()
     {
         DeleteJson();
-        //InitializePaths("inventory.json");
+        InitializePaths("inventory.json");
     }
 
     public void UpdateEventDataTrigger(int eventId, bool newTriggerStatus)

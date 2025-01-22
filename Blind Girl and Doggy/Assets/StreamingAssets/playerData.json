@@ -9,7 +9,8 @@
     "y": 0.0,
     "z": 0.0
   },
-  "sceneName": "",
-  "isNewGame":  true,
-  "hearts": 3
+  "sceneName": "Prologue",
+  "isNewGame": true,
+  "isSpined": false,
+  "hearts": 0
 }

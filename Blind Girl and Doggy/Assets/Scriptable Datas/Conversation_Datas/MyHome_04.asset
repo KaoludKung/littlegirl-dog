@@ -22,7 +22,7 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 618b9c0c975a3b845bb2022b59147aea, type: 2}
     text: "It won\u2019t take too long, but please be careful along the way, okay?\r"
   - character: {fileID: 11400000, guid: f0ebaf5b173e2be4996ddf9f14201427, type: 2}
-    text: "No need to worry, I\u2019ve got Bruno by my side."
+    text: "No need to worry, I\u2019ve got Freund by my side."
   - character: {fileID: 11400000, guid: a178a33e62adcc14d9408084c0c0ca0e, type: 2}
     text: "By the way, what\u2019s in the basket?"
   - character: {fileID: 11400000, guid: 618b9c0c975a3b845bb2022b59147aea, type: 2}

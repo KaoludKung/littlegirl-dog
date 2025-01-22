@@ -8,10 +8,20 @@ public class TimelineManager : EventObject
     [SerializeField] private GameObject uiManagerObject;
     [SerializeField] private bool playerEnable = false;
 
+    private DogController dogController;
+
+    private void Awake()
+    {
+        dogController = FindObjectOfType<DogController>();
+        dogController.Animator.SetBool("isWalk", false);
+        dogController.StopFootStep();
+    }
+
     void Start()
     {
         CharacterManager.Instance.SetIsActive(false);
         CharacterManager.Instance.SetActiveUIPlayer(false);
+       
         if (uiManagerObject != null)
         {
             uiManagerObject.SetActive(false);

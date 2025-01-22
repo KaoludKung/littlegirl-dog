@@ -43,10 +43,10 @@ public class JumpScare : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         deathVisual.sprite = visuals[0];
         deathVisual.gameObject.SetActive(true);
-        SoundFXManager.instance.PlaySoundFXClip(clips[0], transform, false, 1.0f);
+        SoundFXManager.instance.PlaySoundFXClip(clips[0], transform, false, 0.6f);
         yield return new WaitForSeconds(clips[0].length);
         deathVisual.sprite = visuals[1];
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(2.5f);
         GameOverManager.instance.OpenPanel();
         
     }
@@ -56,10 +56,10 @@ public class JumpScare : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         deathVisual.sprite = visuals[2];
         deathVisual.gameObject.SetActive(true);
-        SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1.0f);
+        SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 0.6f);
         yield return new WaitForSeconds(clips[1].length);
         deathVisual.sprite = visuals[3];
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(2.5f);
         GameOverManager.instance.OpenPanel();
 
     }
@@ -69,8 +69,8 @@ public class JumpScare : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         deathVisual.sprite = visuals[4];
         deathVisual.gameObject.SetActive(true);
-        SoundFXManager.instance.PlaySoundFXClip(clips[2], transform, false, 1.0f);
-        yield return new WaitForSeconds(clips[2].length + 2.0f);
+        SoundFXManager.instance.PlaySoundFXClip(clips[2], transform, false, 0.6f);
+        yield return new WaitForSeconds(clips[2].length + 1.0f);
         GameOverManager.instance.OpenPanel();
 
     }

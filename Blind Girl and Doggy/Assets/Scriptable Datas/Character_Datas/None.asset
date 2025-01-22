@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullname: None
   portrait: {fileID: 21300000, guid: e5c6fcf9f1ac9ef4f8abbbf96a396a10, type: 3}
-  typing: {fileID: 8300000, guid: 4f007bd903a844f4cbf2759f57b9a7c3, type: 3}
-  animatorController: {fileID: 0}
+  typing: {fileID: 8300000, guid: 589c386a0dc955548ba411f5c6eeb7e1, type: 3}
   animationCondition: None
   conditionID: 0

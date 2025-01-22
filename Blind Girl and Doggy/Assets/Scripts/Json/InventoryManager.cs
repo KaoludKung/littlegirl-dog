@@ -108,6 +108,25 @@ public class InventoryManager : JsonManager<InventoryData>
     public void DeleteInventory()
     {
         DeleteJson();
+
+        if (File.Exists(persistentPath))
+        {
+            LoadInventory(persistentPath);
+        }
+        else
+        {
+            if (File.Exists(streamingAssetsPath))
+            {
+                File.Copy(streamingAssetsPath, persistentPath);
+                LoadInventory(persistentPath);
+                Debug.Log("Copied default inventory data to Persistent Data Path.");
+            }
+            else
+            {
+                Debug.LogError("Default inventory data not found in StreamingAssets.");
+            }
+        }
+
         //InitializePaths("inventory.json");
     }
 

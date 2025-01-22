@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 
 public class GirlController : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
-    [SerializeField] private float distance = 3f;
+    [SerializeField] private float distance = 2.0f;
     [SerializeField] private AudioClip barkClip;
     [SerializeField] private AudioClip walkClip;
     [SerializeField] private Transform dogTransform;
     [SerializeField] private DogController dogControlller;
     [SerializeField] private GameObject interactionIcon;
+    [SerializeField] private TextMeshProUGUI tooFar;
     [SerializeField] private Image progressFill;
     [SerializeField] private GameObject progressSlider;
 
@@ -39,6 +41,7 @@ public class GirlController : MonoBehaviour
         walkSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         walkSource.clip = walkClip;
+        tooFar.text = "";
     }
 
     
@@ -57,33 +60,85 @@ public class GirlController : MonoBehaviour
 
     void Update()
     {
+       
         if (Input.GetKeyDown(KeyCode.Z) && isActive)
         {
-            if (!dogControlller.IsMoving && !isBarking && dogControlller.staminaFill.fillAmount > 0)
-            {
-                StartCoroutine(HandleMove());
-            } 
-        }
+            float distance = Vector3.Distance(transform.position, dogTransform.position);
+            Debug.Log("Distance to Dog: " + distance);
 
-        if (Input.GetKeyDown(KeyCode.X) && !dogControlller.IsMoving && isActive)
-        {
-            if (currentInteractable != null && !isMoving && !isInteract)
+            if (!isBarking && !dogControlller.IsMoving)
             {
-                Debug.Log("Performing action with: " + currentInteractable);
-                currentInteractable.Interact();
-                StartCoroutine(BarkTwice());
+                if (dogControlller.staminaFill.fillAmount > 0 && distance <= 25f)
+                {
+                    StartCoroutine(HandleMove());
+                }
+                else if (dogControlller.staminaFill.fillAmount == 0)
+                {
+                    tooFar.text = "Not enough stamina T_T";
+                    StartCoroutine(DogSad());
+                    StartCoroutine(TooFar());
+                }
+                else
+                {
+                    tooFar.text = "Too far :(";
+                    StartCoroutine(DogSad());
+                    StartCoroutine(TooFar());
+                }
             }
             else
             {
-                //StartCoroutine(BarkTwice());
-                Debug.Log("Bruh");
+                tooFar.text = "No barking while moving!";
+                StartCoroutine(TooFar());
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.X) && isActive)
+        {
+            if (!dogControlller.IsMoving)
+            {
+                if (currentInteractable != null && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount > 0)
+                {
+                    Debug.Log("Performing action with: " + currentInteractable);
+                    currentInteractable.Interact();
+                    StartCoroutine(BarkTwice());
+                }
+                else if (currentInteractable != null && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount == 0)
+                {
+                    tooFar.text = "Not enough stamina T_T";
+                    StartCoroutine(DogSad());
+                    StartCoroutine(TooFar());
+                }
+                else
+                {
+                    tooFar.text = "Nothing for Margarete to do here.";
+                    StartCoroutine(TooFar());
+                }
+            }
+            else
+            {
+                tooFar.text = "No barking while moving!";
+                StartCoroutine(TooFar());
+            }
+        }
+        
 
         if (isMoving)
         {
             MoveTowardsTarget();
         }
+    }
+
+    IEnumerator DogSad()
+    {
+        dogControlller.Animator.SetInteger("IdleVariant", 2);
+        yield return new WaitForSeconds(1.2f);
+        dogControlller.Animator.SetInteger("IdleVariant", 0);
+    }
+
+    IEnumerator TooFar()
+    {
+        yield return new WaitForSeconds(1.0f);
+        tooFar.text = "";
     }
 
     IEnumerator BarkTwice()

@@ -7,6 +7,7 @@ public class DogController : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     [SerializeField] private AudioClip walkClip;
+    [SerializeField] private GameObject toofar;
     [SerializeField] private Image dogIcon;
     [SerializeField] private Sprite[] dogSprite;
     public Image staminaFill;
@@ -83,12 +84,23 @@ public class DogController : MonoBehaviour
 
     void MoveCharacterWithKeyboard()
     {
-        float horizontal = Input.GetAxis("Horizontal");
+        float horizontal = 0f;
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            horizontal = -1f;
+        }
+        else if (Input.GetKey(KeyCode.RightArrow))
+        {
+            horizontal = 1f;
+        }
+
 
         if (horizontal != 0)
         {
             isMoving = true;
             transform.position += new Vector3(horizontal * speed * Time.deltaTime, 0, 0);
+            animator.SetInteger("IdleVariant", 0);
             animator.SetBool("isWalk", true);
 
             if (horizontal < 0)
@@ -115,6 +127,14 @@ public class DogController : MonoBehaviour
             {
                 walkSource.loop = false;
             }
+        }
+    }
+
+    public void StopFootStep()
+    {
+        if (walkSource.isPlaying)
+        {
+            walkSource.loop = false;
         }
     }
 
@@ -188,6 +208,25 @@ public class DogController : MonoBehaviour
             }
 
             Debug.Log("Collided with Wall, movement stopped and sound stopped.");
+        }
+    }
+
+    void LateUpdate()
+    {
+        if (toofar != null)
+        {
+            if (transform.localScale.x < 0)
+            {
+                toofar.transform.localScale = new Vector3(-Mathf.Abs(toofar.transform.localScale.x),
+                                                                  toofar.transform.localScale.y,
+                                                                  toofar.transform.localScale.z);
+            }
+            else
+            {
+                toofar.transform.localScale = new Vector3(Mathf.Abs(toofar.transform.localScale.x),
+                                                                  toofar.transform.localScale.y,
+                                                                  toofar.transform.localScale.z);
+            }
         }
     }
 

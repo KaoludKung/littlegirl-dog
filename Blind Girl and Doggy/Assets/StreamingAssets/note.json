@@ -17,15 +17,15 @@
     {
       "id": 3,
       "noteName": "Note 3",
-      "noteDate": "Day 10 of July, Year XX15",
-      "noteDetail": "",
+      "noteDate": "Day 10 of August, Year XX15",
+      "noteDetail": "A month has passed, and now we truly feel that Mother has abandoned us. There has been no news or any sign from her. We are heartbroken. Why did Mother do this to us? Did we do something wrong? We're so sorry. Please, come back.",
       "isCollected": false
     },
     {
       "id": 4,
       "noteName": "Note 4",
-      "noteDate": "Day 10 of August, Year XX15",
-      "noteDetail": "A month has passed, and now we truly feel that Mother has abandoned us. There has been no news or any sign from her. We are heartbroken. Why did Mother do this to us? Did we do something wrong? We're so sorry. Please, come back.",
+      "noteDate": "Day 15 of August, Year XX15",
+      "noteDetail": "Our supplies and money are running low. If we don't do something soon, we might starve. We need to find a solution before it's too late.",
       "isCollected": false
     },
     {

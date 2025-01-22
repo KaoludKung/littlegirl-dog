@@ -87,6 +87,25 @@ public class PlayerDataManager : JsonManager<PlayerData>
     public void DeletePlayerData()
     {
         DeleteJson();
+
+        if (File.Exists(persistentPath))
+        {
+            LoadPlayerData(persistentPath);
+        }
+        else
+        {
+            if (File.Exists(streamingAssetsPath))
+            {
+                File.Copy(streamingAssetsPath, persistentPath);
+                LoadPlayerData(persistentPath);
+                Debug.Log("Copied default player data to Persistent Data Path.");
+            }
+            else
+            {
+                Debug.LogError("Default player data not found in StreamingAssets.");
+            }
+        }
+
         //InitializePaths("playerData.json");
     }
 

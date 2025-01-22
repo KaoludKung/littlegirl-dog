@@ -130,6 +130,25 @@ public class NoteManager : JsonManager<NoteData>
     public void DeleteNote()
     {
         DeleteJson();
+
+        if (File.Exists(persistentPath))
+        {
+            LoadNote(persistentPath);
+        }
+        else
+        {
+            if (File.Exists(streamingAssetsPath))
+            {
+                File.Copy(streamingAssetsPath, persistentPath);
+                LoadNote(persistentPath);
+                Debug.Log("Copied default note data to Persistent Data Path.");
+            }
+            else
+            {
+                Debug.LogError("Default note data not found in StreamingAssets.");
+            }
+        }
+
         //InitializePaths("inventory.json");
     }
 

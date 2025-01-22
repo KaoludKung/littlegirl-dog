@@ -29,7 +29,7 @@ public class HeartManager : MonoBehaviour
     {
         if (!PlayerDataManager.Instance.GetIsSpined())
         {
-            int random = Random.Range(1, 3);
+            int random = Random.Range(1, 5);
             PlayerDataManager.Instance.UpdateHearts(random);
             PlayerDataManager.Instance.UpdateIsSpined(true);
             PlayerDataManager.Instance.SavePlayerData();
@@ -84,6 +84,7 @@ public class HeartManager : MonoBehaviour
         if (PlayerDataManager.Instance.GetHearts() != 0)
         {
             StartCoroutine(Death());
+            //JumpScare.instance.jumpScare();
         }
         else
         {

@@ -86,140 +86,140 @@
     },
     {
       "id": 14,
-      "nameEvent": "ForestDay_01",
-      "type": "Dialogue",
+      "nameEvent": "Forest Intro",
+      "type": "Timeline",
       "trigger": true
     },
     {
       "id": 15,
+      "nameEvent": "ForestDay_01",
+      "type": "Dialogue",
+      "trigger": false
+    },
+    {
+      "id": 16,
       "nameEvent": "Safely guide Margarete out of the forest",
       "type": "Objective",
       "trigger": false
     },
     {
-      "id": 16,
-      "nameEvent": "",
-      "type": "",
-      "trigger": false
-    },
-    {
       "id": 17,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "First Spot Appear",
+      "type": "Timeline",
       "trigger": false
     },
     {
       "id": 18,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Digging Tutorial",
+      "type": "Tutorial",
       "trigger": false
     },
     {
       "id": 19,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Pick up Acron",
+      "type": "Action",
       "trigger": false
     },
     {
       "id": 20,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Use Acron",
+      "type": "Action",
       "trigger": false
     },
     {
       "id": 21,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Destroy trap 1",
+      "type": "Result",
       "trigger": false
     },
     {
       "id": 22,
-      "nameEvent": "",
-      "type": "",
-      "trigger": false
+      "nameEvent": "Fruend barks",
+      "type": "Timeline",
+      "trigger": true
     },
     {
       "id": 23,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "ForestDay_02",
+      "type": "Dialogue",
       "trigger": false
     },
     {
       "id": 24,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Hunter appears",
+      "type": "Timeline",
       "trigger": false
     },
     {
       "id": 25,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "ForestDay_03",
+      "type": "Dialogue",
       "trigger": false
     },
     {
       "id": 26,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Hunter leaves",
+      "type": "Timeline",
       "trigger": false
     },
     {
       "id": 27,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "ForestDay_04",
+      "type": "Dialogue",
       "trigger": false
     },
     {
       "id": 28,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "ForestDay_05",
+      "type": "Dialogue",
       "trigger": false
     },
     {
       "id": 29,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": " Lead Margarete to pick flowers",
+      "type": "Objective",
       "trigger": false
     },
     {
       "id": 30,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Monster's head'",
+      "type": "Timeline",
       "trigger": false
     },
     {
       "id": 31,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Pick up flowers",
+      "type": "Action",
       "trigger": false
     },
     {
       "id": 32,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Wolf Jumpscare",
+      "type": "Timeline",
       "trigger": false
     },
     {
       "id": 33,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "ForestDay_06",
+      "type": "Dialogue",
       "trigger": false
     },
     {
       "id": 34,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Wolf Bye",
+      "type": "Timeline",
       "trigger": false
     },
     {
       "id": 35,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "ForestDay_07",
+      "type": "Dialogue",
       "trigger": false
     },
     {
       "id": 36,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Forest Night",
+      "type": "SceneManager",
       "trigger": false
     },
     {
@@ -605,6 +605,60 @@
       "nameEvent": "",
       "type": "",
       "trigger": false
+    },
+    {
+      "id": 101,
+      "nameEvent": "Take Note 1",
+      "type": "Note",
+      "trigger": true
+    },
+    {
+      "id": 102,
+      "nameEvent": "Take Note 2",
+      "type": "Note",
+      "trigger": true
+    },
+    {
+      "id": 103,
+      "nameEvent": "Take Note 3",
+      "type": "Note",
+      "trigger": true
+    },
+    {
+      "id": 104,
+      "nameEvent": "Take Note 4",
+      "type": "Note",
+      "trigger": true
+    },
+    {
+      "id": 105,
+      "nameEvent": "Take Note 5",
+      "type": "Note",
+      "trigger": true
+    },
+    {
+      "id": 106,
+      "nameEvent": "Take Note 6",
+      "type": "Note",
+      "trigger": true
+    },
+    {
+      "id": 107,
+      "nameEvent": "Take Note 7",
+      "type": "Note",
+      "trigger": true
+    },
+    {
+      "id": 108,
+      "nameEvent": "Take Note 8",
+      "type": "Note",
+      "trigger": true
+    },
+    {
+      "id": 109,
+      "nameEvent": "Take Note 9",
+      "type": "Note",
+      "trigger": true
     }
   ]
 }

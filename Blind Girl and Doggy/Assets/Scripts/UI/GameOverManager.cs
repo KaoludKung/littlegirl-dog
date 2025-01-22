@@ -173,9 +173,9 @@ public class GameOverManager : MonoBehaviour
         dogController.Animator.SetInteger("BarkType", 0);
 
         yield return new WaitForSecondsRealtime(0.2f);
-        CharacterManager.Instance.UnpauseAllSound();
         CharacterManager.Instance.SetIsActive(true);
         isActive = false;
+        CharacterManager.Instance.UnpauseAllSound();
         OpenPanel();
     }
 
@@ -187,16 +187,13 @@ public class GameOverManager : MonoBehaviour
 
     public void OpenPanel()
     {
-        gameOverPanel.SetActive(!gameOverPanel.activeSelf);
-
         if (!gameOverPanel.activeSelf)
         {
             CharacterManager.Instance.PauseAllSound();
         }
-        else
-        {
-            CharacterManager.Instance.UnpauseAllSound();
-        }
+
+        gameOverPanel.SetActive(!gameOverPanel.activeSelf);
+
     }
 
     public void SetIsActive(bool g)

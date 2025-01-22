@@ -5,7 +5,7 @@ using UnityEngine;
 public class RandomSound : MonoBehaviour
 {
     [SerializeField] private AudioClip[] clips;
-    [SerializeField] private int  minRandomtime;
+    [SerializeField] private int minRandomtime;
     [SerializeField] private int maxRandomtime;
     [SerializeField] private float minDistance;
     [SerializeField] private float maxDistance;
@@ -24,19 +24,13 @@ public class RandomSound : MonoBehaviour
     {
         while (true)
         {
-            if (!gameover.isActive)
-            {
-                int r = Random.Range(minRandomtime, maxRandomtime);
-                yield return new WaitForSeconds(r);
+            int r = Random.Range(minRandomtime, maxRandomtime);
+            yield return new WaitForSeconds(r);
 
-                if(!gameover.isActive)
-                    SoundFXManager.instance.PlayRandomSoundFXClip(clips, transform, spitalBlend, 1.0f, minDistance, maxDistance);
-            }
-            else
+            if (gameover == null || !gameover.isActive)
             {
-                yield return null;
+                SoundFXManager.instance.PlayRandomSoundFXClip(clips, transform, spitalBlend, 1.0f, minDistance, maxDistance);
             }
         }
     }
-
 }

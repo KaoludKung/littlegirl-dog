@@ -60,14 +60,16 @@ public class TutorialManager : EventObject
         tutorialPanel.SetActive(false);
         EventManager.Instance.UpdateEventDataTrigger(TriggerEventID, true);
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
 
         if (playerEnable)
         {
             dogController.Animator.SetBool("isWalk", false);
+            
             CharacterManager.Instance.SetIsActive(true);
             CharacterManager.Instance.SetActiveUIPlayer(true);
             CharacterManager.Instance.SoundUnPause();
+            
             if (uiManagerObject != null)
                 uiManagerObject.SetActive(true);
         }
