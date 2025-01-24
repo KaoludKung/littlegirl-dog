@@ -18,7 +18,7 @@ public class JumpScare : MonoBehaviour
         instance = this;
     }
 
-    public void jumpScare()
+    public void Jumpscare()
     {
         int i = Random.Range(1, maxJumpscare);
         PlayerDataManager.Instance.UpdateIsSpined(false);
@@ -27,18 +27,18 @@ public class JumpScare : MonoBehaviour
         switch (i)
         {
             case 1: 
-                StartCoroutine(jumpScareAnimation1());
+                StartCoroutine(JumpScareAnimation1());
                 break;
             case 2:
-                StartCoroutine(jumpScareAnimation2());
+                StartCoroutine(JumpScareAnimation2());
                 break;
             case 3:
-                StartCoroutine(jumpScareAnimation3());
+                StartCoroutine(JumpScareAnimation3());
                 break;
         }
     }
 
-    IEnumerator jumpScareAnimation1()
+    IEnumerator JumpScareAnimation1()
     {
         yield return new WaitForSeconds(0.5f);
         deathVisual.sprite = visuals[0];
@@ -51,7 +51,7 @@ public class JumpScare : MonoBehaviour
         
     }
 
-    IEnumerator jumpScareAnimation2()
+    IEnumerator JumpScareAnimation2()
     {
         yield return new WaitForSeconds(0.5f);
         deathVisual.sprite = visuals[2];
@@ -64,7 +64,7 @@ public class JumpScare : MonoBehaviour
 
     }
 
-    IEnumerator jumpScareAnimation3()
+    IEnumerator JumpScareAnimation3()
     {
         yield return new WaitForSeconds(0.5f);
         deathVisual.sprite = visuals[4];

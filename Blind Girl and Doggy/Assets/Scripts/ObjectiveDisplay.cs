@@ -14,16 +14,12 @@ public class ObjectiveDisplay : EventObject
     // Start is called before the first frame update
     void Start()
     {
-        if (isEnable)
-        {
-            uiManager.SetActive(true);
-        }
-
         objectiveText.text = "";
         audioSource = GetComponent<AudioSource>();
         StartCoroutine(TypeObjectiveText());
     }
 
+    /*
     private void Update()
     {
         if (UIManager.Instance.IsAnyUIActive)
@@ -35,7 +31,7 @@ public class ObjectiveDisplay : EventObject
             audioSource.UnPause();
         }
     }
-
+    */
 
     private IEnumerator TypeObjectiveText()
     {
@@ -49,8 +45,15 @@ public class ObjectiveDisplay : EventObject
 
         audioSource.Stop();
         EventManager.Instance.UpdateEventDataTrigger(TriggerEventID, true);
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(3.0f);
         objectiveText.text = "";
         
+        if (isEnable)
+        {
+            CharacterManager.Instance.SetIsActive(true);
+            CharacterManager.Instance.SetActiveUIPlayer(true);
+            uiManager.SetActive(true);
+        }
+
     }
 }

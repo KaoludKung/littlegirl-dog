@@ -189,6 +189,7 @@ public class GameOverManager : MonoBehaviour
     {
         if (!gameOverPanel.activeSelf)
         {
+            CharacterManager.Instance.SoundStop();
             CharacterManager.Instance.PauseAllSound();
         }
 

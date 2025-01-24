@@ -74,6 +74,15 @@ public class CharacterManager : MonoBehaviour
         }
     }
 
+    public void SoundStop()
+    {
+        if (girlController != null && dogController != null)
+        {
+            girlController.GetComponent<AudioSource>().Stop();
+            dogController.GetComponent<AudioSource>().Stop();
+        }
+    }
+
     public void PauseAllSound()
     {
         AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();

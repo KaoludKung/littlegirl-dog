@@ -6,7 +6,6 @@ using TMPro;
 
 public class DialogueManager : EventObject
 {
-    [SerializeField] private float speed = 0.05f;
     [SerializeField] private float durationUnlock = 0;
     [SerializeField] private Conversation conversation;
     [SerializeField] private DialogueOption dialogueOption;
@@ -16,12 +15,35 @@ public class DialogueManager : EventObject
     [SerializeField] private bool resetAnimation = false;
     [SerializeField] private bool playerEnable = false;
 
+    private float speed;
     private int index;
     private int charIndex;
     private bool started;
     private bool waitForNext;
     private bool isWriting;
     private bool isSkipping;
+
+    private void Awake()
+    {
+        if (PlayerPrefs.HasKey("speedText"))
+        {
+            speed = PlayerPrefs.GetFloat("speedText");
+        }
+        else
+        {
+            PlayerPrefs.SetFloat("speedText", 0.05f);
+            speed = PlayerPrefs.GetFloat("speedText");
+        }
+
+        if(speed == 0.05)
+        {
+            dialogueUI.speedText.text = "Speed up";
+        }
+        else
+        {
+            dialogueUI.speedText.text = "Slow down";
+        }
+    }
 
 
     void Start()
@@ -41,6 +63,30 @@ public class DialogueManager : EventObject
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
+        {
+            if (started)
+            {
+                if (speed == 0.05f)
+                {
+                    speed = 0.025f;
+                    PlayerPrefs.SetFloat("speedText", speed);
+                    speed = PlayerPrefs.GetFloat("speedText");
+                    dialogueUI.speedText.text = "Slow down";
+                }
+                else
+                {
+                    speed = 0.05f;
+                    PlayerPrefs.SetFloat("speedText", speed);
+                    speed = PlayerPrefs.GetFloat("speedText");
+                    dialogueUI.speedText.text = "Speed up";
+                }
+
+                Debug.Log("Speed:" + speed);
+            }
+        }
+
+
         if (Input.GetKeyDown(KeyCode.Z))
         {
             if (isWriting)

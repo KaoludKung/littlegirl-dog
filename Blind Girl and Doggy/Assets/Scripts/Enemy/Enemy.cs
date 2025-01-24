@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed = 0.5f;
+    public float speed = 5f;
     public float chaseSpeed = 1.0f;
     public float detectionRange = 1f;
     public float attackRange = 1f;
@@ -82,7 +82,6 @@ public class Enemy : MonoBehaviour
     }
 
 
-
     protected virtual void Chase()
     {
         if (audioSource.clip != chaseSound)
@@ -118,11 +117,11 @@ public class Enemy : MonoBehaviour
     {
         if (targetPosition.x < transform.position.x)
         {
-            transform.localScale = new Vector3(-2, 2, 2);
+            transform.localScale = new Vector3(-0.9f, 0.9f, 0.9f);
         }
         else if (targetPosition.x > transform.position.x)
         {
-            transform.localScale = new Vector3(2, 2, 2);
+            transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
         }
     }
 

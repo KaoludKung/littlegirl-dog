@@ -68,7 +68,7 @@ public class GirlController : MonoBehaviour
 
             if (!isBarking && !dogControlller.IsMoving)
             {
-                if (dogControlller.staminaFill.fillAmount > 0 && distance <= 25f)
+                if (dogControlller.staminaFill.fillAmount > 0 && distance <= 30f)
                 {
                     StartCoroutine(HandleMove());
                 }

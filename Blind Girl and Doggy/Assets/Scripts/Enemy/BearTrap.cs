@@ -40,6 +40,7 @@ public class BearTrap : EventObject
         if (collision.CompareTag("Dog") && !isDestroy)
         {
             StartCoroutine(TrapWorking());
+            HeartManager.instance.HeartDecrease();
             SoundFXManager.instance.PlaySoundFXClip(trap_clip, transform, false, 1.0f);
         }
     }
@@ -51,8 +52,7 @@ public class BearTrap : EventObject
         yield return new WaitForSeconds(0.5f);
         animator.Play("Trap", -1, 0f);
         animator.speed = 0f;
-        yield return new WaitForSeconds(0.5f);
-        HeartManager.instance.HeartDecrease();
+        
     }
 
     IEnumerator TrapDisable()

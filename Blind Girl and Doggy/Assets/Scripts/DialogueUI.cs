@@ -12,6 +12,7 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private Image dialogueSprite;
     [SerializeField] private Image arrowSprite;
     [SerializeField] private AudioSource typingSound;
+    public TextMeshProUGUI speedText;
 
     private bool isPlayingOneShot = false;
 

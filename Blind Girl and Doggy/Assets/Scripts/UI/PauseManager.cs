@@ -172,7 +172,12 @@ public class PauseManager : MonoBehaviour
         isActive = false;
         yield return new WaitForSecondsRealtime(0.3f);
         CharacterManager.Instance.SoundPause();
-        CharacterManager.Instance.SetIsActive(true);
+
+        if (Hiding.instance?.IsHidden != true)
+        {
+            CharacterManager.Instance.SetIsActive(true);
+        }
+
     }
 
     void OpenSetting()

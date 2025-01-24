@@ -202,7 +202,13 @@ public class InventoryUI : MonoBehaviour
             isActive = false;
             UIManager.Instance.ToggleTimeScale(false);
             CharacterManager.Instance.SoundUnPause();
-            CharacterManager.Instance.SetIsActive(true);
+
+            if (Hiding.instance?.IsHidden != true)
+            {
+                CharacterManager.Instance.SetIsActive(true);
+            }
+
+            //CharacterManager.Instance.SetIsActive(true);
         }
     }
 

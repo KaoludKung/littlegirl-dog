@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class HeartManager : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI heartAmount;
+    //[SerializeField] TextMeshProUGUI heartAmount;
+    [SerializeField] Image[] heartImage;
     [SerializeField] AudioClip failedSound;
     public static HeartManager instance;
 
@@ -29,19 +31,50 @@ public class HeartManager : MonoBehaviour
     {
         if (!PlayerDataManager.Instance.GetIsSpined())
         {
-            int random = Random.Range(1, 5);
-            PlayerDataManager.Instance.UpdateHearts(random);
+            //int random = Random.Range(1, 5);
+            PlayerDataManager.Instance.UpdateHearts(3);
             PlayerDataManager.Instance.UpdateIsSpined(true);
             PlayerDataManager.Instance.SavePlayerData();
+            HeartUpdate();
 
-            StartCoroutine(ShowRandomNumbers(random));
+            //StartCoroutine(ShowRandomNumbers(random));
         }
         else
         {
-            heartAmount.text = "X " + PlayerDataManager.Instance.GetHearts();
+            HeartUpdate();
+            //heartAmount.text = "X " + PlayerDataManager.Instance.GetHearts();
         }
     }
 
+    void HeartUpdate()
+    {
+        if(PlayerDataManager.Instance.GetHearts() == 3)
+        {
+            heartImage[0].color = new Color32(255, 255, 255, 255);
+            heartImage[1].color = new Color32(255, 255, 255, 255);
+            heartImage[2].color = new Color32(255, 255, 255, 255);
+        }else if(PlayerDataManager.Instance.GetHearts() == 2)
+        {
+            heartImage[0].color = new Color32(255, 255, 255, 255);
+            heartImage[1].color = new Color32(255, 255, 255, 255);
+            heartImage[2].color = new Color32(66, 66, 66, 255);
+        }
+        else if (PlayerDataManager.Instance.GetHearts() == 1)
+        {
+            heartImage[0].color = new Color32(255, 255, 255, 255);
+            heartImage[1].color = new Color32(66, 66, 66, 255);
+            heartImage[2].color = new Color32(66, 66, 66, 255);
+        }
+        else
+        {
+            heartImage[0].color = new Color32(66, 66, 66, 255);
+            heartImage[1].color = new Color32(66, 66, 66, 255);
+            heartImage[2].color = new Color32(66, 66, 66, 255);
+        }
+
+    }
+
+    /*
     IEnumerator ShowRandomNumbers(int finalValue)
     {
         float duration = 3.0f;
@@ -52,13 +85,13 @@ public class HeartManager : MonoBehaviour
             elapsed += Time.deltaTime;
 
             int fakeValue = Random.Range(0, 3);
-            heartAmount.text = "X " + fakeValue;
+            //heartAmount.text = "X " + fakeValue;
 
             yield return null;
         }
 
-        heartAmount.text = "X " + finalValue;
-    }
+        //heartAmount.text = "X " + finalValue;
+    }*/
 
     public void HeartDecrease()
     {
@@ -76,10 +109,11 @@ public class HeartManager : MonoBehaviour
 
         dogController.Animator.SetInteger("BarkType", 0);
         dogController.Animator.SetBool("isDeath", true);
-
+        
         int heart = PlayerDataManager.Instance.GetHearts() - 1;
         PlayerDataManager.Instance.UpdateHearts(heart);
         PlayerDataManager.Instance.SavePlayerData();
+        HeartUpdate();
 
         if (PlayerDataManager.Instance.GetHearts() != 0)
         {
@@ -88,10 +122,10 @@ public class HeartManager : MonoBehaviour
         }
         else
         {
-            JumpScare.instance.jumpScare();
+            JumpScare.instance.Jumpscare();
         }
 
-        heartAmount.text = "X " + heart;
+        //heartAmount.text = "X " + heart;
     }
 
     IEnumerator Death()
