@@ -34,6 +34,7 @@ public class Spots : MonoBehaviour, Interactable
         dogController.Animator.SetBool("isDig", false);
         CharacterManager.Instance.SetIsActive(true);
         secretItem.SetActive(true);
+        dogController.SetIsDigging(true);
         Destroy(gameObject);
     }
 

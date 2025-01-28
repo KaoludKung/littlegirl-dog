@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0dc24e6a77c5a9438a97135c1d8511f, type: 3}
+  m_Name: ForestNight_04
+  m_EditorClassIdentifier: 
+  titleName: Forest_Night_04
+  lines:
+  - character: {fileID: 11400000, guid: 116f88c1bca8ea447a81aa1c193093c4, type: 2}
+    text: "(That sound of footsteps\u2026)"
+  - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
+    text: Is that Mr. Wormwood?
+  - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
+    text: Ha ha, you can recognize me just by the sound of my steps?
+  - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
+    text: "I\u2019m impressed."
+  - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
+    text: Yes, but what are you doing around here?
+  - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
+    text: "\u2026"
+  - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
+    text: "I\u2019ve been waiting for you."
+  - character: {fileID: 11400000, guid: 116f88c1bca8ea447a81aa1c193093c4, type: 2}
+    text: Waiting for me? Why?
+  - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
+    text: You somehow survived that thing, even though I thought it would be your
+      end...
+  - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
+    text: "Now I had to use my backup plan, even though I\u2019m afraid of that thing
+      too. So frustrating."
+  - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
+    text: Why are you doing this? Did I do something wrong?
+  - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
+    text: "It\u2019s not your fault, little one..."
+  - character: {fileID: 11400000, guid: e08d1d2217b3d38419e4e528ba3459c8, type: 2}
+    text: "But if anyone is to blame, it\u2019s that old hag! Everything\u2019s her
+      fault!"
+  - character: {fileID: 11400000, guid: 116f88c1bca8ea447a81aa1c193093c4, type: 2}
+    text: What do you mean?
+  - character: {fileID: 11400000, guid: e08d1d2217b3d38419e4e528ba3459c8, type: 2}
+    text: "I won\u2019t let you meet her, no matter what."
+  - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
+    text: "Please, don\u2019t!"

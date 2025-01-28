@@ -156,7 +156,6 @@ public class DogController : MonoBehaviour
         }
     }
 
-
     IEnumerator IncreaseStamina()
     {
         while (staminaFill.fillAmount < 1.0f)
@@ -233,6 +232,11 @@ public class DogController : MonoBehaviour
     public void SetIsActive(bool value)
     {
         isActive = value;
+    }
+
+    public void SetIsDigging(bool value)
+    {
+        isDigging = value;
     }
 
 }

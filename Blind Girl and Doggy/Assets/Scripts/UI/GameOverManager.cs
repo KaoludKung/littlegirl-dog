@@ -17,6 +17,7 @@ public class GameOverManager : MonoBehaviour
     public static GameOverManager instance;
     private DogController dogController;
     private GirlController girlController;
+    private Monster monster;
     private int currentIndex = 0;
     private bool isPressed = false;
     public bool isActive { get; private set; }
@@ -32,6 +33,7 @@ public class GameOverManager : MonoBehaviour
         UpdateMenu();
         girlController = FindObjectOfType<GirlController>();
         dogController = FindObjectOfType<DogController>();
+        monster = FindObjectOfType<Monster>();
     }
 
     // Update is called once per frame
@@ -143,7 +145,8 @@ public class GameOverManager : MonoBehaviour
     IEnumerator Retry()
     {
         yield return new WaitForSecondsRealtime(clips[1].length);
-        SceneManager.instance.ChangeScene(sceneName);
+        Time.timeScale = 1;
+        SceneManager.instance.ChangeScene(sceneName, false);
 
     }
 
@@ -151,6 +154,12 @@ public class GameOverManager : MonoBehaviour
     {
         character[0].position = PlayerDataManager.Instance.GetDogPosition();
         character[1].position = PlayerDataManager.Instance.GetGirlPosition();
+
+        if (character[2] != null)
+        {
+            character[2].position = new Vector3(-5.97f,1.20f, 0f);
+        }
+
         yield return new WaitForSecondsRealtime(2.0f);
         isPressed = false;
 
@@ -174,9 +183,18 @@ public class GameOverManager : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(0.2f);
         CharacterManager.Instance.SetIsActive(true);
+        girlController.SetIsInteract(false);
+        girlController.ResetCurrentInteractable();
         isActive = false;
         CharacterManager.Instance.UnpauseAllSound();
+
+        if (monster != null)
+        {
+            monster.SetIsKill(true);
+        }
+
         OpenPanel();
+        Time.timeScale = 1;
     }
 
     IEnumerator ExitToMenu()
@@ -191,6 +209,7 @@ public class GameOverManager : MonoBehaviour
         {
             CharacterManager.Instance.SoundStop();
             CharacterManager.Instance.PauseAllSound();
+            Time.timeScale = 0;
         }
 
         gameOverPanel.SetActive(!gameOverPanel.activeSelf);

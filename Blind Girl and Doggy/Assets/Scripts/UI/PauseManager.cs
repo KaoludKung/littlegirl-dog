@@ -171,7 +171,7 @@ public class PauseManager : MonoBehaviour
         UIManager.Instance.ToggleTimeScale(false);
         isActive = false;
         yield return new WaitForSecondsRealtime(0.3f);
-        CharacterManager.Instance.SoundPause();
+        CharacterManager.Instance.SoundUnPause();
 
         if (Hiding.instance?.IsHidden != true)
         {

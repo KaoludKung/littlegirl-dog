@@ -6,6 +6,7 @@ public class SceneObject : EventObject
 {
     [SerializeField] string sceneName;
     [SerializeField] float times;
+    [SerializeField] bool isLoading = true;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,15 @@ public class SceneObject : EventObject
     {
         EventManager.Instance.UpdateEventDataTrigger(TriggerEventID, true);
         yield return new WaitForSeconds(times);
-        SceneManager.instance.ChangeScene(sceneName);
+
+        if (isLoading)
+        {
+            SceneManager.instance.ChangeScene(sceneName);
+        }
+        else
+        {
+            SceneManager.instance.ChangeSceneImmediately(sceneName);
+        }
     }
 }
+

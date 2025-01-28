@@ -19,17 +19,15 @@ public class Hiding : MonoBehaviour, Interactable
 
     private void Awake()
     {
-        instance = this;
+
         girlController = FindObjectOfType<GirlController>();
 
-        // ???????????? array ?????????? spriteRenderer.Length
         originalSortingLayer = new string[spriteRenderer.Length];
         originalSortingOrder = new int[spriteRenderer.Length];
     }
 
     void Start()
     {
-        // ????????? sortingLayer ??? sortingOrder ??? SpriteRenderer
         for (int i = 0; i < spriteRenderer.Length; i++)
         {
             originalSortingLayer[i] = spriteRenderer[i].sortingLayerName;
@@ -71,6 +69,7 @@ public class Hiding : MonoBehaviour, Interactable
         {
             isHidden = false;
             girlController.Animator.SetBool("isInteract", false);
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Character"), LayerMask.NameToLayer("Enemy"), false);
 
             for (int i = 0; i < spriteRenderer.Length; i++)
             {
@@ -97,6 +96,8 @@ public class Hiding : MonoBehaviour, Interactable
                 spriteRenderer[i].sortingLayerName = "background";
                 spriteRenderer[i].sortingOrder = -3;
             }
+
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Character"), LayerMask.NameToLayer("Enemy"), true);
 
             //Debug.Log("Player is hiding.");
         }

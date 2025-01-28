@@ -17,14 +17,34 @@ public class SceneManager : MonoBehaviour
         instance = this;
     }
 
-    public void ChangeScene(string sceneName)
+    public void ChangeScene(string sceneName, bool all = true)
     {
         PlayerDataManager.Instance.UpdateSceneName(sceneName);
-        //EventManager.Instance.SaveEventData();
-        InventoryManager.Instance.SaveInventory();
         PlayerDataManager.Instance.SavePlayerData();
-        NoteManager.Instance.SaveNote();
+        //EventManager.Instance.SaveEventData();
+
+        if (all)
+        {
+            InventoryManager.Instance.SaveInventory();
+            NoteManager.Instance.SaveNote();
+        }
+
         UnityEngine.SceneManagement.SceneManager.LoadScene("Loading");  
+    }
+
+    public void ChangeSceneImmediately(string sceneName, bool all = true)
+    {
+        PlayerDataManager.Instance.UpdateSceneName(sceneName);
+        PlayerDataManager.Instance.SavePlayerData();
+        //EventManager.Instance.SaveEventData();
+
+        if (all)
+        {
+            InventoryManager.Instance.SaveInventory();
+            NoteManager.Instance.SaveNote();
+        }
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
 
     /*

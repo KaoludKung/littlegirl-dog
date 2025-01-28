@@ -5,15 +5,19 @@ using UnityEngine;
 public class CharacterManager : MonoBehaviour
 {
     public static CharacterManager Instance { get; private set; }
-    private GirlController girlController;
-    private DogController dogController;
     [SerializeField] private GameObject staminaBar;
     [SerializeField] private GameObject heartIcon;
+
+    private GirlController girlController;
+    private DogController dogController;
+    private Monster monster;
+
 
     private void Awake()
     {
         girlController = FindObjectOfType<GirlController>();
         dogController = FindObjectOfType<DogController>();
+        monster = FindObjectOfType<Monster>();
 
         if (Instance != null && Instance != this)
         {
@@ -63,6 +67,11 @@ public class CharacterManager : MonoBehaviour
             girlController.GetComponent<AudioSource>().Pause();
             dogController.GetComponent<AudioSource>().Pause();
         }
+
+        if(monster != null)
+        {
+            monster.GetComponent<AudioSource>().Pause();
+        }
     }
 
     public void SoundUnPause()
@@ -71,6 +80,11 @@ public class CharacterManager : MonoBehaviour
         {
             girlController.GetComponent<AudioSource>().UnPause();
             dogController.GetComponent<AudioSource>().UnPause();
+        }
+
+        if (monster != null)
+        {
+            monster.GetComponent<AudioSource>().UnPause();
         }
     }
 

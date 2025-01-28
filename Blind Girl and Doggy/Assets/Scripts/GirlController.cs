@@ -54,7 +54,7 @@ public class GirlController : MonoBehaviour
 
         if (interactionIcon != null)
         {
-            interactionIcon.gameObject.SetActive(false);
+            interactionIcon.SetActive(false);
         }
     }
 
@@ -64,7 +64,7 @@ public class GirlController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z) && isActive)
         {
             float distance = Vector3.Distance(transform.position, dogTransform.position);
-            Debug.Log("Distance to Dog: " + distance);
+            //Debug.Log("Distance to Dog: " + distance);
 
             if (!isBarking && !dogControlller.IsMoving)
             {
@@ -96,15 +96,22 @@ public class GirlController : MonoBehaviour
         {
             if (!dogControlller.IsMoving)
             {
-                if (currentInteractable != null && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount > 0)
+                float distance = Vector3.Distance(transform.position, dogTransform.position);
+
+                if (currentInteractable != null && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount > 0 && distance <= 10f)
                 {
                     Debug.Log("Performing action with: " + currentInteractable);
                     currentInteractable.Interact();
                     StartCoroutine(BarkTwice());
                 }
-                else if (currentInteractable != null && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount == 0)
+                else if (currentInteractable != null && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount == 0 && distance <= 10f)
                 {
                     tooFar.text = "Not enough stamina T_T";
+                    StartCoroutine(DogSad());
+                    StartCoroutine(TooFar());
+                }else if (currentInteractable != null && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount != 0 && distance > 10f)
+                {
+                    tooFar.text = "Too far :(";
                     StartCoroutine(DogSad());
                     StartCoroutine(TooFar());
                 }
@@ -222,6 +229,8 @@ public class GirlController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        //Debug.Log("isInteract: " + isInteract);
+
         if (other.CompareTag("Interactable") && !isInteract)
         {
             //Debug.Log("Entering Interactable: " + other.gameObject.name);
@@ -229,7 +238,7 @@ public class GirlController : MonoBehaviour
 
             if (currentInteractable != null)
             {
-                interactionIcon.gameObject.SetActive(true);
+                interactionIcon.SetActive(true);
                 //Debug.Log("Interaction icon shown.");
             }
             else
@@ -245,7 +254,7 @@ public class GirlController : MonoBehaviour
         {
             if (interactionIcon != null)
             {
-                interactionIcon.gameObject.SetActive(false);
+                interactionIcon.SetActive(false);
                 //Debug.Log("Interaction icon hidden.");
             }
             currentInteractable = null;
@@ -284,5 +293,10 @@ public class GirlController : MonoBehaviour
     public void SetIsInteract(bool value)
     {
         isInteract = value;
+    }
+
+    public void ResetCurrentInteractable()
+    {
+        currentInteractable = null;
     }
 }
