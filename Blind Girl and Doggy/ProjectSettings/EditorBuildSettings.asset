@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Basement.unity
     guid: af97e7eb69b8d804ca56291f0370a86e
+  - enabled: 1
+    path: Assets/Scenes/HunterHome.unity
+    guid: f5b25635f79752c4f96c10b315313903
   m_configObjects: {}

@@ -47,18 +47,4 @@ public class SceneManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
 
-    /*
-    private IEnumerator WaitSoundAndLoadScene()
-    {
-        SoundFXManager.instance.PlaySoundFXClip(sceneClip, transform, false, 1.0f);
-        yield return new WaitForSeconds(sceneClip.length);
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Loading");
-    }
-
-    public enum SceneOption
-    {
-        WithSound,
-        WithoutSound
-    }
-    */
 }

@@ -17,6 +17,7 @@ public class HeartManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        PlayerDataManager.Instance.UpdateIsSpined(false);
     }
 
     // Start is called before the first frame update

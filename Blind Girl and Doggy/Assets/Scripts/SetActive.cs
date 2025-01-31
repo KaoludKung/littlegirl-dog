@@ -26,7 +26,7 @@ public class SetActive : MonoBehaviour
     {
         yield return new WaitForSeconds(duration);
 
-        if (setType == SetType.setactive)
+        if (setType == SetType.setactive && targetObject != null)
         {
             targetObject.SetActive(!targetObject.activeSelf);
         }

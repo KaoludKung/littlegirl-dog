@@ -45,7 +45,7 @@ public class Teleport : MonoBehaviour, Interactable
         if (teleportOption == TeleportOption.PlaySound)
         {
             SoundFXManager.instance.PlaySoundFXClip(teleportClip, transform, false, 1.0f);
-            yield return new WaitForSeconds(1.5f); 
+            yield return new WaitForSeconds(teleportClip.length); 
         }
 
         objects[0].transform.position = girl_TeleportPosition;
@@ -56,7 +56,7 @@ public class Teleport : MonoBehaviour, Interactable
 
         girlController.Animator.SetBool("isInteract", false);
 
-        yield return new WaitForSecondsRealtime(1.0f);
+        yield return new WaitForSecondsRealtime(0.5f);
         CharacterManager.Instance.SetIsActive(true);
     }
 

@@ -8,7 +8,6 @@ public class SceneObject : EventObject
     [SerializeField] float times;
     [SerializeField] bool isLoading = true;
 
-    // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(WaitSoundAndLoadScene());

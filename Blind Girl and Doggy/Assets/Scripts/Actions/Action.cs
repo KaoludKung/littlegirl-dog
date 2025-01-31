@@ -11,10 +11,18 @@ public class Action : EventObject, Interactable
     [SerializeField] int itemID = 0;
     [SerializeField] Sprite alertSprite;
     [SerializeField] AudioClip actionClips;
+
+    // special options
     [SerializeField] GameObject progressBar;
     [SerializeField] Image progressFill;
     [SerializeField] float progressSpeed = 0.1f;
     [SerializeField] string sceneName = "None";
+
+    // unlock character controller
+    [SerializeField] bool playerEnable = true;
+
+    // if that action more than 2 action such as use and pick up a item
+    [SerializeField] bool UseAndGet = false;
 
     private GirlController girlController;
     private NoteItem noteItem;
@@ -138,18 +146,19 @@ public class Action : EventObject, Interactable
 
     IEnumerator UseItemLong()
     {
+        AudioSource.clip = actionClips;
         CharacterManager.Instance.SetIsActive(true);
         progressBar.SetActive(true);
         girlController.Animator.SetBool("isInteract", true);
         progressFill.fillAmount = 0;
 
         AudioSource.Play();
+
         while (progressFill.fillAmount < 1)
         {
             progressFill.fillAmount += progressSpeed * Time.deltaTime;
             yield return null;
         }
-
 
         isComplete = true;
         AudioSource.Stop();
@@ -161,6 +170,12 @@ public class Action : EventObject, Interactable
                 InventoryManager.Instance.RemoveItem(itemID);
                 progressBar.SetActive(false);
                 girlController.Animator.SetBool("isInteract", false);
+
+                if (UseAndGet && InventoryUI.CollectedItems.Count < 7)
+                {
+                    InventoryManager.Instance.AddItem(itemID + 1);
+                }
+
                 StartCoroutine(FinalizeAction());
             }
             else if (!inventoryItem.isCollected && InventoryUI.CollectedItems.Count < 7)
@@ -235,7 +250,12 @@ public class Action : EventObject, Interactable
         //actionText.text = actionResult;
 
         yield return new WaitForSeconds(0.2f);
-        CharacterManager.Instance.SetIsActive(true);
+
+        if (playerEnable)
+        {
+            CharacterManager.Instance.SetIsActive(true);
+        }
+
         girlController.SetIsInteract(false);
 
         yield return null;
