@@ -20,9 +20,10 @@ public class Action : EventObject, Interactable
 
     // unlock character controller
     [SerializeField] bool playerEnable = true;
-
+ 
     // if that action more than 2 action such as use and pick up a item
     [SerializeField] bool UseAndGet = false;
+    [SerializeField] int itemGetID = 0;
 
     private GirlController girlController;
     private NoteItem noteItem;
@@ -43,7 +44,6 @@ public class Action : EventObject, Interactable
         }
     }
 
-
     private bool isComplete = false;
 
     private void Awake()
@@ -60,6 +60,25 @@ public class Action : EventObject, Interactable
         noteItem = NoteManager.Instance.GetItemByID(itemID);
     }
 
+    void Update()
+    {
+        if (girlController.IsMoving && !isComplete && progressBar != null)
+        {
+            SetInteractionAnimation(false);
+            StopAllCoroutines();
+            girlController.SetIsInteract(false);
+
+            if (AudioSource != null && AudioSource.isPlaying)
+                AudioSource.Stop();
+
+            if (progressFill != null)
+            {
+                progressFill.fillAmount = 0;
+                progressBar.gameObject.SetActive(false);
+            }
+        }
+    }
+
     public void Interact()
     {
         if (EventManager.Instance.IsEventTriggered(eventID) && !girlController.IsMoving && !girlController.IsBarking)
@@ -71,13 +90,13 @@ public class Action : EventObject, Interactable
             switch (actionType)
             {
                 case ActionType.PickUp:
-                    StartCoroutine(PickUp());
+                    PickUp();
                     break;
                 case ActionType.UseItemShort:
-                    StartCoroutine(UseItemShort());
+                    StartCoroutine(UseAndGet ? UseGetItemShort() : UseItemShort());
                     break;
                 case ActionType.UseItemLong:
-                    StartCoroutine(UseItemLong());
+                    StartCoroutine(UseAndGet ? UseGetItemLong() : UseItemLong());
                     break;
                 case ActionType.ActiveNoAnimation:
                     StartCoroutine(ActiveEventNoAnimation());
@@ -86,10 +105,10 @@ public class Action : EventObject, Interactable
                     StartCoroutine(ActiveEvent());
                     break;
                 case ActionType.TakeNote:
-                    StartCoroutine(TakeNote());
+                    TakeNote();
                     break;
                 case ActionType.Exit:
-                    StartCoroutine(Exit());
+                    Exit();
                     break;
                 default:
                     break;
@@ -97,27 +116,58 @@ public class Action : EventObject, Interactable
         }
     }
 
-    IEnumerator PickUp()
+    void ResetAction()
     {
-        if(inventoryItem != null)
+        SetInteractionAnimation(false);
+        actionText.ActionDisplay("Oops, Your inventory is full.");
+        CharacterManager.Instance.SetIsActive(true);
+        girlController.SetIsInteract(false);
+
+        if (progressBar != null && progressFill != null)
         {
-            if (!inventoryItem.isCollected && InventoryUI.CollectedItems.Count < 7)
+            progressBar.SetActive(false);
+            isComplete = false;
+        }
+    }
+
+    private void SetInteractionAnimation(bool state)
+    {
+        if (girlController.Animator != null)
+        {
+            girlController.Animator.SetBool("isInteract", state);
+        }
+    }
+
+    //Play Sound, Play/Stop Aniamtion
+    IEnumerator ExcuteAction(bool exit = false)
+    {
+        SetInteractionAnimation(true);
+        SoundFXManager.instance.PlaySoundFXClip(actionClips, transform, false, 1.0f);
+        yield return new WaitForSeconds(actionClips.length);
+        SetInteractionAnimation(false);
+
+        StartCoroutine(FinalizeAction());
+
+        if (exit)
+        {
+            yield return null;
+            SceneManager.instance.ChangeScene(sceneName);
+        }
+    }
+
+
+    void PickUp()
+    {
+        if (inventoryItem != null)
+        {
+            if (!inventoryItem.isCollected && InventoryUI.CollectedItems.Count < 6)
             {
-                girlController.Animator.SetBool("isInteract", true);
-                SoundFXManager.instance.PlaySoundFXClip(actionClips, transform, false, 1.0f);
-                yield return new WaitForSeconds(actionClips.length);
-                girlController.Animator.SetBool("isInteract", false);
+                StartCoroutine(ExcuteAction());
                 InventoryManager.Instance.AddItem(itemID);
-                StartCoroutine(FinalizeAction());
             }
             else
             {
-                girlController.Animator.SetBool("isInteract", true);
-                actionText.ActionDisplay("Oops, Your inventory is full.");
-                CharacterManager.Instance.SetIsActive(true);
-                girlController.Animator.SetBool("isInteract", false);
-                girlController.SetIsInteract(false);
-
+                ResetAction();
             }
         }
         
@@ -129,19 +179,40 @@ public class Action : EventObject, Interactable
         {
             if (inventoryItem.isCollected)
             {
-                girlController.Animator.SetBool("isInteract", true);
-                SoundFXManager.instance.PlaySoundFXClip(actionClips, transform, false, 1.0f);
-                yield return new WaitForSeconds(actionClips.length);
-                girlController.Animator.SetBool("isInteract", false);
+                StartCoroutine(ExcuteAction());
                 InventoryManager.Instance.RemoveItem(itemID);
-                StartCoroutine(FinalizeAction());
             }
             else
             {
                 Debug.Log("There is not a item in inventory");
             }
         }
+
+        yield return null;
         
+    }
+
+    IEnumerator UseGetItemShort()
+    {
+        if (inventoryItem != null && inventoryItem.isCollected)
+        {
+            if (InventoryUI.CollectedItems.Count < 6)
+            {
+                StartCoroutine(ExcuteAction());
+                InventoryManager.Instance.RemoveItem(itemID);
+                InventoryManager.Instance.AddItem(itemGetID);
+            }
+            else
+            {
+                ResetAction();
+            }
+        }
+        else
+        {
+            Debug.Log("There is not a item in inventory");
+        }
+
+        yield return null;
     }
 
     IEnumerator UseItemLong()
@@ -149,7 +220,7 @@ public class Action : EventObject, Interactable
         AudioSource.clip = actionClips;
         CharacterManager.Instance.SetIsActive(true);
         progressBar.SetActive(true);
-        girlController.Animator.SetBool("isInteract", true);
+        SetInteractionAnimation(true);
         progressFill.fillAmount = 0;
 
         AudioSource.Play();
@@ -163,51 +234,70 @@ public class Action : EventObject, Interactable
         isComplete = true;
         AudioSource.Stop();
 
-        if (inventoryItem != null)
+        if (inventoryItem != null && isComplete)
         {
             if (inventoryItem.isCollected)
             {
                 InventoryManager.Instance.RemoveItem(itemID);
                 progressBar.SetActive(false);
-                girlController.Animator.SetBool("isInteract", false);
-
-                if (UseAndGet && InventoryUI.CollectedItems.Count < 7)
-                {
-                    InventoryManager.Instance.AddItem(itemID + 1);
-                }
-
-                StartCoroutine(FinalizeAction());
+                SetInteractionAnimation(false);
             }
-            else if (!inventoryItem.isCollected && InventoryUI.CollectedItems.Count < 7)
+            else if (!inventoryItem.isCollected && InventoryUI.CollectedItems.Count < 6)
             {
                 InventoryManager.Instance.AddItem(itemID);
                 progressBar.SetActive(false);
-                girlController.Animator.SetBool("isInteract", false);
+                SetInteractionAnimation(false);
                 StartCoroutine(FinalizeAction());
             }
             else
             {
-                girlController.Animator.SetBool("isInteract", true);
-                actionText.ActionDisplay("Oops, Your inventory is full.");
-                progressBar.SetActive(false);
-                isComplete = false;
-                CharacterManager.Instance.SetIsActive(true);
-                girlController.Animator.SetBool("isInteract", false);
-                girlController.SetIsInteract(false);
+                ResetAction();
             }
         }
-    }  
+    }
 
-    IEnumerator TakeNote()
+    IEnumerator UseGetItemLong()
+    {
+        AudioSource.clip = actionClips;
+        CharacterManager.Instance.SetIsActive(true);
+        progressBar.SetActive(true);
+        SetInteractionAnimation(true);
+        progressFill.fillAmount = 0;
+
+        AudioSource.Play();
+
+        while (progressFill.fillAmount < 1)
+        {
+            progressFill.fillAmount += progressSpeed * Time.deltaTime;
+            yield return null;
+        }
+
+        isComplete = true;
+        AudioSource.Stop();
+
+        if (inventoryItem != null && inventoryItem.isCollected && isComplete)
+        {
+            if (InventoryUI.CollectedItems.Count < 6)
+            {
+                InventoryManager.Instance.RemoveItem(itemID);
+                progressBar.SetActive(false);
+                SetInteractionAnimation(false);
+                InventoryManager.Instance.AddItem(itemGetID);
+                StartCoroutine(FinalizeAction());
+            }
+            else
+            {
+                ResetAction();
+            }
+        }
+    }
+
+    void TakeNote()
     {
         if (!noteItem.isCollected)
         {
             NoteManager.Instance.AddItem(itemID);
-            girlController.Animator.SetBool("isInteract", true);
-            SoundFXManager.instance.PlaySoundFXClip(actionClips, transform, false, 1.0f);
-            yield return new WaitForSeconds(actionClips.length);
-            girlController.Animator.SetBool("isInteract", false);
-            StartCoroutine(FinalizeAction());
+            StartCoroutine(ExcuteAction());
         }
     }
         
@@ -217,37 +307,32 @@ public class Action : EventObject, Interactable
             SoundFXManager.instance.PlaySoundFXClip(actionClips, transform, false, 1.0f);
 
         StartCoroutine(FinalizeAction());
-        yield return new WaitForSeconds(1.5f);
+        yield return null;
     }
-
 
     IEnumerator ActiveEvent()
     {
-        girlController.Animator.SetBool("isInteract", true);
+        SetInteractionAnimation(true);
 
-        if(actionClips != null)
+        if (actionClips != null)
             SoundFXManager.instance.PlaySoundFXClip(actionClips, transform, false, 1.0f);
 
         StartCoroutine(FinalizeAction());
         yield return new WaitForSeconds(1.5f);
-        girlController.Animator.SetBool("isInteract", false);
+        SetInteractionAnimation(false);
     }
 
-    IEnumerator Exit()
+    void Exit()
     {
-        girlController.Animator.SetBool("isInteract", true);
         EventManager.Instance.UpdateEventDataTrigger(TriggerEventID, true);
-        SoundFXManager.instance.PlaySoundFXClip(actionClips, transform, false, 1.0f);
-        yield return new WaitForSeconds(actionClips.length);
-        girlController.Animator.SetBool("isInteract", false);
-        SceneManager.instance.ChangeScene(sceneName);
+        StartCoroutine(ExcuteAction(true));
     }
 
+    //After finish the action
     IEnumerator FinalizeAction()
     {
         EventManager.Instance.UpdateEventDataTrigger(TriggerEventID, true);
         actionText.ActionDisplay(actionResult);
-        //actionText.text = actionResult;
 
         yield return new WaitForSeconds(0.2f);
 
@@ -259,7 +344,11 @@ public class Action : EventObject, Interactable
         girlController.SetIsInteract(false);
 
         yield return null;
-        Destroy(gameObject);
+
+        if (gameObject != null)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -274,14 +363,14 @@ public class Action : EventObject, Interactable
     {
         if (other.CompareTag("Player") && !isComplete)
         {
-            girlController.Animator.SetBool("isInteract", false);
+            SetInteractionAnimation(false);
             StopAllCoroutines();
             girlController.SetIsInteract(false);
             
-            if(AudioSource != null)
+            if(AudioSource != null && AudioSource.isPlaying)
                 AudioSource.Stop();
 
-            if (progressFill != null)
+            if (progressBar != null && progressFill != null)
             {
                 progressFill.fillAmount = 0;
                 progressBar.gameObject.SetActive(false);

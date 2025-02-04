@@ -44,6 +44,11 @@ public class InventoryUI : MonoBehaviour
 
     void Update()
     {
+        if (inventoryPanel.activeSelf)
+        {
+            CharacterManager.Instance.SetIsActive(false);
+        }
+
         if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
         {
             if (!inventoryPanel.activeSelf && isUnlock &&!UIManager.Instance.IsAnyUIActive)

@@ -42,6 +42,11 @@ public class NoteUI : MonoBehaviour
 
     void Update()
     {
+        if (notePanel.activeSelf)
+        {
+            CharacterManager.Instance.SetIsActive(false);
+        }
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (!notePanel.activeSelf && isUnlock && !UIManager.Instance.IsAnyUIActive)

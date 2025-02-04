@@ -32,6 +32,11 @@ public class PauseManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (pausePanel.activeSelf)
+        {
+            CharacterManager.Instance.SetIsActive(false);
+        }
+
         if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
         {
             if (!isPaused && !pausePanel.activeSelf && !UIManager.Instance.IsAnyUIActive)           
@@ -140,7 +145,6 @@ public class PauseManager : MonoBehaviour
             relaxText.text = "";
         }
     }
-
 
     void UpdateMenu()
     {

@@ -5205,6 +5205,8 @@ MonoBehaviour:
   progressFill: {fileID: 1713930637}
   progressSpeed: 0.05
   sceneName: None
+  playerEnable: 1
+  UseAndGet: 0
 --- !u!61 &544608411
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5351,6 +5353,8 @@ MonoBehaviour:
   progressFill: {fileID: 0}
   progressSpeed: 0
   sceneName: ForestDay
+  playerEnable: 1
+  UseAndGet: 0
 --- !u!1 &549410964
 GameObject:
   m_ObjectHideFlags: 0
@@ -11210,6 +11214,8 @@ MonoBehaviour:
   progressFill: {fileID: 0}
   progressSpeed: 0
   sceneName: None
+  playerEnable: 1
+  UseAndGet: 0
 --- !u!61 &1152712265
 BoxCollider2D:
   m_ObjectHideFlags: 0

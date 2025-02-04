@@ -226,6 +226,7 @@ MonoBehaviour:
   progressSpeed: 0.25
   sceneName: None
   playerEnable: 1
+  itemGetID: 0
   UseAndGet: 0
 --- !u!82 &19735928
 AudioSource:
@@ -2351,6 +2352,7 @@ MonoBehaviour:
   progressSpeed: 0.25
   sceneName: None
   playerEnable: 1
+  itemGetID: 0
   UseAndGet: 0
 --- !u!1 &427395749
 GameObject:
@@ -2658,6 +2660,7 @@ MonoBehaviour:
   progressSpeed: 0.25
   sceneName: None
   playerEnable: 1
+  itemGetID: 4
   UseAndGet: 1
 --- !u!114 &433680888
 MonoBehaviour:
@@ -4065,6 +4068,7 @@ MonoBehaviour:
   progressSpeed: 0.05
   sceneName: None
   playerEnable: 0
+  itemGetID: 0
   UseAndGet: 0
 --- !u!1 &774954633
 GameObject:
@@ -4169,6 +4173,7 @@ MonoBehaviour:
   progressSpeed: 0.05
   sceneName: None
   playerEnable: 1
+  itemGetID: 0
   UseAndGet: 0
 --- !u!114 &774954637
 MonoBehaviour:
@@ -6612,7 +6617,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 2b9864cdb90b91754b9980bc8dbd85a5db55946c00000000f55d0f69716a58d8f7f84fd3
@@ -8135,6 +8140,7 @@ MonoBehaviour:
   progressSpeed: 0.05
   sceneName: None
   playerEnable: 0
+  itemGetID: 0
   UseAndGet: 0
 --- !u!1001 &1715642248
 PrefabInstance:
@@ -8485,6 +8491,7 @@ MonoBehaviour:
   progressSpeed: 0.25
   sceneName: None
   playerEnable: 1
+  itemGetID: 0
   UseAndGet: 0
 --- !u!1 &1766308651
 GameObject:
@@ -8673,6 +8680,7 @@ MonoBehaviour:
   progressSpeed: 0.05
   sceneName: HunterHome
   playerEnable: 1
+  itemGetID: 0
   UseAndGet: 0
 --- !u!114 &1766908367
 MonoBehaviour:
@@ -8954,6 +8962,7 @@ MonoBehaviour:
   progressSpeed: 0.1
   sceneName: None
   playerEnable: 1
+  itemGetID: 0
   UseAndGet: 0
 --- !u!212 &1823704344
 SpriteRenderer:
