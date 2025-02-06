@@ -64,7 +64,8 @@ public class Teleport : MonoBehaviour, Interactable
     {
         if (collision.CompareTag("Player"))
         {
-            girlController.InteractionIcon.GetComponent<SpriteRenderer>().sprite = alertSprite;
+            girlController.AddInteractSprite(alertSprite);
+            //girlController.InteractionIcon.GetComponent<SpriteRenderer>().sprite = alertSprite;
         }
     }
 

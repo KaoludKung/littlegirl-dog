@@ -28,7 +28,8 @@ public class GirlController : MonoBehaviour
     private Vector3 targetPosition;
     private Vector3 originalScale;
     private bool isWalkingSoundPlaying;
-    private Interactable currentInteractable;
+    private List<Interactable> interactablesInRange = new List<Interactable>();
+    private List<Sprite> interactionSprite = new List<Sprite>();
 
     public bool IsBarking => isBarking;
     public bool IsMoving => isMoving;
@@ -98,18 +99,19 @@ public class GirlController : MonoBehaviour
             {
                 float distance = Vector3.Distance(transform.position, dogTransform.position);
 
-                if (currentInteractable != null && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount > 0 && distance <= 10f)
+                if (interactablesInRange.Count > 0 && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount > 0 && distance <= 10f)
                 {
-                    Debug.Log("Performing action with: " + currentInteractable);
-                    currentInteractable.Interact();
+                    //Debug.Log("Performing action with: " + currentInteractable);
+                    Interactable interactable = interactablesInRange[0];
+                    interactable.Interact();
                     StartCoroutine(BarkTwice());
                 }
-                else if (currentInteractable != null && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount == 0 && distance <= 10f)
+                else if (interactablesInRange.Count > 0 && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount == 0 && distance <= 10f)
                 {
                     tooFar.text = "Not enough stamina T_T";
                     StartCoroutine(DogSad());
                     StartCoroutine(TooFar());
-                }else if (currentInteractable != null && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount != 0 && distance > 10f)
+                }else if (interactablesInRange.Count > 0 && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount != 0 && distance > 10f)
                 {
                     tooFar.text = "Too far :(";
                     StartCoroutine(DogSad());
@@ -227,6 +229,19 @@ public class GirlController : MonoBehaviour
         }
     }
 
+    private void UpdateInteractionIcon()
+    {
+        if (interactablesInRange.Count > 0 && interactionSprite.Count > 0)
+        {
+            interactionIcon.GetComponent<SpriteRenderer>().sprite = interactionSprite[0];
+            interactionIcon.SetActive(true);
+        }
+        else
+        {
+            interactionIcon.SetActive(false);
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         //Debug.Log("isInteract: " + isInteract);
@@ -234,17 +249,14 @@ public class GirlController : MonoBehaviour
         if (other.CompareTag("Interactable") && !isInteract)
         {
             //Debug.Log("Entering Interactable: " + other.gameObject.name);
-            currentInteractable = other.GetComponent<Interactable>();
+            Interactable interactable = other.GetComponent<Interactable>();
 
-            if (currentInteractable != null)
+            if (interactable != null && !interactablesInRange.Contains(interactable))
             {
-                interactionIcon.SetActive(true);
-                //Debug.Log("Interaction icon shown.");
+                interactablesInRange.Add(interactable);
+                UpdateInteractionIcon();
             }
-            else
-            {
-                Debug.Log("Current interactable is null or interaction icon is not set.");
-            }
+
         }
     }
 
@@ -252,12 +264,20 @@ public class GirlController : MonoBehaviour
     {
         if (other.CompareTag("Interactable"))
         {
-            if (interactionIcon != null)
+            Interactable interactable = other.GetComponent<Interactable>();
+
+            if (interactable != null && interactablesInRange.Contains(interactable))
             {
-                interactionIcon.SetActive(false);
-                //Debug.Log("Interaction icon hidden.");
+                interactablesInRange.Remove(interactable);
+
+                if(interactionSprite.Count > 0)
+                {
+                    interactionSprite.Remove(interactionSprite[0]);
+                }
+
+                UpdateInteractionIcon();
             }
-            currentInteractable = null;
+
         }
     }
 
@@ -295,8 +315,19 @@ public class GirlController : MonoBehaviour
         isInteract = value;
     }
 
+    public void AddInteractSprite(Sprite icon)
+    {
+        interactionSprite.Add(icon);
+    }
+
     public void ResetCurrentInteractable()
     {
-        currentInteractable = null;
+        if (interactablesInRange.Count > 0)
+        {
+            interactablesInRange.Clear();
+            Debug.Log("Interactable list cleared.");
+        }        
+        
+        //currentInteractable = null;
     }
 }

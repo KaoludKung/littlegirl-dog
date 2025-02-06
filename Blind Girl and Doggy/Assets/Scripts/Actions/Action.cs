@@ -342,6 +342,7 @@ public class Action : EventObject, Interactable
         }
 
         girlController.SetIsInteract(false);
+        //girlController.ResetCurrentInteractable();
 
         yield return null;
 
@@ -355,7 +356,8 @@ public class Action : EventObject, Interactable
     {
         if (collision.CompareTag("Player"))
         {
-            girlController.InteractionIcon.GetComponent<SpriteRenderer>().sprite = alertSprite;
+            girlController.AddInteractSprite(alertSprite);
+            //girlController.InteractionIcon.GetComponent<SpriteRenderer>().sprite = alertSprite;
         }
     }
 
