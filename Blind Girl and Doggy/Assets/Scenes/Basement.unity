@@ -226,8 +226,8 @@ MonoBehaviour:
   progressSpeed: 0.25
   sceneName: None
   playerEnable: 1
-  itemGetID: 0
   UseAndGet: 0
+  itemGetID: 0
 --- !u!82 &19735928
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2352,8 +2352,8 @@ MonoBehaviour:
   progressSpeed: 0.25
   sceneName: None
   playerEnable: 1
-  itemGetID: 0
   UseAndGet: 0
+  itemGetID: 0
 --- !u!1 &427395749
 GameObject:
   m_ObjectHideFlags: 0
@@ -2660,8 +2660,8 @@ MonoBehaviour:
   progressSpeed: 0.25
   sceneName: None
   playerEnable: 1
-  itemGetID: 4
   UseAndGet: 1
+  itemGetID: 4
 --- !u!114 &433680888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3339,7 +3339,7 @@ Transform:
   m_GameObject: {fileID: 587760550}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30.45, y: 18.45, z: 0}
+  m_LocalPosition: {x: -30.7, y: 23.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3364,6 +3364,7 @@ MonoBehaviour:
   minDistance: 1
   maxDistance: 20
   spitalBlend: 1
+  linaerRoller: 1
 --- !u!114 &608945496 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3804425026122391048, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
@@ -3828,7 +3829,6 @@ GameObject:
   m_Component:
   - component: {fileID: 712241818}
   - component: {fileID: 712241819}
-  - component: {fileID: 712241820}
   m_Layer: 0
   m_Name: timeline_sound
   m_TagString: Untagged
@@ -3947,25 +3947,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &712241820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 712241817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f6fdda32dea46143902ca780746f747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clips:
-  - {fileID: 8300000, guid: 365e6e9b1dddbcd4f8ac987da32df76e, type: 3}
-  minRandomtime: 15
-  maxRandomtime: 30
-  minDistance: 3
-  maxDistance: 20
-  spitalBlend: 1
 --- !u!1 &763266326
 GameObject:
   m_ObjectHideFlags: 0
@@ -4068,8 +4049,8 @@ MonoBehaviour:
   progressSpeed: 0.05
   sceneName: None
   playerEnable: 0
-  itemGetID: 0
   UseAndGet: 0
+  itemGetID: 0
 --- !u!1 &774954633
 GameObject:
   m_ObjectHideFlags: 0
@@ -4173,8 +4154,8 @@ MonoBehaviour:
   progressSpeed: 0.05
   sceneName: None
   playerEnable: 1
-  itemGetID: 0
   UseAndGet: 0
+  itemGetID: 0
 --- !u!114 &774954637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6567,6 +6548,58 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 2.11}
   m_SizeDelta: {x: 450, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1263369760
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1263369761}
+  - component: {fileID: 1263369762}
+  m_Layer: 0
+  m_Name: waterdrop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1263369761
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263369760}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -22.1, y: 2.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1292251187}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1263369762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263369760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f6fdda32dea46143902ca780746f747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 365e6e9b1dddbcd4f8ac987da32df76e, type: 3}
+  minRandomtime: 15
+  maxRandomtime: 30
+  minDistance: 3
+  maxDistance: 20
+  spitalBlend: 1
+  linaerRoller: 1
 --- !u!1 &1292251184
 GameObject:
   m_ObjectHideFlags: 0
@@ -6666,6 +6699,7 @@ Transform:
   - {fileID: 1110548137}
   - {fileID: 712241818}
   - {fileID: 587760551}
+  - {fileID: 1263369761}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1310969676
@@ -8140,8 +8174,8 @@ MonoBehaviour:
   progressSpeed: 0.05
   sceneName: None
   playerEnable: 0
-  itemGetID: 0
   UseAndGet: 0
+  itemGetID: 0
 --- !u!1001 &1715642248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8491,8 +8525,8 @@ MonoBehaviour:
   progressSpeed: 0.25
   sceneName: None
   playerEnable: 1
-  itemGetID: 0
   UseAndGet: 0
+  itemGetID: 0
 --- !u!1 &1766308651
 GameObject:
   m_ObjectHideFlags: 0
@@ -8680,8 +8714,8 @@ MonoBehaviour:
   progressSpeed: 0.05
   sceneName: HunterHome
   playerEnable: 1
-  itemGetID: 0
   UseAndGet: 0
+  itemGetID: 0
 --- !u!114 &1766908367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8962,8 +8996,8 @@ MonoBehaviour:
   progressSpeed: 0.1
   sceneName: None
   playerEnable: 1
-  itemGetID: 0
   UseAndGet: 0
+  itemGetID: 0
 --- !u!212 &1823704344
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -43,6 +43,7 @@ public class GirlController : MonoBehaviour
         animator = GetComponent<Animator>();
         walkSource.clip = walkClip;
         tooFar.text = "";
+
     }
 
     
@@ -229,8 +230,10 @@ public class GirlController : MonoBehaviour
         }
     }
 
-    private void UpdateInteractionIcon()
+    IEnumerator UpdateInteractionIcon()
     {
+        yield return new WaitForSeconds(0.1f);
+
         if (interactablesInRange.Count > 0 && interactionSprite.Count > 0)
         {
             interactionIcon.GetComponent<SpriteRenderer>().sprite = interactionSprite[0];
@@ -254,7 +257,8 @@ public class GirlController : MonoBehaviour
             if (interactable != null && !interactablesInRange.Contains(interactable))
             {
                 interactablesInRange.Add(interactable);
-                UpdateInteractionIcon();
+                StartCoroutine(UpdateInteractionIcon());
+                //UpdateInteractionIcon();
             }
 
         }
@@ -275,7 +279,8 @@ public class GirlController : MonoBehaviour
                     interactionSprite.Remove(interactionSprite[0]);
                 }
 
-                UpdateInteractionIcon();
+                StartCoroutine(UpdateInteractionIcon());
+                //UpdateInteractionIcon();
             }
 
         }
@@ -325,7 +330,9 @@ public class GirlController : MonoBehaviour
         if (interactablesInRange.Count > 0)
         {
             interactablesInRange.Clear();
-            Debug.Log("Interactable list cleared.");
+            interactionSprite.Clear();
+            StartCoroutine(UpdateInteractionIcon());
+            //Debug.Log("Interactable list cleared.");
         }        
         
         //currentInteractable = null;

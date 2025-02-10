@@ -13,11 +13,13 @@ public class GameOverManager : MonoBehaviour
     [SerializeField] private AudioClip[] clips;
     [SerializeField] private Transform[] character;
     [SerializeField] private string sceneName;
+    [SerializeField] private Vector3 enemyPosition;
 
     public static GameOverManager instance;
     private DogController dogController;
     private GirlController girlController;
     private Monster monster;
+    private Hunter hunter;
     private int currentIndex = 0;
     private bool isPressed = false;
     public bool isActive { get; private set; }
@@ -34,6 +36,8 @@ public class GameOverManager : MonoBehaviour
         girlController = FindObjectOfType<GirlController>();
         dogController = FindObjectOfType<DogController>();
         monster = FindObjectOfType<Monster>();
+        hunter = FindObjectOfType<Hunter>();
+
     }
 
     // Update is called once per frame
@@ -155,10 +159,12 @@ public class GameOverManager : MonoBehaviour
         character[0].position = PlayerDataManager.Instance.GetDogPosition();
         character[1].position = PlayerDataManager.Instance.GetGirlPosition();
 
-        if (character[2] != null)
+        if (character != null && character.Length > 2 && character[2] != null)
         {
-            character[2].position = new Vector3(-5.97f,1.20f, 0f);
+            //character[2].position = new Vector3(-5.97f,1.20f, 0f);
+            character[2].position = enemyPosition;
         }
+
 
         yield return new WaitForSecondsRealtime(2.0f);
         isPressed = false;
@@ -191,6 +197,11 @@ public class GameOverManager : MonoBehaviour
         if (monster != null)
         {
             monster.SetIsKill(true);
+        }
+
+        if (hunter != null)
+        {
+            hunter.ResetHunter();
         }
 
         OpenPanel();

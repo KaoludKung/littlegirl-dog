@@ -177,10 +177,8 @@ public class PauseManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.3f);
         CharacterManager.Instance.SoundUnPause();
 
-        if (Hiding.instance?.IsHidden != true)
-        {
+        if (!CharacterManager.Instance.isHiding())
             CharacterManager.Instance.SetIsActive(true);
-        }
 
     }
 

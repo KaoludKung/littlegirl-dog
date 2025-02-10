@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public bool IsAnyUIActive => inventoryUI.isActive == true || noteUI.isActive == true || pauseManager.isActive == true || GameOverManager?.isActive == true || LockPuzzle?.isActive == true;
+    public bool IsAnyUIActive => inventoryUI.isActive == true || noteUI.isActive == true || pauseManager.isActive == true || GameOverManager?.isActive == true || LockPuzzle?.isActive == true || ClockPuzzle?.isActive == true;
     public static UIManager Instance { get; private set; }
 
     private InventoryUI inventoryUI;
@@ -12,6 +12,19 @@ public class UIManager : MonoBehaviour
     private PauseManager pauseManager;
     private GameOverManager GameOverManager;
     private LockPuzzle LockPuzzle;
+    private ClockPuzzle clockPuzzle;
+
+    public ClockPuzzle ClockPuzzle
+    {
+        get
+        {
+            if (clockPuzzle == null || !clockPuzzle.gameObject.activeInHierarchy)
+            {
+                clockPuzzle = FindObjectOfType<ClockPuzzle>();
+            }
+            return clockPuzzle;
+        }
+    }
 
     private void Awake()
     {

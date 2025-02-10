@@ -185,15 +185,9 @@ public class NoteUI : MonoBehaviour
             UIManager.Instance.ToggleTimeScale(false);
             CharacterManager.Instance.SoundUnPause();
 
-            if (Hiding.instance?.IsHidden != true)
-            {
+            if (!CharacterManager.Instance.isHiding())
                 CharacterManager.Instance.SetIsActive(true);
-            }
-
-            //CharacterManager.Instance.SetIsActive(true);
         }
-
-
     }
 
     public void Unlock(bool n)

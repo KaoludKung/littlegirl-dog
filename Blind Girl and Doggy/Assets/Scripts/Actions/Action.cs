@@ -196,7 +196,7 @@ public class Action : EventObject, Interactable
     {
         if (inventoryItem != null && inventoryItem.isCollected)
         {
-            if (InventoryUI.CollectedItems.Count < 6)
+            if (InventoryUI.CollectedItems.Count < 7)
             {
                 StartCoroutine(ExcuteAction());
                 InventoryManager.Instance.RemoveItem(itemID);
@@ -241,6 +241,7 @@ public class Action : EventObject, Interactable
                 InventoryManager.Instance.RemoveItem(itemID);
                 progressBar.SetActive(false);
                 SetInteractionAnimation(false);
+                StartCoroutine(FinalizeAction());
             }
             else if (!inventoryItem.isCollected && InventoryUI.CollectedItems.Count < 6)
             {
@@ -277,7 +278,7 @@ public class Action : EventObject, Interactable
 
         if (inventoryItem != null && inventoryItem.isCollected && isComplete)
         {
-            if (InventoryUI.CollectedItems.Count < 6)
+            if (InventoryUI.CollectedItems.Count < 7)
             {
                 InventoryManager.Instance.RemoveItem(itemID);
                 progressBar.SetActive(false);

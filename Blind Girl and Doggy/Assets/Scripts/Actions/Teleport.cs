@@ -12,10 +12,13 @@ public class Teleport : MonoBehaviour, Interactable
     [SerializeField] private Vector2 dog_TeleportPosition;
     [SerializeField] private AudioClip teleportClip;
     [SerializeField] private Sprite alertSprite;
+    [SerializeField] public bool canHide = true;
 
     private GirlController girlController;
     private CameraSwitcher cameraSwitcher;
 
+    private bool isHiding;
+    public bool IsHiding => isHiding;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +43,8 @@ public class Teleport : MonoBehaviour, Interactable
 
     private IEnumerator HandleTeleport()
     {
+        isHiding = true;
+
         girlController.Animator.SetBool("isInteract", true);
 
         if (teleportOption == TeleportOption.PlaySound)
@@ -58,6 +63,7 @@ public class Teleport : MonoBehaviour, Interactable
 
         yield return new WaitForSecondsRealtime(0.5f);
         CharacterManager.Instance.SetIsActive(true);
+        isHiding = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -65,7 +71,6 @@ public class Teleport : MonoBehaviour, Interactable
         if (collision.CompareTag("Player"))
         {
             girlController.AddInteractSprite(alertSprite);
-            //girlController.InteractionIcon.GetComponent<SpriteRenderer>().sprite = alertSprite;
         }
     }
 

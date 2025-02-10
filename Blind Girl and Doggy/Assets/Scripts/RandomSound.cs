@@ -10,6 +10,7 @@ public class RandomSound : MonoBehaviour
     [SerializeField] private float minDistance;
     [SerializeField] private float maxDistance;
     [SerializeField] private bool spitalBlend;
+    [SerializeField] private bool linaerRoller;
 
     private GameOverManager gameover;
 
@@ -29,7 +30,7 @@ public class RandomSound : MonoBehaviour
 
             if (gameover == null || !gameover.isActive)
             {
-                SoundFXManager.instance.PlayRandomSoundFXClip(clips, transform, spitalBlend, 1.0f, minDistance, maxDistance);
+                SoundFXManager.instance.PlayRandomSoundFXClip(clips, transform, spitalBlend, linaerRoller ,1.0f, minDistance, maxDistance);
             }
         }
     }

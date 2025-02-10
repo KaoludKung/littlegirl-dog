@@ -116,4 +116,38 @@ public class CharacterManager : MonoBehaviour
             audio.UnPause();
         }
     }
+
+    public bool isHiding()
+    {
+        Hiding[] allHidingObjects = FindObjectsOfType<Hiding>();
+        bool anyHidden = false;
+
+        foreach (Hiding hiding in allHidingObjects)
+        {
+            if (hiding.IsHidden)
+            {
+                anyHidden = true;
+                break;
+            }
+        }
+
+        return anyHidden;
+    }
+
+    public bool isHidingT()
+    {
+        Teleport[] allHidingObjects = FindObjectsOfType<Teleport>();
+        bool anyHidden = false;
+
+        foreach (Teleport hiding in allHidingObjects)
+        {
+            if (hiding.IsHiding && hiding.canHide)
+            {
+                anyHidden = true;
+                break;
+            }
+        }
+
+        return anyHidden;
+    }
 }

@@ -8,7 +8,8 @@ public class Hiding : MonoBehaviour, Interactable
     [SerializeField] private GameObject lightfly;
     [SerializeField] private AudioClip hidingClip;
     [SerializeField] private Sprite alertSprite;
-
+    
+    private Hunter hunter;
     private GirlController girlController;
 
     private string[] originalSortingLayer;
@@ -19,7 +20,7 @@ public class Hiding : MonoBehaviour, Interactable
 
     private void Awake()
     {
-
+        hunter = FindObjectOfType<Hunter>();
         girlController = FindObjectOfType<GirlController>();
 
         originalSortingLayer = new string[spriteRenderer.Length];
@@ -39,17 +40,26 @@ public class Hiding : MonoBehaviour, Interactable
     {
         if (Input.GetKeyDown(KeyCode.X) && isHidden && !UIManager.Instance.IsAnyUIActive)
         {
-            StartCoroutine(ToggleHide());
+            if(hunter != null && hunter.IsQuit)
+            {
+                Debug.Log("I'm vansihing.");
+            }
+            else
+            {
+                StartCoroutine(ToggleHide());
+            }
+
         }
     }
 
     public void Interact()
     {
-        if (!girlController.IsMoving && !girlController.IsBarking)
+        if (!girlController.IsMoving && !girlController.IsBarking && girlController.isActive && !isHidden)
         {
             CharacterManager.Instance.SetIsActive(false);
             girlController.InteractionIcon.SetActive(false);
             StartCoroutine(ToggleHide());
+            Debug.Log("YYY");
         }
         else
         {
@@ -84,12 +94,13 @@ public class Hiding : MonoBehaviour, Interactable
 
             //Debug.Log("Player exited hiding.");
         }
-        else
+        else if (!isHidden)
         {
             girlController.Animator.SetBool("isInteract", true);
             yield return new WaitForSeconds(0.3f);
-            lightfly.SetActive(false);
             isHidden = true;
+            lightfly.SetActive(false);
+            
 
             for (int i = 0; i < spriteRenderer.Length; i++)
             {

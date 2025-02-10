@@ -6,39 +6,57 @@ public class Radio : MonoBehaviour
 {
     private Animator radioAnimator;
     private AudioSource radioSource;
+    private Hunter hunter;
+    private bool isPlay = true;
+    public AudioSource RadioSource => radioSource;
 
     // Start is called before the first frame update
     void Start()
     {
+        hunter = FindObjectOfType<Hunter>();
         radioAnimator = GetComponent<Animator>();
         radioSource = GetComponent<AudioSource>();
         radioAnimator.speed = 0f;
 
-        StartCoroutine(PlayRadio());
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        if (EventManager.Instance.IsEventTriggered(65) && isPlay && hunter.CurrentState == HunterState.Radio)
+        {
+            StartCoroutine(PlayRadio());
+        }
     }
 
     IEnumerator PlayRadio()
     {
+        isPlay = false;
+        hunter.setHunterState(HunterState.None);
         radioAnimator.speed = 1f;
-       
+
         if (!radioSource.isPlaying)
         {
             radioSource.Play();
         }
 
-        int r = Random.Range(30, 45);
+        int r = Random.Range(75, 140);
 
         yield return new WaitForSeconds(r);
 
+        int p = Random.Range(1, 4);
+        hunter.SetPattrenIndex(p);
+        Debug.Log("Patrol Round: " + p);
+
+        yield return null;
+
+        hunter.setHunterState(HunterState.Patrol);
         radioSource.Stop();
         radioAnimator.speed = 0f;
+    }
 
-        StartCoroutine(PlayRadio());
+    public void SetIsPlay(bool p)
+    {
+        isPlay = p;
     }
 }

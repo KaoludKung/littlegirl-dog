@@ -37,7 +37,7 @@ public class SoundFXManager : MonoBehaviour
         StartCoroutine(DestroyAudioSource(audioSource.gameObject, clipLength));
     }
 
-    public void PlayRandomSoundFXClip(AudioClip[] audioClip, Transform spawnTransform, bool spatialBlend, float volume, float? minDistance = null, float? maxDistance = null)
+    public void PlayRandomSoundFXClip(AudioClip[] audioClip, Transform spawnTransform, bool spatialBlend, bool linaerRoller, float volume, float? minDistance = null, float? maxDistance = null)
     {
         int random = Random.Range(0, audioClip.Length);
 
@@ -45,6 +45,11 @@ public class SoundFXManager : MonoBehaviour
         audioSource.transform.SetParent(spawnTransform);
         audioSource.clip = audioClip[random];
         audioSource.volume = volume;
+
+        if (linaerRoller)
+        {
+            audioSource.rolloffMode = AudioRolloffMode.Linear;
+        }
 
         if (spatialBlend)
         {
