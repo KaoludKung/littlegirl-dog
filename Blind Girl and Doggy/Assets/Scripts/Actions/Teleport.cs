@@ -17,6 +17,7 @@ public class Teleport : MonoBehaviour, Interactable
     private GirlController girlController;
     private CameraSwitcher cameraSwitcher;
 
+    private bool isAdd = false;
     private bool isHiding;
     public bool IsHiding => isHiding;
 
@@ -43,9 +44,12 @@ public class Teleport : MonoBehaviour, Interactable
 
     private IEnumerator HandleTeleport()
     {
-        isHiding = true;
-
         girlController.Animator.SetBool("isInteract", true);
+
+        if (EventManager.Instance.IsEventTriggered(88))
+        {
+            canHide = true;
+        }
 
         if (teleportOption == TeleportOption.PlaySound)
         {
@@ -60,6 +64,7 @@ public class Teleport : MonoBehaviour, Interactable
         Debug.Log("Performing Action Teleport");
 
         girlController.Animator.SetBool("isInteract", false);
+        isHiding = true;
 
         yield return new WaitForSecondsRealtime(0.5f);
         CharacterManager.Instance.SetIsActive(true);
@@ -68,9 +73,18 @@ public class Teleport : MonoBehaviour, Interactable
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !isAdd)
         {
+            isAdd = true;
             girlController.AddInteractSprite(alertSprite);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player") && isAdd)
+        {
+            isAdd = false;
         }
     }
 

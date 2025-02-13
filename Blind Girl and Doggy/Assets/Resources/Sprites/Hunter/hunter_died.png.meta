@@ -147,7 +147,763 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: hunter_died_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3500
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c98a00b0625244c87b02a4642dca2c
+      internalID: -530022932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3500
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d764dbba4580d084aa56ad80b16598b0
+      internalID: -2016214340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3500
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83ba4916054c5e44bf1f603b259ba8e
+      internalID: 214277184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 3500
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a946f3a3c6f7675428373067530d2da8
+      internalID: 1920959457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3500
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ade8dd6a4ab2f40837fb93cc65f28c
+      internalID: 969258762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_5
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 3500
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643742b63511b3c43a83f6b387e80e12
+      internalID: 1283100202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2800
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a5b71aa6c5ce14c931f9d2b6bb2d83
+      internalID: -2002480391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_7
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2800
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a60479f56dc8be94a91eca2514e03560
+      internalID: -1399209241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2800
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 173327259a1087d46970b8daf12d6f63
+      internalID: -829381387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_9
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2800
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa5634e37ef64a1499c87123decf2d3d
+      internalID: -1720434652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_10
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2800
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df2b67e8400c15a4d95f4d613d519610
+      internalID: -775056249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_11
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2800
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c068ad0be134e43af9acf20ea5d4c1
+      internalID: 642689381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2100
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b359467a31bacd4408aa156baa8428dc
+      internalID: 919864934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_13
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2100
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29472dca28da4b4abe3b8570951bbdd
+      internalID: 930353363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_14
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2100
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc59bd65d5ba8f8429a5fe1edcd1b218
+      internalID: -486589218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_15
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2100
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d27307e20e18f941b78f88d7d13595f
+      internalID: -848895516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_16
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2100
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16348c2d6542c14cbb1676f7a1a5cc7
+      internalID: -1180755878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_17
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2100
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f60a064467f6f74793010bc93031bac
+      internalID: 900208339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1400
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 964b7e1441b82054bbaf1a8c83637df7
+      internalID: 43394374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_19
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1400
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc0b8345c096df4d8bf3a2c14d79ece
+      internalID: 18102452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1400
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f05931794fb90c4a95616da7b372da5
+      internalID: -58789011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_21
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1400
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3a71541ea104694094387f6ef8483fc
+      internalID: -553680804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_22
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1400
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db08a0f83085814d93db3516e2ea10f
+      internalID: -1598318254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_23
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1400
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc5c808d31af5b544aaf25f37e9ca8fe
+      internalID: -2036071665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f200d4f76efb2ef4fa06d0fa6b723e46
+      internalID: 1924879136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_25
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 700
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ba67b5f4fd124140b155fdb0dbc871f
+      internalID: -2093299856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_26
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 700
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d65d5eed6d4e1624086391a47280cdf8
+      internalID: -248652400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_27
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 700
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae5e04fca41de447a0968606291e083
+      internalID: 1973324249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_28
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 700
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eecba2d7e31a0c24590f23df19f119cf
+      internalID: 1311660776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_29
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 700
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0bca94d69bc7c94394b53c3b5f54f35
+      internalID: -1847917562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d1bbc381584e4449518693c3022ac1
+      internalID: -1054235902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_31
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20b8dc289168cf41a4bd1bb3bd7f4d4
+      internalID: -1711693864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_32
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9e74475859f9845a4fb66fb612cb94
+      internalID: 56550832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_33
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e867ee0a5e5fe2c40a9a1cfc74f116a5
+      internalID: -461566356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_34
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28bc1388f874f28459d081404ee733af
+      internalID: 616993488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hunter_died_35
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 512
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44b92c132c9d8a41b5dd9a9e61595e0
+      internalID: -1184314174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -158,7 +914,43 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hunter_died_0: -530022932
+      hunter_died_1: -2016214340
+      hunter_died_10: -775056249
+      hunter_died_11: 642689381
+      hunter_died_12: 919864934
+      hunter_died_13: 930353363
+      hunter_died_14: -486589218
+      hunter_died_15: -848895516
+      hunter_died_16: -1180755878
+      hunter_died_17: 900208339
+      hunter_died_18: 43394374
+      hunter_died_19: 18102452
+      hunter_died_2: 214277184
+      hunter_died_20: -58789011
+      hunter_died_21: -553680804
+      hunter_died_22: -1598318254
+      hunter_died_23: -2036071665
+      hunter_died_24: 1924879136
+      hunter_died_25: -2093299856
+      hunter_died_26: -248652400
+      hunter_died_27: 1973324249
+      hunter_died_28: 1311660776
+      hunter_died_29: -1847917562
+      hunter_died_3: 1920959457
+      hunter_died_30: -1054235902
+      hunter_died_31: -1711693864
+      hunter_died_32: 56550832
+      hunter_died_33: -461566356
+      hunter_died_34: 616993488
+      hunter_died_35: -1184314174
+      hunter_died_4: 969258762
+      hunter_died_5: 1283100202
+      hunter_died_6: -2002480391
+      hunter_died_7: -1399209241
+      hunter_died_8: -829381387
+      hunter_died_9: -1720434652
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

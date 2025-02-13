@@ -9,6 +9,8 @@ public class GirlController : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     [SerializeField] private float distance = 2.0f;
+    [SerializeField] private float detectRange = 30.0f;
+    [SerializeField] private float volume = 1.0f;
     [SerializeField] private AudioClip barkClip;
     [SerializeField] private AudioClip walkClip;
     [SerializeField] private Transform dogTransform;
@@ -18,6 +20,7 @@ public class GirlController : MonoBehaviour
     [SerializeField] private Image progressFill;
     [SerializeField] private GameObject progressSlider;
 
+    private bool hasSound = false;
     private bool isBarking;
     private bool isMoving;
     private bool isInteract;
@@ -31,6 +34,7 @@ public class GirlController : MonoBehaviour
     private List<Interactable> interactablesInRange = new List<Interactable>();
     private List<Sprite> interactionSprite = new List<Sprite>();
 
+    public bool HasSound => hasSound;
     public bool IsBarking => isBarking;
     public bool IsMoving => isMoving;
     public Animator Animator => animator;
@@ -41,6 +45,7 @@ public class GirlController : MonoBehaviour
         isActive = false;
         walkSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
+        animator.updateMode = AnimatorUpdateMode.UnscaledTime;
         walkSource.clip = walkClip;
         tooFar.text = "";
 
@@ -58,19 +63,18 @@ public class GirlController : MonoBehaviour
         {
             interactionIcon.SetActive(false);
         }
+
     }
 
     void Update()
     {
-       
         if (Input.GetKeyDown(KeyCode.Z) && isActive)
         {
             float distance = Vector3.Distance(transform.position, dogTransform.position);
-            //Debug.Log("Distance to Dog: " + distance);
 
             if (!isBarking && !dogControlller.IsMoving)
             {
-                if (dogControlller.staminaFill.fillAmount > 0 && distance <= 30f)
+                if (dogControlller.staminaFill.fillAmount > 0 && distance <= detectRange)
                 {
                     StartCoroutine(HandleMove());
                 }
@@ -99,20 +103,21 @@ public class GirlController : MonoBehaviour
             if (!dogControlller.IsMoving)
             {
                 float distance = Vector3.Distance(transform.position, dogTransform.position);
+                float detectRangeForAction = detectRange > 28 ? detectRange - 20.0f : 8f;
 
-                if (interactablesInRange.Count > 0 && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount > 0 && distance <= 10f)
+                if (interactablesInRange.Count > 0 && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount > 0 && distance <= detectRangeForAction)
                 {
                     //Debug.Log("Performing action with: " + currentInteractable);
                     Interactable interactable = interactablesInRange[0];
                     interactable.Interact();
                     StartCoroutine(BarkTwice());
                 }
-                else if (interactablesInRange.Count > 0 && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount == 0 && distance <= 10f)
+                else if (interactablesInRange.Count > 0 && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount == 0 && distance <= detectRangeForAction)
                 {
                     tooFar.text = "Not enough stamina T_T";
                     StartCoroutine(DogSad());
                     StartCoroutine(TooFar());
-                }else if (interactablesInRange.Count > 0 && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount != 0 && distance > 10f)
+                }else if (interactablesInRange.Count > 0 && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount != 0 && distance > detectRangeForAction)
                 {
                     tooFar.text = "Too far :(";
                     StartCoroutine(DogSad());
@@ -155,12 +160,16 @@ public class GirlController : MonoBehaviour
     {
         int i = 0;
         dogControlller.staminaFill.fillAmount -= 0.15f;
+        
+        hasSound = true;
+        yield return new WaitForSecondsRealtime(0.1f);
+        hasSound = false;
 
         while (i < 2)
         {
             dogControlller.Animator.SetInteger("BarkType", 1);
-            SoundFXManager.instance.PlaySoundFXClip(barkClip, dogTransform, true, 1.0f, 20.0f, 60.0f);
-            yield return new WaitForSeconds(barkClip.length);
+            SoundFXManager.instance.PlaySoundFXClip(barkClip, dogTransform, true, volume, 20.0f, 60.0f);
+            yield return new WaitForSecondsRealtime(barkClip.length);
             dogControlller.Animator.SetInteger("BarkType", 0);
             i++;
         }     
@@ -169,12 +178,16 @@ public class GirlController : MonoBehaviour
     IEnumerator HandleMove()
     {
         isBarking = true;
+        hasSound = true;
         targetPosition = dogControlller.transform.position;
         dogControlller.staminaFill.fillAmount -= 0.1f;
-        SoundFXManager.instance.PlaySoundFXClip(barkClip, dogTransform, true, 1.0f, 20.0f, 60.0f);
+        SoundFXManager.instance.PlaySoundFXClip(barkClip, dogTransform, true, volume, 20.0f, 60.0f);
         dogControlller.Animator.SetInteger("BarkType", 1);
         yield return new WaitForSeconds(barkClip.length);
         dogControlller.Animator.SetInteger("BarkType", 0);
+
+        yield return new WaitForSeconds(0.1f);
+        hasSound = false;
 
         if (!isMoving)
         {
@@ -227,21 +240,6 @@ public class GirlController : MonoBehaviour
             walkSource.loop = false;
             isWalkingSoundPlaying = false;
             isBarking = false;
-        }
-    }
-
-    IEnumerator UpdateInteractionIcon()
-    {
-        yield return new WaitForSeconds(0.1f);
-
-        if (interactablesInRange.Count > 0 && interactionSprite.Count > 0)
-        {
-            interactionIcon.GetComponent<SpriteRenderer>().sprite = interactionSprite[0];
-            interactionIcon.SetActive(true);
-        }
-        else
-        {
-            interactionIcon.SetActive(false);
         }
     }
 
@@ -320,6 +318,11 @@ public class GirlController : MonoBehaviour
         isInteract = value;
     }
 
+    public void SetIcon(bool value)
+    {
+        interactionIcon.SetActive(value);
+    }
+
     public void AddInteractSprite(Sprite icon)
     {
         interactionSprite.Add(icon);
@@ -332,9 +335,21 @@ public class GirlController : MonoBehaviour
             interactablesInRange.Clear();
             interactionSprite.Clear();
             StartCoroutine(UpdateInteractionIcon());
-            //Debug.Log("Interactable list cleared.");
         }        
-        
-        //currentInteractable = null;
+    }
+
+    IEnumerator UpdateInteractionIcon()
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        if (interactablesInRange.Count > 0 && interactionSprite.Count > 0)
+        {
+            interactionIcon.GetComponent<SpriteRenderer>().sprite = interactionSprite[0];
+            interactionIcon.SetActive(true);
+        }
+        else
+        {
+            interactionIcon.SetActive(false);
+        }
     }
 }

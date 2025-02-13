@@ -13,13 +13,14 @@ public class GameOverManager : MonoBehaviour
     [SerializeField] private AudioClip[] clips;
     [SerializeField] private Transform[] character;
     [SerializeField] private string sceneName;
-    [SerializeField] private Vector3 enemyPosition;
+    [SerializeField] private int cameraID = 0;
 
     public static GameOverManager instance;
     private DogController dogController;
     private GirlController girlController;
     private Monster monster;
     private Hunter hunter;
+    private CameraSwitcher cameraSwitcher;
     private int currentIndex = 0;
     private bool isPressed = false;
     public bool isActive { get; private set; }
@@ -35,6 +36,7 @@ public class GameOverManager : MonoBehaviour
         UpdateMenu();
         girlController = FindObjectOfType<GirlController>();
         dogController = FindObjectOfType<DogController>();
+        cameraSwitcher = FindObjectOfType<CameraSwitcher>();
         monster = FindObjectOfType<Monster>();
         hunter = FindObjectOfType<Hunter>();
 
@@ -43,7 +45,10 @@ public class GameOverManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PlayerDataManager.Instance.GetHearts() == 0)
+        if(gameOverPanel.activeSelf)
+            CharacterManager.Instance.SetIsActive(false);
+
+        if (PlayerDataManager.Instance.GetHearts() == 0)
         {
             gameoverOptions[0].gameoverText.text = "Retry";
             gameOverTitle.sprite = gameoverSprite[3];
@@ -161,13 +166,14 @@ public class GameOverManager : MonoBehaviour
 
         if (character != null && character.Length > 2 && character[2] != null)
         {
-            //character[2].position = new Vector3(-5.97f,1.20f, 0f);
-            character[2].position = enemyPosition;
+            character[2].position = new Vector3(-5.97f,1.20f, 0f);
         }
-
 
         yield return new WaitForSecondsRealtime(2.0f);
         isPressed = false;
+
+        if(cameraSwitcher != null)
+            cameraSwitcher.SwitchCamera(cameraID);
 
         foreach (AnimatorControllerParameter parameter in girlController.Animator.parameters)
         {
@@ -186,8 +192,7 @@ public class GameOverManager : MonoBehaviour
         }
 
         dogController.Animator.SetInteger("BarkType", 0);
-
-        yield return new WaitForSecondsRealtime(0.2f);
+        yield return new WaitForSecondsRealtime(0.5f);
         CharacterManager.Instance.SetIsActive(true);
         girlController.SetIsInteract(false);
         girlController.ResetCurrentInteractable();
@@ -199,9 +204,12 @@ public class GameOverManager : MonoBehaviour
             monster.SetIsKill(true);
         }
 
-        if (hunter != null)
+        if (hunter != null && EventManager.Instance.IsEventTriggered(88))
         {
-            hunter.ResetHunter();
+            hunter.ResetHunter(true);
+        }else if(hunter != null)
+        {
+            hunter.ResetHunter(false);
         }
 
         OpenPanel();
@@ -218,6 +226,7 @@ public class GameOverManager : MonoBehaviour
     {
         if (!gameOverPanel.activeSelf)
         {
+            CharacterManager.Instance.SetIsActive(false);
             CharacterManager.Instance.SoundStop();
             CharacterManager.Instance.PauseAllSound();
             Time.timeScale = 0;

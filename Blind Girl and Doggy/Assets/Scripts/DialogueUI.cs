@@ -62,7 +62,7 @@ public class DialogueUI : MonoBehaviour
 
     private IEnumerator ResetOneShotFlag()
     {
-        yield return new WaitForSeconds(typingSound.clip.length);
+        yield return new WaitForSecondsRealtime(typingSound.clip.length);
         isPlayingOneShot = false;
     }
 
@@ -107,7 +107,7 @@ public class DialogueUI : MonoBehaviour
 
         while (typingSound.volume > 0)
         {
-            typingSound.volume -= startVolume * Time.deltaTime / 0.5f;
+            typingSound.volume -= startVolume * Time.unscaledDeltaTime / 0.5f;
             yield return null;
         }
 

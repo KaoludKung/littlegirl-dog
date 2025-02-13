@@ -11,13 +11,15 @@ public class ClockPuzzle : EventObject, Interactable
     [SerializeField] private Sprite alertSprite;
 
     [SerializeField] private int shortHandTargetAngle = 90;
-    [SerializeField] private int longHandTargetAngle = 180;
+    [SerializeField] private int longHandTargetAngle = 210;
     [SerializeField] private AudioClip[] clips;
+    [SerializeField] private GameObject gameoverPanel;
 
     private int angleStep = 30;
     private GirlController girlController;
     private ActionText actionText;
     private bool rotateEnable = true;
+    private bool isRotating = false;
 
     public bool isActive { get; private set; }
 
@@ -26,17 +28,28 @@ public class ClockPuzzle : EventObject, Interactable
         girlController = FindObjectOfType<GirlController>();
         actionText = FindObjectOfType<ActionText>();
         shortHand.gameObject.SetActive(false);
+        shortHand.localEulerAngles = new Vector3(0, 0, -30);
+    }
+
+    void CancelWhileDeath()
+    {
+        isActive = false;
+        clockPanel.SetActive(false);
     }
 
     private void Update()
     {
+        if (gameoverPanel.activeSelf)
+        {
+            Invoke("CancelWhileDeath", 0.5f);
+        }
+
         if (EventManager.Instance.IsEventTriggered(85))
         {
             shortHand.gameObject.SetActive(true);
         }
 
-
-        if (clockPanel.activeSelf && isActive && rotateEnable)
+        if (clockPanel.activeSelf && isActive && rotateEnable && !isRotating)
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow) && shortHand.gameObject.activeSelf)
             {
@@ -58,13 +71,20 @@ public class ClockPuzzle : EventObject, Interactable
 
             if (Input.GetKeyDown(KeyCode.X))
             {
-                StartCoroutine(Delay(true));
+                StartCoroutine(Delay(true, 0.3f));
             }
         }
-
     }
 
-    IEnumerator Delay(bool sound)
+    private float NormalizeAngle(float angle)
+    {
+        angle = angle % 360;
+        if (angle < 0)
+            angle += 360;
+        return angle;
+    }
+
+    IEnumerator Delay(bool sound, float time)
     {
         if (isActive)
         {
@@ -76,38 +96,63 @@ public class ClockPuzzle : EventObject, Interactable
                 SoundFXManager.instance.PlaySoundFXClip(clips[2], transform, false, 1);
             }
 
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time);
             girlController.SetIsInteract(false);
             girlController.InteractionIcon.SetActive(true);
             CharacterManager.Instance.SetIsActive(true);
         }
     }
 
-    public void RotateClockHand(Transform transform , int angleStep)
+    public void RotateClockHand(Transform handTransform, int angleStep)
     {
-        transform.Rotate(0, 0, angleStep);
+        float currentAngle = handTransform.eulerAngles.z;
+        float newAngle = NormalizeAngle(currentAngle + angleStep);
+
+        Vector3 newRotation = handTransform.eulerAngles;
+        newRotation.z = newAngle;
+        handTransform.eulerAngles = newRotation;
+
         SoundFXManager.instance.PlaySoundFXClip(clips[0], transform, false, 1.0f);
+        StartCoroutine(Rotating());
         CheckPuzzleCompletion();
     }
 
     private void CheckPuzzleCompletion()
     {
+        if (Mathf.Approximately(shortHand.eulerAngles.z, shortHandTargetAngle))
+            Debug.Log("Correct short hand");
+
+        if (Mathf.Approximately(longHand.eulerAngles.z, longHandTargetAngle))
+            Debug.Log("Correct long hand");
+
         if (Mathf.Approximately(shortHand.eulerAngles.z, shortHandTargetAngle) && Mathf.Approximately(longHand.eulerAngles.z, longHandTargetAngle))
         {
             StartCoroutine(Unlock());
         }
     }
 
+    IEnumerator Rotating()
+    {
+        isRotating = true;
+        yield return new WaitForSeconds(0.5f);
+        isRotating = false;
+    }
+
     IEnumerator Unlock()
     {
+        yield return new WaitForSeconds(0.5f);
+        girlController.SetIcon(false);
         rotateEnable = false;
+        isRotating = true;
         yield return null;
         SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1.0f);
         InventoryManager.Instance.AddItem(14);
         actionText.ActionDisplay("Margarete has gotten the flower coin.");
-        StartCoroutine(Delay(false));
+        StartCoroutine(Delay(false, 2.0f));
+        
+        yield return new WaitForSeconds(2.0f);
+        yield return null;
 
-        yield return new WaitForSeconds(0.3f);
         if (gameObject != null)
         {
             Destroy(gameObject);
@@ -145,7 +190,6 @@ public class ClockPuzzle : EventObject, Interactable
         if (collision.CompareTag("Player"))
         {
             girlController.AddInteractSprite(alertSprite);
-            //girlController.InteractionIcon.GetComponent<SpriteRenderer>().sprite = alertSprite;
         }
     }
 }

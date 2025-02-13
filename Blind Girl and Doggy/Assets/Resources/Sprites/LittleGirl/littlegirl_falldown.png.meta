@@ -1,0 +1,1222 @@
+fileFormatVersion: 2
+guid: 6939146f9af228043a0cdb2908ff32e4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: littlegirl_falldown_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3072
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef330e5e718c99f4ab07449bc0ee600d
+      internalID: 429006295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_1
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 3072
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6792e0b4fdace664892f47136a76bff9
+      internalID: 964838679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_2
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 3072
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae86ac7604b82648b0781650b326f52
+      internalID: -312899878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_3
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 3072
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d1e0366b2e473b4a948e35f73dceb26
+      internalID: 432066377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_4
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 3072
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc8a39a96613d1c4f9c7a10d8b584c7c
+      internalID: -1250958671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_5
+      rect:
+        serializedVersion: 2
+        x: 3100
+        y: 3072
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9639f0123793c04caaa7e0f1efa1e9a
+      internalID: 1537360829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_6
+      rect:
+        serializedVersion: 2
+        x: 3720
+        y: 3072
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93591dc9b05a4c488b254a591e32253
+      internalID: 1161273777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2560
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64306cdccb2213d439b76f71a52e4c45
+      internalID: -1581727329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_8
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 2560
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4317aef79caed3f4ea8a8423ed17d14f
+      internalID: 1180446501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_9
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 2560
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c3dde1d6bfcd1b4fb24f01c09922d4f
+      internalID: 1757850205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_10
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 2560
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f87ea26ea2e4a5409fdeabd7b1e9635
+      internalID: 174559440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_11
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 2560
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f3492b27fdc0874f8c90bc506a967db
+      internalID: 2082747401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_12
+      rect:
+        serializedVersion: 2
+        x: 3100
+        y: 2560
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dc872af455d71245a1dda5cf100d462
+      internalID: -1784664575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_13
+      rect:
+        serializedVersion: 2
+        x: 3720
+        y: 2560
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 220780997f988064fbc564922641b739
+      internalID: 160523196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51eaf912e9ea56445a1819f02bc7e121
+      internalID: -154048996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_15
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 2048
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a9d3d1ce92d114d83735cd7cb0332d
+      internalID: 1128075356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_16
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 2048
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d753324d8ec2e449c02ade8afe624c
+      internalID: 1075197950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_17
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 2048
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67481fce95390fe43ab9d8299b41d2ba
+      internalID: 1691418817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_18
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 2048
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e45a0701d8396284db329960f040bde2
+      internalID: 1020808725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_19
+      rect:
+        serializedVersion: 2
+        x: 3100
+        y: 2048
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c49cd8d293f8f49815dcb95ed71bc9
+      internalID: 1911844856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_20
+      rect:
+        serializedVersion: 2
+        x: 3720
+        y: 2048
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07bb83a63fc011341a16c1dce62c093a
+      internalID: -910894880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ebf9cf5ff9e8c469988bc2d3c2474b
+      internalID: -1581289876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_22
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 1536
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de56e3f80aded6a46aae26f460252b90
+      internalID: -1969861871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_23
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1536
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec14fe479bff7664fb97d2132fab7e63
+      internalID: 30878334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_24
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 1536
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c75a0fa16abb1a54ba1602d3a0205849
+      internalID: 1589651519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_25
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 1536
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89210e7d541217e41a8176cb74bdff45
+      internalID: -1474478113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_26
+      rect:
+        serializedVersion: 2
+        x: 3100
+        y: 1536
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2201ccabec82e514ea06b484d6adb090
+      internalID: 1849552815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_27
+      rect:
+        serializedVersion: 2
+        x: 3720
+        y: 1536
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebaee3b123254b245b59241d591897a3
+      internalID: 911164520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ec793b2940eb34eb122967b3185f10
+      internalID: 1908398740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_29
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 1024
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 588973f8c7b3329428bde3ae05603ca9
+      internalID: -1401494641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_30
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1024
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ae9ebc1906ec464782a410cc5c597d1
+      internalID: -1272451359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_31
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 1024
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95f4cbf7c0999044f96cbb63adfc3e64
+      internalID: 935608504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_32
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 1024
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b7540b98e531b49b2c85d5296ce9de
+      internalID: 821004635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_33
+      rect:
+        serializedVersion: 2
+        x: 3100
+        y: 1024
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bee38fad84973464eb241bbdbd5e1bb6
+      internalID: -1204001958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_34
+      rect:
+        serializedVersion: 2
+        x: 3720
+        y: 1024
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f0b84f35d4dac4b840f9726d3f7680
+      internalID: -1393247159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d0f75f06752d24583eaa4f012fe09a
+      internalID: 1220226861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_36
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 512
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab0e66a8cc075a4cb1ea2a1196b3dea
+      internalID: -1766652067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_37
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 512
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ab7502e64601dd458019055411576d0
+      internalID: -12711522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_38
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 512
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2f425ae2b597754699392c726ced4f9
+      internalID: 790972226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_39
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 512
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3764c6ee6bb4334facb91a52a394615
+      internalID: 1593208435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_40
+      rect:
+        serializedVersion: 2
+        x: 3100
+        y: 512
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a0de7cc907828243b613b5d3421b2e8
+      internalID: -1769100827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_41
+      rect:
+        serializedVersion: 2
+        x: 3720
+        y: 512
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc43a9bb43e24e41bf8559d05e7e097
+      internalID: -1659069143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffaf475e23b9dd04bbb250eec3776aa4
+      internalID: -511398718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_43
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 0
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e8a82c7e6435f48be018be75c28bdb
+      internalID: -1219669937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_44
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 0
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b77b671d6e8f3f544b7849a46f9b9c83
+      internalID: 930999179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_45
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 0
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d0b618ec025471479807f347c9d5e42
+      internalID: -967293935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_46
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 0
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462075d6600a2f7498c27d5b202534a6
+      internalID: 1369787269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_falldown_47
+      rect:
+        serializedVersion: 2
+        x: 3100
+        y: 0
+        width: 620
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb9138fe47d4ba44af762be9fa0dbe3
+      internalID: 581095849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      littlegirl_falldown_0: 429006295
+      littlegirl_falldown_1: 964838679
+      littlegirl_falldown_10: 174559440
+      littlegirl_falldown_11: 2082747401
+      littlegirl_falldown_12: -1784664575
+      littlegirl_falldown_13: 160523196
+      littlegirl_falldown_14: -154048996
+      littlegirl_falldown_15: 1128075356
+      littlegirl_falldown_16: 1075197950
+      littlegirl_falldown_17: 1691418817
+      littlegirl_falldown_18: 1020808725
+      littlegirl_falldown_19: 1911844856
+      littlegirl_falldown_2: -312899878
+      littlegirl_falldown_20: -910894880
+      littlegirl_falldown_21: -1581289876
+      littlegirl_falldown_22: -1969861871
+      littlegirl_falldown_23: 30878334
+      littlegirl_falldown_24: 1589651519
+      littlegirl_falldown_25: -1474478113
+      littlegirl_falldown_26: 1849552815
+      littlegirl_falldown_27: 911164520
+      littlegirl_falldown_28: 1908398740
+      littlegirl_falldown_29: -1401494641
+      littlegirl_falldown_3: 432066377
+      littlegirl_falldown_30: -1272451359
+      littlegirl_falldown_31: 935608504
+      littlegirl_falldown_32: 821004635
+      littlegirl_falldown_33: -1204001958
+      littlegirl_falldown_34: -1393247159
+      littlegirl_falldown_35: 1220226861
+      littlegirl_falldown_36: -1766652067
+      littlegirl_falldown_37: -12711522
+      littlegirl_falldown_38: 790972226
+      littlegirl_falldown_39: 1593208435
+      littlegirl_falldown_4: -1250958671
+      littlegirl_falldown_40: -1769100827
+      littlegirl_falldown_41: -1659069143
+      littlegirl_falldown_42: -511398718
+      littlegirl_falldown_43: -1219669937
+      littlegirl_falldown_44: 930999179
+      littlegirl_falldown_45: -967293935
+      littlegirl_falldown_46: 1369787269
+      littlegirl_falldown_47: 581095849
+      littlegirl_falldown_5: 1537360829
+      littlegirl_falldown_6: 1161273777
+      littlegirl_falldown_7: -1581727329
+      littlegirl_falldown_8: 1180446501
+      littlegirl_falldown_9: 1757850205
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

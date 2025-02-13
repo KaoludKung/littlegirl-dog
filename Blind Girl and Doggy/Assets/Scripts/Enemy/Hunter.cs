@@ -6,7 +6,7 @@ using UnityEngine.Rendering.Universal;
 public class Hunter : MonoBehaviour
 {
     [SerializeField] private float speed = 1.5f;
-    [SerializeField] private float berserkSpeed = 3.0f;
+    [SerializeField] private float berserkSpeed = 4.0f;
     [SerializeField] private Transform sleepPoint;
     [SerializeField] private Transform[] patrolPoint;
     [SerializeField] private Vector3[] warpPoint;
@@ -15,6 +15,7 @@ public class Hunter : MonoBehaviour
     [SerializeField] Transform shadow;
 
     private Radio radio;
+    private GirlController girlcontroller;
 
     private GameObject player;
     private GameObject dog;
@@ -29,8 +30,6 @@ public class Hunter : MonoBehaviour
     private int patrolCount = 0;
 
     private float lastPlayerY;
-    private float lastDogY;
-
     private HunterState currentState;
     
     private bool isKill = true;
@@ -38,6 +37,7 @@ public class Hunter : MonoBehaviour
     private bool isWarp = false;
     private bool isWarping = false;
     private bool isQuit = false;
+    private bool isTriggerFinal = false;
 
     public HunterState CurrentState => currentState;
     public bool IsQuit => isQuit;
@@ -51,7 +51,8 @@ public class Hunter : MonoBehaviour
         {
             { "walk", clips[0] },
             { "chasing", clips[1] },
-            { "laughing", clips[2] }
+            { "laughing", clips[2] },
+            { "scream", clips[3] }
         };
 
         player = GameObject.FindWithTag("Player");
@@ -62,8 +63,8 @@ public class Hunter : MonoBehaviour
     void Start()
     {
         lastPlayerY = player.transform.position.y;
-        lastDogY = dog.transform.position.y;
         radio = FindObjectOfType<Radio>();
+        girlcontroller = FindObjectOfType<GirlController>();
 
         if (patrolPoint.Length > 0)
         {
@@ -91,9 +92,19 @@ public class Hunter : MonoBehaviour
         bool isDogOnCorrectSide = (isFacingLeft && directionToDog.x < 0) || (!isFacingLeft && directionToDog.x > 0);
 
 
-        if ((distanceToPlayer < 10.0f && isPlayerOnCorrectSide) || (distanceToDog < 10.0f && isDogOnCorrectSide))
+        if ((distanceToPlayer < 13.0f && isPlayerOnCorrectSide) || (distanceToDog < 13.0f && isDogOnCorrectSide))
         {
-            if ((currentState == HunterState.Patrol || currentState == HunterState.Sleep) && !isFound && !CharacterManager.Instance.isHiding())
+            if ((currentState == HunterState.Patrol || currentState == HunterState.Sleep || currentState == HunterState.Final) && !isFound && !CharacterManager.Instance.isHiding())
+            {
+                isFound = true;
+                isKill = false;
+                SoundFXManager.instance.PlaySoundFXClip(hunterClips["laughing"], transform, false, 1.0f);
+                currentState = HunterState.None;
+                currentState = HunterState.Chasing;
+            }
+        }else if((distanceToPlayer < 17.0f) || (distanceToDog < 17.0f))
+        {
+            if ((currentState == HunterState.Patrol || currentState == HunterState.Sleep || currentState == HunterState.Final) && girlcontroller.HasSound && !isFound && !CharacterManager.Instance.isHiding())
             {
                 isFound = true;
                 isKill = false;
@@ -105,23 +116,29 @@ public class Hunter : MonoBehaviour
 
         if (currentState == HunterState.Chasing)
         {
-            if(CharacterManager.Instance.isHiding() || CharacterManager.Instance.isHidingT())
-                currentState = HunterState.Quit;
+            if((CharacterManager.Instance.isHiding() || CharacterManager.Instance.isHidingT()))
+            {
+                if (EventManager.Instance.IsEventTriggered(88))
+                {
+                    currentState = HunterState.Final;
+                }
+                else
+                {
+                    currentState = HunterState.Quit;
+                }
+            }
         }
 
         float currentPlayerY = player.transform.position.y;
-        float currentDogY = dog.transform.position.y;
-
-        if (currentState == HunterState.Chasing && !isWarping && (currentPlayerY != lastPlayerY || currentDogY != lastDogY))
+        if (currentState == HunterState.Chasing && !isWarping && (currentPlayerY != lastPlayerY))
         {
-            if (Mathf.Abs(currentPlayerY - transform.position.y) > 1.0f || Mathf.Abs(currentDogY - transform.position.y) > 1.0f)
+            if (Mathf.Abs(currentPlayerY - transform.position.y) > 1.0f && !EventManager.Instance.IsEventTriggered(88))
             {
                 StartCoroutine(WarpToTarget());
             }
         }
 
         lastPlayerY = currentPlayerY;
-        lastDogY = currentDogY;
 
         switch (currentState)
         {
@@ -137,6 +154,9 @@ public class Hunter : MonoBehaviour
                 break;
             case HunterState.Quit:
                 StartCoroutine(StopChasing());
+                break;
+            case HunterState.Final:
+                FinalPatrol();
                 break;
             default:
                 break;
@@ -163,15 +183,16 @@ public class Hunter : MonoBehaviour
 
     void Chasing()
     {
+        isKill = false;
         SetAnimatorState("isChasing");
         PlaySound("chasing");
-
         GameObject target = player;
 
+        /*
         if (dog != null && Vector2.Distance(transform.position, dog.transform.position) < Vector2.Distance(transform.position, player.transform.position))
         {
             target = dog;
-        }
+        }*/
 
         Vector2 targetPosition = new Vector2(target.transform.position.x, transform.position.y);
         FlipEnemy(targetPosition);
@@ -193,18 +214,19 @@ public class Hunter : MonoBehaviour
         SetAnimatorState("isSleep", false);
         h_animator.SetInteger("IdleVariant", 1);
 
-        yield return new WaitForSeconds(1.2f);
-        globalLight.intensity = 0.0f;
-        yield return new WaitForSeconds(1.2f);
-        globalLight.intensity = 0.1f;
-        yield return new WaitForSeconds(1.2f);
-        globalLight.intensity = 0.0f;
-        transform.position = new Vector3(54.22f, 0f, 0f);
+        for(int i = 0; i < 4; i++)
+        {
+            yield return new WaitForSeconds(1.2f);
+            globalLight.intensity = i%2 == 0 ? 0.0f : 0.1f;
+
+            if(i == 3)
+                transform.position = new Vector3(54.22f, 0f, 0f);
+        }
 
         yield return new WaitForSeconds(1.2f);
         h_animator.SetInteger("IdleVariant", 0);
         globalLight.intensity = 0.1f;
-        ResetHunter();
+        ResetHunter(false);
         isQuit = false;
 
         if(!CharacterManager.Instance.isHiding())
@@ -214,7 +236,7 @@ public class Hunter : MonoBehaviour
     IEnumerator WarpToTarget()
     {
         isWarping = true;
-        yield return new WaitForSeconds(4.0f);
+        yield return new WaitForSeconds(10.0f);
 
         transform.position = warpPoint[transform.position.y == 0f ? 0 : 1];
 
@@ -247,9 +269,6 @@ public class Hunter : MonoBehaviour
             patrolCount += 1;
             isWarp = true;
 
-            Debug.Log(patrolCount);
-            Debug.Log(pattrenIndex);
-
             if ((pattrenIndex == 1 && patrolCount == 1) || (pattrenIndex == 2 && patrolCount == 5) || (pattrenIndex == 3 && patrolCount == 10))
             {
                 currentState = HunterState.Sleep;
@@ -257,10 +276,67 @@ public class Hunter : MonoBehaviour
         }
     }
 
+    IEnumerator FinalPatrol()
+    {
+        // First Time
+        if (!isTriggerFinal)
+        {
+            isTriggerFinal = true;
+            currentState = HunterState.None;
+            CharacterManager.Instance.SetIsActive(false);
+
+            if (enemySource.isPlaying)
+            {
+                enemySource.Stop();
+            }
+
+            SetAnimatorState("isSleep", false);
+            h_animator.SetInteger("IdleVariant", 1);
+
+            for (int i = 0; i < 4; i++)
+            {
+                yield return new WaitForSeconds(1.2f);
+                globalLight.intensity = i % 2 == 0 ? 0.0f : 0.1f;
+
+                if(i == 1)
+                {
+                    SoundFXManager.instance.PlaySoundFXClip(hunterClips["scream"], transform, false, 0.6f);
+                }
+
+                if (i == 3)
+                {
+                    transform.position = new Vector3(54.22f, 0f, 0f);
+                    globalLight.intensity = 0f;
+                }
+            }
+
+            ResetHunter(true);
+            EventManager.Instance.UpdateEventDataTrigger(87, true);
+            // Dialogue Before FinalPatrol
+        }
+
+        if (EventManager.Instance.IsEventTriggered(88))
+        {
+            SetAnimatorState("isWalk");
+            PlaySound("walk");
+
+            Vector2 patrolPosition = new Vector2(targetPatrolPoint.position.x, transform.position.y);
+            FlipEnemy(patrolPosition);
+            transform.position = Vector2.MoveTowards(transform.position, patrolPosition, speed * Time.deltaTime);
+
+            if (Vector2.Distance(transform.position, targetPatrolPoint.position) < 3.0f)
+            {
+                currentPatrolIndex = (currentPatrolIndex == 0) ? 4 : 0;
+                targetPatrolPoint = patrolPoint[currentPatrolIndex];
+            }
+        }
+    }
 
     IEnumerator WarpToNextFloor()
     {
-        if (currentPatrolIndex == 2 || currentPatrolIndex == 4)
+        yield return new WaitForSeconds(0.1f);
+
+        if ((currentPatrolIndex == 2 || currentPatrolIndex == 4) && currentState == HunterState.Patrol)
         {
             yield return new WaitForSeconds(1.5f);
             transform.position = warpPoint[currentPatrolIndex == 2 ? 0 : 1];
@@ -282,12 +358,12 @@ public class Hunter : MonoBehaviour
                 enemySource.Stop();
             }
 
-            ResetHunter();
+            ResetHunter(false);
         }
 
     }
 
-    public void ResetHunter()
+    public void ResetHunter(bool isFinal = false)
     {
         isKill = true;
         isFound = false;
@@ -302,9 +378,19 @@ public class Hunter : MonoBehaviour
         targetPatrolPoint = patrolPoint[currentPatrolIndex];
         Debug.Log("Current Patrol Point: " + currentPatrolIndex);
 
-        SetAnimatorState("isSleep");
-        currentState = HunterState.Radio;
-        radio.SetIsPlay(true);
+        if (!isFinal)
+        {
+            transform.position = new Vector3(54.22f, 0f, 0f);
+            SetAnimatorState("isSleep");
+            currentState = HunterState.Radio;
+            radio.SetIsPlay(true);
+        }
+        else
+        {
+            transform.position = new Vector3(54.22f, 0f, 0f);
+            currentState = HunterState.Final;
+        }
+
     }
 
     private void FlipEnemy(Vector2 targetPosition)
@@ -335,7 +421,7 @@ public class Hunter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") || collision.CompareTag("Dog"))
+        if ((collision.CompareTag("Player") || collision.CompareTag("Dog")) && Time.deltaTime != 0)
         {
             if (!isKill)
             {
@@ -347,9 +433,24 @@ public class Hunter : MonoBehaviour
                 }
 
                 isKill = true;
-                HeartManager.instance.HeartDecrease();
+                Invoke("DecreaseHeart", 0.15f);
             }
         }
+
+        if (collision.CompareTag("Player") && Time.deltaTime != 0)
+        {
+            if (!isKill)
+            {
+                girlcontroller.SetIsMoving(false);
+                girlcontroller.Animator.SetBool("isWalk", false);
+                girlcontroller.Animator.SetBool("isDeath", true);
+            }
+        }
+    }
+
+    private void DecreaseHeart()
+    {
+        HeartManager.instance.HeartDecrease();
     }
 
     public void SetPattrenIndex(int p)
@@ -365,4 +466,4 @@ public class Hunter : MonoBehaviour
 
 }
 
-public enum HunterState { Radio, Sleep, Patrol, Chasing, Quit ,None}
+public enum HunterState { Radio, Sleep, Patrol, Chasing, Quit , Final ,None}

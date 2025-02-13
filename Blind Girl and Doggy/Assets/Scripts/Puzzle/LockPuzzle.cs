@@ -12,6 +12,7 @@ public class LockPuzzle : MonoBehaviour, Interactable
     [SerializeField] private AudioClip[] clips;
     [SerializeField] private int[] answerDigits = { 6, 0, 9 };
     [SerializeField] private GameObject Gitch;
+    [SerializeField] private GameObject gameoverPanel;
 
     private string[] originaText;
     private int[] digits = new int[3];
@@ -31,8 +32,20 @@ public class LockPuzzle : MonoBehaviour, Interactable
         UpdateNumberPosition();
     }
 
+    void CancelWhileDeath()
+    {
+        isActive = false;
+        lockPanel.SetActive(false);
+    }
+
     private void Update()
     {
+        if (gameoverPanel.activeSelf)
+        {
+            Invoke("CancelWhileDeath", 0.5f);
+        }
+
+
         if (lockPanel.activeSelf && isActive)
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -148,8 +161,10 @@ public class LockPuzzle : MonoBehaviour, Interactable
             InventoryManager.Instance.AddItem(13);
             actionText.ActionDisplay("Margarete has gotten the flower coin.");
             StartCoroutine(Delay(false));
-            
-            yield return new WaitForSeconds(0.3f);
+
+            girlController.SetIcon(false);
+
+            yield return new WaitForSeconds(1.2f);
             if (gameObject != null)
             {
                 Destroy(gameObject);
@@ -194,4 +209,6 @@ public class LockPuzzle : MonoBehaviour, Interactable
             //girlController.InteractionIcon.GetComponent<SpriteRenderer>().sprite = alertSprite;
         }
     }
+
 }
+

@@ -31,6 +31,7 @@ public class DogController : MonoBehaviour
         isDigging = false;
         walkSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
+        animator.updateMode = AnimatorUpdateMode.UnscaledTime;
         walkSource.clip = walkClip;
     }
 
@@ -135,24 +136,6 @@ public class DogController : MonoBehaviour
         if (walkSource.isPlaying)
         {
             walkSource.loop = false;
-        }
-    }
-
-
-    IEnumerator PlayWalkSound()
-    {
-        if (walkClip != null)
-        {
-            walkSource.loop = true;
-            walkSource.Play();
-            
-            while (isMoving)
-            {
-                yield return null;
-            }
-
-            walkSource.loop = false;
-            //isWalkingSoundPlaying = false;
         }
     }
 

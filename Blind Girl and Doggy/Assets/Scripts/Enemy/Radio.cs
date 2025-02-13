@@ -44,14 +44,19 @@ public class Radio : MonoBehaviour
 
         yield return new WaitForSeconds(r);
 
-        int p = Random.Range(1, 4);
-        hunter.SetPattrenIndex(p);
-        Debug.Log("Patrol Round: " + p);
+        if(!EventManager.Instance.IsEventTriggered(86))
+        {
+            int p = Random.Range(1, 4);
+            hunter.SetPattrenIndex(p);
+            Debug.Log("Patrol Round: " + p);
 
-        yield return null;
+            yield return null;
 
-        hunter.setHunterState(HunterState.Patrol);
+            hunter.setHunterState(HunterState.Patrol);
+        }
+
         radioSource.Stop();
+        radioAnimator.Play("radio", -1, 0f);
         radioAnimator.speed = 0f;
     }
 

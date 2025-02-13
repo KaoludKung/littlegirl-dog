@@ -24,7 +24,7 @@ public class Skip : MonoBehaviour
 
     IEnumerator SkipAppear()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(5.0f);
         skipObject.SetActive(true);
     }
 }

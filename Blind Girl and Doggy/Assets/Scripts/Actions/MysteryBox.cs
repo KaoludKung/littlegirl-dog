@@ -11,6 +11,7 @@ public class MysteryBox : MonoBehaviour, Interactable
     private InventoryItem[] inventoryItems;
     private ActionText actionText;
     private GirlController girlController;
+    private int putCount = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,8 @@ public class MysteryBox : MonoBehaviour, Interactable
 
         bool allCoinsCollected = true;
         bool soundPlayed = false;
+        bool hasPutCoin = false;
+        bool needMoreCoins = false;
 
         for (int i = 0; i < inventoryItems.Length; i++)
         {
@@ -40,13 +43,31 @@ public class MysteryBox : MonoBehaviour, Interactable
 
                 flowerCoins[i].SetActive(true);
                 InventoryManager.Instance.RemoveItem(12 + i);
-
-                actionText.ActionDisplay("Margarete has put the flower coin.");
+                hasPutCoin = true;
+                putCount += 1;
             }
-            else if (!inventoryItems[i].isCollected)
+
+            if (!inventoryItems[i].isCollected || !flowerCoins[i].activeSelf)
             {
                 allCoinsCollected = false;
+                needMoreCoins = true;
             }
+        }
+
+        Debug.Log("Flower Coins: " + putCount);
+
+        if (putCount == 3)
+        {
+            allCoinsCollected = true;
+        }
+
+        if (hasPutCoin && !allCoinsCollected)
+        {
+            actionText.ActionDisplay("Margarete has put the flower coin.");
+        }
+        else if (needMoreCoins)
+        {
+            actionText.ActionDisplay("You need to find something to put in it.");
         }
 
         if (allCoinsCollected)
@@ -56,6 +77,7 @@ public class MysteryBox : MonoBehaviour, Interactable
             StartCoroutine(GetTheKey());
         }
     }
+
 
     IEnumerator GetTheKey()
     {
@@ -79,7 +101,6 @@ public class MysteryBox : MonoBehaviour, Interactable
         if (collision.CompareTag("Player"))
         {
             girlController.AddInteractSprite(alertSprite);
-            //girlController.InteractionIcon.GetComponent<SpriteRenderer>().sprite = alertSprite;
         }
     }
 }

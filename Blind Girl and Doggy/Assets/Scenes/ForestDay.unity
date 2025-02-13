@@ -5182,6 +5182,7 @@ MonoBehaviour:
   minDistance: 5
   maxDistance: 10
   spitalBlend: 1
+  linaerRoller: 0
 --- !u!1 &254264756
 GameObject:
   m_ObjectHideFlags: 0
@@ -9263,6 +9264,7 @@ MonoBehaviour:
   minDistance: 200
   maxDistance: 300
   spitalBlend: 1
+  linaerRoller: 0
 --- !u!114 &528321713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9282,6 +9284,7 @@ MonoBehaviour:
   minDistance: 150
   maxDistance: 300
   spitalBlend: 1
+  linaerRoller: 0
 --- !u!1 &528591584
 GameObject:
   m_ObjectHideFlags: 0
@@ -14872,6 +14875,7 @@ MonoBehaviour:
   minDistance: 5
   maxDistance: 10
   spitalBlend: 1
+  linaerRoller: 0
 --- !u!1 &817070600
 GameObject:
   m_ObjectHideFlags: 0
@@ -16917,6 +16921,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   distance: 3
+  detectRange: 30
+  volume: 1
   barkClip: {fileID: 8300000, guid: 5412a492768a9b644bdf814cc593b782, type: 3}
   walkClip: {fileID: 8300000, guid: 5872e0a2aec2ce44182603c1ad9d5c0c, type: 3}
   dogTransform: {fileID: 545043435}
@@ -21883,7 +21889,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: e4b220b3f460b474aa7cbb79ba14f440, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -27111,7 +27117,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: c63ef4d477151b545960e625878c071d, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -33697,7 +33703,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: e1dbe95e45554184bb646fe8be5f5eb1, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0

@@ -2009,7 +2009,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: fa40838af968acc45983b4f147bfaa8c, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -2451,7 +2451,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: fa40838af968acc45983b4f147bfaa8c, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -2732,6 +2732,7 @@ MonoBehaviour:
   dog_TeleportPosition: {x: -30.26, y: 14.53268}
   teleportClip: {fileID: 8300000, guid: 847410fa1dbf0334699f6b26ec992a92, type: 3}
   alertSprite: {fileID: 21300000, guid: 1236c2a08ce1e264c9735e092837c6de, type: 3}
+  canHide: 1
 --- !u!61 &446857481
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4229,7 +4230,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 57b73f9c15d709a4fb9f97faeeacc119, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4353,7 +4354,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: fa40838af968acc45983b4f147bfaa8c, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -5840,7 +5841,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: fa40838af968acc45983b4f147bfaa8c, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -6902,7 +6903,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: fa40838af968acc45983b4f147bfaa8c, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -7476,6 +7477,7 @@ MonoBehaviour:
   dog_TeleportPosition: {x: -11.92, y: -2.088295}
   teleportClip: {fileID: 8300000, guid: 847410fa1dbf0334699f6b26ec992a92, type: 3}
   alertSprite: {fileID: 21300000, guid: 1236c2a08ce1e264c9735e092837c6de, type: 3}
+  canHide: 1
 --- !u!61 &1584713009
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7718,6 +7720,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   distance: 3
+  detectRange: 30
+  volume: 1
   barkClip: {fileID: 8300000, guid: 5412a492768a9b644bdf814cc593b782, type: 3}
   walkClip: {fileID: 8300000, guid: 5872e0a2aec2ce44182603c1ad9d5c0c, type: 3}
   dogTransform: {fileID: 1129866229}

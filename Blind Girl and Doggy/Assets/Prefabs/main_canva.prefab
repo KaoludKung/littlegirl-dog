@@ -2087,7 +2087,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit to Menu
+  m_text: Exit to Title
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6e65ef0447c7846468b56ddc3b97c664, type: 2}
   m_sharedMaterial: {fileID: -5009971732904435071, guid: 6e65ef0447c7846468b56ddc3b97c664, type: 2}
@@ -2623,7 +2623,7 @@ MonoBehaviour:
   m_text: "This game has an auto-save system that saves your progress periodically.
     If you exit before it saves, you will lose any unsaved progress. When you return,
     \nthe game will start from the latest save point. \nAre you sure you want to
-    go back to the menu?"
+    go back to the title?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6e65ef0447c7846468b56ddc3b97c664, type: 2}
   m_sharedMaterial: {fileID: -5009971732904435071, guid: 6e65ef0447c7846468b56ddc3b97c664, type: 2}
@@ -4073,6 +4073,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   sceneName: ForestDay
+  enemyPosition: {x: 0, y: 0, z: 0}
+  cameraID: 0
 --- !u!114 &7440817288500635590
 MonoBehaviour:
   m_ObjectHideFlags: 0

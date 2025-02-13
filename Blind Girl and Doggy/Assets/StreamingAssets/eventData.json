@@ -224,320 +224,320 @@
     },
     {
       "id": 37,
-      "nameEvent": "",
-      "type": "",
-      "trigger": false
+      "nameEvent": "Into the dark",
+      "type": "Timeline",
+      "trigger": true
     },
     {
       "id": 38,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "ForestDay_01",
+      "type": "Dialogue",
       "trigger": false
     },
     {
       "id": 39,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Safely guide Margarete out of the forest Part 2",
+      "type": "Objective",
       "trigger": false
     },
     {
       "id": 40,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Roar",
+      "type": "Timeline",
       "trigger": false
     },
     {
       "id": 41,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "ForestDay_02",
+      "type": "Dialogue",
       "trigger": false
     },
     {
       "id": 42,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Monster starts chasing",
+      "type": "Script Trigger",
       "trigger": false
     },
     {
       "id": 43,
-      "nameEvent": "",
-      "type": "",
-      "trigger": false
+      "nameEvent": "Pick up Acron 2",
+      "type": "Action",
+      "trigger": true
     },
     {
       "id": 44,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Use Acron 2",
+      "type": "Action",
       "trigger": false
     },
     {
       "id": 45,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Destroy trap 2",
+      "type": "Result",
       "trigger": false
     },
     {
       "id": 46,
-      "nameEvent": "",
-      "type": "",
-      "trigger": false
+      "nameEvent": "Pick up Acron 3",
+      "type": "Action",
+      "trigger": true
     },
     {
       "id": 47,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Use Acron 3",
+      "type": "Action",
       "trigger": false
     },
     {
       "id": 48,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Destroy trap 3",
+      "type": "Result",
       "trigger": false
     },
     {
       "id": 49,
-      "nameEvent": "",
-      "type": "",
-      "trigger": false
+      "nameEvent": "Forest_Night03",
+      "type": "Dialogue",
+      "trigger": true
     },
     {
       "id": 50,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Similar Sound",
+      "type": "Timeline",
       "trigger": false
     },
     {
       "id": 51,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Forest_Night04",
+      "type": "Dialogue",
       "trigger": false
     },
     {
       "id": 52,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Catch you",
+      "type": "Timeline",
       "trigger": false
     },
     {
       "id": 53,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Memory",
+      "type": "SceneManager",
       "trigger": false
     },
     {
       "id": 54,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Basement",
+      "type": "SceneManager",
       "trigger": false
     },
     {
       "id": 55,
-      "nameEvent": "",
-      "type": "",
-      "trigger": false
+      "nameEvent": "Awake",
+      "type": "Timeline",
+      "trigger": true
     },
     {
       "id": 56,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Basement_01",
+      "type": "Dialogue",
       "trigger": false
     },
     {
       "id": 57,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Lead Margarete out of here",
+      "type": "Objective",
       "trigger": false
     },
     {
       "id": 58,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Basement_02",
+      "type": "Dialogue (Investigation)",
       "trigger": false
     },
     {
       "id": 59,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Basement_03",
+      "type": "Dialogue (Investigation)",
       "trigger": false
     },
     {
       "id": 60,
-      "nameEvent": "",
-      "type": "",
-      "trigger": false
+      "nameEvent": "Find something in many buckets",
+      "type": "Action",
+      "trigger": true
     },
     {
       "id": 61,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Use gloves",
+      "type": "Action",
       "trigger": false
     },
     {
       "id": 62,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Use screwdriver to unlock the door",
+      "type": "Action",
       "trigger": false
     },
     {
       "id": 63,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Open the door",
+      "type": "Action",
       "trigger": false
     },
     {
       "id": 64,
-      "nameEvent": "",
-      "type": "",
-      "trigger": false
+      "nameEvent": "HunterHome_01",
+      "type": "Dialogue",
+      "trigger": true
     },
     {
       "id": 65,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "You can interact from the beginning in hunter's home",
+      "type": "All",
       "trigger": false
     },
     {
       "id": 66,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "HunterHome_02",
+      "type": "Dialogue (Investigation)",
       "trigger": false
     },
     {
       "id": 67,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "HunterHome_03",
+      "type": "Dialogue (Investigation)",
       "trigger": false
     },
     {
       "id": 68,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "HunterHome_04",
+      "type": "Dialogue (Investigation)",
       "trigger": false
     },
     {
       "id": 69,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "HunterHome_05",
+      "type": "Dialogue (Investigation)",
       "trigger": false
     },
     {
       "id": 70,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "HunterHome_06",
+      "type": "Dialogue (Investigation)",
       "trigger": false
     },
     {
       "id": 71,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "HunterHome_07",
+      "type": "Dialogue (Investigation)",
       "trigger": false
     },
     {
       "id": 72,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "HunterHome_08",
+      "type": "Dialogue (Investigation)",
       "trigger": false
     },
     {
       "id": 73,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Unlock 2nd floor",
+      "type": "Action",
       "trigger": false
     },
     {
       "id": 74,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "2nd floor unlocked",
+      "type": "Result",
       "trigger": false
     },
     {
       "id": 75,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Find in desk",
+      "type": "Action",
       "trigger": false
     },
     {
       "id": 76,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Pump Pump",
+      "type": "Action",
       "trigger": false
     },
     {
       "id": 77,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Pick up oil",
+      "type": "Action",
       "trigger": false
     },
     {
       "id": 78,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Use oil",
+      "type": "Action",
       "trigger": false
     },
     {
       "id": 79,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Hint From Doll",
+      "type": "Result",
       "trigger": false
     },
     {
       "id": 80,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "I'm very tall'",
+      "type": "Result",
       "trigger": false
     },
     {
       "id": 81,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Destroy first obstacle",
+      "type": "Action",
       "trigger": false
     },
     {
       "id": 82,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Talk to final lock",
+      "type": "Action",
       "trigger": false
     },
     {
       "id": 83,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "HunterHome_09",
+      "type": "Dialogue (Investigation)",
       "trigger": false
     },
     {
       "id": 84,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Give me a cheese",
+      "type": "Action",
       "trigger": false
     },
     {
       "id": 85,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Get the clock hands",
+      "type": "Result",
       "trigger": false
     },
     {
       "id": 86,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "In To Final Phase",
+      "type": "Enemy",
       "trigger": false
     },
     {
       "id": 87,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "HunterHome_10",
+      "type": "Dialogue",
       "trigger": false
     },
     {
       "id": 88,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Destroy second obstacle",
+      "type": "Action",
       "trigger": false
     },
     {
       "id": 89,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Leave the house",
+      "type": "Action",
       "trigger": false
     },
     {

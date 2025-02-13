@@ -25,6 +25,7 @@ public class Action : EventObject, Interactable
     [SerializeField] bool UseAndGet = false;
     [SerializeField] int itemGetID = 0;
 
+    private bool isAdd = false;
     private GirlController girlController;
     private NoteItem noteItem;
     private InventoryItem inventoryItem;
@@ -355,16 +356,17 @@ public class Action : EventObject, Interactable
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !isAdd)
         {
+            isAdd = true;
             girlController.AddInteractSprite(alertSprite);
             //girlController.InteractionIcon.GetComponent<SpriteRenderer>().sprite = alertSprite;
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        if (other.CompareTag("Player") && !isComplete)
+        if (collision.CompareTag("Player") && !isComplete)
         {
             SetInteractionAnimation(false);
             StopAllCoroutines();
@@ -378,6 +380,11 @@ public class Action : EventObject, Interactable
                 progressFill.fillAmount = 0;
                 progressBar.gameObject.SetActive(false);
             }
+        }
+
+        if(collision.CompareTag("Player") && isAdd)
+        {
+            isAdd = false;
         }
     }
 

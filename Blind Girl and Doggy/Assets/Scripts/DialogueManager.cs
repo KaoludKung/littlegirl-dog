@@ -25,6 +25,8 @@ public class DialogueManager : EventObject
 
     private void Awake()
     {
+        Time.timeScale = 0;
+
         if (PlayerPrefs.HasKey("speedText"))
         {
             speed = PlayerPrefs.GetFloat("speedText");
@@ -159,13 +161,13 @@ public class DialogueManager : EventObject
             dialogueUI.DialogueText.text += conversation.lines[index].text[charIndex];
             charIndex++;
 
-            yield return new WaitForSeconds(speed);
+            yield return new WaitForSecondsRealtime(speed);
         }
 
         dialogueUI.StopSound();
         dialogueUI.ToggleArrow(true);
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSecondsRealtime(0.5f);
 
         isWriting = false;
         waitForNext = true;
@@ -184,8 +186,9 @@ public class DialogueManager : EventObject
     
     private IEnumerator UnlockAndContinue()
     {
-        yield return new WaitForSeconds(durationUnlock);
+        yield return new WaitForSecondsRealtime(durationUnlock);
         EventManager.Instance.UpdateEventDataTrigger(TriggerEventID, true);
+        Time.timeScale = 1;
 
         if (resetAnimation)
         {
@@ -197,7 +200,7 @@ public class DialogueManager : EventObject
 
         if (playerEnable)
         {
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSecondsRealtime(1.0f);
             
             if (uiManagerObject != null)
                 uiManagerObject.SetActive(true);
