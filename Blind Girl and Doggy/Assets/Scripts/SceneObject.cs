@@ -24,7 +24,8 @@ public class SceneObject : EventObject
         }
         else
         {
-            SceneManager.instance.ChangeSceneImmediately(sceneName);
+            SceneManager.instance.ChangeSceneImmediately(sceneName, isLoading, isLoading);
+            Debug.Log("No Save Data");
         }
     }
 }

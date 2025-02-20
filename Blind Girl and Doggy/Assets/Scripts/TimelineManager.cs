@@ -13,8 +13,13 @@ public class TimelineManager : EventObject
     private void Awake()
     {
         dogController = FindObjectOfType<DogController>();
-        dogController.Animator.SetBool("isWalk", false);
-        dogController.StopFootStep();
+
+        if (dogController != null)
+        {
+            dogController.Animator.SetBool("isWalk", false);
+            dogController.StopFootStep();
+        }
+
     }
 
     void Start()

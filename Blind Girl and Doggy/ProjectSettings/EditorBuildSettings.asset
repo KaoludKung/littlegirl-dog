@@ -42,6 +42,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Mansion.unity
     guid: 764eaa0b64af7404c9407cbfb9931d49
   - enabled: 1
+    path: Assets/Scenes/EndCredit.unity
+    guid: 0b009afa8461144428dd10bbd8155bb9
+  - enabled: 1
     path: Assets/Scenes/Secret.unity
     guid: d8008930b1720fd469b7b407f09c0aaf
+  - enabled: 1
+    path: Assets/Scenes/Hints.unity
+    guid: 9d99c6d5efa60634eaf9a72d7312eb59
   m_configObjects: {}

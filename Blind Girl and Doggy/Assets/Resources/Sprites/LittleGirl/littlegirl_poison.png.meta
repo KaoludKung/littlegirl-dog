@@ -1,0 +1,2014 @@
+fileFormatVersion: 2
+guid: b9cb2c78228bedf4daee524fdec3d028
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: littlegirl_poison_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4096
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e89ce0f91500c468e1d1c224ae6165
+      internalID: 754890564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_1
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 4096
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19264c9b1df8513428682ecde5bee182
+      internalID: 1151345880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_2
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 4096
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 785e1d4f728181c4ab93bc489f591c72
+      internalID: 1299728775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_3
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 4096
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b6c8e9d7aad964ab522aa4c45fa504
+      internalID: -552727005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_4
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 4096
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd118e844bbe02847a49f3bfa10e6d63
+      internalID: 2053174316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_5
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 4096
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a37ae36c9d1b3146be922dc9d8770ae
+      internalID: 926372819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_6
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 4096
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f81f9f553c2e0dd43af11516c029ef7a
+      internalID: 8209867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_7
+      rect:
+        serializedVersion: 2
+        x: 4900
+        y: 4096
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e42f087997e2e5543a74c59d38845d50
+      internalID: 1813893731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_8
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 4096
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfaba56f17e541f42bab5c7df330b05e
+      internalID: 1900030797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_9
+      rect:
+        serializedVersion: 2
+        x: 6300
+        y: 4096
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a8134b169f7584d883386148c70cb0
+      internalID: 1960760255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3584
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5acff5f0763daf408c576cab69e4536
+      internalID: -2126235175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_11
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 3584
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11d85f3ef519c7047a8c01641725fb7a
+      internalID: -1438051224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_12
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 3584
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0270003e96bbb84fb442c3cd2124776
+      internalID: -1161697254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_13
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 3584
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb4c6eca56d48b45ae0ed5fd6da10d4
+      internalID: -1075958706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_14
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 3584
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df3b1d14c41b1c749a782b558112e6a2
+      internalID: -2065321280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_15
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 3584
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e632a21b7a5cc044dbc6897d60b6ba23
+      internalID: 684515654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_16
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 3584
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 182e7df6541331443a33245ea217bdcc
+      internalID: -1120505051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_17
+      rect:
+        serializedVersion: 2
+        x: 4900
+        y: 3584
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d4abfd2e4c6bcd438e1a8bcdd48bdbd
+      internalID: -777353607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_18
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 3584
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc73830f0b0fa214bbc43030e433a5e3
+      internalID: 726345702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_19
+      rect:
+        serializedVersion: 2
+        x: 6300
+        y: 3584
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd83d24ea2d0ef4c936377e7e0bfa2c
+      internalID: 1188819311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3072
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 121c808de07dee74caeb4c0bdcc7ff80
+      internalID: -1280015454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_21
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 3072
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41ac7ba9596f9f44aaf0296e3b9a0311
+      internalID: 13911352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_22
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 3072
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09f66519ac57e54409d531fc5de3abd6
+      internalID: 818349199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_23
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 3072
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c05f8a66046d48478a09fe093c375d4
+      internalID: 2065113873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_24
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 3072
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db7cc9ed4d5db147a246e028e99800f
+      internalID: 1166941956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_25
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 3072
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742355a8ed01ed940821f8882ebc6128
+      internalID: -260981905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_26
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 3072
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9392ee65d346df4485b0e3db8620733
+      internalID: -1639753000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_27
+      rect:
+        serializedVersion: 2
+        x: 4900
+        y: 3072
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0843605c57679449a326bcc6e148290
+      internalID: -1528975821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_28
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 3072
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 681bdd9142b64ed4684744df327c709e
+      internalID: 426360631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_29
+      rect:
+        serializedVersion: 2
+        x: 6300
+        y: 3072
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0684a1851db03c428c24c06b5f38742
+      internalID: -776188553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2560
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75d7f0cdca67d14bb66389fb2fd412b
+      internalID: 1241392406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_31
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 2560
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d27a0ed617b12e4793e11080196a3df
+      internalID: -1920861210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_32
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 2560
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa939abc01a48444d88f7569b6b3fc6e
+      internalID: -1170683527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_33
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 2560
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d00b5d3b036d89c42821fef7880ba92b
+      internalID: 905967763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_34
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 2560
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8854888706b23834aa4e1b20d03ba736
+      internalID: 226897751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_35
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 2560
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfa182d728e92e54083e402262b1dda4
+      internalID: -94450472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_36
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 2560
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f25fca08c7b092849b1fb9fd86b56dc6
+      internalID: 80291146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_37
+      rect:
+        serializedVersion: 2
+        x: 4900
+        y: 2560
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e0f18761bc60b4a8f211fa10cdc37e
+      internalID: 264157924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_38
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 2560
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4cfd6341fe64449bd484dc081173b4
+      internalID: 656231378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_39
+      rect:
+        serializedVersion: 2
+        x: 6300
+        y: 2560
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c5a5a5c7aeab5449440a323c420d76
+      internalID: -1500750043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97668c178aa9e74bbd145006be60157
+      internalID: -777593201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_41
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 2048
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 014c458ff1dc9524a8069ee902f6ff47
+      internalID: 153257301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_42
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 2048
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9ebfc2f5f61fc429844f95a2088c41
+      internalID: -43581689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_43
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 2048
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d150fa5a58074458f6384b507af376
+      internalID: 1784753379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_44
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 2048
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7280c44a2b44ae341bc89ebd6fb1ca72
+      internalID: -2012152126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_45
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 2048
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2205efb036acd3d4783ec24a40cefa80
+      internalID: -257472482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_46
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 2048
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a862e0518ae0a7a4c99afdc551b70366
+      internalID: 1833548595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_47
+      rect:
+        serializedVersion: 2
+        x: 4900
+        y: 2048
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57d1d3a4676bcc9448bab1fd2943899b
+      internalID: 443407553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_48
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 2048
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14bacce6b6fd3bd46bc084c6cedf38fc
+      internalID: -1657629164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_49
+      rect:
+        serializedVersion: 2
+        x: 6300
+        y: 2048
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 135ce7a7670e3a448898b07028e64c8f
+      internalID: 1621930585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e3a7fb5f88979349b149af7a0f766b2
+      internalID: 691842541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_51
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1536
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688dfdea8fb4c9e4197f7edc70b50b73
+      internalID: 1611946980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_52
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1536
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 024db73a35d476544a7630354ea21049
+      internalID: 24401843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_53
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 1536
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d73d89d427792ac46aad465f227c73c1
+      internalID: -147876521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_54
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 1536
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a448071775f474a8ce1ee6eb9f6b07
+      internalID: 1909943267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_55
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 1536
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e78f02c24dde89418b1a161c652fc57
+      internalID: -432636097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_56
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 1536
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1efe2960f138ad84b83dac8b5841f6ec
+      internalID: 588836808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_57
+      rect:
+        serializedVersion: 2
+        x: 4900
+        y: 1536
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b4c663273c5b44aaa05b9a06ff0a33
+      internalID: -1544304460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_58
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 1536
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac6377392a9b634485a254dfaeddee4
+      internalID: 891724690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_59
+      rect:
+        serializedVersion: 2
+        x: 6300
+        y: 1536
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d991089f84b39f147b54cef9d001da5f
+      internalID: 75738575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f36614c346d284db967e72d52d5dff
+      internalID: 1795188414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_61
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1024
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eefc92075aa411d42864473014b34d2d
+      internalID: 2138358480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_62
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1024
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c37f5520bd2fdb499db1920ca2ac9b6
+      internalID: 1880956390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_63
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 1024
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f9a4bedcdbac94bb6b20c89be9375f
+      internalID: 925521023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_64
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 1024
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae32d2aaa844bf54da347c55023aea3c
+      internalID: 1346315009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_65
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 1024
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ff0b15d27200c47a634c45e922923f
+      internalID: -1008911027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_66
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 1024
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f126f7b112d21734b974c45fcd28980c
+      internalID: 98615169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_67
+      rect:
+        serializedVersion: 2
+        x: 4900
+        y: 1024
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ae23a4f22adac64a8134c717d763839
+      internalID: -1072145160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_68
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 1024
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f7f6f5883ff40429778250bee30046
+      internalID: 1732175316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_69
+      rect:
+        serializedVersion: 2
+        x: 6300
+        y: 1024
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c234e46cced67ea4a9fcec04b12e7f81
+      internalID: -2098478951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f119b8eb6e046488989e43cec40524
+      internalID: 840899776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_71
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 512
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bed3ddc7d6ed1b4e93c5e00c6fd0dc4
+      internalID: 736867863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_72
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 512
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71279202c6055e049827856039ab71b0
+      internalID: 1257272441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_73
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 512
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bc66f8aa57b5804987783e38f8800f0
+      internalID: 1607206332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_74
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 512
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee554d7004a95a64fadd86b408445c06
+      internalID: -1853501123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_75
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 512
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 796249b665b6ac042b669f8ffd4a17ab
+      internalID: 666332976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_76
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 512
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1726f4ef8626662438a60f330a07af60
+      internalID: -1072617590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_77
+      rect:
+        serializedVersion: 2
+        x: 4900
+        y: 512
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d00d91d2b1d46d84f805eb4623d6ed32
+      internalID: 1838234867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_78
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 512
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb7a7440b4f59e418d44eb11007712a
+      internalID: -1629221147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_79
+      rect:
+        serializedVersion: 2
+        x: 6300
+        y: 512
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6869b30ef2042284da5bda6e210f6ca2
+      internalID: -688569518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12d698c0b25721a4187a2e6b6c042f5c
+      internalID: -2107390267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_81
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 366e2155f31ce1f428b857d785edf946
+      internalID: -414061494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_82
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 0
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf8ba867cf892a646b10f23e9d1a232d
+      internalID: 684988887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: littlegirl_poison_83
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 0
+        width: 700
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 336185e548e98d847966a2f2b5a38640
+      internalID: 1360198331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      littlegirl_poison_0: 754890564
+      littlegirl_poison_1: 1151345880
+      littlegirl_poison_10: -2126235175
+      littlegirl_poison_11: -1438051224
+      littlegirl_poison_12: -1161697254
+      littlegirl_poison_13: -1075958706
+      littlegirl_poison_14: -2065321280
+      littlegirl_poison_15: 684515654
+      littlegirl_poison_16: -1120505051
+      littlegirl_poison_17: -777353607
+      littlegirl_poison_18: 726345702
+      littlegirl_poison_19: 1188819311
+      littlegirl_poison_2: 1299728775
+      littlegirl_poison_20: -1280015454
+      littlegirl_poison_21: 13911352
+      littlegirl_poison_22: 818349199
+      littlegirl_poison_23: 2065113873
+      littlegirl_poison_24: 1166941956
+      littlegirl_poison_25: -260981905
+      littlegirl_poison_26: -1639753000
+      littlegirl_poison_27: -1528975821
+      littlegirl_poison_28: 426360631
+      littlegirl_poison_29: -776188553
+      littlegirl_poison_3: -552727005
+      littlegirl_poison_30: 1241392406
+      littlegirl_poison_31: -1920861210
+      littlegirl_poison_32: -1170683527
+      littlegirl_poison_33: 905967763
+      littlegirl_poison_34: 226897751
+      littlegirl_poison_35: -94450472
+      littlegirl_poison_36: 80291146
+      littlegirl_poison_37: 264157924
+      littlegirl_poison_38: 656231378
+      littlegirl_poison_39: -1500750043
+      littlegirl_poison_4: 2053174316
+      littlegirl_poison_40: -777593201
+      littlegirl_poison_41: 153257301
+      littlegirl_poison_42: -43581689
+      littlegirl_poison_43: 1784753379
+      littlegirl_poison_44: -2012152126
+      littlegirl_poison_45: -257472482
+      littlegirl_poison_46: 1833548595
+      littlegirl_poison_47: 443407553
+      littlegirl_poison_48: -1657629164
+      littlegirl_poison_49: 1621930585
+      littlegirl_poison_5: 926372819
+      littlegirl_poison_50: 691842541
+      littlegirl_poison_51: 1611946980
+      littlegirl_poison_52: 24401843
+      littlegirl_poison_53: -147876521
+      littlegirl_poison_54: 1909943267
+      littlegirl_poison_55: -432636097
+      littlegirl_poison_56: 588836808
+      littlegirl_poison_57: -1544304460
+      littlegirl_poison_58: 891724690
+      littlegirl_poison_59: 75738575
+      littlegirl_poison_6: 8209867
+      littlegirl_poison_60: 1795188414
+      littlegirl_poison_61: 2138358480
+      littlegirl_poison_62: 1880956390
+      littlegirl_poison_63: 925521023
+      littlegirl_poison_64: 1346315009
+      littlegirl_poison_65: -1008911027
+      littlegirl_poison_66: 98615169
+      littlegirl_poison_67: -1072145160
+      littlegirl_poison_68: 1732175316
+      littlegirl_poison_69: -2098478951
+      littlegirl_poison_7: 1813893731
+      littlegirl_poison_70: 840899776
+      littlegirl_poison_71: 736867863
+      littlegirl_poison_72: 1257272441
+      littlegirl_poison_73: 1607206332
+      littlegirl_poison_74: -1853501123
+      littlegirl_poison_75: 666332976
+      littlegirl_poison_76: -1072617590
+      littlegirl_poison_77: 1838234867
+      littlegirl_poison_78: -1629221147
+      littlegirl_poison_79: -688569518
+      littlegirl_poison_8: 1900030797
+      littlegirl_poison_80: -2107390267
+      littlegirl_poison_81: -414061494
+      littlegirl_poison_82: 684988887
+      littlegirl_poison_83: 1360198331
+      littlegirl_poison_9: 1960760255
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -4073,7 +4073,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   sceneName: ForestDay
-  enemyPosition: {x: 0, y: 0, z: 0}
   cameraID: 0
 --- !u!114 &7440817288500635590
 MonoBehaviour:
@@ -10260,7 +10259,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 5cc8786f22a07184fbfe9d38ce30040e, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0

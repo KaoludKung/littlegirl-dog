@@ -12,6 +12,7 @@ public class DialogueManager : EventObject
     [SerializeField] private DialogueUI dialogueUI;
     [SerializeField] private GameObject uiManagerObject;
     [SerializeField] private Animator[] animators;
+    [SerializeField] List<ItemActive> itemActives;
     [SerializeField] private bool resetAnimation = false;
     [SerializeField] private bool playerEnable = false;
 
@@ -125,6 +126,8 @@ public class DialogueManager : EventObject
         string currentText = conversation.lines[i].text;
         Sprite currentSprite = conversation.lines[i].character.portrait;
 
+        SetActiveItem(i);
+
         if (dialogueOption == DialogueOption.FullDisplay)
         {
             foreach (Animator animator in animators)
@@ -144,6 +147,22 @@ public class DialogueManager : EventObject
 
         dialogueUI.ShowDialogue(currentName, currentText, currentSprite, dialogueOption);
         StartCoroutine(Writing());
+    }
+
+    void SetActiveItem(int i)
+    {
+        if(itemActives.Count > 0)
+        {
+            for (int j = 0; j < itemActives.Count; j++)
+            {
+                ItemActive option = itemActives[j];
+
+                if (i == option.targetIndex)
+                {
+                    option.gameObjectActive.SetActive(true);
+                }
+            }
+        }
     }
 
     IEnumerator Writing()
@@ -217,4 +236,11 @@ public enum DialogueOption
 {
     TextOnly,
     FullDisplay
+}
+
+[System.Serializable]
+public class ItemActive
+{
+    public GameObject gameObjectActive;
+    public int targetIndex;
 }

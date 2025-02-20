@@ -30,7 +30,7 @@ MonoBehaviour:
     text: I just want you to feel the pain like you made us feel when we were kids.
   - character: {fileID: 11400000, guid: e08d1d2217b3d38419e4e528ba3459c8, type: 2}
     text: "So you\u2019ll know what pain feels like."
-  - character: {fileID: 11400000, guid: d7db8367b70c8e64ca8702eef020d88f, type: 2}
+  - character: {fileID: 11400000, guid: 9007ba49d2b35a84c853d46e3b50aacd, type: 2}
     text: Please stop, don't hurt her.
   - character: {fileID: 11400000, guid: 9007ba49d2b35a84c853d46e3b50aacd, type: 2}
     text: I swear, I'll shoot!

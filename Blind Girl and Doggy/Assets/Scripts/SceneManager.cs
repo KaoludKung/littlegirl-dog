@@ -32,10 +32,13 @@ public class SceneManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("Loading");  
     }
 
-    public void ChangeSceneImmediately(string sceneName, bool all = true)
+    public void ChangeSceneImmediately(string sceneName, bool player = true ,bool all = true)
     {
         PlayerDataManager.Instance.UpdateSceneName(sceneName);
-        PlayerDataManager.Instance.SavePlayerData();
+
+        if(player)
+            PlayerDataManager.Instance.SavePlayerData();
+
         //EventManager.Instance.SaveEventData();
 
         if (all)

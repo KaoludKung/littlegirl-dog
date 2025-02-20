@@ -3,13 +3,19 @@ using UnityEngine;
 
 public class CheatCode : MonoBehaviour
 {
-    private string cheatCode = "UP,UP,DOWN,DOWN,LEFT,RIGHT,LEFT,RIGHT,B,A,";
+    [SerializeField] private CheatType cheatType;
+    [SerializeField] private string cheatCode = "UP,UP,DOWN,DOWN,LEFT,RIGHT,LEFT,RIGHT,X,Z,";
+    [SerializeField] private AudioClip unlockClips;
     private string currentInput = "";
-    private float inputDelay = 0.2f;  // ???????????????????? (???????????????)
+    private float inputDelay = 0.2f;
+
+    private void Start()
+    {
+        Debug.Log("You can type cheat code");
+    }
 
     void Update()
     {
-        // ??????????????????????????????
         if (Time.time % inputDelay < 0.1f)
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -20,10 +26,10 @@ public class CheatCode : MonoBehaviour
                 AddInput("LEFT");
             else if (Input.GetKeyDown(KeyCode.RightArrow))
                 AddInput("RIGHT");
-            else if (Input.GetKeyDown(KeyCode.B))
-                AddInput("B");
-            else if (Input.GetKeyDown(KeyCode.A))
-                AddInput("A");
+            else if (Input.GetKeyDown(KeyCode.X))
+                AddInput("X");
+            else if (Input.GetKeyDown(KeyCode.Z))
+                AddInput("Z");
             else if (Input.GetKeyDown(KeyCode.Return))
                 AddInput("START");
         }
@@ -34,13 +40,12 @@ public class CheatCode : MonoBehaviour
         currentInput += key + ",";
         Debug.Log(currentInput);
 
-        // ?????????????????????????????????????
         if (currentInput == cheatCode)
         {
             ActivateCheat();
-            currentInput = "";  // ?????????????????????????
+            currentInput = "";
         }
-        else if (!cheatCode.StartsWith(currentInput))  // ?????????? ??????
+        else if (!cheatCode.StartsWith(currentInput))
         {
             currentInput = "";
             Debug.Log("Reset Try Again");
@@ -50,5 +55,23 @@ public class CheatCode : MonoBehaviour
     void ActivateCheat()
     {
         Debug.Log("Cheat Activated!");
+
+        if (cheatType == CheatType.Hint)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Hints");
+        }
+        else if(cheatType == CheatType.Unlock && PlayerPrefs.GetInt("UnlockSecret") == 0)
+        {
+            PlayerPrefs.SetInt("UnlockSecret", 1);
+
+            if(unlockClips != null)
+                SoundFXManager.instance.PlaySoundFXClip(unlockClips, transform, false, 1.0f);
+        }
     }
+}
+
+public enum CheatType
+{
+    Hint,
+    Unlock
 }
