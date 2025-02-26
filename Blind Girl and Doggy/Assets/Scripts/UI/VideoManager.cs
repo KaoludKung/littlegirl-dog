@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -13,10 +12,12 @@ public class VideoManager : MonoBehaviour
     void Awake()
     {
         secret = PlayerPrefs.GetInt("UnlockSecret");
-
         videoPlayer.playOnAwake = false;
         videoPlayer.isLooping = false;
+    }
 
+    void Start()
+    {
         videoPlayer.prepareCompleted += OnVideoPrepared;
         videoPlayer.Prepare();
     }
@@ -24,6 +25,12 @@ public class VideoManager : MonoBehaviour
     void OnVideoPrepared(VideoPlayer vp)
     {
         Debug.Log("Video is ready to play!");
+        StartCoroutine(PlayVideoWithDelay(0.5f));
+    }
+
+    IEnumerator PlayVideoWithDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
         videoPlayer.Play();
         videoPlayer.loopPointReached += OnVideoFinished;
     }
@@ -38,7 +45,7 @@ public class VideoManager : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
 
-        if(secret > 0 && ending)
+        if (secret > 0 && ending)
         {
             PlayerPrefs.SetInt("UnlockSecret", 0);
             UnityEngine.SceneManagement.SceneManager.LoadScene("Secret");
@@ -47,6 +54,6 @@ public class VideoManager : MonoBehaviour
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("Title");
         }
-
     }
 }
+

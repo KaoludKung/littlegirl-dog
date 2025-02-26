@@ -5,27 +5,30 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     [SerializeField] private float speed = 2f;
-    //[SerializeField] private float chaseSpeed = 1.0f;
-    //[SerializeField] private float detectionRange = 1f;
-    //[SerializeField] private float attackRange = 1f;
+    [SerializeField] private float berserkSpeed = 3.5f;
     [SerializeField] private GameObject endOfmonster;
     [SerializeField] private Transform playerTarget;
     [SerializeField] private Transform[] patrolPoint;
     [SerializeField] private AudioClip[] monsterClips;
 
+    private MonsterState currentState;
     private int currentPatrolIndex = 0;
     private Transform targetPatrolPoint;
 
     private float patrolSoundTimer = 0f;
     private float roarSoundTimer = 0f;
 
-    private bool isStalker = true;
-    private bool isPatrol = false;
     private bool hasPlayedSound = false;
+    private bool isHunting = false;
     private bool isKill = false;
     
     private AudioSource enemySource;
     private GirlController girlController;
+
+    private void Awake()
+    {
+        currentState = MonsterState.Stalker;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -37,48 +40,42 @@ public class Monster : MonoBehaviour
 
         girlController = FindObjectOfType<GirlController>();
         enemySource = GetComponent<AudioSource>();
-        //enemySource.Play();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (EventManager.Instance.IsEventTriggered(41))
+        if (EventManager.Instance.IsEventTriggered(41) && !isHunting)
         {
-            isStalker = false;
-            isPatrol = true;
+            isHunting = true;
+            currentState = MonsterState.Patrol;
         }
 
         if (endOfmonster.activeSelf)
+            currentState = MonsterState.RunAway;
+
+        switch (currentState)
         {
-            isStalker = false;
-            isPatrol = false;
+            case MonsterState.Stalker:
+                Stalker();
+                break;
+            case MonsterState.Patrol:
+                Patrol();
+                break;
+            case MonsterState.RunAway:
+                RunAway();
+                break;
+            default:
+                break;
         }
 
-        if (isStalker)
-        {
-            Stalker();
-        }
-        else if(isPatrol)
-        {
-            Patrol();
-        }
-        else
-        {
-            isKill = true;
-            enemySource.Stop();
-
-            Vector2 patrolPosition = new Vector2(6.46f, transform.position.y);
-            FlipEnemy(patrolPosition);
-            transform.position = Vector2.MoveTowards(transform.position, patrolPosition, speed * Time.deltaTime);
-        }
     }
+
 
     void Stalker()
     {
         float stopChasingRange = 30.0f;
         float distanceToPlayer = Vector2.Distance(transform.position, playerTarget.position);
-        //Debug.Log("Distance to Girl: " + distanceToPlayer);
 
         if (girlController.IsMoving && distanceToPlayer > stopChasingRange)
         {
@@ -123,7 +120,7 @@ public class Monster : MonoBehaviour
             Debug.Log(r);
             
             if(r == 1 || r == 2)
-                SoundFXManager.instance.PlaySoundFXClip(monsterClips[2], transform, true, 0.8f, 3f, 20f);
+                SoundFXManager.instance.PlaySoundFXClip(monsterClips[2], transform, true, 0.8f, 2.5f, 40f);
         }
 
         if (EventManager.Instance.IsEventTriggered(42))
@@ -141,6 +138,16 @@ public class Monster : MonoBehaviour
                 targetPatrolPoint = patrolPoint[currentPatrolIndex];
             }
         }
+    }
+
+    void RunAway()
+    {
+        isKill = true;
+        enemySource.Stop();
+
+        Vector2 patrolPosition = new Vector2(6.46f, transform.position.y);
+        FlipEnemy(patrolPosition);
+        transform.position = Vector2.MoveTowards(transform.position, patrolPosition, speed * Time.deltaTime);
     }
 
 
@@ -164,7 +171,16 @@ public class Monster : MonoBehaviour
             {
                 isKill = true;
                 HeartManager.instance.HeartDecrease();
-                //Debug.Log("Catch me!!!");
+            }
+        }
+
+        if (collision.CompareTag("Player"))
+        {
+            if (!isKill)
+            {
+                girlController.SetIsMoving(false);
+                girlController.Animator.SetBool("isWalk", false);
+                girlController.Animator.SetBool("isDeath", true);
             }
         }
     }
@@ -175,3 +191,5 @@ public class Monster : MonoBehaviour
     }
 
 }
+
+public enum MonsterState {Stalker, Patrol, RunAway ,None }

@@ -65,7 +65,11 @@ public class CheatCode : MonoBehaviour
             PlayerPrefs.SetInt("UnlockSecret", 1);
 
             if(unlockClips != null)
-                SoundFXManager.instance.PlaySoundFXClip(unlockClips, transform, false, 1.0f);
+                SoundFXManager.instance.PlaySoundFXClip(unlockClips, transform, false, 0.7f);
+        }
+        else
+        {
+            Debug.Log("Nothing");
         }
     }
 }

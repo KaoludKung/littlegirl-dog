@@ -35,6 +35,7 @@ public class TitleManager : MonoBehaviour
         Time.timeScale = 1;
         animator[0].SetBool("isWalk", true);
         animator[1].SetBool("isWalk", true);
+        PlayerPrefs.SetInt("UnlockSecret", 0);
     }
 
     // Start is called before the first frame update

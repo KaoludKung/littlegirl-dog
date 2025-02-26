@@ -378,6 +378,7 @@ MonoBehaviour:
   uiManagerObject: {fileID: 851934030}
   animators:
   - {fileID: 1608686693}
+  itemActives: []
   resetAnimation: 1
   playerEnable: 1
 --- !u!114 &127154214
@@ -3948,6 +3949,63 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &740894727
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 704344563671748909, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 608.367
+      objectReference: {fileID: 0}
+    - target: {fileID: 704344563671748909, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 454.4939
+      objectReference: {fileID: 0}
+    - target: {fileID: 704344563671748909, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.211328
+      objectReference: {fileID: 0}
+    - target: {fileID: 704344563671748909, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 704344563671748909, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 704344563671748909, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 704344563671748909, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 704344563671748909, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 704344563671748909, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 704344563671748909, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382754940525842558, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
+      propertyPath: m_Name
+      value: cheat_code
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
 --- !u!1 &763266326
 GameObject:
   m_ObjectHideFlags: 0
@@ -5515,7 +5573,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -6608615458130458199, guid: 9416f50642d9c7a44b9ac219a6244c1c, type: 2}
   m_audioClip: {fileID: 8300000, guid: c7db989f7f6647a45b4e5c02c19a6c33, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6804,6 +6862,7 @@ MonoBehaviour:
   animators:
   - {fileID: 1129866231}
   - {fileID: 1608686693}
+  itemActives: []
   resetAnimation: 1
   playerEnable: 0
 --- !u!1 &1360622240
@@ -7682,6 +7741,7 @@ MonoBehaviour:
   uiManagerObject: {fileID: 851934030}
   animators:
   - {fileID: 1608686693}
+  itemActives: []
   resetAnimation: 1
   playerEnable: 1
 --- !u!1 &1608686690
@@ -7742,7 +7802,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -6608615458130458199, guid: 9416f50642d9c7a44b9ac219a6244c1c, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.6
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7750,8 +7810,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 5
-  MaxDistance: 10
+  MinDistance: 3
+  MaxDistance: 20
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -8988,7 +9048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b41208fc49c2e43a8a4f3b3a4b77f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventID: 106
+  eventID: 206
   TriggerEventID: 0
   actionType: 5
   actionResult: Margarete has discovered a hidden note.
@@ -10339,3 +10399,4 @@ SceneRoots:
   - {fileID: 330687196}
   - {fileID: 136952701}
   - {fileID: 837812745}
+  - {fileID: 740894727}

@@ -5741,6 +5741,7 @@ MonoBehaviour:
   animators:
   - {fileID: 912300481}
   - {fileID: 2069060447}
+  itemActives: []
   resetAnimation: 1
   playerEnable: 0
 --- !u!1 &277268830
@@ -9035,7 +9036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b41208fc49c2e43a8a4f3b3a4b77f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventID: 101
+  eventID: 201
   TriggerEventID: 0
   actionType: 5
   actionResult: Margarete has discovered a hidden note. Press E to open the note
@@ -9689,9 +9690,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -6608615458130458199, guid: 9416f50642d9c7a44b9ac219a6244c1c, type: 2}
-  m_audioClip: {fileID: 8300000, guid: c7db989f7f6647a45b4e5c02c19a6c33, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e2c0dec93583e1345b643135351c1ca0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -10228,6 +10229,7 @@ MonoBehaviour:
   animators:
   - {fileID: 912300481}
   - {fileID: 2069060447}
+  itemActives: []
   resetAnimation: 1
   playerEnable: 0
 --- !u!4 &562054041
@@ -12344,6 +12346,7 @@ MonoBehaviour:
   animators:
   - {fileID: 912300481}
   - {fileID: 1473348820}
+  itemActives: []
   resetAnimation: 1
   playerEnable: 0
 --- !u!1 &708776402
@@ -13120,7 +13123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b41208fc49c2e43a8a4f3b3a4b77f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventID: 103
+  eventID: 203
   TriggerEventID: 0
   actionType: 5
   actionResult: Margarete has discovered a hidden note. Press E to open the note
@@ -14876,6 +14879,63 @@ MonoBehaviour:
   maxDistance: 10
   spitalBlend: 1
   linaerRoller: 0
+--- !u!1001 &814920372
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 704344563671748909, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 608.367
+      objectReference: {fileID: 0}
+    - target: {fileID: 704344563671748909, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 454.4939
+      objectReference: {fileID: 0}
+    - target: {fileID: 704344563671748909, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.211328
+      objectReference: {fileID: 0}
+    - target: {fileID: 704344563671748909, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 704344563671748909, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 704344563671748909, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 704344563671748909, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 704344563671748909, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 704344563671748909, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 704344563671748909, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382754940525842558, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
+      propertyPath: m_Name
+      value: cheat_code
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bcaf82c4477a2354580c53e5c67363bc, type: 3}
 --- !u!1 &817070600
 GameObject:
   m_ObjectHideFlags: 0
@@ -16788,6 +16848,7 @@ MonoBehaviour:
   animators:
   - {fileID: 545043431}
   - {fileID: 912300481}
+  itemActives: []
   resetAnimation: 1
   playerEnable: 0
 --- !u!1 &911988848
@@ -16924,7 +16985,7 @@ MonoBehaviour:
   detectRange: 30
   volume: 1
   barkClip: {fileID: 8300000, guid: 5412a492768a9b644bdf814cc593b782, type: 3}
-  walkClip: {fileID: 8300000, guid: 5872e0a2aec2ce44182603c1ad9d5c0c, type: 3}
+  walkClip: {fileID: 8300000, guid: 4818ef1d5c9b9394caad884ebce98e7c, type: 3}
   dogTransform: {fileID: 545043435}
   dogControlller: {fileID: 545043429}
   interactionIcon: {fileID: 251196495}
@@ -16943,7 +17004,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -6608615458130458199, guid: 9416f50642d9c7a44b9ac219a6244c1c, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -16951,8 +17012,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 5
-  MaxDistance: 10
+  MinDistance: 3
+  MaxDistance: 20
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -19482,7 +19543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b41208fc49c2e43a8a4f3b3a4b77f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventID: 102
+  eventID: 202
   TriggerEventID: 0
   actionType: 5
   actionResult: Margarete has discovered a hidden note. Press E to open the note
@@ -24964,7 +25025,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 19fd22e6498e027468fae10f8c8bf35f, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -27494,6 +27555,7 @@ MonoBehaviour:
   animators:
   - {fileID: 912300481}
   - {fileID: 545043431}
+  itemActives: []
   resetAnimation: 1
   playerEnable: 1
 --- !u!114 &1653003690
@@ -30319,6 +30381,7 @@ MonoBehaviour:
   animators:
   - {fileID: 912300481}
   - {fileID: 545043431}
+  itemActives: []
   resetAnimation: 0
   playerEnable: 0
 --- !u!1 &1890352652
@@ -32051,6 +32114,7 @@ MonoBehaviour:
   animators:
   - {fileID: 545043431}
   - {fileID: 912300481}
+  itemActives: []
   resetAnimation: 1
   playerEnable: 0
 --- !u!114 &1986822214
@@ -35325,3 +35389,4 @@ SceneRoots:
   - {fileID: 68933745}
   - {fileID: 136671099}
   - {fileID: 938052878}
+  - {fileID: 814920372}
