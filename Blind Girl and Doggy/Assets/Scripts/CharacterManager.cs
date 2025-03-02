@@ -36,6 +36,12 @@ public class CharacterManager : MonoBehaviour
         }
     }
 
+    public void StopMoving()
+    {
+        girlController.SetIsMoving(false);
+        girlController.Animator.SetBool("isWalk", false);
+    }
+
     public void SetIsActive(bool i)
     {
         if (girlController != null && dogController != null)

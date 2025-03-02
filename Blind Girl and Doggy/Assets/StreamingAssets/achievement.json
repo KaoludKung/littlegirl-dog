@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "achievementName": "Let’s go my buddy",
+      "iconPath": "Achievements/ach-01",
+      "description": "Start your first journey.",
+      "isCollected": false
+    },
+    {
+      "id": 2,
+      "achievementName": "Grim Reaper met a new friend",
+      "iconPath": "Achievements/ach-02",
+      "description": "The First Time Margarete or Fruend Died.",
+      "isCollected": false
+    },
+    {
+      "id": 3,
+      "achievementName": "The past is completely collected",
+      "iconPath": "Achievements/ach-03",
+      "description": "Collect all notes.",
+      "isCollected": false
+    },
+    {
+      "id": 4,
+      "achievementName": "A delicious apple pie",
+      "iconPath": "Achievements/ach-04",
+      "description": "Margarete should follow her mother's orders.",
+      "isCollected": false
+    },
+    {
+      "id": 5,
+      "achievementName": "It's just a memory",
+      "iconPath": "Achievements/ach-05",
+      "description": "Veronika indulged in the oh-so-delicious pie.",
+      "isCollected": false
+    },
+    {
+      "id": 6,
+      "achievementName": "A pie left uneaten forever.",
+      "iconPath": "Achievements/ach-06",
+      "description": "Margarete didn’t show up for Veronika. How disrespectful!",
+      "isCollected": false
+    },
+    {
+      "id": 7,
+      "achievementName": "The Kaolud Code",
+      "iconPath": "Achievements/ach-07",
+      "description": "UP,UP,DOWN,DOWN,LEFT,RIGHT,LEFT,RIGHT,X,Z.",
+      "isCollected": false
+    },
+    {
+      "id": 8,
+      "achievementName": "I Come from Another Planet",
+      "iconPath": "Achievements/ach-08",
+      "description": "Watch the secret scene.",
+      "isCollected": false
+    }
+  ]
+}

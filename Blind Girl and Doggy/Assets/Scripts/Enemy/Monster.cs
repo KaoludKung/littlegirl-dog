@@ -5,7 +5,6 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     [SerializeField] private float speed = 2f;
-    [SerializeField] private float berserkSpeed = 3.5f;
     [SerializeField] private GameObject endOfmonster;
     [SerializeField] private Transform playerTarget;
     [SerializeField] private Transform[] patrolPoint;

@@ -157,6 +157,7 @@ public class InventoryManager : JsonManager<InventoryData>
     public void RemoveItem(int itemId)
     {
         InventoryItem itemToRemove = items.Find(item => item.id == itemId);
+        
         if (itemToRemove != null)
         {
             if (itemToRemove.isCollected)

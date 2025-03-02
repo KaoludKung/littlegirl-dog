@@ -1491,6 +1491,7 @@ MonoBehaviour:
   - {fileID: 1510311325}
   - {fileID: 852590575}
   breakClip: {fileID: 8300000, guid: 4a20201dda58efd41af87e3e6d6ddfe0, type: 3}
+  bridgeClips: []
 --- !u!1 &69671302
 GameObject:
   m_ObjectHideFlags: 0
@@ -2803,7 +2804,7 @@ Transform:
   m_GameObject: {fileID: 136671098}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 316.80917, y: 1.8595705, z: 0}
+  m_LocalPosition: {x: -291.55783, y: -452.63434, z: 6.211328}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2813,7 +2814,7 @@ Transform:
   - {fileID: 206257400}
   - {fileID: 551487303}
   - {fileID: 835116824}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1871289903}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &137181545
 GameObject:
@@ -3488,7 +3489,7 @@ Transform:
   m_GameObject: {fileID: 163386307}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 231.03, y: -0.81, z: 0}
+  m_LocalPosition: {x: -377.337, y: -455.3039, z: 6.211328}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3504,7 +3505,7 @@ Transform:
   - {fileID: 350699277}
   - {fileID: 2090992986}
   - {fileID: 1130414295}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1871289903}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &164247312
 GameObject:
@@ -7342,7 +7343,7 @@ Transform:
   m_GameObject: {fileID: 371025236}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.4316797, y: 9.538084, z: 0}
+  m_LocalPosition: {x: -603.9353, y: -444.9558, z: 6.211328}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7386,7 +7387,7 @@ Transform:
   - {fileID: 1216849940}
   - {fileID: 884185389}
   - {fileID: 1125933359}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1871289903}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &389125505
 GameObject:
@@ -9673,7 +9674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  walkClip: {fileID: 8300000, guid: c7db989f7f6647a45b4e5c02c19a6c33, type: 3}
+  walkClip: {fileID: 8300000, guid: e2c0dec93583e1345b643135351c1ca0, type: 3}
   toofar: {fileID: 14252097}
   dogIcon: {fileID: 563070970}
   dogSprite:
@@ -9692,7 +9693,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -6608615458130458199, guid: 9416f50642d9c7a44b9ac219a6244c1c, type: 2}
   m_audioClip: {fileID: 8300000, guid: e2c0dec93583e1345b643135351c1ca0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -10954,8 +10955,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623081827}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 75.6045, y: 8.674826, z: -0.49096832}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -532.7625, y: -445.81906, z: 5.72036}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10971,7 +10972,7 @@ Transform:
   - {fileID: 157620331}
   - {fileID: 1245346455}
   - {fileID: 127333180}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1871289903}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &630424807
 GameObject:
@@ -14006,8 +14007,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787639709}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.62177, y: 4.6543555, z: -0.10887845}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -624.9888, y: -449.83954, z: 6.1024494}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14035,7 +14036,7 @@ Transform:
   - {fileID: 240088363}
   - {fileID: 2116590028}
   - {fileID: 950725684}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1871289903}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &792429743
 GameObject:
@@ -17004,7 +17005,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -6608615458130458199, guid: 9416f50642d9c7a44b9ac219a6244c1c, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.35
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -17242,7 +17243,7 @@ Transform:
   m_GameObject: {fileID: 912300478}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.4, y: -1.455029, z: 0}
+  m_LocalPosition: {x: -15.4, y: -1.386733, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20412,8 +20413,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154994985}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.62177, y: 4.6543555, z: -0.10887845}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -624.9888, y: -449.83954, z: 6.1024494}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20425,7 +20426,7 @@ Transform:
   - {fileID: 1324788744}
   - {fileID: 1824021020}
   - {fileID: 112520621}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1871289903}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1159623242
 GameObject:
@@ -21637,6 +21638,9 @@ MonoBehaviour:
   - {fileID: 1510311325}
   - {fileID: 852590575}
   breakClip: {fileID: 8300000, guid: 4a20201dda58efd41af87e3e6d6ddfe0, type: 3}
+  bridgeClips:
+  - {fileID: 8300000, guid: c7db989f7f6647a45b4e5c02c19a6c33, type: 3}
+  - {fileID: 8300000, guid: 6e09c861ff84369489f97eac42ec0cdc, type: 3}
 --- !u!61 &1220372184
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28305,8 +28309,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707056184}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 75.6045, y: 8.674826, z: -0.49096832}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -532.7625, y: -445.81906, z: 5.72036}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -28326,7 +28330,7 @@ Transform:
   - {fileID: 768731871}
   - {fileID: 1790646188}
   - {fileID: 463842547}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1871289903}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1709313561
 GameObject:
@@ -30221,6 +30225,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1871289902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1871289903}
+  m_Layer: 0
+  m_Name: props
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1871289903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871289902}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 608.367, y: 454.4939, z: -6.211328}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 136671099}
+  - {fileID: 1707056185}
+  - {fileID: 623081828}
+  - {fileID: 1910801589}
+  - {fileID: 371025237}
+  - {fileID: 787639710}
+  - {fileID: 1154994986}
+  - {fileID: 163386308}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1879765124
 GameObject:
   m_ObjectHideFlags: 0
@@ -30851,7 +30894,7 @@ Transform:
   m_GameObject: {fileID: 1910801588}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.776414, y: 14.249449, z: 0}
+  m_LocalPosition: {x: -603.5906, y: -440.24445, z: 6.211328}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -30907,7 +30950,7 @@ Transform:
   - {fileID: 886209006}
   - {fileID: 1693407680}
   - {fileID: 573459769}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1871289903}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1924652782
 GameObject:
@@ -35379,14 +35422,7 @@ SceneRoots:
   - {fileID: 798962161}
   - {fileID: 2134136090}
   - {fileID: 485063391}
-  - {fileID: 1707056185}
-  - {fileID: 623081828}
-  - {fileID: 1910801589}
-  - {fileID: 371025237}
-  - {fileID: 787639710}
-  - {fileID: 1154994986}
-  - {fileID: 163386308}
+  - {fileID: 1871289903}
   - {fileID: 68933745}
-  - {fileID: 136671099}
   - {fileID: 938052878}
   - {fileID: 814920372}

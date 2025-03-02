@@ -53,6 +53,8 @@ public class DialogueManager : EventObject
     {
         CharacterManager.Instance.SetIsActive(false);
         CharacterManager.Instance.SetActiveUIPlayer(false);
+        CharacterManager.Instance.StopMoving();
+
         if (uiManagerObject != null)
             uiManagerObject.SetActive(false);
 

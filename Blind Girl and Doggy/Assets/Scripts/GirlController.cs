@@ -26,6 +26,7 @@ public class GirlController : MonoBehaviour
     private bool isInteract;
     public bool isActive { get; private set; }
 
+    private AudioClip originalClip;
     private AudioSource walkSource;
     private Animator animator;
     private Vector3 targetPosition;
@@ -47,6 +48,7 @@ public class GirlController : MonoBehaviour
         animator = GetComponent<Animator>();
         animator.updateMode = AnimatorUpdateMode.UnscaledTime;
         walkSource.clip = walkClip;
+        originalClip = walkClip;
         tooFar.text = "";
 
     }
@@ -301,6 +303,11 @@ public class GirlController : MonoBehaviour
                                                                   progressSlider.transform.localScale.z);
             }
         }
+    }
+
+    public void SetNewClip(AudioClip newClip, bool useOriginal = false)
+    {
+        walkSource.clip = useOriginal ? originalClip : newClip;
     }
 
     public void SetIsMoving(bool value)

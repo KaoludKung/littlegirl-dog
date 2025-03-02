@@ -13,11 +13,11 @@ public class DogController : MonoBehaviour
     public Image staminaFill;
     public bool isActive { get; private set; }
 
+    private AudioClip originalClip;
     private AudioSource walkSource;
     private Animator animator;
     private bool isMoving;
     private bool isDigging;
-    //private bool isWalkingSoundPlaying;
     private bool isRegeneratingStamina = false;
     private Interactable currentInteractable;
 
@@ -33,6 +33,7 @@ public class DogController : MonoBehaviour
         animator = GetComponent<Animator>();
         animator.updateMode = AnimatorUpdateMode.UnscaledTime;
         walkSource.clip = walkClip;
+        originalClip = walkClip;
     }
 
 
@@ -40,7 +41,6 @@ public class DogController : MonoBehaviour
     {
         isMoving = false;
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Character"), LayerMask.NameToLayer("Character"), true);
-        //isWalkingSoundPlaying = false;
     }
 
     void Update()
@@ -113,7 +113,7 @@ public class DogController : MonoBehaviour
                 transform.localScale = new Vector3(1, 1, 1);
             }
 
-            if (!walkSource.isPlaying)
+            if (walkSource.clip != null && !walkSource.isPlaying)
             {
                 walkSource.loop = true;
                 walkSource.Play();
@@ -182,7 +182,6 @@ public class DogController : MonoBehaviour
         if (collision.gameObject.CompareTag("Wall"))
         {
             isMoving = false;
-            //isWalkingSoundPlaying = false;
 
             if (walkSource.isPlaying)
             {
@@ -211,6 +210,12 @@ public class DogController : MonoBehaviour
             }
         }
     }
+
+    public void SetNewClip(AudioClip newClip, bool useOriginal = false)
+    {
+        walkSource.clip = useOriginal ? originalClip : newClip;
+    }
+
 
     public void SetIsActive(bool value)
     {

@@ -161,6 +161,9 @@ public class GameOverManager : MonoBehaviour
 
     IEnumerator Respawn()
     {
+        dogController.SetNewClip(null, true);
+        girlController.SetNewClip(null, true);
+
         character[0].position = PlayerDataManager.Instance.GetDogPosition();
         character[1].position = PlayerDataManager.Instance.GetGirlPosition();
 

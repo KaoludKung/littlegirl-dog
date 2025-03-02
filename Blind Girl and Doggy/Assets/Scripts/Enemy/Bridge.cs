@@ -8,6 +8,7 @@ public class Bridge : MonoBehaviour
     [SerializeField] private Transform rope;
     [SerializeField] private Transform[] bridge;
     [SerializeField] private AudioClip breakClip;
+    [SerializeField] private AudioClip[] bridgeClips;
 
     private int charactersOnBridge = 0;
     private Vector3[] bridgePosition;
@@ -15,6 +16,7 @@ public class Bridge : MonoBehaviour
     private Rigidbody2D rb;
     private BoxCollider2D boxCollider;
     private GirlController controller;
+    private DogController dcontroller;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,7 @@ public class Bridge : MonoBehaviour
         rb = rope.GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         controller = FindObjectOfType<GirlController>();
+        dcontroller = FindObjectOfType<DogController>();
         bridgePosition = new Vector3[bridge.Length];
         ropePosition = rope.position;
 
@@ -49,6 +52,11 @@ public class Bridge : MonoBehaviour
          
         }
 
+        if (collision.CompareTag("Dog"))
+            dcontroller.SetNewClip(bridgeClips[0]);
+
+        if (collision.CompareTag("Player"))
+            dcontroller.SetNewClip(bridgeClips[1]);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -57,6 +65,12 @@ public class Bridge : MonoBehaviour
         {
             charactersOnBridge--;
         }
+
+        if (collision.CompareTag("Dog"))
+            dcontroller.SetNewClip(null, true);
+
+        if (collision.CompareTag("Player"))
+            dcontroller.SetNewClip(null, true);
     }
 
     public IEnumerator Wait()

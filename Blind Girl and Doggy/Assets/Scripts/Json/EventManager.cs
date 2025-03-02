@@ -89,6 +89,8 @@ public class EventManager : JsonManager<EventData>
         InitializePaths("inventory.json");
     }
 
+    public List<EventData> GetEventList() => eventList;
+
     public void UpdateEventDataTrigger(int eventId, bool newTriggerStatus)
     {
         EventData eventData = eventList.Find(e => e.id == eventId);
@@ -104,24 +106,6 @@ public class EventManager : JsonManager<EventData>
         }
     }
 
-    /*
-    public void UpdataEventDataExcuted(int eventId, bool newhasExecutedStatus)
-    {
-        EventData eventData = eventList.Find(e => e.id == eventId);
-        if (eventData != null)
-        {
-            eventData.hasExecuted = newhasExecutedStatus;
-            Debug.Log($"Event '{eventData.nameEvent}' updated to: {newhasExecutedStatus}");
-            //SaveEventData();
-        }
-        else
-        {
-            Debug.LogWarning($"Event with ID '{eventId}' not found.");
-        }
-    }*/
-
-    public List<EventData> GetEventList() => eventList;
-
     public bool IsEventTriggered(int eventId)
     {
         EventData eventData = eventList.Find(e => e.id == eventId);
@@ -135,23 +119,6 @@ public class EventManager : JsonManager<EventData>
         return false;
         
     }
-
-    /*
-    public bool IsHasExcuted(int eventId)
-    {
-        EventData eventData = eventList.Find(e => e.id == eventId);
-
-        if (eventData != null)
-        {
-            return eventData.hasExecuted;
-        }
-
-        Debug.LogWarning($"Event with ID '{eventId}' not found.");
-        return false;
-
-    }
-    */
-
 }
 
 [Serializable]

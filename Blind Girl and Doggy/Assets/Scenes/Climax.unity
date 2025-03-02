@@ -4619,6 +4619,7 @@ MonoBehaviour:
   uiManagerObject: {fileID: 704901171}
   animators:
   - {fileID: 473871880}
+  itemActives: []
   resetAnimation: 0
   playerEnable: 0
 --- !u!1 &473871879
@@ -5837,6 +5838,7 @@ MonoBehaviour:
   uiManagerObject: {fileID: 704901171}
   animators:
   - {fileID: 473871880}
+  itemActives: []
   resetAnimation: 0
   playerEnable: 0
 --- !u!1 &610810098
@@ -8285,7 +8287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  walkClip: {fileID: 8300000, guid: c7db989f7f6647a45b4e5c02c19a6c33, type: 3}
+  walkClip: {fileID: 8300000, guid: e2c0dec93583e1345b643135351c1ca0, type: 3}
   toofar: {fileID: 45618611}
   dogIcon: {fileID: 0}
   dogSprite:
@@ -15103,7 +15105,7 @@ MonoBehaviour:
   detectRange: 24
   volume: 0.2
   barkClip: {fileID: 8300000, guid: 5412a492768a9b644bdf814cc593b782, type: 3}
-  walkClip: {fileID: 8300000, guid: 5872e0a2aec2ce44182603c1ad9d5c0c, type: 3}
+  walkClip: {fileID: 8300000, guid: 4818ef1d5c9b9394caad884ebce98e7c, type: 3}
   dogTransform: {fileID: 754401285}
   dogControlller: {fileID: 754401279}
   interactionIcon: {fileID: 31697909}
@@ -15122,7 +15124,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -6608615458130458199, guid: 9416f50642d9c7a44b9ac219a6244c1c, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.6
+  m_Volume: 0.35
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -15130,8 +15132,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 5
-  MaxDistance: 10
+  MinDistance: 3
+  MaxDistance: 20
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -15341,6 +15343,7 @@ Transform:
   - {fileID: 31697911}
   - {fileID: 256611836}
   - {fileID: 919729362}
+  - {fileID: 1408693586}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1297270625
@@ -17123,6 +17126,134 @@ Transform:
   - {fileID: 1172054807}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1408693585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1408693586}
+  - component: {fileID: 1408693587}
+  m_Layer: 6
+  m_Name: panting_source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1408693586
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408693585}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1293685873}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1408693587
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408693585}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -6608615458130458199, guid: 9416f50642d9c7a44b9ac219a6244c1c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 3
+  MaxDistance: 20
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1409949335
 GameObject:
   m_ObjectHideFlags: 0
@@ -17344,6 +17475,7 @@ MonoBehaviour:
   uiManagerObject: {fileID: 704901171}
   animators:
   - {fileID: 473871880}
+  itemActives: []
   resetAnimation: 0
   playerEnable: 0
 --- !u!1 &1448839559
@@ -20515,6 +20647,8 @@ PlayableDirector:
     value: {fileID: 1712827812}
   - key: {fileID: -8747688003887277617, guid: d2194dc1ea2e3d6418c3273008ff2bc4, type: 2}
     value: {fileID: 1804792274}
+  - key: {fileID: -8370770066874484400, guid: d2194dc1ea2e3d6418c3273008ff2bc4, type: 2}
+    value: {fileID: 1408693587}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1752705495
@@ -23701,6 +23835,7 @@ MonoBehaviour:
   dialogueUI: {fileID: 704901173}
   uiManagerObject: {fileID: 704901171}
   animators: []
+  itemActives: []
   resetAnimation: 0
   playerEnable: 0
 --- !u!4 &2016636070
@@ -24846,6 +24981,7 @@ MonoBehaviour:
   uiManagerObject: {fileID: 704901171}
   animators:
   - {fileID: 473871880}
+  itemActives: []
   resetAnimation: 0
   playerEnable: 0
 --- !u!1 &2126068068
