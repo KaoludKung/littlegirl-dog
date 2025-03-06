@@ -116,6 +116,8 @@ public class HeartManager : MonoBehaviour
         PlayerDataManager.Instance.SavePlayerData();
         HeartUpdate();
 
+        AchievementUnlock.Instance.UnlockAchievement(2);
+
         if (PlayerDataManager.Instance.GetHearts() != 0)
         {
             StartCoroutine(Death());

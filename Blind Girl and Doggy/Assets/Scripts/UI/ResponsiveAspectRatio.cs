@@ -5,11 +5,24 @@ using UnityEngine.UI;
 public class ResponsiveAspectRatio : MonoBehaviour
 {
     private AspectRatioFitter aspectRatioFitter;
+    private Vector2 lastScreenSize;
 
     void Start()
     {
         aspectRatioFitter = GetComponent<AspectRatioFitter>();
+        lastScreenSize = new Vector2(Screen.width, Screen.height);
         AdjustAspectRatio();
+    }
+
+    void Update()
+    {
+        Vector2 currentScreenSize = new Vector2(Screen.width, Screen.height);
+
+        if (currentScreenSize != lastScreenSize)
+        {
+            lastScreenSize = currentScreenSize;
+            AdjustAspectRatio();
+        }
     }
 
     void AdjustAspectRatio()
@@ -21,13 +34,5 @@ public class ResponsiveAspectRatio : MonoBehaviour
         aspectRatioFitter.aspectRatio = currentAspect;
 
         Debug.Log($"Screen Width: {screenWidth}, Screen Height: {screenHeight}, Aspect Ratio: {currentAspect}");
-    }
-
-    void Update()
-    {
-        if (Screen.width != aspectRatioFitter.aspectRatio * Screen.height)
-        {
-            AdjustAspectRatio();
-        }
     }
 }

@@ -542,123 +542,280 @@
     },
     {
       "id": 90,
-      "nameEvent": "",
-      "type": "",
-      "trigger": false
+      "nameEvent": "Fall Down",
+      "type": "Timeline",
+      "trigger": true
     },
     {
       "id": 91,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Climax_01",
+      "type": "Dialogue",
       "trigger": false
     },
     {
       "id": 92,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "GrannyAppears",
+      "type": "Timeline",
       "trigger": false
     },
     {
       "id": 93,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Climax_02",
+      "type": "Dialogue",
       "trigger": false
     },
     {
       "id": 94,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Hunter's death'",
+      "type": "Timeline",
       "trigger": false
     },
     {
       "id": 95,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Climax_03",
+      "type": "Dialogue",
       "trigger": false
     },
     {
       "id": 96,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Good Bye",
+      "type": "Timeline",
       "trigger": false
     },
     {
       "id": 97,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Climax_04",
+      "type": "Dialogue",
       "trigger": false
     },
     {
       "id": 98,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "You're safe",
+      "type": "Timeline",
       "trigger": false
     },
     {
       "id": 99,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Climax_05",
+      "type": "Dialogue",
       "trigger": false
     },
     {
       "id": 100,
-      "nameEvent": "",
-      "type": "",
+      "nameEvent": "Mansion",
+      "type": "SceneManager",
       "trigger": false
     },
     {
       "id": 101,
+      "nameEvent": "Mansion_01",
+      "type": "Dialogue",
+      "trigger": true
+    },
+    {
+      "id": 102,
+      "nameEvent": "Choice of The End",
+      "type": "Route",
+      "trigger": false
+    },
+    {
+      "id": 103,
+      "nameEvent": "Mansion_02",
+      "type": "Dialogue",
+      "trigger": false
+    },
+    {
+      "id": 104,
+      "nameEvent": "GiveMyPie",
+      "type": "Timeline",
+      "trigger": false
+    },
+    {
+      "id": 105,
+      "nameEvent": "Mansion_03",
+      "type": "Dialogue",
+      "trigger": false
+    },
+    {
+      "id": 106,
+      "nameEvent": "Poison",
+      "type": "Timeline",
+      "trigger": false
+    },
+    {
+      "id": 107,
+      "nameEvent": "Mansion_04",
+      "type": "Dialogue",
+      "trigger": false
+    },
+    {
+      "id": 108,
+      "nameEvent": "Mom appears",
+      "type": "Timeline",
+      "trigger": false
+    },
+    {
+      "id": 109,
+      "nameEvent": "Mansion_05",
+      "type": "Dialogue",
+      "trigger": false
+    },
+    {
+      "id": 110,
+      "nameEvent": "GirlShock",
+      "type": "Timeline",
+      "trigger": false
+    },
+    {
+      "id": 111,
+      "nameEvent": "Mansion_06",
+      "type": "Dialogue",
+      "trigger": false
+    },
+    {
+      "id": 112,
+      "nameEvent": "Evil Laugh",
+      "type": "Timeline",
+      "trigger": false
+    },
+    {
+      "id": 113,
+      "nameEvent": "Mansion_07",
+      "type": "Dialogue",
+      "trigger": false
+    },
+    {
+      "id": 114,
+      "nameEvent": "I eat pie",
+      "type": "Timeline",
+      "trigger": false
+    },
+    {
+      "id": 115,
+      "nameEvent": "Mansion_08",
+      "type": "Dialogue",
+      "trigger": false
+    },
+    {
+      "id": 116,
+      "nameEvent": "I'm poison",
+      "type": "Timeline",
+      "trigger": false
+    },
+    {
+      "id": 117,
+      "nameEvent": "Mansion_09",
+      "type": "Dialogue",
+      "trigger": false
+    },
+    {
+      "id": 118,
+      "nameEvent": "End Credits",
+      "type": "SceneManager",
+      "trigger": false
+    },
+    {
+      "id": 201,
       "nameEvent": "Take Note 1",
       "type": "Note",
       "trigger": true
     },
     {
-      "id": 102,
+      "id": 202,
       "nameEvent": "Take Note 2",
       "type": "Note",
       "trigger": true
     },
     {
-      "id": 103,
+      "id": 203,
       "nameEvent": "Take Note 3",
       "type": "Note",
       "trigger": true
     },
     {
-      "id": 104,
+      "id": 204,
       "nameEvent": "Take Note 4",
       "type": "Note",
       "trigger": true
     },
     {
-      "id": 105,
+      "id": 205,
       "nameEvent": "Take Note 5",
       "type": "Note",
       "trigger": true
     },
     {
-      "id": 106,
+      "id": 206,
       "nameEvent": "Take Note 6",
       "type": "Note",
       "trigger": true
     },
     {
-      "id": 107,
+      "id": 207,
       "nameEvent": "Take Note 7",
       "type": "Note",
       "trigger": true
     },
     {
-      "id": 108,
+      "id": 208,
       "nameEvent": "Take Note 8",
       "type": "Note",
       "trigger": true
     },
     {
-      "id": 109,
+      "id": 209,
       "nameEvent": "Take Note 9",
       "type": "Note",
       "trigger": true
+    },
+    {
+      "id": 301,
+      "nameEvent": "Strange Dog",
+      "type": "Timeline",
+      "trigger": true
+    },
+    {
+      "id": 302,
+      "nameEvent": "Secret_01",
+      "type": "Dialogue",
+      "trigger": false
+    },
+    {
+      "id": 303,
+      "nameEvent": "UFO",
+      "type": "Dialogue",
+      "trigger": false
+    },
+    {
+      "id": 304,
+      "nameEvent": "Secret_02",
+      "type": "Dialogue",
+      "trigger": false
+    },
+    {
+      "id": 305,
+      "nameEvent": "Go To Title OK?",
+      "type": "SceneManager",
+      "trigger": false
+    },
+    {
+      "id": 401,
+      "nameEvent": "Talk to mommy again",
+      "type": "Action",
+      "trigger": true
+    },
+    {
+      "id": 402,
+      "nameEvent": "MyHome_Secret",
+      "type": "Dialogue",
+      "trigger": false
+    },
+    {
+      "id": 403,
+      "nameEvent": "Go To Title",
+      "type": "SceneManager",
+      "trigger": false
     }
+
   ]
 }

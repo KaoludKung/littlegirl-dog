@@ -1135,7 +1135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 545043435}
-  smoothSpeed: 0.125
+  smoothSpeed: 4
   offset: {x: 0, y: 0, z: 0}
 --- !u!114 &65226991
 MonoBehaviour:
@@ -21640,7 +21640,7 @@ MonoBehaviour:
   breakClip: {fileID: 8300000, guid: 4a20201dda58efd41af87e3e6d6ddfe0, type: 3}
   bridgeClips:
   - {fileID: 8300000, guid: c7db989f7f6647a45b4e5c02c19a6c33, type: 3}
-  - {fileID: 8300000, guid: 6e09c861ff84369489f97eac42ec0cdc, type: 3}
+  - {fileID: 8300000, guid: 5872e0a2aec2ce44182603c1ad9d5c0c, type: 3}
 --- !u!61 &1220372184
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35001,7 +35001,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2134136086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35420,9 +35420,9 @@ SceneRoots:
   - {fileID: 1646247419}
   - {fileID: 1792876447}
   - {fileID: 798962161}
-  - {fileID: 2134136090}
   - {fileID: 485063391}
   - {fileID: 1871289903}
   - {fileID: 68933745}
   - {fileID: 938052878}
   - {fileID: 814920372}
+  - {fileID: 2134136090}

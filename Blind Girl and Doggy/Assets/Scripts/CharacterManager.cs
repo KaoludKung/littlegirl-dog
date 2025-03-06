@@ -38,8 +38,11 @@ public class CharacterManager : MonoBehaviour
 
     public void StopMoving()
     {
-        girlController.SetIsMoving(false);
-        girlController.Animator.SetBool("isWalk", false);
+        if(girlController != null)
+        {
+            girlController.SetIsMoving(false);
+            girlController.Animator.SetBool("isWalk", false);
+        }   
     }
 
     public void SetIsActive(bool i)

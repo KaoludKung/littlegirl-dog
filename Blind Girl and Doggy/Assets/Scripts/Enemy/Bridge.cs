@@ -56,7 +56,7 @@ public class Bridge : MonoBehaviour
             dcontroller.SetNewClip(bridgeClips[0]);
 
         if (collision.CompareTag("Player"))
-            dcontroller.SetNewClip(bridgeClips[1]);
+            controller.SetNewClip(bridgeClips[1]);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -70,7 +70,7 @@ public class Bridge : MonoBehaviour
             dcontroller.SetNewClip(null, true);
 
         if (collision.CompareTag("Player"))
-            dcontroller.SetNewClip(null, true);
+            controller.SetNewClip(null, true);
     }
 
     public IEnumerator Wait()

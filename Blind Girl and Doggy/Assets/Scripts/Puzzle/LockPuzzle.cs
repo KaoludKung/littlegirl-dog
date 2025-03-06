@@ -13,6 +13,7 @@ public class LockPuzzle : MonoBehaviour, Interactable
     [SerializeField] private int[] answerDigits = { 6, 0, 9 };
     [SerializeField] private GameObject Gitch;
     [SerializeField] private GameObject gameoverPanel;
+    [SerializeField] private GameObject aitoMeme;
 
     private string[] originaText;
     private int[] digits = new int[3];
@@ -148,7 +149,21 @@ public class LockPuzzle : MonoBehaviour, Interactable
         if (digits[0] == answerDigits[0] && digits[1] == answerDigits[1] && digits[2] == answerDigits[2])
         {
             StartCoroutine(Unlock());
+        }if(digits[0] == 1 && digits[1] == 1 && digits[2] == 5)
+        {
+            StartCoroutine(AitoBoy());
         }
+    }
+
+    IEnumerator AitoBoy()
+    {
+        Time.timeScale = 0;
+        aitoMeme.SetActive(true);
+
+        yield return new WaitForSecondsRealtime(3.0f);
+
+        Time.timeScale = 1;
+        aitoMeme.SetActive(false);
     }
 
     IEnumerator Unlock()

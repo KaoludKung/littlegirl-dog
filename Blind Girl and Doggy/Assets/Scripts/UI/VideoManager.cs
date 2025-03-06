@@ -11,6 +11,7 @@ public class VideoManager : MonoBehaviour
 
     void Awake()
     {
+        Time.timeScale = 1;
         secret = PlayerPrefs.GetInt("UnlockSecret");
         videoPlayer.playOnAwake = false;
         videoPlayer.isLooping = false;

@@ -439,6 +439,65 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &53939916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 53939919}
+  - component: {fileID: 53939918}
+  - component: {fileID: 53939917}
+  m_Layer: 0
+  m_Name: ach_unlock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &53939917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53939916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6ca1d38a343d6c41a5b8e633524ac64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &53939918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53939916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25990723db1e5c246b66b78ec5fbf1b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  achievementId: 1
+  times: 1.5
+--- !u!4 &53939919
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53939916}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 35.904095, y: 1.9962622, z: -0.22249822}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &55420205
 GameObject:
   m_ObjectHideFlags: 0
@@ -5840,6 +5899,7 @@ MonoBehaviour:
   dialogueUI: {fileID: 1438934370}
   uiManagerObject: {fileID: 320423350}
   animators: []
+  itemActives: []
   resetAnimation: 0
   playerEnable: 0
 --- !u!4 &1071272167
@@ -7478,7 +7538,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1477126527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9330,6 +9390,7 @@ MonoBehaviour:
   TriggerEventID: 2
   sceneName: MyHome
   times: 0.5
+  isLoading: 1
 --- !u!1 &1930487641
 GameObject:
   m_ObjectHideFlags: 0
@@ -11070,10 +11131,11 @@ SceneRoots:
   - {fileID: 916444401}
   - {fileID: 1611274195}
   - {fileID: 1777914948}
-  - {fileID: 1477126530}
   - {fileID: 1964618896}
   - {fileID: 1032612859}
   - {fileID: 288223475}
   - {fileID: 1856958706}
   - {fileID: 745240424}
   - {fileID: 1930487643}
+  - {fileID: 53939919}
+  - {fileID: 1477126530}
