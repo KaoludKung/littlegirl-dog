@@ -279,12 +279,16 @@ public class GirlController : MonoBehaviour
                     interactionSprite.Remove(interactionSprite[0]);
                 }
 
-                StartCoroutine(UpdateInteractionIcon());
+                if (this != null && gameObject.activeInHierarchy)
+                {
+                    StartCoroutine(UpdateInteractionIcon());
+                }
                 //UpdateInteractionIcon();
             }
 
         }
     }
+
 
     void LateUpdate()
     {

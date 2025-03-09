@@ -136,6 +136,10 @@ public class Hunter : MonoBehaviour
             {
                 StartCoroutine(WarpToTarget());
             }
+            else if (Mathf.Abs(currentPlayerY - transform.position.y) > 1.0f && EventManager.Instance.IsEventTriggered(88))
+            {
+                currentState = HunterState.Final;
+            }
         }
 
         lastPlayerY = currentPlayerY;
@@ -156,7 +160,7 @@ public class Hunter : MonoBehaviour
                 StartCoroutine(StopChasing());
                 break;
             case HunterState.Final:
-                FinalPatrol();
+                StartCoroutine(FinalPatrol());
                 break;
             default:
                 break;
@@ -238,9 +242,16 @@ public class Hunter : MonoBehaviour
         isWarping = true;
         yield return new WaitForSeconds(10.0f);
 
-        transform.position = warpPoint[transform.position.y == 0f ? 0 : 1];
+        if(currentState == HunterState.Chasing)
+            transform.position = warpPoint[transform.position.y == 0f ? 0 : 1];
 
         yield return new WaitForSeconds(0.1f);
+
+        if(currentState == HunterState.Sleep)
+            transform.position = new Vector3(54.22f, 0f, 0f);
+
+        yield return new WaitForSeconds(0.1f);
+
         isWarping = false; 
     }
 
@@ -300,7 +311,7 @@ public class Hunter : MonoBehaviour
 
                 if(i == 1)
                 {
-                    SoundFXManager.instance.PlaySoundFXClip(hunterClips["scream"], transform, false, 0.6f);
+                    //SoundFXManager.instance.PlaySoundFXClip(hunterClips["scream"], transform, false, 0.6f);
                 }
 
                 if (i == 3)
@@ -317,7 +328,7 @@ public class Hunter : MonoBehaviour
 
         if (EventManager.Instance.IsEventTriggered(88))
         {
-            SetAnimatorState("isWalk");
+            SetAnimatorState("isChasing");
             PlaySound("walk");
 
             Vector2 patrolPosition = new Vector2(targetPatrolPoint.position.x, transform.position.y);
@@ -421,6 +432,16 @@ public class Hunter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Player") && Time.deltaTime != 0)
+        {
+            if (!isKill)
+            {
+                girlcontroller.SetIsMoving(false);
+                girlcontroller.Animator.SetBool("isWalk", false);
+                girlcontroller.Animator.SetBool("isDeath", true);
+            }
+        }
+
         if ((collision.CompareTag("Player") || collision.CompareTag("Dog")) && Time.deltaTime != 0)
         {
             if (!isKill)
@@ -437,15 +458,6 @@ public class Hunter : MonoBehaviour
             }
         }
 
-        if (collision.CompareTag("Player") && Time.deltaTime != 0)
-        {
-            if (!isKill)
-            {
-                girlcontroller.SetIsMoving(false);
-                girlcontroller.Animator.SetBool("isWalk", false);
-                girlcontroller.Animator.SetBool("isDeath", true);
-            }
-        }
     }
 
     private void DecreaseHeart()

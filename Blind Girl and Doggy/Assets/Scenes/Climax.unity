@@ -7268,6 +7268,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9184124589768895244, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8212,7 +8216,7 @@ GameObject:
   - component: {fileID: 750333031}
   - component: {fileID: 750333032}
   m_Layer: 0
-  m_Name: insert
+  m_Name: insect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16723,7 +16727,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 473871882}
-  smoothSpeed: 0.125
   offset: {x: 0, y: 0, z: 0}
 --- !u!114 &1388478060
 MonoBehaviour:
@@ -23261,7 +23264,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1293685873}
-  smoothSpeed: 0.125
   offset: {x: 0, y: 0, z: 0}
 --- !u!114 &1972407842
 MonoBehaviour:

@@ -12,15 +12,17 @@ public class PlayerData
     public string sceneName;
     public bool isNewGame;
     public bool isSpined;
+    public bool secrets;
     public int hearts;
 
-    public PlayerData(Vector3 girlPosition, Vector3 dogPosition, string sceneName,bool isNewGame,bool isSpined ,int hearts)
+    public PlayerData(Vector3 girlPosition, Vector3 dogPosition, string sceneName,bool isNewGame,bool isSpined, bool secret ,int hearts)
     {
         this.girlPosition = girlPosition;
         this.dogPosition = dogPosition;
         this.sceneName = sceneName;
         this.isNewGame = isNewGame;
         this.isSpined = isSpined;
+        this.secrets = secret;
         this.hearts = hearts;
     }
 }
@@ -134,6 +136,11 @@ public class PlayerDataManager : JsonManager<PlayerData>
         return playerData != null ? playerData.isSpined : false;
     }
 
+    public bool GetIsSecret()
+    {
+        return playerData != null ? playerData.secrets : false;
+    }
+
     public int GetHearts()
     {
         return playerData != null ? playerData.hearts : 0;
@@ -185,6 +192,16 @@ public class PlayerDataManager : JsonManager<PlayerData>
         {
             playerData.isSpined = isSpined;
             Debug.Log($"Updated isSpined to: {isSpined}");
+            //SavePlayerData();
+        }
+    }
+
+    public void UpdateSecrets(bool secret)
+    {
+        if (playerData != null)
+        {
+            playerData.secrets = secret;
+            Debug.Log($"Updated secrets to: {secret}");
             //SavePlayerData();
         }
     }

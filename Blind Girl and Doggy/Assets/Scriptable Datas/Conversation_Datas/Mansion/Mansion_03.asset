@@ -20,11 +20,11 @@ MonoBehaviour:
     text: "It's... really delicious... but\u2026"
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: Veronika... why do you feel... colder than usual?
-  - character: {fileID: 11400000, guid: 55297d43d7c736043bee3cd72e15d91b, type: 2}
+  - character: {fileID: 11400000, guid: 2630b23e2b8db0146b0b53325e03ceee, type: 2}
     text: I guess it's just how delicious the snack is...
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: And... Why does your voice sound off?
-  - character: {fileID: 11400000, guid: 19ffb9f769808e449b060863b2921cb9, type: 2}
+  - character: {fileID: 11400000, guid: 2630b23e2b8db0146b0b53325e03ceee, type: 2}
     text: Probably because... I...
   - character: {fileID: 11400000, guid: 19ffb9f769808e449b060863b2921cb9, type: 2}
     text: '!!!'

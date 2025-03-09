@@ -27,6 +27,17 @@ public class Radio : MonoBehaviour
         {
             StartCoroutine(PlayRadio());
         }
+
+        if (EventManager.Instance.IsEventTriggered(86))
+        {
+            StopAllCoroutines();
+
+            radioSource.Stop();
+            radioAnimator.Play("radio", -1, 0f);
+            radioAnimator.speed = 0f;
+
+            hunter.setHunterState(HunterState.Final);
+        }
     }
 
     IEnumerator PlayRadio()

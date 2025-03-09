@@ -89,11 +89,11 @@ public class LockPuzzle : MonoBehaviour, Interactable
             if (sound)
             {
                 SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1);
+                girlController.InteractionIcon.SetActive(true);
             }
 
             yield return new WaitForSeconds(0.3f);
             girlController.SetIsInteract(false);
-            girlController.InteractionIcon.SetActive(true);
             CharacterManager.Instance.SetIsActive(true);
         }
     }

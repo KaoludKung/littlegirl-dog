@@ -222,6 +222,7 @@ public class GameOverManager : MonoBehaviour
     IEnumerator ExitToMenu()
     {
         yield return new WaitForSecondsRealtime(clips[1].length + 0.5f);
+        Time.timeScale = 1;
         UnityEngine.SceneManagement.SceneManager.LoadScene("Title");
     }
 

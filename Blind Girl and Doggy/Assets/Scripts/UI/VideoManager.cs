@@ -7,12 +7,10 @@ public class VideoManager : MonoBehaviour
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private float times;
     [SerializeField] private bool ending;
-    private int secret;
 
     void Awake()
     {
         Time.timeScale = 1;
-        secret = PlayerPrefs.GetInt("UnlockSecret");
         videoPlayer.playOnAwake = false;
         videoPlayer.isLooping = false;
     }
@@ -46,9 +44,10 @@ public class VideoManager : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
 
-        if (secret > 0 && ending)
+        if (PlayerDataManager.Instance.GetIsSecret() && ending)
         {
-            PlayerPrefs.SetInt("UnlockSecret", 0);
+            PlayerDataManager.Instance.UpdateSecrets(false);
+            PlayerDataManager.Instance.SavePlayerData();
             UnityEngine.SceneManagement.SceneManager.LoadScene("Secret");
         }
         else

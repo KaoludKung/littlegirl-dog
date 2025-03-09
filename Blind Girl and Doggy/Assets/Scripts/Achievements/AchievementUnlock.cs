@@ -23,7 +23,7 @@ public class AchievementUnlock : MonoBehaviour
         {
             string achachievementName = "achievement_0" + id;
             AchievementManager.Instance.UpdateAchievementTrigger(id);
-            AchievementManager.Instance.SaveAchievement();
+            //AchievementManager.Instance.SaveAchievement();
 
             if (SteamManager.Initialized)
             {

@@ -12,5 +12,6 @@
   "sceneName": "Prologue",
   "isNewGame": true,
   "isSpined": false,
-  "hearts": 0
+  "secrets": false,
+  "hearts": 3
 }

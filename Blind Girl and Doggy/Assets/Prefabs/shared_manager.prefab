@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 131045857519447818}
   - component: {fileID: 3179492940204308678}
   - component: {fileID: 940287829119036098}
+  - component: {fileID: 4451141809095351903}
   - component: {fileID: -6168748430801544511}
   m_Layer: 0
   m_Name: shared_manager
@@ -74,6 +75,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   staminaBar: {fileID: 0}
   heartIcon: {fileID: 0}
+--- !u!114 &4451141809095351903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012989449960488748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6ca1d38a343d6c41a5b8e633524ac64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-6168748430801544511
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -27,7 +27,7 @@ public class TitleManager : MonoBehaviour
 
     private void Awake()
     {
-        
+        Time.timeScale = 1;
     }
 
     private void StartWalking()

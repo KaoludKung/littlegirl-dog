@@ -97,7 +97,7 @@ public class EventManager : JsonManager<EventData>
         if (eventData != null)
         {
             eventData.trigger = newTriggerStatus;
-            Debug.Log($"Event '{eventData.nameEvent}' updated to: {newTriggerStatus}");
+            //Debug.Log($"Event '{eventData.nameEvent}' updated to: {newTriggerStatus}");
             //SaveEventData();
         }
         else

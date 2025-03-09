@@ -94,11 +94,11 @@ public class ClockPuzzle : EventObject, Interactable
             if (sound)
             {
                 SoundFXManager.instance.PlaySoundFXClip(clips[2], transform, false, 1);
+                girlController.InteractionIcon.SetActive(true);
             }
 
             yield return new WaitForSeconds(time);
             girlController.SetIsInteract(false);
-            girlController.InteractionIcon.SetActive(true);
             CharacterManager.Instance.SetIsActive(true);
         }
     }

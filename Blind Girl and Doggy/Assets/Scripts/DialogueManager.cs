@@ -76,18 +76,18 @@ public class DialogueManager : EventObject
                 {
                     speed = 0.025f;
                     PlayerPrefs.SetFloat("speedText", speed);
-                    speed = PlayerPrefs.GetFloat("speedText");
+                    //speed = PlayerPrefs.GetFloat("speedText");
                     dialogueUI.speedText.text = "Slow down";
                 }
                 else
                 {
                     speed = 0.05f;
                     PlayerPrefs.SetFloat("speedText", speed);
-                    speed = PlayerPrefs.GetFloat("speedText");
+                    //speed = PlayerPrefs.GetFloat("speedText");
                     dialogueUI.speedText.text = "Speed up";
                 }
 
-                Debug.Log("Speed:" + speed);
+                //Debug.Log("Speed:" + speed);
             }
         }
 

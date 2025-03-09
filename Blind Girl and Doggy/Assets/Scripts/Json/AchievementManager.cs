@@ -153,12 +153,15 @@ public class AchievementManager : JsonManager<AchievementData>
             if (!achievementToAdd.isCollected)
             {
                 achievementToAdd.isCollected = true;
+                Debug.Log("Update " + achievementToAdd.achievementName);
+                SaveAchievement();
             }
             else
             {
                 Debug.Log("Achievement already unlocks in data");
             }
         }
+
     }
 }
 

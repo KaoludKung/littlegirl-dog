@@ -59,7 +59,7 @@
     {
       "id": 9,
       "itemName": "Plunger",
-      "iconPath": "plunger",
+      "iconPath": "Items/plunger",
       "description": "For when the toilet refuses to cooperate.",
       "isCollected": false
     },

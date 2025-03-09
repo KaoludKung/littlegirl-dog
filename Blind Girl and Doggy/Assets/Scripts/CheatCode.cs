@@ -7,7 +7,7 @@ public class CheatCode : MonoBehaviour
     [SerializeField] private string cheatCode = "UP,UP,DOWN,DOWN,LEFT,RIGHT,LEFT,RIGHT,X,Z,";
     [SerializeField] private AudioClip unlockClips;
     private string currentInput = "";
-    private float inputDelay = 0.2f;
+    private bool Delay = false;
 
     private void Start()
     {
@@ -16,27 +16,29 @@ public class CheatCode : MonoBehaviour
 
     void Update()
     {
-        if (Time.time % inputDelay < 0.1f)
+        if (!Delay)
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
-                AddInput("UP");
+                StartCoroutine(AddInput("UP"));
             else if (Input.GetKeyDown(KeyCode.DownArrow))
-                AddInput("DOWN");
+                StartCoroutine(AddInput("DOWN"));
             else if (Input.GetKeyDown(KeyCode.LeftArrow))
-                AddInput("LEFT");
+                StartCoroutine(AddInput("LEFT"));
             else if (Input.GetKeyDown(KeyCode.RightArrow))
-                AddInput("RIGHT");
+                StartCoroutine(AddInput("RIGHT"));
             else if (Input.GetKeyDown(KeyCode.X))
-                AddInput("X");
+                StartCoroutine(AddInput("X"));
             else if (Input.GetKeyDown(KeyCode.Z))
-                AddInput("Z");
+                StartCoroutine(AddInput("Z"));
             else if (Input.GetKeyDown(KeyCode.Return))
-                AddInput("START");
+                StartCoroutine(AddInput("START"));
         }
     }
 
-    void AddInput(string key)
+    IEnumerator AddInput(string key)
     {
+        Delay = true;
+
         currentInput += key + ",";
         Debug.Log(currentInput);
 
@@ -50,6 +52,9 @@ public class CheatCode : MonoBehaviour
             currentInput = "";
             Debug.Log("Reset Try Again");
         }
+
+        yield return new WaitForSecondsRealtime(0.25f);
+        Delay = false;
     }
 
     void ActivateCheat()
@@ -60,9 +65,10 @@ public class CheatCode : MonoBehaviour
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("Hints");
         }
-        else if(cheatType == CheatType.Unlock && PlayerPrefs.GetInt("UnlockSecret") == 0)
+        else if(cheatType == CheatType.Unlock && !PlayerDataManager.Instance.GetIsSecret())
         {
-            PlayerPrefs.SetInt("UnlockSecret", 1);
+            PlayerDataManager.Instance.UpdateSecrets(true);
+            PlayerDataManager.Instance.SavePlayerData();
 
             if(unlockClips != null)
                 SoundFXManager.instance.PlaySoundFXClip(unlockClips, transform, false, 0.7f);

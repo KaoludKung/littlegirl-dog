@@ -19,12 +19,13 @@ public class Loading : MonoBehaviour
 
     private void Awake()
     {
+        /// streamingAssetsPath = persistentDataPath
         Time.timeScale = 1;
         streamingAssetsPathA = Path.Combine(Application.persistentDataPath, "playerData.json");
         streamingAssetsPathB = Path.Combine(Application.persistentDataPath, "eventData.json");
         streamingAssetsPathC = Path.Combine(Application.persistentDataPath, "note.json");
-        streamingAssetsPathD = Path.Combine(Application.streamingAssetsPath, "inventory.json");
-        streamingAssetsPathE = Path.Combine(Application.streamingAssetsPath, "achievement.json");
+        streamingAssetsPathD = Path.Combine(Application.persistentDataPath, "inventory.json");
+        streamingAssetsPathE = Path.Combine(Application.persistentDataPath, "achievement.json");
 
         PlayerDataManager.Instance.LoadPlayerData(streamingAssetsPathA);
         EventManager.Instance.LoadEventData(streamingAssetsPathB);
