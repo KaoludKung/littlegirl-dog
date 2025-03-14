@@ -8,6 +8,7 @@ public class CheatCode : MonoBehaviour
     [SerializeField] private AudioClip unlockClips;
     private string currentInput = "";
     private bool Delay = false;
+    private float localLastMoveTime = 0f;
 
     private void Start()
     {
@@ -18,19 +19,19 @@ public class CheatCode : MonoBehaviour
     {
         if (!Delay)
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (InputManager.Instance.IsUpPressed(ref localLastMoveTime))
                 StartCoroutine(AddInput("UP"));
-            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            else if (InputManager.Instance.IsDownPressed(ref localLastMoveTime))
                 StartCoroutine(AddInput("DOWN"));
-            else if (Input.GetKeyDown(KeyCode.LeftArrow))
+            else if (InputManager.Instance.IsLeftPressed(ref localLastMoveTime))
                 StartCoroutine(AddInput("LEFT"));
-            else if (Input.GetKeyDown(KeyCode.RightArrow))
+            else if (InputManager.Instance.IsRightPressed(ref localLastMoveTime))
                 StartCoroutine(AddInput("RIGHT"));
-            else if (Input.GetKeyDown(KeyCode.X))
+            else if (InputManager.Instance.IsXPressed())
                 StartCoroutine(AddInput("X"));
-            else if (Input.GetKeyDown(KeyCode.Z))
+            else if (InputManager.Instance.IsZPressed())
                 StartCoroutine(AddInput("Z"));
-            else if (Input.GetKeyDown(KeyCode.Return))
+            else if (InputManager.Instance.IsEnterPressed())
                 StartCoroutine(AddInput("START"));
         }
     }

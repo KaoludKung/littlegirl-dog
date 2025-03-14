@@ -28,7 +28,8 @@ public class NoteUI : MonoBehaviour
     private List<NoteItem> allNotes = new List<NoteItem>();
 
     private const int visibleSlots = 3;
- 
+    private float localLastMoveTime = 0f;
+
     private void Awake()
     {
         note = FindObjectOfType<NoteManager>();
@@ -47,7 +48,7 @@ public class NoteUI : MonoBehaviour
             CharacterManager.Instance.SetIsActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (InputManager.Instance.IsEPressed())
         {
             if (!notePanel.activeSelf && isUnlock && !UIManager.Instance.IsAnyUIActive)
             {
@@ -62,14 +63,14 @@ public class NoteUI : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.X) && notePanel.activeSelf)
+        if (InputManager.Instance.IsXPressed() && notePanel.activeSelf)
         {
             SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1.0f);
             StartCoroutine(ToggleNotePanel());
             StartCoroutine(Delay());
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) && notePanel.activeSelf)
+        if (InputManager.Instance.IsUpPressed(ref localLastMoveTime) && notePanel.activeSelf)
         {
             currentIndex = (currentIndex - 1 + allNotes.Count) % allNotes.Count;
             noteProgess.fillAmount = Mathf.Max((float)currentIndex / (allNotes.Count - 1), 0.1f);
@@ -77,7 +78,7 @@ public class NoteUI : MonoBehaviour
             SoundFXManager.instance.PlaySoundFXClip(clips[0], transform, false, 1);
             UpdateNoteUI();
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow) && notePanel.activeSelf)
+        else if (InputManager.Instance.IsDownPressed(ref localLastMoveTime) && notePanel.activeSelf)
         {
             currentIndex = (currentIndex + 1) % allNotes.Count;
             noteProgess.fillAmount = Mathf.Max((float)currentIndex / (allNotes.Count - 1), 0.1f);

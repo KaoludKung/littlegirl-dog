@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 16581109}
   - component: {fileID: 16581108}
   - component: {fileID: 16581107}
+  - component: {fileID: 16581112}
   m_Layer: 0
   m_Name: JsonManager
   m_TagString: Untagged
@@ -289,6 +290,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &16581112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16581106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dc13597f338c2c4e8561f3f4024e7d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &21545989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,6 +1549,7 @@ MonoBehaviour:
   itemID: 6
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.1
@@ -1767,6 +1781,7 @@ MonoBehaviour:
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
   actionClips: {fileID: 0}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.05
@@ -3207,6 +3222,7 @@ MonoBehaviour:
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
   actionClips: {fileID: 0}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.05
@@ -3596,6 +3612,7 @@ MonoBehaviour:
   itemID: 7
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
   actionClips: {fileID: 8300000, guid: 4a231b0643641fe4e9b90258468e0ad2, type: 3}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.05
@@ -4393,6 +4410,7 @@ MonoBehaviour:
   itemID: 11
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
   actionClips: {fileID: 8300000, guid: 4a20201dda58efd41af87e3e6d6ddfe0, type: 3}
+  gameoverPanel: {fileID: 24047674}
   progressBar: {fileID: 1800644216}
   progressFill: {fileID: 1981063156}
   progressSpeed: 0.1
@@ -5104,7 +5122,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.20509219, y: 0.6689892}
+  m_Offset: {x: 0.19751763, y: 0.56495714}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5115,7 +5133,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.7854867, y: 8.232067}
+  m_Size: {x: 5.082434, y: 8.440131}
   m_EdgeRadius: 0
 --- !u!1 &351235917
 GameObject:
@@ -5837,6 +5855,7 @@ MonoBehaviour:
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
   actionClips: {fileID: 0}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.05
@@ -6480,6 +6499,7 @@ MonoBehaviour:
   itemID: 9
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
   actionClips: {fileID: 8300000, guid: a91979a590233fc45be67238ba5202ce, type: 3}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 1800644216}
   progressFill: {fileID: 1981063156}
   progressSpeed: 0.08
@@ -6680,6 +6700,7 @@ MonoBehaviour:
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
   actionClips: {fileID: 0}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.05
@@ -7871,6 +7892,7 @@ MonoBehaviour:
   itemID: 8
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.1
@@ -9817,6 +9839,7 @@ MonoBehaviour:
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
   actionClips: {fileID: 0}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.05
@@ -12559,7 +12582,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -849045461
   m_SortingLayer: -5
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 2ea77d93db3a3f141b08e05be7da1d66, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12626,6 +12649,7 @@ MonoBehaviour:
   lightfly: {fileID: 351235917}
   hidingClip: {fileID: 0}
   alertSprite: {fileID: 21300000, guid: e25d915402045ae4d80291649d5a60f8, type: 3}
+  gameoverPanel: {fileID: 24047674}
 --- !u!61 &890455507
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13428,7 +13452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
-  berserkSpeed: 3
+  berserkSpeed: 4
   sleepPoint: {fileID: 1476814708}
   patrolPoint:
   - {fileID: 1892005734}
@@ -13478,7 +13502,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.372406, y: 0}
+  m_Offset: {x: 0.1049633, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -13489,7 +13513,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.2813644, y: 7}
+  m_Size: {x: 5.236103, y: 7}
   m_EdgeRadius: 0
 --- !u!1 &972922576
 GameObject:
@@ -13791,6 +13815,7 @@ MonoBehaviour:
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
   actionClips: {fileID: 0}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.05
@@ -13996,6 +14021,7 @@ MonoBehaviour:
   itemID: 9
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.1
@@ -14581,6 +14607,7 @@ MonoBehaviour:
   itemID: 5
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.1
@@ -16744,63 +16771,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1044473117}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1270762741
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1270762743}
-  - component: {fileID: 1270762742}
-  - component: {fileID: 1270762744}
-  m_Layer: 0
-  m_Name: TestJson
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1270762742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1270762741}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4180960346bd94442977cef3ed1044ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1270762743
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1270762741}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.582401, y: -1.8343592, z: 0.05574522}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1270762744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1270762741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63a8d4d0b3a10bc4f80cfd730692de08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1271285934
 GameObject:
   m_ObjectHideFlags: 0
@@ -17577,7 +17547,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -849045461
   m_SortingLayer: -5
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c6963d22736f7924691c7917fd84854d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -18159,6 +18129,7 @@ MonoBehaviour:
   lightfly: {fileID: 351235917}
   hidingClip: {fileID: 8300000, guid: 847410fa1dbf0334699f6b26ec992a92, type: 3}
   alertSprite: {fileID: 21300000, guid: e25d915402045ae4d80291649d5a60f8, type: 3}
+  gameoverPanel: {fileID: 24047674}
 --- !u!61 &1349456585
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18279,6 +18250,7 @@ MonoBehaviour:
   itemID: 11
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.1
@@ -18819,6 +18791,7 @@ MonoBehaviour:
   itemID: 15
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
   actionClips: {fileID: 8300000, guid: 1b1f9c26f9eed4949a83b6a166c313b6, type: 3}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.05
@@ -20649,6 +20622,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3206723446159792866, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+      propertyPath: originalImage.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3206723446159792866, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+      propertyPath: originalImage.Array.data[7].UIImage
+      value: 
+      objectReference: {fileID: 1884583976}
+    - target: {fileID: 3206723446159792866, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+      propertyPath: originalImage.Array.data[8].UIImage
+      value: 
+      objectReference: {fileID: 1682693392}
+    - target: {fileID: 3206723446159792866, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+      propertyPath: originalImage.Array.data[7].targetImage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3206723446159792866, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+      propertyPath: originalImage.Array.data[8].targetImage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3724495262929361494, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
       propertyPath: isUnlock
       value: 1
@@ -21192,6 +21185,7 @@ MonoBehaviour:
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
   actionClips: {fileID: 0}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.05
@@ -22919,6 +22913,7 @@ MonoBehaviour:
   itemID: 7
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.1
@@ -23165,6 +23160,7 @@ MonoBehaviour:
   itemID: 8
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
   actionClips: {fileID: 8300000, guid: 310495e0f5ef89e43846179fc015211c, type: 3}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.05
@@ -23452,7 +23448,7 @@ GameObject:
   - component: {fileID: 1682693393}
   - component: {fileID: 1682693392}
   m_Layer: 5
-  m_Name: button_icon
+  m_Name: Xbutton_iconL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23696,7 +23692,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1704782316}
   - component: {fileID: 1704782315}
-  - component: {fileID: 1704782314}
   m_Layer: 0
   m_Name: global_light
   m_TagString: Untagged
@@ -23704,21 +23699,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1704782314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1704782313}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97c005ea44fe16540bf85f065cf2f79d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toggleSpeedKey: 102
-  normalSpeed: 1
-  fastSpeed: 5
 --- !u!114 &1704782315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25329,7 +25309,7 @@ Transform:
   m_GameObject: {fileID: 1799377676}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.63, y: -8.936719, z: 0.114396974}
+  m_LocalPosition: {x: -30.81, y: -8.936719, z: 0.114396974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25367,7 +25347,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.0018803, y: -0.59669304}
+  m_Offset: {x: 0.74990135, y: -0.59669304}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -25378,7 +25358,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2932174, y: 6.7017097}
+  m_Size: {x: 1.3361362, y: 6.7017097}
   m_EdgeRadius: 0
 --- !u!114 &1799377679
 MonoBehaviour:
@@ -25399,6 +25379,7 @@ MonoBehaviour:
   itemID: 5
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
   actionClips: {fileID: 8300000, guid: 1b1f9c26f9eed4949a83b6a166c313b6, type: 3}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.05
@@ -25737,6 +25718,7 @@ MonoBehaviour:
   itemID: 7
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.1
@@ -26249,6 +26231,7 @@ MonoBehaviour:
   itemID: 8
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.1
@@ -26405,6 +26388,7 @@ MonoBehaviour:
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
   actionClips: {fileID: 0}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.05
@@ -26797,7 +26781,7 @@ GameObject:
   - component: {fileID: 1884583977}
   - component: {fileID: 1884583976}
   m_Layer: 5
-  m_Name: button_icon
+  m_Name: Xbutton_iconC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28177,7 +28161,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1981737720}
   - component: {fileID: 1981737722}
-  - component: {fileID: 1981737721}
   m_Layer: 0
   m_Name: auto_save
   m_TagString: Untagged
@@ -28200,21 +28183,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1704782316}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1981737721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1981737719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97c005ea44fe16540bf85f065cf2f79d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toggleSpeedKey: 102
-  normalSpeed: 1
-  fastSpeed: 5
 --- !u!114 &1981737722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28523,6 +28491,7 @@ MonoBehaviour:
   itemID: 9
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
   actionClips: {fileID: 8300000, guid: 580c8869ca7e2cd49af16908eec6e392, type: 3}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.05
@@ -29272,6 +29241,7 @@ MonoBehaviour:
   itemID: 0
   alertSprite: {fileID: 21300000, guid: 1236c2a08ce1e264c9735e092837c6de, type: 3}
   actionClips: {fileID: 8300000, guid: 847410fa1dbf0334699f6b26ec992a92, type: 3}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.05
@@ -29581,4 +29551,3 @@ SceneRoots:
   - {fileID: 1713335624}
   - {fileID: 1084184449}
   - {fileID: 16581111}
-  - {fileID: 1270762743}

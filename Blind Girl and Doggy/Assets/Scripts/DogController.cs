@@ -58,7 +58,7 @@ public class DogController : MonoBehaviour
             MoveCharacterWithKeyboard();
         }
 
-        if (Input.GetKeyDown(KeyCode.Q) && isActive)
+        if (InputManager.Instance.IsQPressed() && isActive)
         {
             if (currentInteractable != null && !isMoving && isDigging)
             {
@@ -87,11 +87,11 @@ public class DogController : MonoBehaviour
     {
         float horizontal = 0f;
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) || InputManager.Instance.IsWalkingLeft())
         {
             horizontal = -1f;
         }
-        else if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.RightArrow) || InputManager.Instance.IsWalkingRight())
         {
             horizontal = 1f;
         }
@@ -143,7 +143,7 @@ public class DogController : MonoBehaviour
     {
         while (staminaFill.fillAmount < 1.0f)
         {
-            yield return new WaitForSeconds(5.0f);
+            yield return new WaitForSeconds(3.5f);
             staminaFill.fillAmount += 0.1f;
         }
         isRegeneratingStamina = false;

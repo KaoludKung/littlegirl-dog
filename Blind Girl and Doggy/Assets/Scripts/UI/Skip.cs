@@ -16,7 +16,7 @@ public class Skip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift) && skipObject.activeSelf)
+        if(InputManager.Instance.IsShiftPressed() && skipObject.activeSelf)
         {
             SceneManager.instance.ChangeScene(sceneName);
         }
@@ -24,7 +24,7 @@ public class Skip : MonoBehaviour
 
     IEnumerator SkipAppear()
     {
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSecondsRealtime(5.0f);
         skipObject.SetActive(true);
     }
 }

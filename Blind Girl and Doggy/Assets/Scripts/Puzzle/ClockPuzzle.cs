@@ -20,6 +20,7 @@ public class ClockPuzzle : EventObject, Interactable
     private ActionText actionText;
     private bool rotateEnable = true;
     private bool isRotating = false;
+    private float localLastMoveTime = 0f;
 
     public bool isActive { get; private set; }
 
@@ -51,25 +52,25 @@ public class ClockPuzzle : EventObject, Interactable
 
         if (clockPanel.activeSelf && isActive && rotateEnable && !isRotating)
         {
-            if (Input.GetKeyDown(KeyCode.LeftArrow) && shortHand.gameObject.activeSelf)
+            if (InputManager.Instance.IsLeftPressed(ref localLastMoveTime) && shortHand.gameObject.activeSelf)
             {
                 RotateClockHand(shortHand, angleStep);
             }
-            else if (Input.GetKeyDown(KeyCode.RightArrow) && shortHand.gameObject.activeSelf)
+            else if (InputManager.Instance.IsRightPressed(ref localLastMoveTime) && shortHand.gameObject.activeSelf)
             {
                 RotateClockHand(shortHand, -angleStep);
             }
 
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (InputManager.Instance.IsUpPressed(ref localLastMoveTime))
             {
                 RotateClockHand(longHand, -angleStep);
             }
-            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            else if (InputManager.Instance.IsDownPressed(ref localLastMoveTime))
             {
                 RotateClockHand(longHand, angleStep);
             }
 
-            if (Input.GetKeyDown(KeyCode.X))
+            if (InputManager.Instance.IsXPressed())
             {
                 StartCoroutine(Delay(true, 0.3f));
             }

@@ -164,15 +164,6 @@ public class Monster : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Dog") || collision.CompareTag("Player"))
-        {
-            if (!isKill)
-            {
-                isKill = true;
-                HeartManager.instance.HeartDecrease();
-            }
-        }
-
         if (collision.CompareTag("Player"))
         {
             if (!isKill)
@@ -180,6 +171,15 @@ public class Monster : MonoBehaviour
                 girlController.SetIsMoving(false);
                 girlController.Animator.SetBool("isWalk", false);
                 girlController.Animator.SetBool("isDeath", true);
+            }
+        }
+
+        if (collision.CompareTag("Dog") || collision.CompareTag("Player"))
+        {
+            if (!isKill)
+            {
+                isKill = true;
+                HeartManager.instance.HeartDecrease();
             }
         }
     }

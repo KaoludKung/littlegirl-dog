@@ -13,6 +13,7 @@ public class Action : EventObject, Interactable
     [SerializeField] AudioClip actionClips;
 
     // special options
+    [SerializeField] GameObject gameoverPanel;
     [SerializeField] GameObject progressBar;
     [SerializeField] Image progressFill;
     [SerializeField] float progressSpeed = 0.1f;
@@ -63,7 +64,7 @@ public class Action : EventObject, Interactable
 
     void Update()
     {
-        if (girlController.IsMoving && !isComplete && progressBar != null)
+        if (!isComplete && progressBar != null && (girlController.IsMoving || (gameoverPanel != null && gameoverPanel.activeSelf)))
         {
             SetInteractionAnimation(false);
             StopAllCoroutines();
@@ -386,6 +387,11 @@ public class Action : EventObject, Interactable
         {
             isAdd = false;
         }
+    }
+
+    public void SetActionText(string newText)
+    {
+        actionResult = newText;
     }
 
 }

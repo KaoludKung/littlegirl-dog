@@ -21,6 +21,8 @@ public class LockPuzzle : MonoBehaviour, Interactable
     private Color32 defaultColor = new Color32(102, 46, 72, 255);
     private Color32 selectedColor = new Color32(249, 168, 117, 255);
 
+    private float localLastMoveTime = 0f;
+
     private GirlController girlController;
     private ActionText actionText;
     public bool isActive { get; private set; }
@@ -49,28 +51,28 @@ public class LockPuzzle : MonoBehaviour, Interactable
 
         if (lockPanel.activeSelf && isActive)
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (InputManager.Instance.IsUpPressed(ref localLastMoveTime))
             {
                 AdjustDigit(currentIndex, 1);
-            }else if (Input.GetKeyDown(KeyCode.DownArrow))
+            }else if (InputManager.Instance.IsDownPressed(ref localLastMoveTime))
             {
                 AdjustDigit(currentIndex, -1);
             }
 
 
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            if (InputManager.Instance.IsLeftPressed(ref localLastMoveTime))
             {
                 currentIndex = (currentIndex - 1 + digitText.Length) % digitText.Length;
                 SoundFXManager.instance.PlaySoundFXClip(clips[0], transform, false, 1);
                 UpdateNumberPosition();
-            }else if (Input.GetKeyDown(KeyCode.RightArrow))
+            }else if (InputManager.Instance.IsRightPressed(ref localLastMoveTime))
             {
                 currentIndex = (currentIndex + 1) % digitText.Length;
                 SoundFXManager.instance.PlaySoundFXClip(clips[0], transform, false, 1);
                 UpdateNumberPosition();
             }
 
-            if (Input.GetKeyDown(KeyCode.X))
+            if (InputManager.Instance.IsXPressed())
             {
                 StartCoroutine(Delay(true));
             }

@@ -136,10 +136,6 @@ public class Hunter : MonoBehaviour
             {
                 StartCoroutine(WarpToTarget());
             }
-            else if (Mathf.Abs(currentPlayerY - transform.position.y) > 1.0f && EventManager.Instance.IsEventTriggered(88))
-            {
-                currentState = HunterState.Final;
-            }
         }
 
         lastPlayerY = currentPlayerY;

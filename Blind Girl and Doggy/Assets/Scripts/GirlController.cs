@@ -70,7 +70,7 @@ public class GirlController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z) && isActive)
+        if (InputManager.Instance.IsZPressed() && isActive)
         {
             float distance = Vector3.Distance(transform.position, dogTransform.position);
 
@@ -100,7 +100,7 @@ public class GirlController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.X) && isActive)
+        if (InputManager.Instance.IsXPressed() && isActive)
         {
             if (!dogControlller.IsMoving)
             {

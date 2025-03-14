@@ -29,6 +29,7 @@ public class InventoryUI : MonoBehaviour
     private List<InventoryItem> collectedItems = new List<InventoryItem>(); 
     
     public List<InventoryItem> CollectedItems => collectedItems;
+    private float localLastMoveTime = 0f;
 
     private void Awake()
     {
@@ -49,7 +50,7 @@ public class InventoryUI : MonoBehaviour
             CharacterManager.Instance.SetIsActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
+        if (InputManager.Instance.IsShiftPressed())
         {
             if (!inventoryPanel.activeSelf && isUnlock &&!UIManager.Instance.IsAnyUIActive)
             {
@@ -62,7 +63,7 @@ public class InventoryUI : MonoBehaviour
             }     
         }
 
-        if(Input.GetKeyDown(KeyCode.X) && inventoryPanel.activeSelf)
+        if(InputManager.Instance.IsXPressed() && inventoryPanel.activeSelf)
         {
             SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1.0f);
             StartCoroutine(ToggleInventory());
@@ -71,10 +72,10 @@ public class InventoryUI : MonoBehaviour
 
         if (inventoryPanel.activeSelf)
         {
-            if (Input.GetKeyDown(KeyCode.LeftArrow)) MoveHighlight(-1, 0);
-            if (Input.GetKeyDown(KeyCode.RightArrow)) MoveHighlight(1, 0);
-            if (Input.GetKeyDown(KeyCode.UpArrow)) MoveHighlight(0, -1);
-            if (Input.GetKeyDown(KeyCode.DownArrow)) MoveHighlight(0, 1);
+            if (InputManager.Instance.IsLeftPressed(ref localLastMoveTime)) MoveHighlight(-1, 0);
+            if (InputManager.Instance.IsRightPressed(ref localLastMoveTime)) MoveHighlight(1, 0);
+            if (InputManager.Instance.IsUpPressed(ref localLastMoveTime)) MoveHighlight(0, -1);
+            if (InputManager.Instance.IsDownPressed(ref localLastMoveTime)) MoveHighlight(0, 1);
         }
     }
 
@@ -218,6 +219,7 @@ public class InventoryUI : MonoBehaviour
     {
         isUnlock = n;
     }
+
 }
 
 

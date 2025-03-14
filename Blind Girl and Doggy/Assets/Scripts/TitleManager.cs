@@ -25,6 +25,8 @@ public class TitleManager : MonoBehaviour
     private bool isPressed = false;
     private bool isAlert = false;
 
+    private float localLastMoveTime = 0f;
+
     private void Awake()
     {
         Time.timeScale = 1;
@@ -52,7 +54,7 @@ public class TitleManager : MonoBehaviour
     {
         if (!isPressed)
         {
-            if (Input.GetKeyDown(KeyCode.RightArrow) && cutsceneObject[2].activeSelf)
+            if (InputManager.Instance.IsRightPressed(ref localLastMoveTime) && cutsceneObject[2].activeSelf)
             {
                 do
                 {
@@ -61,7 +63,7 @@ public class TitleManager : MonoBehaviour
                 SoundFXManager.instance.PlaySoundFXClip(clips[0], transform, false, 1);
                 UpdateMenu();
             }
-            else if (Input.GetKeyDown(KeyCode.LeftArrow) && cutsceneObject[2].activeSelf)
+            else if (InputManager.Instance.IsLeftPressed(ref localLastMoveTime) && cutsceneObject[2].activeSelf)
             {
                 do
                 {
@@ -71,13 +73,13 @@ public class TitleManager : MonoBehaviour
                 UpdateMenu();
             }
 
-            if (Input.GetKeyDown(KeyCode.Z) && cutsceneObject[2].activeSelf)
+            if (InputManager.Instance.IsZPressed() && cutsceneObject[2].activeSelf)
             {
                 StartCoroutine(SelectOption());
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.X) && isPressed)
+        if (InputManager.Instance.IsXPressed() && isPressed)
         {
             if (controlPanel.activeSelf)
             {
@@ -94,7 +96,7 @@ public class TitleManager : MonoBehaviour
 
         if (isAlert)
         {
-            if (Input.GetKeyDown(KeyCode.Z) && popUp.activeSelf)
+            if (InputManager.Instance.IsZPressed() && popUp.activeSelf)
             {
                 popUp.SetActive(false);
                 backgroundNight.SetActive(true);
@@ -106,7 +108,7 @@ public class TitleManager : MonoBehaviour
                 StartCoroutine(MoveOn("Prologue", 2.0f));
                 PlayerDataManager.Instance.UpdateNewGame(false);
             }
-            else if (Input.GetKeyDown(KeyCode.X))
+            else if (InputManager.Instance.IsXPressed())
             {
                 popUp.SetActive(false);
                 isAlert = false;
@@ -114,7 +116,7 @@ public class TitleManager : MonoBehaviour
         }
 
        
-       if (Input.GetKeyDown(KeyCode.Z) && cutsceneObject[1].activeSelf)
+       if (InputManager.Instance.IsZPressed() && cutsceneObject[1].activeSelf)
        {
            StartCoroutine(PressToStart());
        }

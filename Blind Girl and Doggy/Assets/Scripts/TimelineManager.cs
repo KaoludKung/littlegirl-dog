@@ -44,8 +44,11 @@ public class TimelineManager : EventObject
     void OnTimelineStopped(PlayableDirector director)
     {
         EventManager.Instance.UpdateEventDataTrigger(TriggerEventID, true);
-        StartCoroutine(UnlockPlayer());
-       
+
+        if (this != null && gameObject.activeInHierarchy)
+        {
+            StartCoroutine(UnlockPlayer());
+        }
     }
 
     private IEnumerator UnlockPlayer()

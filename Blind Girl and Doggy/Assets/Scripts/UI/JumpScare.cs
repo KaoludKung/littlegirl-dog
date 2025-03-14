@@ -20,7 +20,7 @@ public class JumpScare : MonoBehaviour
 
     public void Jumpscare()
     {
-        int i = Random.Range(1, maxJumpscare);
+        int i = Random.Range(1, maxJumpscare + 1);
         PlayerDataManager.Instance.UpdateIsSpined(false);
         PlayerDataManager.Instance.SavePlayerData();
 

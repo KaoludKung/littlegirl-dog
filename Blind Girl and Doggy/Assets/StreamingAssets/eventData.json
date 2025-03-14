@@ -815,6 +815,24 @@
       "nameEvent": "Go To Title",
       "type": "SceneManager",
       "trigger": false
+    },
+    {
+      "id": 501,
+      "nameEvent": "Frog greetings",
+      "type": "Dialogue",
+      "trigger": false
+    },
+    {
+      "id": 502,
+      "nameEvent": "Turtle warning",
+      "type": "Dialogue",
+      "trigger": false
+    },
+    {
+      "id": 503,
+      "nameEvent": "MyHome Teddy",
+      "type": "Dialogue",
+      "trigger": false
     }
 
   ]

@@ -34,7 +34,16 @@ public class SceneManager : MonoBehaviour
 
     public void ChangeSceneImmediately(string sceneName, bool player = true ,bool all = true)
     {
-        PlayerDataManager.Instance.UpdateSceneName(sceneName);
+        if(sceneName != "Title")
+        {
+            PlayerDataManager.Instance.UpdateSceneName(sceneName);
+            Debug.Log("No Title");
+        }
+        else
+        {
+            Debug.Log("It's me title");
+        }
+
 
         if(player)
             PlayerDataManager.Instance.SavePlayerData();

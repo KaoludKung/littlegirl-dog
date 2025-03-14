@@ -14,7 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleName: Mansion_08
   lines:
-  - character: {fileID: 11400000, guid: 19ffb9f769808e449b060863b2921cb9, type: 2}
-    text: Oh no, Margarete, what's happening?
-  - character: {fileID: 11400000, guid: 19ffb9f769808e449b060863b2921cb9, type: 2}
-    text: Somebody, please help her!
+  - character: {fileID: 11400000, guid: 585a7fe128b0aad48a6070c92bdeae6e, type: 2}
+    text: '!!!'
+  - character: {fileID: 11400000, guid: 585a7fe128b0aad48a6070c92bdeae6e, type: 2}
+    text: Margarete! What's happening to you?
+  - character: {fileID: 11400000, guid: 585a7fe128b0aad48a6070c92bdeae6e, type: 2}
+    text: (Or is it because of that pie...)
+  - character: {fileID: 11400000, guid: 585a7fe128b0aad48a6070c92bdeae6e, type: 2}
+    text: Stay strong, okay? I'll go get help!
+  - character: {fileID: 11400000, guid: 585a7fe128b0aad48a6070c92bdeae6e, type: 2}
+    text: Please, don't let anything happen to you...
+  - character: {fileID: 11400000, guid: 585a7fe128b0aad48a6070c92bdeae6e, type: 2}
+    text: 'My dear granddaughter...
+
+'

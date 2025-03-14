@@ -24,6 +24,7 @@ public class GameOverManager : MonoBehaviour
     private int currentIndex = 0;
     private bool isPressed = false;
     public bool isActive { get; private set; }
+    private float localLastMoveTime = 0f;
 
     private void Awake()
     {
@@ -61,20 +62,20 @@ public class GameOverManager : MonoBehaviour
 
         if (!isPressed)
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow) && gameOverPanel.activeSelf)
+            if (InputManager.Instance.IsUpPressed(ref localLastMoveTime) && gameOverPanel.activeSelf)
             {
                 currentIndex = (currentIndex - 1 + gameoverOptions.Count) % gameoverOptions.Count;
                 SoundFXManager.instance.PlaySoundFXClip(clips[0], transform, false, 1);
                 UpdateMenu();
             }
-            else if (Input.GetKeyDown(KeyCode.DownArrow) && gameOverPanel.activeSelf)
+            else if (InputManager.Instance.IsDownPressed(ref localLastMoveTime) && gameOverPanel.activeSelf)
             {
                 currentIndex = (currentIndex + 1) % gameoverOptions.Count;
                 SoundFXManager.instance.PlaySoundFXClip(clips[0], transform, false, 1);
                 UpdateMenu();
             }
 
-            if (Input.GetKeyDown(KeyCode.Z) && gameOverPanel.activeSelf)
+            if (InputManager.Instance.IsZPressed() && gameOverPanel.activeSelf)
             {
                 StartCoroutine(SelectOption());
             }
@@ -161,6 +162,9 @@ public class GameOverManager : MonoBehaviour
 
     IEnumerator Respawn()
     {
+        CharacterManager.Instance.StopMoving();
+        yield return new WaitForSecondsRealtime(0.2f);
+
         dogController.SetNewClip(null, true);
         girlController.SetNewClip(null, true);
 
@@ -204,7 +208,7 @@ public class GameOverManager : MonoBehaviour
 
         if (monster != null)
         {
-            monster.SetIsKill(true);
+            monster.SetIsKill(false);
         }
 
         if (hunter != null && EventManager.Instance.IsEventTriggered(88))

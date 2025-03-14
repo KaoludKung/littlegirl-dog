@@ -21,7 +21,7 @@ public class ActionText : MonoBehaviour
 
     IEnumerator ResetDisplay(string result)
     {
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSecondsRealtime(5.0f);
 
         if(a_text.text == result)
         {

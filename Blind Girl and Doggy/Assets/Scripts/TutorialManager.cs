@@ -15,6 +15,7 @@ public class TutorialManager : EventObject
 
     private int currentIndex = 0;
     private DogController dogController;
+    private float localLastMoveTime = 0f;
 
     void Start()
     {
@@ -35,20 +36,25 @@ public class TutorialManager : EventObject
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && tutorialPanel.activeSelf && currentIndex != 0)
+        if (tutorialPanel.activeSelf)
+        {
+            uiManagerObject.SetActive(false);
+        }
+
+        if (InputManager.Instance.IsLeftPressed(ref localLastMoveTime) && tutorialPanel.activeSelf && currentIndex != 0)
         {
             currentIndex = (currentIndex - 1);
             SoundFXManager.instance.PlaySoundFXClip(clips[0], transform, false, 1);
             UpdateMenu();
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow) && tutorialPanel.activeSelf && currentIndex != tutorialImage.Length - 1)
+        else if (InputManager.Instance.IsRightPressed(ref localLastMoveTime) && tutorialPanel.activeSelf && currentIndex != tutorialImage.Length - 1)
         {
             currentIndex = (currentIndex + 1);
             SoundFXManager.instance.PlaySoundFXClip(clips[0], transform, false, 1);
             UpdateMenu();
         }
 
-        if (Input.GetKeyDown(KeyCode.X) && tutorialPanel.activeSelf && tutorialIcon[2].activeSelf)
+        if (InputManager.Instance.IsXPressed() && tutorialPanel.activeSelf && tutorialIcon[2].activeSelf)
         {
             StartCoroutine(ClosePopUp());
         }
@@ -104,6 +110,11 @@ public class TutorialManager : EventObject
             tutorialIcon[2].SetActive(false);
         }
 
+    }
+
+    public void SetTutorialImage(int index, Sprite s)
+    {
+        tutorialImage[index] = s;
     }
 
 }

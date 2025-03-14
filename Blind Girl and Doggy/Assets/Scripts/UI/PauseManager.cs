@@ -21,7 +21,8 @@ public class PauseManager : MonoBehaviour
     private int currentIndex = 0;
     private string baseText = "It's time to relax!!!";
 
-   
+    private float localLastMoveTime = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +38,7 @@ public class PauseManager : MonoBehaviour
             CharacterManager.Instance.SetIsActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
+        if (InputManager.Instance.IsEnterPressed())
         {
             if (!isPaused && !pausePanel.activeSelf && !UIManager.Instance.IsAnyUIActive)           
             {
@@ -49,26 +50,26 @@ public class PauseManager : MonoBehaviour
 
         if (!isPressed && isPaused)
         {
-            if (Input.GetKeyDown(KeyCode.LeftArrow) && pausePanel.activeSelf)
+            if (InputManager.Instance.IsLeftPressed(ref localLastMoveTime) && pausePanel.activeSelf)
             {
                 currentIndex = (currentIndex - 1 + pauseOptions.Count) % pauseOptions.Count;
                 SoundFXManager.instance.PlaySoundFXClip(clips[0], transform, false, 1);
                 UpdateMenu();
             }
-            else if (Input.GetKeyDown(KeyCode.RightArrow) && pausePanel.activeSelf)
+            else if (InputManager.Instance.IsRightPressed(ref localLastMoveTime) && pausePanel.activeSelf)
             {
                 currentIndex = (currentIndex + 1) % pauseOptions.Count;
                 SoundFXManager.instance.PlaySoundFXClip(clips[0], transform, false, 1);
                 UpdateMenu();
             }
 
-            if (Input.GetKeyDown(KeyCode.Z) && pausePanel.activeSelf)
+            if (InputManager.Instance.IsZPressed() && pausePanel.activeSelf)
             {
                 StartCoroutine(SelectOption());
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.X) && isPressed)
+        if (InputManager.Instance.IsXPressed() && isPressed)
         {
             if (settingPanel.activeSelf)
             {
@@ -82,7 +83,7 @@ public class PauseManager : MonoBehaviour
             SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1);
         }
 
-        if (isAlert && Input.GetKeyDown(KeyCode.Z) && popUp.activeSelf)
+        if (isAlert && InputManager.Instance.IsZPressed() && popUp.activeSelf)
         {
             StartCoroutine(ExitToMenu());
         }

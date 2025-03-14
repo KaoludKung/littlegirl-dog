@@ -8,6 +8,7 @@ public class Hiding : MonoBehaviour, Interactable
     [SerializeField] private GameObject lightfly;
     [SerializeField] private AudioClip hidingClip;
     [SerializeField] private Sprite alertSprite;
+    [SerializeField] private GameObject gameoverPanel;
     
     private Hunter hunter;
     private GirlController girlController;
@@ -38,7 +39,7 @@ public class Hiding : MonoBehaviour, Interactable
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X) && isHidden && !UIManager.Instance.IsAnyUIActive)
+        if (InputManager.Instance.IsXPressed() && isHidden && !UIManager.Instance.IsAnyUIActive)
         {
             if(hunter != null && hunter.IsQuit)
             {
@@ -48,7 +49,11 @@ public class Hiding : MonoBehaviour, Interactable
             {
                 StartCoroutine(ToggleHide());
             }
+        }
 
+        if(gameoverPanel != null && gameoverPanel.activeSelf && isHidden)
+        {
+            StartCoroutine(ToggleHide());
         }
     }
 
@@ -69,8 +74,9 @@ public class Hiding : MonoBehaviour, Interactable
 
     IEnumerator ToggleHide()
     {
-        yield return new WaitForSeconds(0.2f);
-        if (hidingClip != null)
+        yield return new WaitForSecondsRealtime(0.2f);
+
+        if (hidingClip != null && gameoverPanel != null && !gameoverPanel.activeSelf)
         {
             SoundFXManager.instance.PlaySoundFXClip(hidingClip, transform, false, 1.0f);
         }
@@ -87,7 +93,7 @@ public class Hiding : MonoBehaviour, Interactable
                 spriteRenderer[i].sortingOrder = originalSortingOrder[i];
             }
 
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSecondsRealtime(0.3f);
             CharacterManager.Instance.SetIsActive(true);
             lightfly.SetActive(true);
             girlController.InteractionIcon.SetActive(true);
@@ -97,7 +103,7 @@ public class Hiding : MonoBehaviour, Interactable
         else if (!isHidden)
         {
             girlController.Animator.SetBool("isInteract", true);
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSecondsRealtime(0.3f);
             isHidden = true;
             lightfly.SetActive(false);
             

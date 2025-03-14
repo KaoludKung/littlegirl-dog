@@ -14,6 +14,7 @@ public class Choice : EventObject
 
     private int currentIndex = 0;
     private bool isPressed = false;
+    private float localLastMoveTime = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -25,20 +26,20 @@ public class Choice : EventObject
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow) && choicePanel.activeSelf && !isPressed)
+        if (InputManager.Instance.IsUpPressed(ref localLastMoveTime) && choicePanel.activeSelf && !isPressed)
         {
             currentIndex = (currentIndex - 1 + choiceOptions.Count) % choiceOptions.Count;
             SoundFXManager.instance.PlaySoundFXClip(clips[0], transform, false, 1);
             UpdateChoice();
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow) && choicePanel.activeSelf && !isPressed)
+        else if (InputManager.Instance.IsDownPressed(ref localLastMoveTime) && choicePanel.activeSelf && !isPressed)
         {
             currentIndex = (currentIndex + 1) % choiceOptions.Count;
             SoundFXManager.instance.PlaySoundFXClip(clips[0], transform, false, 1);
             UpdateChoice();
         }
 
-        if (Input.GetKeyDown(KeyCode.Z) && !isPressed)
+        if (InputManager.Instance.IsZPressed() && !isPressed)
         {
             StartCoroutine(SelectChoice());
         }

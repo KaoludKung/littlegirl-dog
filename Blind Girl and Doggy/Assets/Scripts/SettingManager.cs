@@ -15,6 +15,7 @@ public class SettingManager : MonoBehaviour
 
     private int currentIndex = 0;
     private float volumeStep = 0.05f;
+    private float localLastMoveTime = 0f;
 
     void Start()
     {
@@ -27,38 +28,29 @@ public class SettingManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (InputManager.Instance.IsUpPressed(ref localLastMoveTime))
         {
             currentIndex = (currentIndex - 1 + musicOptions.Count) % musicOptions.Count;
             SoundFXManager.instance.PlaySoundFXClip(selectedClip, transform, false, 1);
             UpdateMenu();
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (InputManager.Instance.IsDownPressed(ref localLastMoveTime))
         {
             currentIndex = (currentIndex + 1) % musicOptions.Count;
             SoundFXManager.instance.PlaySoundFXClip(selectedClip, transform, false, 1);
             UpdateMenu();
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (InputManager.Instance.IsLeftPressed(ref localLastMoveTime))
         {
             AdjustVolume(-volumeStep);
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (InputManager.Instance.IsRightPressed(ref localLastMoveTime))
         {
             AdjustVolume(volumeStep);
         }
 
     }
-
-    /*
-    IEnumerator SwapTab()
-    {
-        SoundFXManager.instance.PlaySoundFXClip(pressedClip, transform, false, 1);
-        yield return new WaitForSeconds(pressedClip.length);
-        displayPanel.SetActive(true);
-        gameObject.SetActive(false);
-    }*/
 
     void UpdateMenu()
     {
@@ -111,6 +103,8 @@ public class SettingManager : MonoBehaviour
         musicOptions[currentIndex].musicFill.fillAmount = newVolume;
         SoundFXManager.instance.PlaySoundFXClip(pressedClip, transform, false, 1);
     }
+
+    
 }
 
 [System.Serializable]

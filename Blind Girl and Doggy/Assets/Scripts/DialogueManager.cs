@@ -68,13 +68,13 @@ public class DialogueManager : EventObject
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
+        if (InputManager.Instance.IsEnterPressed())
         {
             if (started)
             {
                 if (speed == 0.05f)
                 {
-                    speed = 0.025f;
+                    speed = 0.015f;
                     PlayerPrefs.SetFloat("speedText", speed);
                     //speed = PlayerPrefs.GetFloat("speedText");
                     dialogueUI.speedText.text = "Slow down";
@@ -92,7 +92,7 @@ public class DialogueManager : EventObject
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (InputManager.Instance.IsZPressed())
         {
             if (isWriting)
             {

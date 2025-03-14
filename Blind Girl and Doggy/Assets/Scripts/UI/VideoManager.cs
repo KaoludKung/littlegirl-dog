@@ -11,12 +11,19 @@ public class VideoManager : MonoBehaviour
     void Awake()
     {
         Time.timeScale = 1;
+        videoPlayer.frame = 0;
         videoPlayer.playOnAwake = false;
         videoPlayer.isLooping = false;
     }
 
     void Start()
     {
+        if (ending)
+        {
+            PlayerDataManager.Instance.UpdateSceneName("Mansion");
+            PlayerDataManager.Instance.SavePlayerData();
+        }
+
         videoPlayer.prepareCompleted += OnVideoPrepared;
         videoPlayer.Prepare();
     }
@@ -43,6 +50,7 @@ public class VideoManager : MonoBehaviour
     IEnumerator NextScene(float time)
     {
         yield return new WaitForSeconds(time);
+        videoPlayer.frame = 0;
 
         if (PlayerDataManager.Instance.GetIsSecret() && ending)
         {
@@ -55,5 +63,6 @@ public class VideoManager : MonoBehaviour
             UnityEngine.SceneManagement.SceneManager.LoadScene("Title");
         }
     }
+
 }
 
