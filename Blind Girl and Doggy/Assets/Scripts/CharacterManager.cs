@@ -47,6 +47,7 @@ public class CharacterManager : MonoBehaviour
         if(dogController != null)
         {
             dogController.Animator.SetBool("isWalk", false);
+            dogController.StopSound();
         }
     }
 

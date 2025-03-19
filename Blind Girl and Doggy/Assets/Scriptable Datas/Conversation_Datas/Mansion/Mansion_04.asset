@@ -15,4 +15,8 @@ MonoBehaviour:
   titleName: Mansion_04
   lines:
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
-    text: "Veronika!! No... it can't be true!!\r"
+    text: "Veronika!! No\u2026\r"
+  - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
+    text: "Please... don\u2019t leave me...\r\r"
+  - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
+    text: "Please!! Veronika, wake up, don\u2019t do this...\r"

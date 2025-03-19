@@ -51,7 +51,7 @@ public class Radio : MonoBehaviour
             radioSource.Play();
         }
 
-        int r = Random.Range(75, 140);
+        int r = Random.Range(60, 120);
 
         yield return new WaitForSeconds(r);
 

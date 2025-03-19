@@ -143,8 +143,8 @@ public class DogController : MonoBehaviour
     {
         while (staminaFill.fillAmount < 1.0f)
         {
-            yield return new WaitForSeconds(3.5f);
-            staminaFill.fillAmount += 0.1f;
+            yield return new WaitForSeconds(5.2f);
+            staminaFill.fillAmount += 0.075f;
         }
         isRegeneratingStamina = false;
     }
@@ -172,7 +172,7 @@ public class DogController : MonoBehaviour
         if (collision.CompareTag("Spots"))
         {
             isDigging = false;
-            Debug.Log("Bye");
+            //Debug.Log("Bye");
         }
     }
 
@@ -225,6 +225,14 @@ public class DogController : MonoBehaviour
     public void SetIsDigging(bool value)
     {
         isDigging = value;
+    }
+
+    public void StopSound()
+    {
+        if (walkSource.isPlaying)
+        {
+            walkSource.Stop();
+        }
     }
 
 }

@@ -9,7 +9,7 @@ public class TitleManager : MonoBehaviour
     [SerializeField] private GameObject controlPanel;
     [SerializeField] private GameObject settingPanel;
     [SerializeField] private GameObject popUp;
-    [SerializeField] private GameObject backgroundNight;
+    [SerializeField] private GameObject[] backgroundNight;
     [SerializeField] private GameObject[] cutsceneObject; // [0] title name, [1] press z, [2] option grid, [3] credit 
     [SerializeField] private Animator[] animator;
 
@@ -37,12 +37,14 @@ public class TitleManager : MonoBehaviour
         Time.timeScale = 1;
         animator[0].SetBool("isWalk", true);
         animator[1].SetBool("isWalk", true);
-        PlayerPrefs.SetInt("UnlockSecret", 0);
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        if (PlayerDataManager.Instance.GetIsSecret())
+            PlayerDataManager.Instance.UpdateSecrets(false);
+
         Invoke(nameof(StartWalking), 0.3f);
         StartCoroutine(ShowIntro());
         UpdateMenu();
@@ -99,7 +101,8 @@ public class TitleManager : MonoBehaviour
             if (InputManager.Instance.IsZPressed() && popUp.activeSelf)
             {
                 popUp.SetActive(false);
-                backgroundNight.SetActive(true);
+                backgroundNight[0].SetActive(true);
+                backgroundNight[1].SetActive(true);
                 musicSource.clip = clips[2];
                 musicSource.Play();
                 PlayerDataManager.Instance.DeletePlayerData();
@@ -254,7 +257,8 @@ public class TitleManager : MonoBehaviour
     {
         if (PlayerDataManager.Instance.GetIsNewGame())
         {
-            backgroundNight.SetActive(true);
+            backgroundNight[0].SetActive(true);
+            backgroundNight[1].SetActive(true);
             musicSource.clip = clips[2];
             musicSource.Play();
             StartCoroutine(MoveOn("Prologue", 1.5f));

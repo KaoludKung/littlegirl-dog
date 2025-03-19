@@ -162,6 +162,8 @@ public class GameOverManager : MonoBehaviour
 
     IEnumerator Respawn()
     {
+        Time.timeScale = 1;
+
         CharacterManager.Instance.StopMoving();
         yield return new WaitForSecondsRealtime(0.2f);
 
@@ -176,11 +178,11 @@ public class GameOverManager : MonoBehaviour
             character[2].position = new Vector3(-5.97f,1.20f, 0f);
         }
 
-        yield return new WaitForSecondsRealtime(2.0f);
-        isPressed = false;
-
-        if(cameraSwitcher != null)
+        if (cameraSwitcher != null)
             cameraSwitcher.SwitchCamera(cameraID);
+
+        yield return new WaitForSeconds(1.2f);
+        isPressed = false;
 
         foreach (AnimatorControllerParameter parameter in girlController.Animator.parameters)
         {
@@ -199,10 +201,12 @@ public class GameOverManager : MonoBehaviour
         }
 
         dogController.Animator.SetInteger("BarkType", 0);
-        yield return new WaitForSecondsRealtime(0.5f);
-        CharacterManager.Instance.SetIsActive(true);
+
         girlController.SetIsInteract(false);
         girlController.ResetCurrentInteractable();
+
+        yield return new WaitForSeconds(0.5f);
+        CharacterManager.Instance.SetIsActive(true);
         isActive = false;
         CharacterManager.Instance.UnpauseAllSound();
 
@@ -220,7 +224,7 @@ public class GameOverManager : MonoBehaviour
         }
 
         OpenPanel();
-        Time.timeScale = 1;
+        
     }
 
     IEnumerator ExitToMenu()
@@ -241,7 +245,6 @@ public class GameOverManager : MonoBehaviour
         }
 
         gameOverPanel.SetActive(!gameOverPanel.activeSelf);
-
     }
 
     public void SetIsActive(bool g)

@@ -6,6 +6,7 @@ using TMPro;
 public class Intro : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI[] introText;
+    private bool isSkip = false;
 
     // Start is called before the first frame update
     void Start()
@@ -13,14 +14,23 @@ public class Intro : MonoBehaviour
         StartCoroutine(GoToTitle());
     }
 
+    private void Update()
+    {
+        if(!isSkip && (InputManager.Instance.IsZPressed() || InputManager.Instance.IsXPressed() || InputManager.Instance.IsEnterPressed()))
+        {
+            isSkip = true;
+            StartCoroutine(SkipToTitle());    
+        }
+    }
+
     IEnumerator GoToTitle()
     {
-        yield return new WaitForSeconds(6.0f);
+        yield return new WaitForSeconds(5.0f);
 
         introText[0].text = "Player Tips!!!";
-        //introText[1].enableWordWrapping = true;
-        //introText[1].rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 1500f);
-        introText[1].text = "Put on headphones to experience more immersive sound and enhance the excitement of your gameplay!";
+        introText[1].enableWordWrapping = true;
+        introText[1].rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 1500f);
+        introText[1].text = "Put on headphones to enjoy immersive sound and enhance your gameplay experience. This game supports controllers, and for optimal performance, we recommend connecting via USB for greater stability.";
 
         yield return new WaitForSeconds(5.0f);
 
@@ -30,6 +40,17 @@ public class Intro : MonoBehaviour
         {
             yield return null;
         }
+    }
 
+    IEnumerator SkipToTitle()
+    {
+        yield return new WaitForSeconds(1.0f);
+
+        AsyncOperation asyncLoad = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("Title");
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
     }
 }

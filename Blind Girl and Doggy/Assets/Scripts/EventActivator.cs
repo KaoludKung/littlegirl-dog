@@ -6,6 +6,7 @@ public class EventActivator : MonoBehaviour
 {
     [SerializeField] private float checkInterval;
     [SerializeField] private List<GameObject> eventObjects;
+    //[SerializeField] private float activationDelay = 1f; // ?????????????
 
     private void Start()
     {
@@ -33,8 +34,7 @@ public class EventActivator : MonoBehaviour
                         EventObject eventObject = obj.GetComponent<EventObject>();
                         if (eventObject != null && eventObject.GetEventId() == eventData.id)
                         {
-                            obj.SetActive(true);
-                            //Debug.Log($"Activated object for event: {eventData.nameEvent}");
+                            StartCoroutine(ActivateObjectWithDelay(obj)); 
                         }
                     }
                 }
@@ -59,4 +59,10 @@ public class EventActivator : MonoBehaviour
         }
     }
 
+    private IEnumerator ActivateObjectWithDelay(GameObject obj)
+    {
+        yield return new WaitForSeconds(0.3f); 
+        obj.SetActive(true);
+        //Debug.Log($"Activated object: {obj.name}");
+    }
 }

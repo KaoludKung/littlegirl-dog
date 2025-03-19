@@ -53,7 +53,7 @@ public class Hiding : MonoBehaviour, Interactable
 
         if(gameoverPanel != null && gameoverPanel.activeSelf && isHidden)
         {
-            StartCoroutine(ToggleHide());
+            StartCoroutine(CancelHidingWhileDie());
         }
     }
 
@@ -72,11 +72,32 @@ public class Hiding : MonoBehaviour, Interactable
         }
     }
 
+    IEnumerator CancelHidingWhileDie()
+    {
+        yield return new WaitForSeconds(1.0f);
+
+        isHidden = false;
+        girlController.Animator.SetBool("isInteract", false);
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Character"), LayerMask.NameToLayer("Enemy"), false);
+
+        for (int i = 0; i < spriteRenderer.Length; i++)
+        {
+            spriteRenderer[i].sortingLayerName = originalSortingLayer[i];
+            spriteRenderer[i].sortingOrder = originalSortingOrder[i];
+        }
+
+        yield return new WaitForSeconds(0.1f);
+        lightfly.SetActive(true);
+        //CharacterManager.Instance.SetIsActive(true);
+        //girlController.InteractionIcon.SetActive(true);
+
+    }
+
     IEnumerator ToggleHide()
     {
         yield return new WaitForSecondsRealtime(0.2f);
 
-        if (hidingClip != null && gameoverPanel != null && !gameoverPanel.activeSelf)
+        if (hidingClip != null)
         {
             SoundFXManager.instance.PlaySoundFXClip(hidingClip, transform, false, 1.0f);
         }

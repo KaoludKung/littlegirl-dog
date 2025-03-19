@@ -31,4 +31,12 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: Veronika, what's happening?! Veronika!!
   - character: {fileID: 11400000, guid: 5e015be63c84c684895261fa634c179b, type: 2}
-    text: I... love you... my dear granddaughter...
+    text: "Mar\u2026 gare\u2026\r\n"
+  - character: {fileID: 11400000, guid: 5e015be63c84c684895261fa634c179b, type: 2}
+    text: "There's something I need to tell you\u2026"
+  - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
+    text: Forget about that for now, just hold on, I'll go get help.
+  - character: {fileID: 11400000, guid: 5e015be63c84c684895261fa634c179b, type: 2}
+    text: 'Listen... I... love you... '
+  - character: {fileID: 11400000, guid: 5e015be63c84c684895261fa634c179b, type: 2}
+    text: My dear granddaughter...

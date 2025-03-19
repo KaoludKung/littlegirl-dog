@@ -1191,6 +1191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 545043435}
   offset: {x: 0, y: 0, z: 0}
+  smoothTime: 0.2
 --- !u!114 &65226991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2021,7 +2022,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -665294223
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5a823238f4af7a445b0ec75750c34f2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8386,6 +8387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 443371254}
   - component: {fileID: 443371255}
+  - component: {fileID: 443371256}
   m_Layer: 5
   m_Name: updateTT
   m_TagString: Untagged
@@ -8431,6 +8433,26 @@ MonoBehaviour:
   keyboardSprites: {fileID: 11400000, guid: 590868f94024f0541a7351e97ac2658b, type: 2}
   ps4Sprites: {fileID: 11400000, guid: 54b9dd602a4deab4d8007a1143fc924b, type: 2}
   xboxSprites: {fileID: 11400000, guid: 8ecb573fd7c0bec4299501bfc21583ef, type: 2}
+--- !u!114 &443371256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443371253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d1c292dd100c2148b29105a6d2103a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+  - {fileID: 523269787}
+  - {fileID: 1111259782}
+  - {fileID: 748116471}
+  newText:
+  - Margarete has discovered a hidden note. Press E to open the note inventory.
+  - Margarete has discovered a hidden note. Press RB to open the note inventory.
+  - Margarete has discovered a hidden note. Press R1 to open the note inventory.
 --- !u!1 &452390131
 GameObject:
   m_ObjectHideFlags: 0
@@ -9209,6 +9231,7 @@ MonoBehaviour:
   itemID: 1
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.1
@@ -13296,6 +13319,7 @@ MonoBehaviour:
   itemID: 3
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.1
@@ -15039,11 +15063,11 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: 3aa389c5c54fb6345b51b270dbe45b7f, type: 3}
   minRandomtime: 45
-  maxRandomtime: 75
-  minDistance: 5
-  maxDistance: 10
+  maxRandomtime: 65
+  minDistance: 2
+  maxDistance: 12
   spitalBlend: 1
-  linaerRoller: 0
+  linaerRoller: 1
 --- !u!1001 &814920372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18702,6 +18726,7 @@ MonoBehaviour:
   itemID: 2
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.1
@@ -19126,6 +19151,7 @@ MonoBehaviour:
   itemID: 2
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
   actionClips: {fileID: 8300000, guid: 2010330198c45e24cb25c0c28a99242f, type: 3}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.1
@@ -19568,7 +19594,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.900673, y: 0}
+  m_Offset: {x: -3.192459, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -19579,7 +19605,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.1892548, y: 1}
+  m_Size: {x: 4.772827, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &1085184315
 MonoBehaviour:
@@ -19717,6 +19743,7 @@ MonoBehaviour:
   itemID: 2
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.1
@@ -21347,6 +21374,7 @@ MonoBehaviour:
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
   actionClips: {fileID: 0}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.1
@@ -22312,8 +22340,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ribbit: {fileID: 8300000, guid: 36edc8bdb66cce84cb7172390b7390cb, type: 3}
-  minInterval: 30
-  maxInterval: 60
+  minInterval: 2
+  maxInterval: 20
 --- !u!1 &1243206669
 GameObject:
   m_ObjectHideFlags: 0
@@ -25598,7 +25626,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -665294223
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c49a0aca8fe87664baa5ab1922cf5d09, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -26951,7 +26979,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -30196,6 +30224,7 @@ MonoBehaviour:
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
   actionClips: {fileID: 0}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.1
@@ -30904,6 +30933,7 @@ MonoBehaviour:
   itemID: 2
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: e4001740e3aa71145a936b212f1ae703, type: 3}
+  gameoverPanel: {fileID: 0}
   progressBar: {fileID: 0}
   progressFill: {fileID: 0}
   progressSpeed: 0.1
@@ -35373,6 +35403,7 @@ GameObject:
   - component: {fileID: 2134136088}
   - component: {fileID: 2134136087}
   - component: {fileID: 2134136086}
+  - component: {fileID: 2134136091}
   m_Layer: 0
   m_Name: JsonManager
   m_TagString: Untagged
@@ -35443,6 +35474,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2134136091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134136085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dc13597f338c2c4e8561f3f4024e7d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2137571353 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8152484130200093908, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
@@ -35772,6 +35815,22 @@ PrefabInstance:
     - target: {fileID: 1239043751401136283, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763995337222459360, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763995337222459360, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.14901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763995337222459360, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.29803923
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763995337222459360, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 3352140
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

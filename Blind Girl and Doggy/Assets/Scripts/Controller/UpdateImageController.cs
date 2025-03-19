@@ -22,21 +22,35 @@ public class UpdateImageController : MonoBehaviour
             timeSinceLastCheck = 0f;
 
             string[] connectedJoysticks = Input.GetJoystickNames();
+            Debug.Log("Connected Joysticks Length: " + connectedJoysticks.Length);
 
-            if (connectedJoysticks.Length > 0 && !string.IsNullOrEmpty(connectedJoysticks[0]))
+            string activeJoystickName = null;
+
+            foreach (string joystick in connectedJoysticks)
             {
-                string joystickName = connectedJoysticks[0].Trim().ToLower();
-                Debug.Log("Controller connected: " + joystickName);
+                if (!string.IsNullOrEmpty(joystick))
+                {
+                    activeJoystickName = joystick.Trim().ToLower();
+                    break; 
+                }
+            }
 
-                if (joystickName.Contains("wireless controller") || joystickName.Contains("sony"))
+            if (!string.IsNullOrEmpty(activeJoystickName))
+            {
+                if (activeJoystickName.Contains("wireless controller") || activeJoystickName.Contains("sony") || activeJoystickName.Contains("playstation"))
                 {
                     UpdateUI(2); 
                     Debug.Log("PS4 Controller connected.");
                 }
-                else if (joystickName.Contains("xbox") || joystickName.Contains("microsoft"))
+                else if (activeJoystickName.Contains("xbox") || activeJoystickName.Contains("microsoft"))
                 {
                     UpdateUI(3); 
                     Debug.Log("Xbox Controller connected.");
+                }
+                else
+                {
+                    UpdateUI(3);
+                    Debug.Log("Other Controller connected.");
                 }
             }
             else

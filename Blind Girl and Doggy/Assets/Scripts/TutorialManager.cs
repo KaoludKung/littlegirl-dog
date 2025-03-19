@@ -81,7 +81,7 @@ public class TutorialManager : EventObject
         }
     }
 
-    void UpdateMenu()
+    public void UpdateMenu()
     {
         for (int i = 0; i < tutorialImage.Length; i++)
         {

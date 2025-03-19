@@ -5,10 +5,14 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     public static InputManager Instance { get; private set; }
+    private Dictionary<string, KeyCode> buttonMapping;
     private float moveDelay = 0.25f;
     private float joystickThreshold = 0.6f;
     private string lastConnectedDevice = "";
     private string currentDevice;
+
+    private float checkInterval = 2.5f;
+    private float timeSinceLastCheck = 0f;
 
     private void Awake()
     {
@@ -18,17 +22,57 @@ public class InputManager : MonoBehaviour
             return;
         }
         Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
+    private void Start()
+    {
+        //Set up a controller first
+        MappingButton(1);
     }
 
     void Update()
     {
         currentDevice = GetCurrentInputDevice();
-
         if (lastConnectedDevice != currentDevice)
         {
             lastConnectedDevice = currentDevice;
-            //Input.ResetInputAxes();
             Debug.Log("Input device switched to: " + currentDevice);
+        }
+
+        timeSinceLastCheck += Time.unscaledDeltaTime;
+
+        if (timeSinceLastCheck >= checkInterval)
+        {
+            timeSinceLastCheck = 0f;
+
+            string[] connectedJoysticks = Input.GetJoystickNames();
+            string activeJoystickName = null;
+
+            foreach (string joystick in connectedJoysticks)
+            {
+                if (!string.IsNullOrEmpty(joystick))
+                {
+                    activeJoystickName = joystick.Trim().ToLower();
+                    break;
+                }
+            }
+
+            if (!string.IsNullOrEmpty(activeJoystickName))
+            {
+                if (activeJoystickName.Contains("wireless controller") || activeJoystickName.Contains("sony") || activeJoystickName.Contains("playstation"))
+                {
+                    MappingButton(2);
+                }
+                else if (activeJoystickName.Contains("xbox") || activeJoystickName.Contains("microsoft"))
+                {
+                    MappingButton(1);
+                }
+                else
+                {
+                    MappingButton(1);
+                }
+            }
         }
     }
 
@@ -47,34 +91,65 @@ public class InputManager : MonoBehaviour
         return isJoystickConnected ? "Joystick" : "Keyboard";
     }
 
+    public void MappingButton(int controller)
+    {
+        switch (controller)
+        {
+            //Mapping Xbox
+            case 1:
+                Debug.Log("Mapping Controller To Xbox");
+                buttonMapping = new Dictionary<string, KeyCode>{
+                    { "Z", KeyCode.JoystickButton0 },
+                    { "X", KeyCode.JoystickButton1 },
+                    { "Q", KeyCode.JoystickButton4 },
+                    { "E", KeyCode.JoystickButton5 },
+                    { "Enter", KeyCode.JoystickButton7 },
+                    { "Shift", KeyCode.JoystickButton6 }
+                };
+                break;
+            // Mapping PS4
+            case 2:
+                Debug.Log("Mapping Controller To PS4");
+                buttonMapping = new Dictionary<string, KeyCode>{
+                    { "Z", KeyCode.JoystickButton1 },
+                    { "X", KeyCode.JoystickButton2 },
+                    { "Q", KeyCode.JoystickButton4 },
+                    { "E", KeyCode.JoystickButton5 },
+                    { "Enter", KeyCode.JoystickButton9 },
+                    { "Shift", KeyCode.JoystickButton8 }
+                };
+                break;
+        }
+    }
+
     public bool IsZPressed()
     {
-        return Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.JoystickButton1);
+        return Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(buttonMapping["Z"]);
     }
 
     public bool IsXPressed()
     {
-        return Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.JoystickButton2);
+        return Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(buttonMapping["X"]);
     }
 
     public bool IsQPressed()
     {
-        return Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.JoystickButton4);
+        return Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(buttonMapping["Q"]);
     }
 
     public bool IsEPressed()
     {
-        return Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton5);
+        return Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(buttonMapping["E"]);
     }
 
     public bool IsEnterPressed()
     {
-        return Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.JoystickButton9);
+        return Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(buttonMapping["Enter"]);
     }
 
     public bool IsShiftPressed()
     {
-        return Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.JoystickButton8);
+        return Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(buttonMapping["Shift"]);
     }
 
     public bool IsUpPressed(ref float lastMoveTime)
@@ -150,7 +225,6 @@ public class InputManager : MonoBehaviour
     }
 
     //for dog movement
-
     public bool IsWalkingLeft()
     {
         if (currentDevice == "Keyboard" && Input.GetKeyDown(KeyCode.LeftArrow))

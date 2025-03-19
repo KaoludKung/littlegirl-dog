@@ -76,11 +76,11 @@ public class GirlController : MonoBehaviour
 
             if (!isBarking && !dogControlller.IsMoving)
             {
-                if (dogControlller.staminaFill.fillAmount > 0 && distance <= detectRange)
+                if (dogControlller.staminaFill.fillAmount > 0.10 && distance <= detectRange)
                 {
                     StartCoroutine(HandleMove());
                 }
-                else if (dogControlller.staminaFill.fillAmount == 0)
+                else if (dogControlller.staminaFill.fillAmount < 0.10)
                 {
                     tooFar.text = "Not enough stamina T_T";
                     StartCoroutine(DogSad());
@@ -107,19 +107,19 @@ public class GirlController : MonoBehaviour
                 float distance = Vector3.Distance(transform.position, dogTransform.position);
                 float detectRangeForAction = detectRange > 28 ? detectRange - 20.0f : 8f;
 
-                if (interactablesInRange.Count > 0 && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount > 0 && distance <= detectRangeForAction)
+                if (interactablesInRange.Count > 0 && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount > 0.15 && distance <= detectRangeForAction)
                 {
                     //Debug.Log("Performing action with: " + currentInteractable);
                     Interactable interactable = interactablesInRange[0];
                     interactable.Interact();
                     StartCoroutine(BarkTwice());
                 }
-                else if (interactablesInRange.Count > 0 && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount == 0 && distance <= detectRangeForAction)
+                else if (interactablesInRange.Count > 0 && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount < 0.15 && distance <= detectRangeForAction)
                 {
                     tooFar.text = "Not enough stamina T_T";
                     StartCoroutine(DogSad());
                     StartCoroutine(TooFar());
-                }else if (interactablesInRange.Count > 0 && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount != 0 && distance > detectRangeForAction)
+                }else if (interactablesInRange.Count > 0 && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount > 0.15 && distance > detectRangeForAction)
                 {
                     tooFar.text = "Too far :(";
                     StartCoroutine(DogSad());
@@ -182,7 +182,7 @@ public class GirlController : MonoBehaviour
         isBarking = true;
         hasSound = true;
         targetPosition = dogControlller.transform.position;
-        dogControlller.staminaFill.fillAmount -= 0.1f;
+        dogControlller.staminaFill.fillAmount -= 0.10f;
         SoundFXManager.instance.PlaySoundFXClip(barkClip, dogTransform, true, volume, 20.0f, 60.0f);
         dogControlller.Animator.SetInteger("BarkType", 1);
         yield return new WaitForSeconds(barkClip.length);

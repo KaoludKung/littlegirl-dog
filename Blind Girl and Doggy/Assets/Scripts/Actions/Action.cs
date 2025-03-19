@@ -337,7 +337,7 @@ public class Action : EventObject, Interactable
         EventManager.Instance.UpdateEventDataTrigger(TriggerEventID, true);
         actionText.ActionDisplay(actionResult);
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.15f);
 
         if (playerEnable)
         {
