@@ -164,6 +164,9 @@ public class GameOverManager : MonoBehaviour
     {
         Time.timeScale = 1;
 
+        if (dogController != null)
+            dogController.MaxStamina();
+
         CharacterManager.Instance.StopMoving();
         yield return new WaitForSecondsRealtime(0.2f);
 

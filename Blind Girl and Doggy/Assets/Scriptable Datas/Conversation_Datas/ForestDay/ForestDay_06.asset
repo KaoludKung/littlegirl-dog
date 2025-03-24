@@ -16,11 +16,11 @@ MonoBehaviour:
   lines:
   - character: {fileID: 11400000, guid: 116f88c1bca8ea447a81aa1c193093c4, type: 2}
     text: Yikes!!!
-  - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
+  - character: {fileID: 11400000, guid: cd8ffe11b7660a5499675dd39c43cb74, type: 2}
     text: Hey there, little one.
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: Who are you?
-  - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
+  - character: {fileID: 11400000, guid: cd8ffe11b7660a5499675dd39c43cb74, type: 2}
     text: Before you ask my name, you should introduce yourself first.
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: "I\u2019m so sorry, my name is Mar...."

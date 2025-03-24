@@ -18,9 +18,9 @@ MonoBehaviour:
     text: "(Sounds like someone\u2019s coming.)"
   - character: {fileID: 11400000, guid: 116f88c1bca8ea447a81aa1c193093c4, type: 2}
     text: "Greetings, who\u2019s that?"
-  - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
+  - character: {fileID: 11400000, guid: 4e9645c0c1436d14dbfe5d23b43581e6, type: 2}
     text: "\u2026"
-  - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
+  - character: {fileID: 11400000, guid: 4e9645c0c1436d14dbfe5d23b43581e6, type: 2}
     text: Hi, young lady. I hope I didn't frighten you.
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: "I\u2019m Wermut, just a hunter wandering the forest."

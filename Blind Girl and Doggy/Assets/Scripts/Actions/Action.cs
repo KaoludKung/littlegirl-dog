@@ -6,25 +6,25 @@ using TMPro;
 
 public class Action : EventObject, Interactable
 {
-    [SerializeField] ActionType actionType;
-    [SerializeField] string actionResult;
-    [SerializeField] int itemID = 0;
-    [SerializeField] Sprite alertSprite;
-    [SerializeField] AudioClip actionClips;
+    [SerializeField] private ActionType actionType;
+    [SerializeField] private string actionResult;
+    [SerializeField] private int itemID = 0;
+    [SerializeField] private Sprite alertSprite;
+    [SerializeField] private AudioClip actionClips;
 
     // special options
-    [SerializeField] GameObject gameoverPanel;
-    [SerializeField] GameObject progressBar;
-    [SerializeField] Image progressFill;
-    [SerializeField] float progressSpeed = 0.1f;
-    [SerializeField] string sceneName = "None";
+    [SerializeField] private GameObject gameoverPanel;
+    [SerializeField] private GameObject progressBar;
+    [SerializeField] private Image progressFill;
+    [SerializeField] private float progressSpeed = 0.1f;
+    [SerializeField] private string sceneName = "None";
 
     // unlock character controller
-    [SerializeField] bool playerEnable = true;
+    [SerializeField] private bool playerEnable = true;
  
     // if that action more than 2 action such as use and pick up a item
-    [SerializeField] bool UseAndGet = false;
-    [SerializeField] int itemGetID = 0;
+    [SerializeField] private bool UseAndGet = false;
+    [SerializeField] private int itemGetID = 0;
 
     private bool isAdd = false;
     private GirlController girlController;
@@ -282,11 +282,17 @@ public class Action : EventObject, Interactable
         {
             if (InventoryUI.CollectedItems.Count < 7)
             {
+                //protect character move while process
+                CharacterManager.Instance.SetIsActive(false);
+                //girlController.ResetCurrentInteractable();
+
                 InventoryManager.Instance.RemoveItem(itemID);
                 progressBar.SetActive(false);
                 SetInteractionAnimation(false);
                 InventoryManager.Instance.AddItem(itemGetID);
                 StartCoroutine(FinalizeAction());
+
+                
             }
             else
             {

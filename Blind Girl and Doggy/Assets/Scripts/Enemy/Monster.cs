@@ -57,6 +57,7 @@ public class Monster : MonoBehaviour
         {
             case MonsterState.Stalker:
                 Stalker();
+                //Stalker();
                 break;
             case MonsterState.Patrol:
                 Patrol();

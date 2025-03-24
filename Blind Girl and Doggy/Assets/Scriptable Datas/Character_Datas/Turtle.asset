@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 439898a6769cb494fb284aa331202590, type: 3}
   m_Name: Turtle
   m_EditorClassIdentifier: 
-  fullname: Tortoise
+  fullname: Taosie
   portrait: {fileID: 21300000, guid: 331de760d90654b4d9a532dfaa0fb0c5, type: 3}
   typing: {fileID: 8300000, guid: 59fdfbf152ec92a419d707355ebc7bda, type: 3}
   animationCondition: 

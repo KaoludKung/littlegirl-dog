@@ -161,7 +161,7 @@ public class GirlController : MonoBehaviour
     IEnumerator BarkTwice()
     {
         int i = 0;
-        dogControlller.staminaFill.fillAmount -= 0.15f;
+        dogControlller.staminaFill.fillAmount -= 0.12f;
         
         hasSound = true;
         yield return new WaitForSecondsRealtime(0.1f);

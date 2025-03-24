@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 439898a6769cb494fb284aa331202590, type: 3}
   m_Name: Frog
   m_EditorClassIdentifier: 
-  fullname: Frog
+  fullname: Mr. Froppie
   portrait: {fileID: 21300000, guid: 54c06d7b53408a946aae80aaa62da326, type: 3}
   typing: {fileID: 8300000, guid: 589c386a0dc955548ba411f5c6eeb7e1, type: 3}
   animationCondition: 

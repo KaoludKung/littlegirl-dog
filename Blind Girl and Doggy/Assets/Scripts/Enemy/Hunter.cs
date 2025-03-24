@@ -188,11 +188,10 @@ public class Hunter : MonoBehaviour
         PlaySound("chasing");
         GameObject target = player;
 
-        /*
         if (dog != null && Vector2.Distance(transform.position, dog.transform.position) < Vector2.Distance(transform.position, player.transform.position))
         {
             target = dog;
-        }*/
+        }
 
         Vector2 targetPosition = new Vector2(target.transform.position.x, transform.position.y);
         FlipEnemy(targetPosition);
