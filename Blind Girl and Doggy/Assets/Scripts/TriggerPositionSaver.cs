@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class TriggerPositionSaver : MonoBehaviour
 {
+    [SerializeField] GameObject Ballon;
+    [SerializeField] Sprite BallonHappySprite;
     [SerializeField] Vector3 positionGirl;
     private Vector3 positionAtTrigger;
 
@@ -9,6 +11,7 @@ public class TriggerPositionSaver : MonoBehaviour
     {
         if (collision.CompareTag("Dog"))
         {
+            Ballon.GetComponent<SpriteRenderer>().sprite = BallonHappySprite;
             positionAtTrigger = collision.transform.position;
             PlayerDataManager.Instance.UpdateDogPosition(positionAtTrigger);
             PlayerDataManager.Instance.UpdateGirlPosition(positionGirl);

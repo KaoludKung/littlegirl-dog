@@ -196,3 +196,11 @@ public class NoteUI : MonoBehaviour
         isUnlock = n;
     }
 }
+
+[System.Serializable]
+public class NoteTransation
+{
+    public string[] noteName;
+    public string[] noteDate;
+    public string[] noteDetail;
+}

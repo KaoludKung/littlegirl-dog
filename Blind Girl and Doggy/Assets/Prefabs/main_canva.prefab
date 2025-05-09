@@ -11796,6 +11796,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 786e36bd17ff3104b9511f588da225a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemTranslations:
+  - itemName:
+    - a
+    - a
+    - a
+    - a
+    - a
+    - a
+    - a
+    - a
+    - a
+    - a
+    - a
+    - a
+    - a
+    - a
+    - a
+    itemDescription:
+    - a
+    - a
+    - a
+    - a
+    - a
+    - a
+    - a
+    - a
+    - a
+    - a
+    - a
+    - a
+    - a
+    - a
+    - a
   inventoryPanel: {fileID: 996314718048706136}
   itemSlotPrefab: {fileID: 7063492790746314963, guid: d21bf9ca43aff404ca0a4772ff92a1c1, type: 3}
   itemSlotContainer: {fileID: 8074000894678004644}

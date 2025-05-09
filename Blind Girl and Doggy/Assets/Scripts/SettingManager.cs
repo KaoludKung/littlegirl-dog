@@ -6,7 +6,9 @@ using TMPro;
 
 public class SettingManager : MonoBehaviour
 {
+    //[SerializeField] private List<tabOption> tabOptions;
     [SerializeField] private List<MusicOption> musicOptions;
+    //[SerializeField] private List<DisplayOption> displayOptions;
     [SerializeField] private Sprite[] optionSprite;
     [SerializeField] private SoundMixerManager soundMixerManager;
     //[SerializeField] private GameObject displayPanel;
@@ -19,6 +21,16 @@ public class SettingManager : MonoBehaviour
 
     void Start()
     {
+        if (!PlayerPrefs.HasKey("language"))
+        {
+            PlayerPrefs.SetInt("language", 0);
+        }
+
+        if (!!PlayerPrefs.HasKey("fps"))
+        {
+            PlayerPrefs.SetInt("fps", 120);
+        }
+
         soundMixerManager.InitializeVolumeSettings();
         musicOptions[0].musicFill.fillAmount = PlayerPrefs.GetFloat("masterVolume");
         musicOptions[1].musicFill.fillAmount = PlayerPrefs.GetFloat("musicVolume");
@@ -108,10 +120,26 @@ public class SettingManager : MonoBehaviour
 }
 
 [System.Serializable]
+public class tabOption
+{
+    public Image tabBorder;
+    public Image symbolTab;   
+}
+
+[System.Serializable]
 public class MusicOption
 {
     public Image musicBorder;
     public Image musicFill;
+    public Image arrowLeft;
+    public Image arrowRight;
+    public TextMeshProUGUI optionText;
+}
+
+[System.Serializable]
+public class DisplayOption
+{
+    public Image displayorder;
     public Image arrowLeft;
     public Image arrowRight;
     public TextMeshProUGUI optionText;

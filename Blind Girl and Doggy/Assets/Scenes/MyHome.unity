@@ -2005,6 +2005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1738906956}
   offset: {x: 0, y: 0, z: 0}
+  smoothTime: 0.2
 --- !u!114 &206131279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4589,6 +4590,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 786e36bd17ff3104b9511f588da225a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemTranslations:
+  - itemName:
+    - a
+    - b
+    - c
+    - d
+    - e
+    - f
+    - g
+    - h
+    - i
+    - j
+    - k
+    - l
+    - o
+    - m
+    - n
+    itemDescription:
+    - aa
+    - aa
+    - aa
+    - aa
+    - aa
+    - aa
+    - aa
+    - aa
+    - aa
+    - aa
+    - aa
+    - aa
+    - aa
+    - aa
+    - aa
   inventoryPanel: {fileID: 1725367548}
   itemSlotPrefab: {fileID: 7063492790746314963, guid: d21bf9ca43aff404ca0a4772ff92a1c1, type: 3}
   itemSlotContainer: {fileID: 137439569}
@@ -9965,7 +9999,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1045137054
 Transform:
   m_ObjectHideFlags: 0
@@ -12921,6 +12955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1738906956}
   offset: {x: 0, y: 0, z: 0}
+  smoothTime: 0.2
 --- !u!114 &1333762158
 MonoBehaviour:
   m_ObjectHideFlags: 0
