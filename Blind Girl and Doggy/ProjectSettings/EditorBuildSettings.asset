@@ -51,6 +51,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Hints.unity
     guid: 9d99c6d5efa60634eaf9a72d7312eb59
   - enabled: 1
+    path: Assets/Scenes/MansionError.unity
+    guid: 13f56d3fc7456fe43a9b3700251bb87c
+  - enabled: 1
+    path: Assets/Scenes/GoodBye.unity
+    guid: c4823fb2fb7573a40ae1dde21b3d4b0b
+  - enabled: 1
     path: Assets/Scenes/EndDemo.unity
     guid: a2e45351401822040b241573f47a3889
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 678b4db404bdd2642b75687665ddbb92, type: 2}

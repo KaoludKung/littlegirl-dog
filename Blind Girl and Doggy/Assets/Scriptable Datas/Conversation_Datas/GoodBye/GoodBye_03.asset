@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0dc24e6a77c5a9438a97135c1d8511f, type: 3}
+  m_Name: GoodBye_03
+  m_EditorClassIdentifier: 
+  titleName: GoodBye_03
+  lines:
+  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
+    text: "Welcome to Dimension 88, the void where nothing exists. I\u2019m KaoludKung,
+      the creator of this game."
+  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
+    text: "Oh, and don\u2019t question the art style of my character. I\u2019m testing
+      out a new design for my next game."
+  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
+    text: "Alright, let\u2019s get straight to the point."
+  - character: {fileID: 11400000, guid: 674e2e5aa01126c44965c9aa8299cfd5, type: 2}
+    text: That whole "the game is broken" thing I mentioned earlier? Yeah, I was
+      just kidding.
+  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
+    text: "You did all this because you wanted a good ending, didn\u2019t you?"
+  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
+    text: Well...
+  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
+    text: "To be honest, it doesn\u2019t exist."
+  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
+    text: 'Turning all the bad things in this story into something good is nearly
+      impossible. '
+  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
+    text: "I\u2019ve been thinking about it for days, but the more I think, the darker
+      the story becomes. You know what the worst-case scenario is?"
+  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
+    text: Everyone in the family ends up dead.
+  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
+    text: "But you already know that life doesn\u2019t always end happily. As we
+      grow older, we just encounter more and more bad things."
+  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
+    text: "But you know what? If fixing the present is too difficult...\r"
+  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
+    text: 'Why not go back and fix the root cause? '
+  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
+    text: "Yes, I\u2019ll reset the universe of this game where Veronika chooses
+      not to abandon her family."
+  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
+    text: "But doing that might come with heavy consequences.\r"
+  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
+    text: Yes... little Margarete might not even exist in that new world.
+  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
+    text: It seems like a favorable choice, but it comes with risks.
+  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
+    text: "Still, this decision isn\u2019t yours, Player."
+  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
+    text: It's you who is there, little one.

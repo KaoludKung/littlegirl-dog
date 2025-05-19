@@ -21,13 +21,13 @@ public class AchievementUnlock : MonoBehaviour
     {
         if(!AchievementManager.Instance.GetAchievementIsCollected(id))
         {
-            string achachievementName = "achievement_0" + id;
+            string achievementName = id < 10 ? "achievement_0" + id : "achievement_" + id;
             AchievementManager.Instance.UpdateAchievementTrigger(id);
             //AchievementManager.Instance.SaveAchievement();
 
             if (SteamManager.Initialized)
             {
-                SteamUserStats.SetAchievement(achachievementName);
+                SteamUserStats.SetAchievement(achievementName);
                 SteamUserStats.StoreStats();
             }
 

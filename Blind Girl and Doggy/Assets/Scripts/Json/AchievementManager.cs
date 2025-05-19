@@ -64,9 +64,30 @@ public class AchievementManager : JsonManager<AchievementData>
 
         InitializePaths("achievement.json");
 
-        ///if (File.Exists(persistentPath)) > LoadInventory(persistentPath);
         if (File.Exists(persistentPath))
         {
+            List<AchievementItem> persistentData = JsonUtility.FromJson<AchievementData>(LoadJson(persistentPath)).items;
+            List<AchievementItem> streamingData = JsonUtility.FromJson<AchievementData>(LoadJson(streamingAssetsPath)).items;
+
+            bool hasNewData = false;
+
+            foreach (var streamingAchievement in streamingData)
+            {
+                if (!persistentData.Exists(e => e.id == streamingAchievement.id))
+                {
+                    persistentData.Add(streamingAchievement);
+                    hasNewData = true;
+                }
+            }
+
+            if (hasNewData)
+            {
+                string updatedJson = JsonUtility.ToJson(new AchievementData { items = persistentData }, true);
+                SaveJson(updatedJson);
+                Debug.LogWarning("Updated persistent data with new achievements from StreamingAssets.");
+            }
+
+
             LoadAchievement(persistentPath);
         }
         else
@@ -169,6 +190,7 @@ public class AchievementManager : JsonManager<AchievementData>
 public class AchievementData
 {
     public List<AchievementItem> items;
+    public AchievementData() { }
 
     public AchievementData(List<AchievementItem> items)
     {

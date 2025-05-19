@@ -24,7 +24,6 @@ public class InventoryUI : MonoBehaviour
    
     public bool isActive { get; private set; }
 
-    private int currentLanguage = 0;
     private int currentIndex = 0;
     private const int columns = 3; // columns in Inventory
     private const int rows = 2;    // rows in Inventory
@@ -173,16 +172,8 @@ public class InventoryUI : MonoBehaviour
         if (itemImage != null)
             itemImage.sprite = item.GetIcon();
 
-        if(currentLanguage == 0)
-        {
-            itemNameText.text = item.itemName;
-            descriptionText.text = item.description;
-        }
-        else
-        {
-            itemNameText.text = itemTranslations[currentLanguage - 1].itemName[item.id - 1];
-            descriptionText.text = itemTranslations[currentLanguage - 1].itemDescription[item.id - 1];
-        }
+        itemNameText.text = item.itemName;
+        descriptionText.text = item.description;
     }
 
     private void ClearItemDescription()
@@ -194,7 +185,6 @@ public class InventoryUI : MonoBehaviour
 
     void Initialize()
     {
-        currentLanguage = PlayerPrefs.GetInt("language");
         itemImage.sprite = emptySprite;
         itemNameText.text = "";
         descriptionText.text = "";

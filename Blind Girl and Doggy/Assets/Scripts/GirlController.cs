@@ -349,6 +349,11 @@ public class GirlController : MonoBehaviour
         }        
     }
 
+    public void AdjustSpeed(float value)
+    {
+        speed += value;
+    }
+
     IEnumerator UpdateInteractionIcon()
     {
         yield return new WaitForSeconds(0.1f);

@@ -13,5 +13,6 @@
   "isNewGame": true,
   "isSpined": false,
   "secrets": false,
-  "hearts": 3
+  "hearts": 3,
+  "deathCount": 0
 }

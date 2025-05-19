@@ -41,9 +41,29 @@ public class EventManager : JsonManager<EventData>
         InitializePaths("eventData.json");
         eventList = new List<EventData>();
 
-        ///if (File.Exists(persistentPath)) > LoadInventory(persistentPath);
         if (File.Exists(persistentPath))
         {
+            List<EventData> persistentData = JsonUtility.FromJson<EventDataListWrapper>(LoadJson(persistentPath)).eventList;
+            List<EventData> streamingData = JsonUtility.FromJson<EventDataListWrapper>(LoadJson(streamingAssetsPath)).eventList;
+
+            bool hasNewData = false;
+
+            foreach (var streamingEvent in streamingData)
+            {
+                if (!persistentData.Exists(e => e.id == streamingEvent.id))
+                {
+                    persistentData.Add(streamingEvent);
+                    hasNewData = true;
+                }
+            }
+
+            if (hasNewData)
+            {
+                string updatedJson = JsonUtility.ToJson(new EventDataListWrapper { eventList = persistentData }, true);
+                SaveJson(updatedJson);
+                Debug.LogWarning("Updated persistent data with new events from StreamingAssets.");
+            }
+
             LoadEventData(persistentPath);
         }
         else

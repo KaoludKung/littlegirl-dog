@@ -14,8 +14,9 @@ public class PlayerData
     public bool isSpined;
     public bool secrets;
     public int hearts;
+    public int deathCount;
 
-    public PlayerData(Vector3 girlPosition, Vector3 dogPosition, string sceneName,bool isNewGame,bool isSpined, bool secret ,int hearts)
+    public PlayerData(Vector3 girlPosition, Vector3 dogPosition, string sceneName,bool isNewGame, bool isSpined, bool secret, int hearts, int deathCount)
     {
         this.girlPosition = girlPosition;
         this.dogPosition = dogPosition;
@@ -24,6 +25,7 @@ public class PlayerData
         this.isSpined = isSpined;
         this.secrets = secret;
         this.hearts = hearts;
+        this.deathCount = deathCount;
     }
 }
 
@@ -47,7 +49,23 @@ public class PlayerDataManager : JsonManager<PlayerData>
 
         if (File.Exists(persistentPath))
         {
-            LoadPlayerData(persistentPath);
+            string rawJson = File.ReadAllText(persistentPath);
+
+            if (!rawJson.Contains("\"deathCount\""))
+            {
+                Debug.LogWarning("Existing save file lacks 'deathCount'. Adding default value (0).");
+
+                LoadPlayerData(persistentPath);
+                if (playerData != null)
+                {
+                    playerData.deathCount = 0;
+                    SavePlayerData();
+                }
+            }
+            else
+            {
+                LoadPlayerData(persistentPath);
+            }
         }
         else
         {
@@ -146,6 +164,11 @@ public class PlayerDataManager : JsonManager<PlayerData>
         return playerData != null ? playerData.hearts : 0;
     }
 
+    public int GetDeathCount()
+    {
+        return playerData != null ? playerData.deathCount : 0;
+    }
+
     public void UpdateGirlPosition(Vector3 newPosition)
     {
         if (playerData != null)
@@ -212,6 +235,16 @@ public class PlayerDataManager : JsonManager<PlayerData>
         {
             playerData.hearts = newHearts;
             Debug.Log($"Updated hearts to: {newHearts}");
+            //SavePlayerData();
+        }
+    }
+
+    public void UpdateDeathCount(int death)
+    {
+        if (playerData != null)
+        {
+            playerData.deathCount = death;
+            Debug.Log($"Updated deathCount to: {death}");
             //SavePlayerData();
         }
     }

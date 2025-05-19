@@ -14,6 +14,7 @@ public class LockPuzzle : MonoBehaviour, Interactable
     [SerializeField] private GameObject Gitch;
     [SerializeField] private GameObject gameoverPanel;
     [SerializeField] private GameObject aitoMeme;
+    [SerializeField] private GameObject FinalHint;
 
     private string[] originaText;
     private int[] digits = new int[3];
@@ -151,9 +152,12 @@ public class LockPuzzle : MonoBehaviour, Interactable
         if (digits[0] == answerDigits[0] && digits[1] == answerDigits[1] && digits[2] == answerDigits[2])
         {
             StartCoroutine(Unlock());
-        }if(digits[0] == 1 && digits[1] == 1 && digits[2] == 5)
+        }else if(digits[0] == 1 && digits[1] == 1 && digits[2] == 5)
         {
             StartCoroutine(AitoBoy());
+        }else if (digits[0] == 3 && digits[1] == 1 && digits[2] == 4)
+        {
+            StartCoroutine(ShowFinalHints());
         }
     }
 
@@ -166,6 +170,16 @@ public class LockPuzzle : MonoBehaviour, Interactable
 
         Time.timeScale = 1;
         aitoMeme.SetActive(false);
+    }
+
+    IEnumerator ShowFinalHints()
+    {
+        Time.timeScale = 0;
+        FinalHint.SetActive(true);
+        yield return new WaitForSecondsRealtime(4.0f);
+
+        Time.timeScale = 1;
+        FinalHint.SetActive(false);
     }
 
     IEnumerator Unlock()

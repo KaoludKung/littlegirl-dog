@@ -144,7 +144,7 @@ public class DogController : MonoBehaviour
         while (staminaFill.fillAmount < 1.0f)
         {
             yield return new WaitForSeconds(0.75f);
-            staminaFill.fillAmount += 0.0075f;
+            staminaFill.fillAmount += 0.0090f;
         }
         isRegeneratingStamina = false;
     }
@@ -233,6 +233,16 @@ public class DogController : MonoBehaviour
         {
             walkSource.Stop();
         }
+    }
+
+    public void AdjustSpeed(float value)
+    {
+        speed += value;
+    }
+
+    public void AdjustStamina(float value)
+    {
+        staminaFill.fillAmount = Mathf.Clamp(staminaFill.fillAmount + value, 0f, 1f);
     }
 
     public void MaxStamina()

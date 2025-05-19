@@ -6,16 +6,23 @@ using TMPro;
 
 public class TitleManager : MonoBehaviour
 {
+    [Header("UI")]
     [SerializeField] private GameObject controlPanel;
     [SerializeField] private GameObject settingPanel;
     [SerializeField] private GameObject popUp;
+
+    [Header("Objects In Scene")]
+    [SerializeField] private GameObject[] SpriteInScene; // [0] dog, [1] girl, [2] picture (true end)
     [SerializeField] private GameObject[] backgroundNight;
     [SerializeField] private GameObject[] cutsceneObject; // [0] title name, [1] press z, [2] option grid, [3] credit 
     [SerializeField] private Animator[] animator;
 
+    [Header("Title Menu Settings")]
     [SerializeField] private List<TitleOption> titleOptions;
     [SerializeField] private Sprite[] defaultIcon;
     [SerializeField] private Sprite[] selectedIcon;
+
+    [Header("Sound Settings")]
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioClip[] clips; // [0] select, [1] pressed, [2] glitch
 
@@ -35,13 +42,37 @@ public class TitleManager : MonoBehaviour
     private void StartWalking()
     {
         Time.timeScale = 1;
-        animator[0].SetBool("isWalk", true);
-        animator[1].SetBool("isWalk", true);
+
+        for(int i = 0; i < animator.Length; i++)
+        {
+            if (animator[i].gameObject.activeSelf)
+            {
+                animator[i].SetBool("isWalk", true);
+            }
+        }
+    }
+
+    private void ShowSprite()
+    {
+        //Get a true ending
+        if (AchievementManager.Instance.GetAchievementIsCollected(10))
+        {
+            SpriteInScene[2].SetActive(true);
+        }
+        else
+        {
+            for(int i = 0; i < SpriteInScene.Length - 1; i++)
+            {
+                SpriteInScene[i].SetActive(true);
+            }
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        ShowSprite();
+
         if (PlayerDataManager.Instance.GetIsSecret())
             PlayerDataManager.Instance.UpdateSecrets(false);
 

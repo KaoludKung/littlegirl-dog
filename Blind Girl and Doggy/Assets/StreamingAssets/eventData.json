@@ -833,6 +833,18 @@
       "nameEvent": "MyHome Teddy",
       "type": "Dialogue",
       "trigger": false
+    },
+    {
+      "id": 601,
+      "nameEvent": "Error Error",
+      "type": "Timeline",
+      "trigger": false
+    },
+    {
+      "id": 602,
+      "nameEvent": "To The End",
+      "type": "SceneManager",
+      "trigger": false
     }
 
   ]

@@ -55,6 +55,20 @@
       "iconPath": "Achievements/ach-08",
       "description": "Watch the secret scene.",
       "isCollected": false
+    },
+    {
+      "id": 9,
+      "achievementName": "Yuck, it tastes horrible!",
+      "iconPath": "Achievements/ach-09",
+      "description": "Tasted the mysterious potion.",
+      "isCollected": false
+    },
+    {
+      "id": 10,
+      "achievementName": "No More Apple Pie",
+      "iconPath": "Achievements/ach-10",
+      "description": "Margarete has truly chosen her own path.",
+      "isCollected": false
     }
   ]
 }

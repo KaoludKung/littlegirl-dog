@@ -33,7 +33,17 @@ public class HeartManager : MonoBehaviour
         if (!PlayerDataManager.Instance.GetIsSpined())
         {
             //int random = Random.Range(1, 5);
-            PlayerDataManager.Instance.UpdateHearts(3);
+
+            if(PlayerDataManager.Instance.GetDeathCount() > 13)
+            {
+                heartImage[3].gameObject.SetActive(true);
+                PlayerDataManager.Instance.UpdateHearts(4);
+            }
+            else
+            {
+                PlayerDataManager.Instance.UpdateHearts(3);
+            }
+
             PlayerDataManager.Instance.UpdateIsSpined(true);
             PlayerDataManager.Instance.SavePlayerData();
             HeartUpdate();
@@ -49,28 +59,40 @@ public class HeartManager : MonoBehaviour
 
     void HeartUpdate()
     {
-        if(PlayerDataManager.Instance.GetHearts() == 3)
+        if(PlayerDataManager.Instance.GetHearts() == 4)
         {
             heartImage[0].color = new Color32(255, 255, 255, 255);
             heartImage[1].color = new Color32(255, 255, 255, 255);
             heartImage[2].color = new Color32(255, 255, 255, 255);
-        }else if(PlayerDataManager.Instance.GetHearts() == 2)
+            heartImage[3].color = new Color32(255, 255, 255, 255);
+        }
+        else if(PlayerDataManager.Instance.GetHearts() == 3)
+        {
+            heartImage[0].color = new Color32(255, 255, 255, 255);
+            heartImage[1].color = new Color32(255, 255, 255, 255);
+            heartImage[2].color = new Color32(255, 255, 255, 255);
+            heartImage[3].color = new Color32(66, 66, 66, 255);
+        }
+        else if(PlayerDataManager.Instance.GetHearts() == 2)
         {
             heartImage[0].color = new Color32(255, 255, 255, 255);
             heartImage[1].color = new Color32(255, 255, 255, 255);
             heartImage[2].color = new Color32(66, 66, 66, 255);
+            heartImage[3].color = new Color32(66, 66, 66, 255);
         }
         else if (PlayerDataManager.Instance.GetHearts() == 1)
         {
             heartImage[0].color = new Color32(255, 255, 255, 255);
             heartImage[1].color = new Color32(66, 66, 66, 255);
             heartImage[2].color = new Color32(66, 66, 66, 255);
+            heartImage[3].color = new Color32(66, 66, 66, 255);
         }
         else
         {
             heartImage[0].color = new Color32(66, 66, 66, 255);
             heartImage[1].color = new Color32(66, 66, 66, 255);
             heartImage[2].color = new Color32(66, 66, 66, 255);
+            heartImage[3].color = new Color32(66, 66, 66, 255);
         }
 
     }
@@ -112,7 +134,10 @@ public class HeartManager : MonoBehaviour
         dogController.Animator.SetBool("isDeath", true);
         
         int heart = PlayerDataManager.Instance.GetHearts() - 1;
+        int death = PlayerDataManager.Instance.GetDeathCount() + 1;
+        
         PlayerDataManager.Instance.UpdateHearts(heart);
+        PlayerDataManager.Instance.UpdateDeathCount(death);
         PlayerDataManager.Instance.SavePlayerData();
         HeartUpdate();
 

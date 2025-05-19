@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0dc24e6a77c5a9438a97135c1d8511f, type: 3}
+  m_Name: GoodBye_01
+  m_EditorClassIdentifier: 
+  titleName: GoodBye_01
+  lines:
+  - character: {fileID: 11400000, guid: 7cd0ec2e31dabf24490e3de20e8b309d, type: 2}
+    text: Damn it...
+  - character: {fileID: 11400000, guid: 7cd0ec2e31dabf24490e3de20e8b309d, type: 2}
+    text: That dumb apple pie ruined my perfect game.
+  - character: {fileID: 11400000, guid: 7cd0ec2e31dabf24490e3de20e8b309d, type: 2}
+    text: Now I have to fix the bugs again. Well, at least I don't have to redraw
+      anything this time.

@@ -6,14 +6,20 @@ using TMPro;
 
 public class GameOverManager : MonoBehaviour
 {
+    [Header("Gameover Elements")]
     [SerializeField] private List<GameOverOption> gameoverOptions;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private Image gameOverTitle;
     [SerializeField] private Sprite[] gameoverSprite;
     [SerializeField] private AudioClip[] clips;
     [SerializeField] private Transform[] character;
+    
     [SerializeField] private string sceneName;
     [SerializeField] private int cameraID = 0;
+
+    [Header("Hint Settings")]
+    [SerializeField] private TextMeshProUGUI hintText;
+    [SerializeField] private string[] hintsList;
 
     public static GameOverManager instance;
     private DogController dogController;
@@ -226,8 +232,20 @@ public class GameOverManager : MonoBehaviour
             hunter.ResetHunter(false);
         }
 
+        hintText.text = "";
         OpenPanel();
-        
+    }
+
+    void SpawnHints()
+    {
+        int random = Random.Range(1, 6);
+
+        if(random == 4)
+        {
+            int hints = Random.Range(0, hintsList.Length);
+            hintText.text = hintsList[hints];
+        }
+
     }
 
     IEnumerator ExitToMenu()
@@ -244,6 +262,7 @@ public class GameOverManager : MonoBehaviour
             CharacterManager.Instance.SetIsActive(false);
             CharacterManager.Instance.SoundStop();
             CharacterManager.Instance.PauseAllSound();
+            SpawnHints();
             Time.timeScale = 0;
         }
 
