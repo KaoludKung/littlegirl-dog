@@ -11,20 +11,13 @@ public class FramerRate : MonoBehaviour
 
     void SetTargetFrameRate()
     {
-        if (SystemInfo.processorFrequency >= 3000)
+        if (!PlayerPrefs.HasKey("FPS"))
         {
-            Application.targetFrameRate = 120;
-            Debug.Log("Setting FPS to 120");
+            PlayerPrefs.SetInt("FPS", 120);
         }
-        else if (SystemInfo.processorFrequency >= 2500)
-        {
-            Application.targetFrameRate = 60;
-            Debug.Log("Setting FPS to 60");
-        }
-        else
-        {
-            Application.targetFrameRate = 30;
-            Debug.Log("Setting FPS to 30");
-        }
+
+        Application.targetFrameRate = PlayerPrefs.GetInt("FPS");
+        Debug.Log("Setting FPS to " + PlayerPrefs.GetInt("FPS"));
+      
     }
 }

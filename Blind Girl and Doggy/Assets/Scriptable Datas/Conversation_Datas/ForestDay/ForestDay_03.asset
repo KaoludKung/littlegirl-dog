@@ -16,50 +16,83 @@ MonoBehaviour:
   lines:
   - character: {fileID: 11400000, guid: a178a33e62adcc14d9408084c0c0ca0e, type: 2}
     text: "(Sounds like someone\u2019s coming.)"
+    textTH: "(\u0E40\u0E2A\u0E35\u0E22\u0E07\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E21\u0E35\u0E04\u0E19\u0E01\u0E33\u0E25\u0E31\u0E07\u0E40\u0E14\u0E34\u0E19\u0E21\u0E32\u0E19\u0E30)"
   - character: {fileID: 11400000, guid: 116f88c1bca8ea447a81aa1c193093c4, type: 2}
     text: "Greetings, who\u2019s that?"
+    textTH: "\u0E2A\u0E27\u0E31\u0E2A\u0E14\u0E35\u0E04\u0E48\u0E30 \u0E19\u0E31\u0E49\u0E19\u0E43\u0E04\u0E23\u0E04\u0E30"
   - character: {fileID: 11400000, guid: 4e9645c0c1436d14dbfe5d23b43581e6, type: 2}
     text: "\u2026"
+    textTH: ...
   - character: {fileID: 11400000, guid: 4e9645c0c1436d14dbfe5d23b43581e6, type: 2}
     text: Hi, young lady. I hope I didn't frighten you.
+    textTH: "\u0E2A\u0E27\u0E31\u0E2A\u0E14\u0E35 \u0E2A\u0E32\u0E27\u0E19\u0E49\u0E2D\u0E22
+      \u0E2B\u0E27\u0E31\u0E07\u0E27\u0E48\u0E32\u0E09\u0E31\u0E19\u0E44\u0E21\u0E48\u0E44\u0E14\u0E49\u0E17\u0E33\u0E43\u0E2B\u0E49\u0E40\u0E18\u0E2D\u0E01\u0E25\u0E31\u0E27\u0E19\u0E30"
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: "I\u2019m Wermut, just a hunter wandering the forest."
+    textTH: "\u0E09\u0E31\u0E19\u0E0A\u0E37\u0E48\u0E2D\u0E40\u0E27\u0E2D\u0E23\u0E4C\u0E21\u0E38\u0E18 
+      \u0E40\u0E1B\u0E47\u0E19\u0E40\u0E40\u0E04\u0E48\u0E19\u0E32\u0E22\u0E1E\u0E23\u0E32\u0E19\u0E17\u0E35\u0E48\u0E01\u0E33\u0E25\u0E31\u0E07\u0E25\u0E48\u0E32\u0E2A\u0E31\u0E15\u0E27\u0E4C\u0E2D\u0E22\u0E39\u0E48\u0E19\u0E30"
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: But tell me, what are you and your little dog doing out here in the scary
       forest?
+    textTH: "\u0E27\u0E48\u0E32\u0E40\u0E40\u0E15\u0E48\u0E40\u0E18\u0E2D\u0E01\u0E31\u0E1A\u0E40\u0E08\u0E49\u0E32\u0E2B\u0E21\u0E32\u0E15\u0E31\u0E27\u0E19\u0E49\u0E2D\u0E22\u0E21\u0E32\u0E17\u0E33\u0E2D\u0E30\u0E44\u0E23\u0E17\u0E35\u0E48\u0E1B\u0E48\u0E32\u0E19\u0E48\u0E32\u0E01\u0E25\u0E31\u0E27\u0E40\u0E40\u0E1A\u0E1A\u0E19\u0E35\u0E49\u0E25\u0E30"
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: "Um\u2026 we're on our way to visit someone we know."
+    textTH: "\u0E40\u0E2D\u0E48\u0E2D... \u0E1E\u0E27\u0E01\u0E40\u0E23\u0E32\u0E01\u0E33\u0E25\u0E31\u0E07\u0E08\u0E30\u0E40\u0E14\u0E34\u0E19\u0E17\u0E32\u0E07\u0E44\u0E1B\u0E40\u0E22\u0E35\u0E48\u0E22\u0E21\u0E04\u0E19\u0E17\u0E35\u0E48\u0E23\u0E39\u0E49\u0E08\u0E31\u0E01\u0E19\u0E30\u0E04\u0E30"
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: Oh, you mean the old woman at that mansion?
+    textTH: "\u0E42\u0E2D\u0E49 \u0E40\u0E18\u0E2D\u0E2B\u0E21\u0E32\u0E22\u0E16\u0E36\u0E07\u0E2B\u0E0D\u0E34\u0E07\u0E0A\u0E23\u0E32\u0E17\u0E35\u0E48\u0E2D\u0E22\u0E39\u0E48\u0E43\u0E19\u0E04\u0E24\u0E2B\u0E32\u0E2A\u0E19\u0E4C\u0E19\u0E31\u0E49\u0E19\u0E2D\u0E30\u0E19\u0E30"
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: Yes. But how do you know about her?
+    textTH: "\u0E04\u0E48\u0E30 \u0E27\u0E48\u0E32\u0E40\u0E40\u0E15\u0E48\u0E04\u0E38\u0E13\u0E23\u0E39\u0E49\u0E08\u0E31\u0E01\u0E40\u0E18\u0E2D\u0E40\u0E2B\u0E23\u0E2D"
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: "Ha ha, around here, it\u2019s just me and that old woman who lives close
       by"
+    textTH: "\u0E2E\u0E32\u0E2E\u0E48\u0E32 \u0E01\u0E47\u0E40\u0E40\u0E16\u0E27\u0E46\u0E19\u0E35\u0E49\u0E19\u0E2D\u0E01\u0E08\u0E32\u0E01\u0E09\u0E31\u0E19
+      \u0E01\u0E47\u0E21\u0E35\u0E40\u0E40\u0E04\u0E48\u0E2B\u0E0D\u0E34\u0E07\u0E0A\u0E23\u0E32\u0E04\u0E19\u0E19\u0E31\u0E49\u0E19\u0E40\u0E40\u0E2B\u0E25\u0E30\u0E17\u0E35\u0E48\u0E2D\u0E32\u0E28\u0E31\u0E22\u0E2D\u0E22\u0E39\u0E48\u0E40\u0E40\u0E16\u0E27\u0E19\u0E35\u0E49"
   - character: {fileID: 11400000, guid: e08d1d2217b3d38419e4e528ba3459c8, type: 2}
     text: "(A blind girl\u2026 that old hag\u2026 It\u2019s gotta be her\u2026)"
+    textTH: "(\u0E40\u0E14\u0E47\u0E01\u0E2A\u0E32\u0E27\u0E15\u0E32\u0E1A\u0E2D\u0E14\u2026
+      \u0E22\u0E31\u0E22\u0E40\u0E40\u0E01\u0E48\u0E19\u0E31\u0E49\u0E19\u2026. \u0E15\u0E49\u0E2D\u0E07\u0E43\u0E0A\u0E48\u0E40\u0E40\u0E19\u0E48\u2026.)"
   - character: {fileID: 11400000, guid: 116f88c1bca8ea447a81aa1c193093c4, type: 2}
     text: Excuse me, Did you say something just now?
+    textTH: "\u0E40\u0E21\u0E37\u0E48\u0E2D\u0E01\u0E35\u0E49\u0E04\u0E38\u0E13\u0E44\u0E14\u0E49\u0E1E\u0E39\u0E14\u0E27\u0E48\u0E32\u0E2D\u0E30\u0E44\u0E23\u0E2B\u0E23\u0E37\u0E2D\u0E40\u0E1B\u0E25\u0E48\u0E32\u0E04\u0E30"
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: Oh, nothing, just mumbling to myself like an old man does.
+    textTH: "\u0E2D\u0E4B\u0E2D \u0E44\u0E21\u0E48\u0E21\u0E35\u0E2D\u0E30\u0E44\u0E23\u0E2B\u0E23\u0E2D\u0E01
+      \u0E09\u0E31\u0E19\u0E40\u0E40\u0E04\u0E48\u0E1A\u0E48\u0E19\u0E1E\u0E36\u0E21\u0E1E\u0E33\u0E15\u0E32\u0E21\u0E1B\u0E23\u0E30\u0E2A\u0E32\u0E17\u0E25\u0E38\u0E07\u0E40\u0E40\u0E01\u0E48\u0E46\u0E2D\u0E30\u0E19\u0E30"
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: But you have gone out of your way to travel all this way to visit that
       old woman. You must care about her a lot.
+    textTH: "\u0E41\u0E15\u0E48\u0E08\u0E30\u0E27\u0E48\u0E32\u0E44\u0E1B \u0E40\u0E18\u0E2D\u0E2D\u0E38\u0E15\u0E2A\u0E48\u0E32\u0E2B\u0E4C\u0E25\u0E07\u0E17\u0E38\u0E19\u0E40\u0E14\u0E34\u0E19\u0E17\u0E32\u0E07\u0E21\u0E32\u0E02\u0E19\u0E32\u0E14\u0E19\u0E35\u0E49\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E44\u0E1B\u0E40\u0E22\u0E35\u0E48\u0E22\u0E21\u0E2B\u0E0D\u0E34\u0E07\u0E0A\u0E23\u0E32\u0E04\u0E19\u0E19\u0E31\u0E49\u0E19
+      \u0E41\u0E2A\u0E14\u0E07\u0E27\u0E48\u0E32\u0E15\u0E49\u0E2D\u0E07\u0E23\u0E31\u0E01\u0E40\u0E18\u0E2D\u0E21\u0E32\u0E01\u0E08\u0E23\u0E34\u0E07\u0E46"
   - character: {fileID: 11400000, guid: f0ebaf5b173e2be4996ddf9f14201427, type: 2}
     text: "That\u2019s right! Because she loves me very much."
+    textTH: "\u0E43\u0E0A\u0E48\u0E04\u0E48\u0E30 \u0E40\u0E1E\u0E23\u0E32\u0E30
+      \u0E40\u0E18\u0E2D\u0E23\u0E31\u0E01\u0E2B\u0E19\u0E39\u0E21\u0E32\u0E01\u0E46"
   - character: {fileID: 11400000, guid: d9f3410a0e4c89240abdce4c20f28d76, type: 2}
     text: "Ha\u2026 ha\u2026  I really envy you."
+    textTH: "\u0E2E\u0E32... \u0E2E\u0E48\u0E32... \u0E09\u0E31\u0E19\u0E2D\u0E34\u0E08\u0E09\u0E32\u0E2B\u0E19\u0E39\u0E08\u0E23\u0E34\u0E07\u0E46"
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: However, you should hurry and get to her house before sundown.
+    textTH: "\u0E16\u0E49\u0E32\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E07\u0E31\u0E49\u0E19\u0E2B\u0E19\u0E39\u0E04\u0E27\u0E23\u0E23\u0E35\u0E1A\u0E40\u0E14\u0E34\u0E19\u0E17\u0E32\u0E07\u0E44\u0E1B\u0E16\u0E36\u0E07\u0E1A\u0E49\u0E32\u0E19\u0E02\u0E2D\u0E07\u0E40\u0E18\u0E2D\u0E01\u0E48\u0E2D\u0E19\u0E15\u0E30\u0E27\u0E31\u0E19\u0E15\u0E01\u0E14\u0E34\u0E19\u0E19\u0E30"
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: "This forest is dangerous. There are wolves\u2026 and things scarier than
       wolves.\r\n"
+    textTH: "\u0E1B\u0E48\u0E32\u0E19\u0E19\u0E30\u0E35\u0E49\u0E21\u0E31\u0E19\u0E21\u0E35\u0E2D\u0E31\u0E19\u0E15\u0E23\u0E32\u0E22
+      \u0E21\u0E35\u0E17\u0E31\u0E49\u0E07\u0E2B\u0E21\u0E32\u0E1B\u0E48\u0E32 \u0E2B\u0E23\u0E37\u0E2D
+      \u0E2D\u0E30\u0E44\u0E23\u0E17\u0E35\u0E48\u0E19\u0E48\u0E32\u0E01\u0E25\u0E31\u0E27\u0E01\u0E27\u0E48\u0E32\u0E19\u0E31\u0E49\u0E19\u0E19\u0E30\r\n"
   - character: {fileID: 11400000, guid: f0ebaf5b173e2be4996ddf9f14201427, type: 2}
     text: "Thank you for the warning, but I\u2019ve got my buddy to protect me. I'm
       not scared of anything!"
+    textTH: "\u0E02\u0E2D\u0E1A\u0E04\u0E38\u0E13\u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A\u0E04\u0E33\u0E40\u0E15\u0E37\u0E2D\u0E19\u0E04\u0E48\u0E30
+      \u0E41\u0E15\u0E48\u0E2B\u0E19\u0E39\u0E21\u0E35\u0E04\u0E39\u0E48\u0E2B\u0E39\u0E04\u0E2D\u0E22\u0E1B\u0E01\u0E1B\u0E49\u0E2D\u0E07\u0E2D\u0E22\u0E39\u0E48
+      \u0E41\u0E25\u0E30\u0E2B\u0E19\u0E39\u0E44\u0E21\u0E48\u0E01\u0E25\u0E31\u0E27\u0E2D\u0E30\u0E44\u0E23\u0E40\u0E25\u0E22\u0E17\u0E31\u0E49\u0E07\u0E19\u0E31\u0E49\u0E19\r\n"
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: "That\u2019s good... I hope you make it to your destination safely."
+    textTH: "\u0E14\u0E35\u0E40\u0E40\u0E25\u0E49\u0E27... \u0E09\u0E31\u0E19\u0E2B\u0E27\u0E31\u0E07\u0E27\u0E48\u0E32\u0E1E\u0E27\u0E01\u0E40\u0E18\u0E2D\u0E08\u0E30\u0E44\u0E1B\u0E16\u0E36\u0E07\u0E17\u0E35\u0E48\u0E2B\u0E21\u0E32\u0E22\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E1B\u0E25\u0E2D\u0E14\u0E20\u0E31\u0E22\u0E19\u0E30"
   - character: {fileID: 11400000, guid: e08d1d2217b3d38419e4e528ba3459c8, type: 2}
     text: "If you make it, that is\u2026"
+    textTH: "\u0E16\u0E49\u0E32\u0E44\u0E1B\u0E16\u0E36\u0E07\u0E19\u0E48\u0E30\u0E19\u0E30\u2026"
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: Ha ha
+    textTH: "\u0E2E\u0E32\u0E2E\u0E48\u0E32"

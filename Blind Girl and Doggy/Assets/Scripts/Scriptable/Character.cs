@@ -11,4 +11,7 @@ public class Character : ScriptableObject
     //public AnimatorController animatorController;
     public string animationCondition;
     public int conditionID;
+
+    //0: thai
+    public string[] translationsName;
 }

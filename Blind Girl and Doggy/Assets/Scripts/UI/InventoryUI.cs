@@ -6,12 +6,13 @@ using System.Collections;
 
 public class InventoryUI : MonoBehaviour
 {
-    [SerializeField] private InventoryTransation[] itemTranslations;
+    [SerializeField] private ItemTranslate itemTranslations;
 
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private GameObject itemSlotPrefab;
     [SerializeField] private Transform itemSlotContainer;
     [SerializeField] private Image itemImage;
+    [SerializeField] private TextMeshProUGUI itemTitleText;
     [SerializeField] private TextMeshProUGUI itemNameText;
     [SerializeField] private TextMeshProUGUI descriptionText;
 
@@ -172,8 +173,16 @@ public class InventoryUI : MonoBehaviour
         if (itemImage != null)
             itemImage.sprite = item.GetIcon();
 
-        itemNameText.text = item.itemName;
-        descriptionText.text = item.description;
+        if(PlayerDataManager.Instance.GetLanguage() == 0)
+        {
+            itemNameText.text = item.itemName;
+            descriptionText.text = item.description.Replace("\\n", "\n");
+        }
+        else
+        {
+            itemNameText.text = itemTranslations.itemList[item.id - 1].nameTranslation[PlayerDataManager.Instance.GetLanguage() - 1];
+            descriptionText.text = itemTranslations.itemList[item.id - 1].descriptionTranslation[PlayerDataManager.Instance.GetLanguage() - 1].Replace("\\n", "\n");
+        }
     }
 
     private void ClearItemDescription()
@@ -192,9 +201,12 @@ public class InventoryUI : MonoBehaviour
 
     IEnumerator ToggleInventory()
     {
+        itemTitleText.fontSizeMin = PlayerDataManager.Instance.GetLanguage() == 1 ? 40 : 60;
+        descriptionText.fontSizeMax = PlayerDataManager.Instance.GetLanguage() == 1 ? 22 : 32;
+
         yield return new WaitForSecondsRealtime(0.1f);
         inventoryPanel.SetActive(!inventoryPanel.activeSelf);
-        
+
         if (inventoryPanel.activeSelf)
         {
             UpdateInventoryUI();

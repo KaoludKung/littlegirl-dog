@@ -16,39 +16,69 @@ MonoBehaviour:
   lines:
   - character: {fileID: 11400000, guid: 116f88c1bca8ea447a81aa1c193093c4, type: 2}
     text: Yikes!!!
+    textTH: "\u0E27\u0E49\u0E32\u0E22!!!"
   - character: {fileID: 11400000, guid: cd8ffe11b7660a5499675dd39c43cb74, type: 2}
     text: Hey there, little one.
+    textTH: "\u0E44\u0E07 \u0E40\u0E08\u0E49\u0E32\u0E15\u0E31\u0E27\u0E40\u0E25\u0E47\u0E01"
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: Who are you?
+    textTH: "\u0E04\u0E38\u0E13\u0E40\u0E1B\u0E47\u0E19\u0E43\u0E04\u0E23\u0E19\u0E48\u0E30"
   - character: {fileID: 11400000, guid: cd8ffe11b7660a5499675dd39c43cb74, type: 2}
     text: Before you ask my name, you should introduce yourself first.
+    textTH: "\u0E01\u0E48\u0E2D\u0E19\u0E17\u0E35\u0E48\u0E40\u0E18\u0E2D\u0E08\u0E30\u0E16\u0E32\u0E21\u0E0A\u0E37\u0E48\u0E2D\u0E09\u0E31\u0E19
+      \u0E40\u0E18\u0E2D\u0E04\u0E27\u0E23\u0E40\u0E40\u0E19\u0E30\u0E19\u0E33\u0E15\u0E31\u0E27\u0E40\u0E2D\u0E07\u0E01\u0E48\u0E2D\u0E19\u0E19\u0E30"
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: "I\u2019m so sorry, my name is Mar...."
+    textTH: "\u0E09\u0E31\u0E19\u0E40\u0E2A\u0E35\u0E22\u0E21\u0E32\u0E23\u0E22\u0E32\u0E17\u0E08\u0E23\u0E34\u0E07\u0E46
+      \u0E09\u0E31\u0E19\u0E0A\u0E37\u0E48\u0E2D \u0E21\u0E32\u0E23\u0E4C..."
   - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
     text: "I\u2019m Mr. Schlemmer, the gourmet wolf."
+    textTH: "\u0E09\u0E31\u0E19\u0E04\u0E37\u0E2D \u0E21\u0E34\u0E2A\u0E40\u0E15\u0E2D\u0E23\u0E4C\u0E0A\u0E40\u0E25\u0E21\u0E40\u0E21\u0E2D\u0E23\u0E4C
+      \u0E2B\u0E21\u0E32\u0E1B\u0E49\u0E48\u0E32\u0E22\u0E2D\u0E14\u0E19\u0E31\u0E01\u0E0A\u0E34\u0E21"
   - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
     text: But others like to say I resemble a fox more.
+    textTH: "\u0E40\u0E40\u0E15\u0E48\u0E04\u0E19\u0E2D\u0E37\u0E48\u0E19\u0E0A\u0E2D\u0E1A\u0E1A\u0E2D\u0E01\u0E27\u0E48\u0E32
+      \u0E09\u0E31\u0E19\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E2B\u0E21\u0E32\u0E08\u0E34\u0E49\u0E07\u0E08\u0E2D\u0E01\u0E21\u0E32\u0E01\u0E01\u0E27\u0E48\u0E32"
   - character: {fileID: 11400000, guid: 116f88c1bca8ea447a81aa1c193093c4, type: 2}
     text: Hey! You introduced yourself before I could!
+    textTH: "\u0E2D\u0E49\u0E32\u0E27\u0E19\u0E35\u0E48 \u0E04\u0E38\u0E13\u0E21\u0E32\u0E40\u0E40\u0E22\u0E48\u0E07\u0E09\u0E31\u0E19\u0E40\u0E40\u0E19\u0E30\u0E19\u0E33\u0E15\u0E31\u0E27"
   - character: {fileID: 11400000, guid: 116f88c1bca8ea447a81aa1c193093c4, type: 2}
     text: Wait a second... you're a wolf?
+    textTH: "\u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E01\u0E48\u0E2D\u0E19\u0E19\u0E30...
+      \u0E2B\u0E21\u0E32\u0E1B\u0E48\u0E32\u0E40\u0E2B\u0E23\u0E2D"
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: "Don\u2019t tell me you\u2019re going to eat me?"
+    textTH: "\u0E2D\u0E22\u0E48\u0E32\u0E21\u0E32\u0E1A\u0E2D\u0E01\u0E19\u0E30\u0E27\u0E48\u0E32
+      \u0E04\u0E38\u0E13\u0E08\u0E30\u0E21\u0E32\u0E01\u0E34\u0E19\u0E09\u0E31\u0E19\u0E40\u0E40\u0E1A\u0E1A\u0E43\u0E19\u0E19\u0E34\u0E17\u0E32\u0E19"
   - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
     text: "Oh no, don\u2019t worry. Human meat would make me sick."
+    textTH: "\u0E42\u0E2D\u0E49\u0E44\u0E21\u0E48 \u0E44\u0E21\u0E48\u0E15\u0E49\u0E2D\u0E07\u0E01\u0E31\u0E07\u0E27\u0E25\u0E44\u0E1B
+      \u0E40\u0E19\u0E37\u0E49\u0E2D\u0E21\u0E19\u0E38\u0E29\u0E22\u0E4C\u0E16\u0E49\u0E32\u0E01\u0E34\u0E19\u0E40\u0E02\u0E49\u0E32\u0E44\u0E1B\u0E09\u0E31\u0E19\u0E08\u0E30\u0E1B\u0E48\u0E27\u0E22\u0E44\u0E14\u0E49"
   - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
     text: "But that\u2019s not important."
+    textTH: "\u0E40\u0E40\u0E15\u0E48\u0E19\u0E31\u0E49\u0E19\u0E44\u0E21\u0E48\u0E2A\u0E33\u0E04\u0E31\u0E0D"
   - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
     text: "You\u2019ve gone off the path, little one. Why aren\u2019t you hurrying
       to leave the forest?\r\n"
+    textTH: "\u0E40\u0E18\u0E2D\u0E40\u0E14\u0E34\u0E19\u0E2D\u0E2D\u0E01\u0E19\u0E2D\u0E01\u0E40\u0E2A\u0E49\u0E19\u0E17\u0E32\u0E07\u0E44\u0E1B\u0E41\u0E25\u0E49\u0E27\u0E19\u0E30
+      \u0E17\u0E33\u0E44\u0E21\u0E44\u0E21\u0E48\u0E23\u0E35\u0E1A\u0E2D\u0E2D\u0E01\u0E08\u0E32\u0E01\u0E1B\u0E48\u0E32\u0E44\u0E1B\u0E25\u0E30?"
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: "I wanted to pick some flowers for my neighbor. I was looking for a flower
       field around here. Once I\u2019m done, I\u2019ll leave right away."
+    textTH: "\u0E2B\u0E19\u0E39\u0E2D\u0E22\u0E32\u0E01\u0E40\u0E01\u0E47\u0E1A\u0E14\u0E2D\u0E01\u0E44\u0E21\u0E49\u0E44\u0E1B\u0E43\u0E2B\u0E49\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E19\u0E1A\u0E49\u0E32\u0E19\u0E02\u0E2D\u0E07\u0E2B\u0E19\u0E39\u0E19\u0E30\u0E04\u0E30
+      \u0E40\u0E25\u0E22\u0E2B\u0E32\u0E21\u0E32\u0E17\u0E38\u0E48\u0E07\u0E14\u0E2D\u0E01\u0E44\u0E21\u0E49\u0E41\u0E16\u0E27\u0E19\u0E35\u0E49
+      \u0E40\u0E2A\u0E23\u0E47\u0E08\u0E41\u0E25\u0E49\u0E27\u0E01\u0E47\u0E08\u0E30\u0E23\u0E35\u0E1A\u0E2D\u0E2D\u0E01\u0E44\u0E1B\u0E40\u0E25\u0E22\u0E04\u0E48\u0E30"
   - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
     text: Hm... this is crazy, but if you say so...
+    textTH: "\u0E2E\u0E37\u0E21.. \u0E19\u0E35\u0E48\u0E21\u0E31\u0E19\u0E1A\u0E49\u0E32\u0E0A\u0E31\u0E14\u0E46
+      \u0E40\u0E40\u0E15\u0E48\u0E16\u0E49\u0E32\u0E40\u0E18\u0E2D\u0E1E\u0E39\u0E14\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E07\u0E31\u0E49\u0E19..."
   - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
     text: "You\u2019ve picked the flowers, right?"
+    textTH: "\u0E40\u0E18\u0E2D\u0E40\u0E01\u0E47\u0E1A\u0E14\u0E2D\u0E01\u0E44\u0E21\u0E49\u0E40\u0E2A\u0E23\u0E47\u0E08\u0E41\u0E25\u0E49\u0E27\u0E43\u0E0A\u0E48\u0E21\u0E31\u0E49\u0E22?"
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: All done!
+    textTH: "\u0E40\u0E23\u0E35\u0E22\u0E1A\u0E23\u0E49\u0E2D\u0E22\u0E40\u0E40\u0E25\u0E49\u0E27\u0E04\u0E48\u0E30"
   - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
     text: "Good. Then hurry to your neighbor\u2019s house. It\u2019s getting late."
+    textTH: "\u0E07\u0E31\u0E49\u0E19\u0E01\u0E47\u0E14\u0E35 \u0E23\u0E35\u0E1A\u0E44\u0E1B\u0E1A\u0E49\u0E32\u0E19\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E19\u0E1A\u0E49\u0E32\u0E19\u0E02\u0E2D\u0E07\u0E40\u0E18\u0E2D
+      \u0E15\u0E2D\u0E19\u0E19\u0E35\u0E49\u0E43\u0E01\u0E25\u0E49\u0E08\u0E30\u0E40\u0E22\u0E47\u0E19\u0E41\u0E25\u0E49\u0E27"

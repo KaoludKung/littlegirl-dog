@@ -22423,6 +22423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skipObject: {fileID: 1857676017}
+  skipText: {fileID: 2128574016}
   sceneName: Mansion
 --- !u!4 &1844335844
 Transform:

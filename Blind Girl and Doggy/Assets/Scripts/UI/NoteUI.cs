@@ -6,6 +6,12 @@ using TMPro;
 
 public class NoteUI : MonoBehaviour
 {
+    [Header("Translation Options")]
+    [SerializeField] private NoteTranslate noteTransations;
+    //0:en 1:th
+    [SerializeField] private TMP_FontAsset[] fontName;
+
+    [Header("Note Settings")]
     [SerializeField] private GameObject notePanel;
     [SerializeField] private GameObject noteSlotPrefab;
     [SerializeField] private Transform noteSlotContainer;
@@ -108,9 +114,21 @@ public class NoteUI : MonoBehaviour
             NoteItem item = allNotes[index];
             var itemName = itemSlot.transform.Find("note_text").GetComponent<TextMeshProUGUI>();
 
+
+            itemName.font = PlayerDataManager.Instance.GetLanguage() == 1 ? fontName[1] : fontName[0];
+
             if (itemName != null)
             {
-                itemName.text = item.isCollected ? item.noteName : "???";
+                itemName.fontSizeMax = PlayerDataManager.Instance.GetLanguage() == 1 ? 42 : 60;
+
+                if (PlayerDataManager.Instance.GetLanguage() == 0)
+                {
+                    itemName.text = item.isCollected ? item.noteName : "???";
+                }
+                else
+                {
+                    itemName.text = item.isCollected ? noteTransations.noteList[item.id - 1].nameTranslation[PlayerDataManager.Instance.GetLanguage() - 1] : "???";
+                }
             }
 
             itemSlot.GetComponent<Image>().color = new Color(itemSlot.GetComponent<Image>().color.r,
@@ -147,15 +165,25 @@ public class NoteUI : MonoBehaviour
     {
         if (item.isCollected)
         {
-            noteNameText.text = item.noteName;
-            noteDateText.text = item.noteDate;
-            noteDetailText.text = item.noteDetail;
+            if (PlayerDataManager.Instance.GetLanguage() == 0)
+            {
+
+                noteNameText.text = item.noteName;
+                noteDateText.text = item.noteDate;
+                noteDetailText.text = item.noteDetail.Replace("\\n", "\n");
+            }
+            else
+            {
+                noteNameText.text = noteTransations.noteList[item.id - 1].nameTranslation[PlayerDataManager.Instance.GetLanguage() - 1];
+                noteDateText.text = noteTransations.noteList[item.id - 1].dateTranslation[PlayerDataManager.Instance.GetLanguage() - 1];
+                noteDetailText.text = noteTransations.noteList[item.id - 1].descriptionTranslation[PlayerDataManager.Instance.GetLanguage() - 1].Replace("\\n", "\n");
+            }
         }
         else
         {
             noteNameText.text = "???";
-            noteDateText.text = "Date Unknown";
-            noteDetailText.text = "This note has not been found yet, but there's likely something hidden inside. Take a look around... Maybe the answer you've been seeking is inside.";
+            noteDateText.text = LocalizationManager.Instance.GetText(41, PlayerDataManager.Instance.GetLanguage());
+            noteDetailText.text = LocalizationManager.Instance.GetText(42, PlayerDataManager.Instance.GetLanguage()).Replace("\\n", "\n");
         }
     }
 
@@ -168,6 +196,9 @@ public class NoteUI : MonoBehaviour
 
     IEnumerator ToggleNotePanel()
     {
+        noteNameText.fontSizeMin = PlayerDataManager.Instance.GetLanguage() == 1 ? 48 : 60;
+        noteDetailText.fontSizeMax = PlayerDataManager.Instance.GetLanguage() == 1 ? 30 : 42;
+
         yield return new WaitForSecondsRealtime(0.1f);
         notePanel.SetActive(!notePanel.activeSelf);
 

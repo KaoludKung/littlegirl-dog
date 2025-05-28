@@ -82,20 +82,20 @@ public class GirlController : MonoBehaviour
                 }
                 else if (dogControlller.staminaFill.fillAmount < 0.10)
                 {
-                    tooFar.text = "Not enough stamina T_T";
+                    tooFar.text = LocalizationManager.Instance.GetText(53, PlayerDataManager.Instance.GetLanguage());
                     StartCoroutine(DogSad());
                     StartCoroutine(TooFar());
                 }
                 else
                 {
-                    tooFar.text = "Too far :(";
+                    tooFar.text = LocalizationManager.Instance.GetText(54, PlayerDataManager.Instance.GetLanguage());
                     StartCoroutine(DogSad());
                     StartCoroutine(TooFar());
                 }
             }
             else
             {
-                tooFar.text = "No barking while moving!";
+                tooFar.text = LocalizationManager.Instance.GetText(55, PlayerDataManager.Instance.GetLanguage());
                 StartCoroutine(TooFar());
             }
         }
@@ -116,24 +116,24 @@ public class GirlController : MonoBehaviour
                 }
                 else if (interactablesInRange.Count > 0 && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount < 0.15 && distance <= detectRangeForAction)
                 {
-                    tooFar.text = "Not enough stamina T_T";
+                    tooFar.text = LocalizationManager.Instance.GetText(53, PlayerDataManager.Instance.GetLanguage());
                     StartCoroutine(DogSad());
                     StartCoroutine(TooFar());
                 }else if (interactablesInRange.Count > 0 && !isMoving && !isInteract && dogControlller.staminaFill.fillAmount > 0.15 && distance > detectRangeForAction)
                 {
-                    tooFar.text = "Too far :(";
+                    tooFar.text = LocalizationManager.Instance.GetText(54, PlayerDataManager.Instance.GetLanguage());
                     StartCoroutine(DogSad());
                     StartCoroutine(TooFar());
                 }
                 else
                 {
-                    tooFar.text = "Nothing for Margarete to do here.";
+                    tooFar.text = LocalizationManager.Instance.GetText(56, PlayerDataManager.Instance.GetLanguage());
                     StartCoroutine(TooFar());
                 }
             }
             else
             {
-                tooFar.text = "No barking while moving!";
+                tooFar.text = LocalizationManager.Instance.GetText(55, PlayerDataManager.Instance.GetLanguage());
                 StartCoroutine(TooFar());
             }
         }

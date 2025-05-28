@@ -16,7 +16,12 @@ MonoBehaviour:
   lines:
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: "Veronika!! No\u2026\r"
+    textTH: "\u0E40\u0E27\u0E42\u0E23\u0E19\u0E34\u0E01\u0E49\u0E32!! \u0E44\u0E21\u0E48\u0E19\u0E30..."
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: "Please... don\u2019t leave me...\r\r"
+    textTH: "\u0E44\u0E14\u0E49\u0E42\u0E1B\u0E23\u0E14\u2026 \u0E2D\u0E22\u0E48\u0E32\u0E17\u0E34\u0E49\u0E07\u0E2B\u0E19\u0E39\u0E44\u0E1B\u2026"
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: "Please!! Veronika, wake up, don\u2019t do this...\r"
+    textTH: "\u0E44\u0E14\u0E49\u0E42\u0E1B\u0E23\u0E14\u0E40\u0E16\u0E2D\u0E30!
+      \u0E40\u0E27\u0E42\u0E23\u0E19\u0E34\u0E01\u0E49\u0E32 \u0E15\u0E37\u0E48\u0E19\u0E02\u0E36\u0E49\u0E19\u0E21\u0E32\u0E40\u0E16\u0E2D\u0E30
+      \u0E2D\u0E22\u0E48\u0E32\u0E21\u0E32\u0E17\u0E33\u0E40\u0E40\u0E1A\u0E1A\u0E19\u0E35\u0E49\u0E19\u0E30\r\n"

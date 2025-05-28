@@ -148,7 +148,7 @@ public class ClockPuzzle : EventObject, Interactable
         yield return null;
         SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1.0f);
         InventoryManager.Instance.AddItem(14);
-        actionText.ActionDisplay("Margarete has gotten the flower coin.");
+        actionText.ActionDisplay(LocalizationManager.Instance.GetText(88, PlayerDataManager.Instance.GetLanguage()));
         StartCoroutine(Delay(false, 2.0f));
         
         yield return new WaitForSeconds(2.0f);

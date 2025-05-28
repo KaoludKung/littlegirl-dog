@@ -17,3 +17,5 @@ MonoBehaviour:
   typing: {fileID: 8300000, guid: f20b41dc7c9071f4e91c29302d5baa75, type: 3}
   animationCondition: None
   conditionID: 0
+  translationsName:
+  - ???

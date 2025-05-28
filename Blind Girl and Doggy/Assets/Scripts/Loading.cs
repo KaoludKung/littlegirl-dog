@@ -7,7 +7,7 @@ using System.IO;
 public class Loading : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI textLoading;
-    private string baseText = "Loading";
+    //private string baseText = "Loading";
     private bool isLoading = true;
     private string sceneName;
 
@@ -37,6 +37,8 @@ public class Loading : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        textLoading.fontSizeMin = PlayerDataManager.Instance.GetLanguage() == 1 ? 52 : 72;
+
         sceneName = PlayerDataManager.Instance.GetSceneName();
         Debug.Log(sceneName);
         StartCoroutine(LoadSceneASycn());
@@ -67,9 +69,9 @@ public class Loading : MonoBehaviour
     {
         while (isLoading)
         {
-            for (int i = 0; i <= baseText.Length; i++)
+            for (int i = 0; i <= LocalizationManager.Instance.GetText(24, PlayerDataManager.Instance.GetLanguage()).Length; i++)
             {
-                textLoading.text = baseText.Substring(0, i);
+                textLoading.text = LocalizationManager.Instance.GetText(24, PlayerDataManager.Instance.GetLanguage()).Substring(0, i);
                 yield return new WaitForSeconds(0.3f);
             }
 

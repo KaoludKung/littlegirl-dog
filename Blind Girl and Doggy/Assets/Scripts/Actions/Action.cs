@@ -7,7 +7,7 @@ using TMPro;
 public class Action : EventObject, Interactable
 {
     [SerializeField] private ActionType actionType;
-    [SerializeField] private string actionResult;
+    [SerializeField] private int actionResultID;
     [SerializeField] private int itemID = 0;
     [SerializeField] private Sprite alertSprite;
     [SerializeField] private AudioClip actionClips;
@@ -33,6 +33,7 @@ public class Action : EventObject, Interactable
     private InventoryUI inventoryUI;
     private ActionText actionText;
     private AudioSource AudioSource;
+    private string actionResult =  "";
 
     public InventoryUI InventoryUI
     {
@@ -121,7 +122,7 @@ public class Action : EventObject, Interactable
     void ResetAction()
     {
         SetInteractionAnimation(false);
-        actionText.ActionDisplay("Oops, Your inventory is full.");
+        actionText.ActionDisplay(LocalizationManager.Instance.GetText(95, PlayerDataManager.Instance.GetLanguage()));
         CharacterManager.Instance.SetIsActive(true);
         girlController.SetIsInteract(false);
 
@@ -341,6 +342,7 @@ public class Action : EventObject, Interactable
     IEnumerator FinalizeAction()
     {
         EventManager.Instance.UpdateEventDataTrigger(TriggerEventID, true);
+        actionResult = LocalizationManager.Instance.GetText(actionResultID, PlayerDataManager.Instance.GetLanguage());
         actionText.ActionDisplay(actionResult);
 
         yield return new WaitForSeconds(0.15f);

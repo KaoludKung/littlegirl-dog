@@ -63,11 +63,11 @@ public class MysteryBox : MonoBehaviour, Interactable
 
         if (hasPutCoin && !allCoinsCollected)
         {
-            actionText.ActionDisplay("Margarete has put the flower coin.");
+            actionText.ActionDisplay(LocalizationManager.Instance.GetText(89, PlayerDataManager.Instance.GetLanguage()));
         }
         else if (needMoreCoins)
         {
-            actionText.ActionDisplay("You need to find something to put in it.");
+            actionText.ActionDisplay(LocalizationManager.Instance.GetText(90, PlayerDataManager.Instance.GetLanguage()));
         }
 
         if (allCoinsCollected)
@@ -82,7 +82,7 @@ public class MysteryBox : MonoBehaviour, Interactable
     IEnumerator GetTheKey()
     {
         SoundFXManager.instance.PlaySoundFXClip(clip, transform, false, 1.0f);
-        actionText.ActionDisplay("Margarete has put all the flower coins in and then gotten the exit key.");
+        actionText.ActionDisplay(LocalizationManager.Instance.GetText(91, PlayerDataManager.Instance.GetLanguage()));
 
         yield return new WaitForSeconds(clip.length);
         Destroy(dialogueL);

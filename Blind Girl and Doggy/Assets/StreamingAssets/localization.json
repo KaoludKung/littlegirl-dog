@@ -1,0 +1,16 @@
+{
+  "items": {
+    "1": {
+      "en": "Hello, World!",
+      "th": "สวัสดีโลก!",
+      "fr": "Bonjour, Monde!",
+      "tr": "Merhaba, Dünya!"
+    },
+    "2": {
+      "en": "Goodbye!",
+      "th": "ลาก่อน!",
+      "fr": "Au revoir!",
+      "tr": "Hoşça kal!"
+    }
+  }
+}

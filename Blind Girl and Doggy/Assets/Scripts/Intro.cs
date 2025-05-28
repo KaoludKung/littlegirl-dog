@@ -27,10 +27,10 @@ public class Intro : MonoBehaviour
     {
         yield return new WaitForSeconds(5.0f);
 
-        introText[0].text = "Player Tips!!!";
+        introText[0].text = LocalizationManager.Instance.GetText(3, PlayerDataManager.Instance.GetLanguage()).Replace("\\n", "\n");
         introText[1].enableWordWrapping = true;
         introText[1].rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 1500f);
-        introText[1].text = "Put on headphones to enjoy immersive sound and enhance your gameplay experience. This game supports controllers, and for optimal performance, we recommend connecting via USB for greater stability.";
+        introText[1].text = LocalizationManager.Instance.GetText(4, PlayerDataManager.Instance.GetLanguage()).Replace("\\n", "\n");
 
         yield return new WaitForSeconds(5.0f);
 

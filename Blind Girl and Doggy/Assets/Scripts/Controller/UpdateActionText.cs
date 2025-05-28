@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public class UpdateActionText : MonoBehaviour
@@ -7,9 +8,12 @@ public class UpdateActionText : MonoBehaviour
     private float checkInterval = 2.5f;
     private float timeSinceLastCheck = 0f;
 
-    [SerializeField] Action[] action;
+    [SerializeField] private Action[] action;
+    [SerializeField] private int actionTextID;
     //0: keyboard 1: xbox 2: ps4
-    [SerializeField] string[] newText;
+    [SerializeField] private string[] newText;
+    //@"Shift|View|Share"
+    [SerializeField] private string pattern;
 
     void Update()
     {
@@ -61,10 +65,16 @@ public class UpdateActionText : MonoBehaviour
 
     void UpdateNewActionText(int controller)
     {
-        for(int i = 0; i < action.Length; i++)
+        for (int i = 0; i < action.Length; i++)
         {
             if (action[i] != null)
-                action[i].SetActionText(newText[controller]);
+            {
+                string originalText = LocalizationManager.Instance.GetText(actionTextID, PlayerDataManager.Instance.GetLanguage());
+                string updatedText = Regex.Replace(originalText, pattern, newText[controller]);
+                Debug.Log($"Updated Text: {updatedText}");
+
+                action[i].SetActionText(updatedText);
+            }
         }
     }
 }

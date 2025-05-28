@@ -4,26 +4,29 @@ using System.Collections;
 
 public class TypewriterEffect : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI textMeshPro;
+    [SerializeField] private TextMeshProUGUI typingText;
     [SerializeField] private AudioSource typeSource;
     [SerializeField] private AudioClip typeClip;
-    [SerializeField] private string fullText;
+    [SerializeField] private int dataID;
+    //[SerializeField] private string fullText;
     [SerializeField] private bool isReset = false;
 
     public float typingSpeed = 0.25f;
     private string currentText = "";
+    private string data;
 
     private void Start()
     {
         typeSource.clip = typeClip;
-        StartTyping(fullText);
+        typingText.fontSizeMax = PlayerDataManager.Instance.GetLanguage() == 1 ? 42 : 48;
+        StartTyping(LocalizationManager.Instance.GetText(dataID, PlayerDataManager.Instance.GetLanguage()));
     }
 
 
     public void StartTyping(string text)
     {
         typeSource.loop = true;
-        fullText = text;
+        data = text;
         currentText = "";
         StartCoroutine(TypeText());
     }
@@ -32,11 +35,11 @@ public class TypewriterEffect : MonoBehaviour
     {
         typeSource.Play();
 
-        for (int i = 0; i < fullText.Length; i++)
+        for (int i = 0; i < data.Length; i++)
         {
             
-            currentText += fullText[i];
-            textMeshPro.text = currentText;
+            currentText += data[i];
+            typingText.text = currentText;
             yield return new WaitForSeconds(typingSpeed);
         }
 
@@ -44,6 +47,6 @@ public class TypewriterEffect : MonoBehaviour
         yield return new WaitForSeconds(3.0f);
 
         if(!isReset)
-            textMeshPro.text = "";
+            typingText.text = "";
     }
 }

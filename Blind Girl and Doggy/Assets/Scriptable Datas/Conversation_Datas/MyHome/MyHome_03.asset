@@ -16,9 +16,14 @@ MonoBehaviour:
   lines:
   - character: {fileID: 11400000, guid: f0ebaf5b173e2be4996ddf9f14201427, type: 2}
     text: See? I told you, I was right!
+    textTH: "\u0E19\u0E35\u0E48\u0E44\u0E07 \u0E2B\u0E19\u0E39\u0E1E\u0E39\u0E14\u0E16\u0E39\u0E01
+      \u0E40\u0E2B\u0E47\u0E19\u0E21\u0E30"
   - character: {fileID: 11400000, guid: 618b9c0c975a3b845bb2022b59147aea, type: 2}
     text: Well, you really have great hearing, as always.
+    textTH: "\u0E40\u0E40\u0E2B\u0E21 \u0E25\u0E39\u0E01\u0E22\u0E31\u0E07\u0E2B\u0E39\u0E14\u0E35\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E40\u0E04\u0E22\u0E40\u0E25\u0E22\u0E19\u0E30"
   - character: {fileID: 11400000, guid: f0ebaf5b173e2be4996ddf9f14201427, type: 2}
     text: Buddy, Can you help me get the basket?
+    textTH: "\u0E04\u0E39\u0E48\u0E2B\u0E39 \u0E0A\u0E48\u0E27\u0E22\u0E1E\u0E32\u0E09\u0E31\u0E19\u0E44\u0E1B\u0E40\u0E2D\u0E32\u0E15\u0E30\u0E01\u0E23\u0E49\u0E32\u0E17\u0E35\u0E44\u0E14\u0E49\u0E21\u0E31\u0E49\u0E22"
   - character: {fileID: 11400000, guid: f4576e04d5b97664b922c59d74f0efd9, type: 2}
     text: Woof!!!
+    textTH: "\u0E42\u0E2E\u0E48\u0E07!!!"

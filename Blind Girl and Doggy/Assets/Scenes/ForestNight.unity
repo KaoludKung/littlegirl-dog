@@ -3860,7 +3860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventID: 39
   TriggerEventID: 40
-  objectiveName: 'Objective: Safely guide Margarete out of the forest'
+  objectiveID: 61
   objectiveText: {fileID: 231928544}
   uiManager: {fileID: 991435391}
   isEnable: 1
@@ -9178,6 +9178,7 @@ MonoBehaviour:
   TriggerEventID: 47
   actionType: 0
   actionResult: Margarete has picked up the acorn.
+  actionResultID: 72
   itemID: 2
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
@@ -14553,6 +14554,7 @@ MonoBehaviour:
   TriggerEventID: 44
   actionType: 0
   actionResult: Margarete has picked up the acorn.
+  actionResultID: 72
   itemID: 2
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
@@ -17159,6 +17161,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1239043751401136283, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1057444911}
+    - targetCorrespondingSourceObject: {fileID: 1239043751401136283, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1096837026}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
 --- !u!1 &991435388 stripped
@@ -18576,6 +18581,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1096837025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1096837026}
+  - component: {fileID: 1096837027}
+  m_Layer: 5
+  m_Name: TranslateOnly
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1096837026
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096837025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1437374615}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1096837027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096837025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bcf9cb2701255146a60f28062966055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizeElements:
+  - localizeText: {fileID: 1549015596}
+    localID: 0
 --- !u!1 &1100973557
 GameObject:
   m_ObjectHideFlags: 0
@@ -19894,6 +19950,7 @@ MonoBehaviour:
   TriggerEventID: 48
   actionType: 1
   actionResult: Margarete has used the acorn.
+  actionResultID: 73
   itemID: 2
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
   actionClips: {fileID: 8300000, guid: 2010330198c45e24cb25c0c28a99242f, type: 3}
@@ -24908,6 +24965,7 @@ MonoBehaviour:
   TriggerEventID: 0
   actionType: 5
   actionResult: Margarete has discovered a hidden note.
+  actionResultID: 75
   itemID: 4
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
@@ -25515,7 +25573,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 30
+  m_fontSizeMin: 22
   m_fontSizeMax: 36
   m_fontStyle: 1
   m_HorizontalAlignment: 2
@@ -26823,7 +26881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01392e550702a5647b9463f981f089b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkInterval: 2.5
+  checkInterval: 1.5
   eventObjects:
   - {fileID: 1213611132}
   - {fileID: 697497522}
@@ -27903,6 +27961,7 @@ MonoBehaviour:
   TriggerEventID: 0
   actionType: 5
   actionResult: Margarete has discovered a hidden note.
+  actionResultID: 75
   itemID: 5
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
@@ -32045,6 +32104,7 @@ MonoBehaviour:
   TriggerEventID: 45
   actionType: 1
   actionResult: Margarete has used the acorn.
+  actionResultID: 73
   itemID: 2
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
   actionClips: {fileID: 8300000, guid: 2010330198c45e24cb25c0c28a99242f, type: 3}
@@ -34072,10 +34132,10 @@ SceneRoots:
   - {fileID: 833857341}
   - {fileID: 1801319873}
   - {fileID: 571737752}
-  - {fileID: 845959483}
   - {fileID: 474714746}
   - {fileID: 1075255324}
   - {fileID: 1631828477}
+  - {fileID: 845959483}
   - {fileID: 1729503670}
   - {fileID: 465403823}
   - {fileID: 600709580}

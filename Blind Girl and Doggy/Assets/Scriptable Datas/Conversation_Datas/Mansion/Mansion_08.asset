@@ -16,9 +16,14 @@ MonoBehaviour:
   lines:
   - character: {fileID: 11400000, guid: dba9a603bb88a7348b362eb1a498f770, type: 2}
     text: How is it?
+    textTH: "\u0E40\u0E1B\u0E47\u0E19\u0E44\u0E07\u0E08\u0E4A\u0E30"
   - character: {fileID: 11400000, guid: f0ebaf5b173e2be4996ddf9f14201427, type: 2}
     text: It's really delicious.
+    textTH: "\u0E21\u0E31\u0E19\u0E2D\u0E23\u0E48\u0E2D\u0E22\u0E21\u0E32\u0E01\u0E46\u0E40\u0E25\u0E22"
   - character: {fileID: 11400000, guid: 55297d43d7c736043bee3cd72e15d91b, type: 2}
     text: Wow, that's good? I have to try it then...
+    textTH: "\u0E42\u0E2B \u0E02\u0E19\u0E32\u0E14\u0E19\u0E31\u0E49\u0E19\u0E40\u0E25\u0E22\u0E40\u0E2B\u0E23\u0E2D
+      \u0E07\u0E31\u0E49\u0E19\u0E09\u0E31\u0E19\u0E15\u0E49\u0E2D\u0E07\u0E25\u0E2D\u0E07\u2026"
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: But... I feel... weird...
+    textTH: "\u0E40\u0E40\u0E15\u0E48... \u0E2B\u0E19\u0E39\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E40\u0E40\u0E1B\u0E25\u0E01\u0E46"

@@ -19,15 +19,25 @@ public class PauseManager : MonoBehaviour
     private bool isPressed = false;
     private bool isAlert = false;
     private int currentIndex = 0;
-    private string baseText = "It's time to relax!!!";
+    //private string baseText = "It's time to relax!!!";
 
     private float localLastMoveTime = 0f;
+    private int currentLanguage = -1;
 
     // Start is called before the first frame update
     void Start()
     {
         isActive = false;
+        UpdateFontSizes();
         StartCoroutine(TypePauseText());
+    }
+
+    private void UpdateFontSizes()
+    {
+        for (int i = 0; i < pauseOptions.Count; i++)
+        {
+            pauseOptions[i].buttonText.fontSizeMax = currentLanguage == 1 ? 42 : 60;
+        }
     }
 
     // Update is called once per frame
@@ -36,6 +46,13 @@ public class PauseManager : MonoBehaviour
         if (pausePanel.activeSelf)
         {
             CharacterManager.Instance.SetIsActive(false);
+
+            int language = PlayerDataManager.Instance.GetLanguage();
+            if (language != currentLanguage)
+            {
+                currentLanguage = language;
+                UpdateFontSizes();
+            }
         }
 
         if (InputManager.Instance.IsEnterPressed())
@@ -208,9 +225,9 @@ public class PauseManager : MonoBehaviour
         {
             relaxText.text = "";
 
-            for (int i = 0; i <= baseText.Length; i++)
+            for (int i = 0; i <= LocalizationManager.Instance.GetText(32, PlayerDataManager.Instance.GetLanguage()).Length; i++)
             {
-                relaxText.text = baseText.Substring(0, i);
+                relaxText.text = LocalizationManager.Instance.GetText(32, PlayerDataManager.Instance.GetLanguage()).Substring(0, i);
                 yield return new WaitForSecondsRealtime(0.2f);
             }
 

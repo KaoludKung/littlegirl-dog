@@ -16,3 +16,4 @@ MonoBehaviour:
   lines:
   - character: {fileID: 11400000, guid: f0ebaf5b173e2be4996ddf9f14201427, type: 2}
     text: Okay, I'll eat it now
+    textTH: "\u0E42\u0E2D\u0E40\u0E04 \u0E07\u0E31\u0E49\u0E19\u0E2B\u0E19\u0E39\u0E08\u0E30\u0E01\u0E34\u0E19\u0E25\u0E30\u0E19\u0E30"

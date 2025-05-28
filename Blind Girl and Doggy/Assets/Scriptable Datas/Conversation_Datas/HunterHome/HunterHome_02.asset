@@ -16,3 +16,5 @@ MonoBehaviour:
   lines:
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: It won't open. I need to find something to open it.
+    textTH: "\u0E21\u0E31\u0E19\u0E40\u0E1B\u0E34\u0E14\u0E44\u0E21\u0E48\u0E44\u0E14\u0E49
+      \u0E15\u0E49\u0E2D\u0E07\u0E2B\u0E32\u0E2D\u0E30\u0E44\u0E23\u0E2A\u0E31\u0E01\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E21\u0E32\u0E43\u0E0A\u0E49\u0E43\u0E19\u0E01\u0E32\u0E23\u0E40\u0E1B\u0E34\u0E14\u0E21\u0E31\u0E19"

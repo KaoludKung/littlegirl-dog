@@ -33,7 +33,7 @@ public class Potions : MonoBehaviour, Interactable
             potionCollider.enabled = false;
             potionObject.SetActive(false);
             StartCoroutine(DrinkPotion());
-            //AchievementUnlock.Instance.UnlockAchievement(9);
+            AchievementUnlock.Instance.UnlockAchievement(9);
         }
     }
 

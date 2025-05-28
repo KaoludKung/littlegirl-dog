@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform target;
-    public Vector3 offset;
-    public float smoothTime = 0.2f;
+    [SerializeField] private Transform target;
+    [SerializeField] private Vector3 offset;
+    [SerializeField] private float smoothTime = 0.2f;
+   
     private Vector3 velocity = Vector3.zero;
-
-    private float currentFPS;
+    private float averageFPS;
     private float updateInterval = 3.0f;
     private float timeAccumulator;
     private int frames;
@@ -25,26 +25,24 @@ public class CameraFollow : MonoBehaviour
 
         if (timeAccumulator >= updateInterval)
         {
-            currentFPS = frames / timeAccumulator;
-            frames = 0;
+            averageFPS = frames / timeAccumulator;
             timeAccumulator = 0f;
-
-            if (currentFPS <= 30)
-            {
-                smoothTime = 0.35f;
-            }
-            else 
-            {
-                smoothTime = 0.2f;
-            }
+            frames = 0;
         }
+
+        // Smoothly adjust smoothTime based on FPS
+        float targetSmoothTime = averageFPS <= 60 ? 0.35f : 0.2f;
+        smoothTime = Mathf.Lerp(smoothTime, targetSmoothTime, Time.unscaledDeltaTime);
+
+        // Debugging (Optional)
+        //Debug.Log($"Average FPS: {averageFPS}, SmoothTime: {smoothTime}");
     }
 
-    void LateUpdate()
+    void FixedUpdate()
     {
         if (target != null)
         {
-            Vector3 desiredPosition = new Vector3(target.position.x + offset.x, transform.position.y, transform.position.z);
+            Vector3 desiredPosition = target.position + offset;
             Vector3 smoothedPosition = Vector3.SmoothDamp(transform.position, desiredPosition, ref velocity, smoothTime);
             transform.position = smoothedPosition;
         }

@@ -17,5 +17,10 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 618b9c0c975a3b845bb2022b59147aea, type: 2}
     text: "I guess it must have run off to play somewhere else. Looks like you won\u2019t
       be able to visit her after all."
+    textTH: "\u0E2A\u0E07\u0E2A\u0E31\u0E22\u0E21\u0E31\u0E19\u0E04\u0E07\u0E2B\u0E19\u0E35\u0E44\u0E1B\u0E40\u0E25\u0E48\u0E19\u0E17\u0E35\u0E48\u0E2D\u0E37\u0E48\u0E19\u0E2D\u0E22\u0E39\u0E48
+      \u0E25\u0E39\u0E01\u0E04\u0E07\u0E2D\u0E14\u0E44\u0E1B\u0E2B\u0E32\u0E40\u0E18\u0E2D\u0E40\u0E40\u0E25\u0E49\u0E27\u0E40\u0E40\u0E2B\u0E25\u0E30\r"
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: "Oh, no! That\u2019s not true! I heard it, and it\u2019s running this way!"
+    textTH: "\u0E44\u0E21\u0E48\u0E08\u0E23\u0E34\u0E07 \u0E44\u0E21\u0E48\u0E43\u0E0A\u0E48\u0E0B\u0E30\u0E2B\u0E19\u0E48\u0E2D\u0E22
+      \u0E2B\u0E19\u0E39\u0E44\u0E14\u0E49\u0E22\u0E34\u0E19\u0E40\u0E2A\u0E35\u0E22\u0E07\u0E19\u0E30
+      \u0E21\u0E31\u0E19\u0E01\u0E33\u0E25\u0E31\u0E07\u0E27\u0E34\u0E48\u0E07\u0E21\u0E32\u0E17\u0E32\u0E07\u0E19\u0E35\u0E49"

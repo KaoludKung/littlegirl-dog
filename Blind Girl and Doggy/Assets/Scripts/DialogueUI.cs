@@ -12,6 +12,7 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private Image dialogueSprite;
     [SerializeField] private Image arrowSprite;
     [SerializeField] private AudioSource typingSound;
+    [SerializeField] private TMP_FontAsset thFont;
     public TextMeshProUGUI speedText;
 
     private bool isPlayingOneShot = false;
@@ -115,6 +116,11 @@ public class DialogueUI : MonoBehaviour
         typingSound.volume = startVolume;
     }
 
-
+    public void ResizeText()
+    {
+        dialogueText.fontSizeMax = dialogueText.font == thFont ? 26 : 32;
+        dialogueName.fontSizeMax = dialogueText.font == thFont ? 25 : 32;
+        speedText.fontSizeMax = speedText.font == thFont ? 22 : 28;
+    }
 
 }

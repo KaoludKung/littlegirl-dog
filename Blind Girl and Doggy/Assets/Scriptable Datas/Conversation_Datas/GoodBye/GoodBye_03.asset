@@ -17,45 +17,56 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
     text: "Welcome to Dimension 88, the void where nothing exists. I\u2019m KaoludKung,
       the creator of this game."
+    textTH: "\u0E17\u0E35\u0E48\u0E19\u0E35\u0E48\u0E04\u0E37\u0E2D\u0E21\u0E34\u0E15\u0E34\u0E17\u0E35\u0E48
+      88 \u0E21\u0E34\u0E15\u0E34\u0E41\u0E2B\u0E48\u0E07\u0E04\u0E27\u0E32\u0E21\u0E27\u0E48\u0E32\u0E07\u0E40\u0E1B\u0E25\u0E48\u0E32
+      \u0E2A\u0E48\u0E27\u0E19\u0E09\u0E31\u0E19\u0E04\u0E37\u0E2D \u0E40\u0E01\u0E32\u0E25\u0E31\u0E14\u0E04\u0E38\u0E07
+      \u0E1C\u0E39\u0E49\u0E2A\u0E23\u0E49\u0E32\u0E07\u0E40\u0E01\u0E21\u0E19\u0E35\u0E49"
   - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
     text: "Oh, and don\u2019t question the art style of my character. I\u2019m testing
       out a new design for my next game."
+    textTH: "\u0E41\u0E25\u0E49\u0E27\u0E01\u0E47\u2026\u0E44\u0E21\u0E48\u0E15\u0E49\u0E2D\u0E07\u0E2A\u0E07\u0E2A\u0E31\u0E22\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E25\u0E32\u0E22\u0E40\u0E2A\u0E49\u0E19\u0E15\u0E31\u0E27\u0E25\u0E30\u0E04\u0E23\u0E02\u0E2D\u0E07\u0E09\u0E31\u0E19\u0E2B\u0E23\u0E2D\u0E01\u0E19\u0E30
+      \u0E09\u0E31\u0E19\u0E01\u0E33\u0E25\u0E31\u0E07\u0E25\u0E2D\u0E07\u0E14\u0E35\u0E44\u0E0B\u0E19\u0E4C\u0E43\u0E2B\u0E21\u0E48\u0E44\u0E27\u0E49\u0E43\u0E0A\u0E49\u0E43\u0E19\u0E40\u0E01\u0E21\u0E2B\u0E19\u0E49\u0E32\r\n"
   - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
     text: "Alright, let\u2019s get straight to the point."
-  - character: {fileID: 11400000, guid: 674e2e5aa01126c44965c9aa8299cfd5, type: 2}
+    textTH: "\u0E40\u0E2D\u0E32\u0E25\u0E48\u0E30 \u0E40\u0E23\u0E32\u0E21\u0E32\u0E40\u0E02\u0E49\u0E32\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E01\u0E31\u0E19\u0E14\u0E35\u0E01\u0E27\u0E48\u0E32\r\n"
+  - character: {fileID: 11400000, guid: 6c58cf5fb5b520d40a02282e5d005bcb, type: 2}
     text: That whole "the game is broken" thing I mentioned earlier? Yeah, I was
       just kidding.
+    textTH: "\u0E01\u0E48\u0E2D\u0E19\u0E2B\u0E19\u0E49\u0E32\u0E19\u0E35\u0E49\u0E17\u0E35\u0E48\u0E1E\u0E39\u0E14\u0E27\u0E48\u0E32\u0E40\u0E01\u0E21\u0E1E\u0E31\u0E07\u0E2D\u0E30\u0E44\u0E23\u0E19\u0E31\u0E48\u0E19\u0E19\u0E30
+      \u0E09\u0E31\u0E19\u0E01\u0E47\u0E1E\u0E39\u0E14\u0E44\u0E1B\u0E07\u0E31\u0E49\u0E19\u0E46
+      \u0E41\u0E2B\u0E25\u0E30\r\n"
   - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
     text: "You did all this because you wanted a good ending, didn\u2019t you?"
+    textTH: "\u0E17\u0E35\u0E48\u0E19\u0E32\u0E22\u0E17\u0E33\u0E41\u0E1A\u0E1A\u0E19\u0E35\u0E49
+      \u0E40\u0E1E\u0E23\u0E32\u0E30\u0E2D\u0E22\u0E32\u0E01\u0E44\u0E14\u0E49\u0E09\u0E32\u0E01\u0E08\u0E1A\u0E17\u0E48\u0E35\u0E14\u0E35
+      \u0E43\u0E0A\u0E48\u0E21\u0E31\u0E49\u0E22\u0E25\u0E30"
   - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
     text: Well...
+    textTH: "\u0E01\u0E47..."
   - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
     text: "To be honest, it doesn\u2019t exist."
+    textTH: "\u0E16\u0E49\u0E32\u0E43\u0E2B\u0E49\u0E1E\u0E39\u0E14\u0E15\u0E23\u0E07\u0E46
+      \u0E40\u0E25\u0E22 \u0E21\u0E31\u0E19\u0E44\u0E21\u0E48\u0E21\u0E35\u0E2B\u0E23\u0E2D\u0E01
+      \u0E02\u0E2D\u0E07\u0E40\u0E40\u0E1A\u0E1A\u0E19\u0E31\u0E49\u0E19\u0E19\u0E30"
   - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
     text: 'Turning all the bad things in this story into something good is nearly
       impossible. '
+    textTH: "\u0E08\u0E30\u0E43\u0E2B\u0E49\u0E1E\u0E25\u0E34\u0E01\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E23\u0E49\u0E32\u0E22
+      \u0E46 \u0E43\u0E19\u0E40\u0E01\u0E21\u0E19\u0E35\u0E49\u0E40\u0E1B\u0E47\u0E19\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E14\u0E35\u0E44\u0E14\u0E49\u0E19\u0E30
+      \u0E21\u0E31\u0E19\u0E40\u0E1B\u0E47\u0E19\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E17\u0E35\u0E48\u0E22\u0E32\u0E01\u0E21\u0E32\u0E01 "
   - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
     text: "I\u2019ve been thinking about it for days, but the more I think, the darker
       the story becomes. You know what the worst-case scenario is?"
-  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
+    textTH: "\u0E09\u0E31\u0E19\u0E19\u0E31\u0E48\u0E07\u0E04\u0E34\u0E14\u0E21\u0E32\u0E2B\u0E25\u0E32\u0E22\u0E27\u0E31\u0E19\u0E41\u0E25\u0E49\u0E27
+      \u0E41\u0E15\u0E48\u0E22\u0E34\u0E48\u0E07\u0E04\u0E34\u0E14\u0E40\u0E19\u0E37\u0E49\u0E2D\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E21\u0E31\u0E19\u0E01\u0E47\u0E22\u0E34\u0E48\u0E07\u0E14\u0E32\u0E23\u0E4C\u0E01\u0E02\u0E36\u0E49\u0E19\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E22
+      \u0E46 \u0E23\u0E39\u0E49\u0E21\u0E31\u0E49\u0E22\u0E27\u0E48\u0E32\u0E17\u0E35\u0E48\u0E41\u0E22\u0E48\u0E17\u0E35\u0E48\u0E2A\u0E38\u0E14\u0E04\u0E37\u0E2D\u0E2D\u0E30\u0E44\u0E23?"
+  - character: {fileID: 11400000, guid: abd8af4adad5f564181b1b5d239335bb, type: 2}
     text: Everyone in the family ends up dead.
-  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
+    textTH: "\u0E15\u0E32\u0E22\u0E2B\u0E21\u0E14\u0E17\u0E31\u0E49\u0E07\u0E04\u0E23\u0E2D\u0E1A\u0E04\u0E23\u0E31\u0E27\u0E40\u0E25\u0E22\u0E22\u0E31\u0E07\u0E44\u0E07\u0E25\u0E48\u0E30"
+  - character: {fileID: 11400000, guid: abd8af4adad5f564181b1b5d239335bb, type: 2}
     text: "But you already know that life doesn\u2019t always end happily. As we
       grow older, we just encounter more and more bad things."
-  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
-    text: "But you know what? If fixing the present is too difficult...\r"
-  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
-    text: 'Why not go back and fix the root cause? '
-  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
-    text: "Yes, I\u2019ll reset the universe of this game where Veronika chooses
-      not to abandon her family."
-  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
-    text: "But doing that might come with heavy consequences.\r"
-  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
-    text: Yes... little Margarete might not even exist in that new world.
-  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
-    text: It seems like a favorable choice, but it comes with risks.
-  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
-    text: "Still, this decision isn\u2019t yours, Player."
-  - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
-    text: It's you who is there, little one.
+    textTH: "\u0E41\u0E15\u0E48\u0E19\u0E32\u0E22\u0E01\u0E47\u0E23\u0E39\u0E49\u0E19\u0E35\u0E48
+      \u0E0A\u0E35\u0E27\u0E34\u0E15\u0E08\u0E23\u0E34\u0E07\u0E21\u0E31\u0E19\u0E01\u0E47\u0E44\u0E21\u0E48\u0E44\u0E14\u0E49\u0E08\u0E1A\u0E41\u0E1A\u0E1A\u0E21\u0E35\u0E04\u0E27\u0E32\u0E21\u0E2A\u0E38\u0E02\u0E40\u0E2A\u0E21\u0E2D\u0E44\u0E1B\u0E2B\u0E23\u0E2D\u0E01
+      \u0E42\u0E14\u0E22\u0E40\u0E09\u0E1E\u0E32\u0E30\u0E40\u0E21\u0E37\u0E48\u0E2D\u0E40\u0E23\u0E32\u0E42\u0E15\u0E02\u0E36\u0E49\u0E19\u0E41\u0E25\u0E30\u0E15\u0E49\u0E2D\u0E07\u0E40\u0E08\u0E2D\u0E41\u0E15\u0E48\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E41\u0E22\u0E48
+      \u0E46\r\n"

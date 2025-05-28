@@ -527,10 +527,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61d093b3a89c414d9b43bbfd73cd050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMeshPro: {fileID: 1566448420}
+  typingText: {fileID: 1566448420}
   typeSource: {fileID: 1691052069}
   typeClip: {fileID: 8300000, guid: 4f007bd903a844f4cbf2759f57b9a7c3, type: 3}
-  fullText: I really wish this moment could last forever.
+  dataID: 99
   isReset: 1
   typingSpeed: 0.05
 --- !u!4 &385290485
@@ -577,10 +577,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61d093b3a89c414d9b43bbfd73cd050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMeshPro: {fileID: 1566448420}
+  typingText: {fileID: 1566448420}
   typeSource: {fileID: 1691052069}
   typeClip: {fileID: 8300000, guid: 4f007bd903a844f4cbf2759f57b9a7c3, type: 3}
-  fullText: Since I met you, everything has changed.
+  dataID: 96
   isReset: 0
   typingSpeed: 0.05
 --- !u!4 &388124271
@@ -1484,10 +1484,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61d093b3a89c414d9b43bbfd73cd050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMeshPro: {fileID: 1566448420}
+  typingText: {fileID: 1566448420}
   typeSource: {fileID: 1691052069}
   typeClip: {fileID: 8300000, guid: 4f007bd903a844f4cbf2759f57b9a7c3, type: 3}
-  fullText: I've gotten to eat delicious food.
+  dataID: 97
   isReset: 0
   typingSpeed: 0.05
 --- !u!4 &1210728175
@@ -1774,6 +1774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1552761632}
   - component: {fileID: 1552761631}
+  - component: {fileID: 1552761633}
   m_Layer: 0
   m_Name: skipManager
   m_TagString: Untagged
@@ -1794,6 +1795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skipObject: {fileID: 1451794138}
+  skipText: {fileID: 694777862}
   sceneName: Basement
 --- !u!4 &1552761632
 Transform:
@@ -1810,6 +1812,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1552761633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552761630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bcf9cb2701255146a60f28062966055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizeElements:
+  - localizeText: {fileID: 1566448420}
+    localID: 0
 --- !u!1 &1566448418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1869,8 +1886,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6e65ef0447c7846468b56ddc3b97c664, type: 2}
-  m_sharedMaterial: {fileID: -5009971732904435071, guid: 6e65ef0447c7846468b56ddc3b97c664, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 32172498bbcd4834c962e4f079bdbdd4, type: 2}
+  m_sharedMaterial: {fileID: 2639937945252411571, guid: 32172498bbcd4834c962e4f079bdbdd4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1897,9 +1914,9 @@ MonoBehaviour:
   m_fontSize: 48
   m_fontSizeBase: 48
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 36
+  m_fontSizeMax: 48
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -2535,10 +2552,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61d093b3a89c414d9b43bbfd73cd050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMeshPro: {fileID: 1566448420}
+  typingText: {fileID: 1566448420}
   typeSource: {fileID: 1691052069}
   typeClip: {fileID: 8300000, guid: 4f007bd903a844f4cbf2759f57b9a7c3, type: 3}
-  fullText: and I've met new friends
+  dataID: 98
   isReset: 0
   typingSpeed: 0.05
 --- !u!4 &1928691413

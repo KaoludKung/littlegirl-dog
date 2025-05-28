@@ -16,27 +16,45 @@ MonoBehaviour:
   lines:
   - character: {fileID: 11400000, guid: f0ebaf5b173e2be4996ddf9f14201427, type: 2}
     text: Do you feel better after eating it?
+    textTH: "\u0E01\u0E34\u0E19\u0E41\u0E25\u0E49\u0E27\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E14\u0E35\u0E02\u0E36\u0E49\u0E19\u0E21\u0E31\u0E49\u0E22\u0E04\u0E30"
   - character: {fileID: 11400000, guid: 55297d43d7c736043bee3cd72e15d91b, type: 2}
     text: "It's... really delicious... but\u2026"
+    textTH: "\u0E2D\u0E23\u0E48\u0E2D\u0E22\u2026 \u0E21\u0E32\u0E01\u0E40\u0E25\u0E22
+      \u0E40\u0E40\u0E15\u0E48\u0E27\u0E48\u0E32..."
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: Veronika... why do you feel... colder than usual?
+    textTH: "\u0E40\u0E27\u0E42\u0E23\u0E19\u0E34\u0E01\u0E49\u0E32 \u0E17\u0E33\u0E44\u0E21\u0E08\u0E39\u0E48\u0E46\u0E15\u0E31\u0E27\u0E02\u0E2D\u0E07\u0E04\u0E38\u0E13\u0E16\u0E36\u0E07\u2026
+      \u0E14\u0E39\u0E40\u0E22\u0E47\u0E19\u0E01\u0E27\u0E48\u0E32\u0E1B\u0E01\u0E15\u0E34\u0E25\u0E30\u0E04\u0E30"
   - character: {fileID: 11400000, guid: 2630b23e2b8db0146b0b53325e03ceee, type: 2}
     text: I guess it's just how delicious the snack is...
+    textTH: "\u0E2A\u0E07\u0E2A\u0E31\u0E22\u0E02\u0E19\u0E21\u0E21\u0E31\u0E19\u0E2D\u0E23\u0E48\u0E2D\u0E22\u0E21\u0E32\u0E01\u0E46
+      \u0E22\u0E31\u0E07\u0E44\u0E07\u0E25\u0E30 "
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: And... Why does your voice sound off?
+    textTH: "\u0E41\u0E25\u0E49\u0E27\u2026 \u0E17\u0E33\u0E44\u0E21\u0E40\u0E2A\u0E35\u0E22\u0E07\u0E02\u0E2D\u0E07\u0E04\u0E38\u0E13\u0E14\u0E39\u0E44\u0E21\u0E48\u0E14\u0E35\u0E40\u0E25\u0E22\u0E25\u0E30\u0E04\u0E30"
   - character: {fileID: 11400000, guid: 2630b23e2b8db0146b0b53325e03ceee, type: 2}
     text: Probably because... I...
+    textTH: "\u0E2D\u0E32\u0E08\u0E08\u0E30 \u0E40\u0E1E\u0E23\u0E32\u0E30... \u0E09\u0E31\u0E19...\u0E45"
   - character: {fileID: 11400000, guid: 19ffb9f769808e449b060863b2921cb9, type: 2}
     text: '!!!'
+    textTH: '!!!'
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: Veronika, what's happening?! Veronika!!
+    textTH: "\u0E40\u0E27\u0E42\u0E23\u0E19\u0E34\u0E01\u0E49\u0E32 \u0E40\u0E1B\u0E47\u0E19\u0E2D\u0E30\u0E44\u0E23\u0E44\u0E1B\u0E04\u0E30!
+      \u0E40\u0E27\u0E42\u0E23\u0E19\u0E34\u0E01\u0E49\u0E32!"
   - character: {fileID: 11400000, guid: 5e015be63c84c684895261fa634c179b, type: 2}
     text: "Mar\u2026 gare\u2026\r\n"
+    textTH: "\u0E21\u0E32\u0E23\u0E4C... \u0E01\u0E32..."
   - character: {fileID: 11400000, guid: 5e015be63c84c684895261fa634c179b, type: 2}
     text: "There's something I need to tell you\u2026"
+    textTH: "\u0E09\u0E31\u0E19\u0E21\u0E35\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E17\u0E35\u0E48\u0E15\u0E49\u0E2D\u0E07\u0E1A\u0E2D\u0E01\u0E01\u0E31\u0E1A\u0E2B\u0E19\u0E39\u2026."
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: Forget about that for now, just hold on, I'll go get help.
+    textTH: "\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E19\u0E31\u0E49\u0E19\u0E0A\u0E48\u0E32\u0E07\u0E21\u0E31\u0E19\u0E01\u0E48\u0E2D\u0E19
+      \u0E2D\u0E14\u0E17\u0E19\u0E44\u0E27\u0E49\u0E19\u0E30 \u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E2B\u0E19\u0E39\u0E08\u0E30\u0E44\u0E1B\u0E2B\u0E32\u0E04\u0E19\u0E0A\u0E48\u0E27\u0E22"
   - character: {fileID: 11400000, guid: 5e015be63c84c684895261fa634c179b, type: 2}
     text: 'Listen... I... love you... '
+    textTH: "\u0E1F\u0E31\u0E07\u0E19\u0E30... \u0E22\u0E32\u0E22\u0E23\u0E31\u0E01\u0E2B\u0E19\u0E39..."
   - character: {fileID: 11400000, guid: 5e015be63c84c684895261fa634c179b, type: 2}
     text: My dear granddaughter...
+    textTH: "\u0E2B\u0E25\u0E32\u0E19\u0E17\u0E35\u0E48\u0E23\u0E31\u0E01\u0E19\u0E48\u0E32\u0E23\u0E31\u0E01\u0E02\u0E2D\u0E07\u0E09\u0E31\u0E19\u2026 "

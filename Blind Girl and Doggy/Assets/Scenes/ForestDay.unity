@@ -3884,10 +3884,12 @@ MonoBehaviour:
   eventID: 18
   TriggerEventID: 19
   tutorialPanel: {fileID: 1721706599}
+  tutorialText: {fileID: 1235959084}
   tutorialIcon:
   - {fileID: 1154086077}
   - {fileID: 357638}
   - {fileID: 2137571353}
+  tutorialDataID: 440000004500000046000000
   tutorialImage:
   - {fileID: 21300000, guid: 7f7b91d591955ad409555e3be69e2800, type: 3}
   - {fileID: 21300000, guid: 58d51d76c2178e14a8c87848f046c7f5, type: 3}
@@ -8746,10 +8748,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 443371254}
-  - component: {fileID: 443371255}
   - component: {fileID: 443371256}
+  - component: {fileID: 443371257}
   m_Layer: 5
-  m_Name: updateTT
+  m_Name: updateTT/Translate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8774,25 +8776,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &443371255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 443371253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72c31f07cda09944ea9fb95fbaf8114f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tutorialManager: {fileID: 165310926}
-  maximum: 1
-  tutorialIndex: 01000000
-  controllerIndex: 07000000
-  keyboardSprites: {fileID: 11400000, guid: 590868f94024f0541a7351e97ac2658b, type: 2}
-  ps4Sprites: {fileID: 11400000, guid: 54b9dd602a4deab4d8007a1143fc924b, type: 2}
-  xboxSprites: {fileID: 11400000, guid: 8ecb573fd7c0bec4299501bfc21583ef, type: 2}
 --- !u!114 &443371256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8809,10 +8792,39 @@ MonoBehaviour:
   - {fileID: 523269787}
   - {fileID: 1111259782}
   - {fileID: 748116471}
+  actionTextID: 74
   newText:
-  - Margarete has discovered a hidden note. Press E to open the note inventory.
-  - Margarete has discovered a hidden note. Press RB to open the note inventory.
-  - Margarete has discovered a hidden note. Press R1 to open the note inventory.
+  - E
+  - RB
+  - R1
+  pattern: E|RB|R1
+--- !u!114 &443371257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443371253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bcf9cb2701255146a60f28062966055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizeElements:
+  - localizeText: {fileID: 8130364126947767474}
+    localID: 28
+  - localizeText: {fileID: 8130364126947767473}
+    localID: 29
+  - localizeText: {fileID: 8130364126947767472}
+    localID: 30
+  - localizeText: {fileID: 8130364126947767471}
+    localID: 31
+  - localizeText: {fileID: 1807983880}
+    localID: 47
+  - localizeText: {fileID: 2013727589}
+    localID: 0
+  - localizeText: {fileID: 1235959084}
+    localID: 0
 --- !u!1 &452390131
 GameObject:
   m_ObjectHideFlags: 0
@@ -9591,6 +9603,7 @@ MonoBehaviour:
   actionType: 5
   actionResult: Margarete has discovered a hidden note. Press E to open the note
     inventory.
+  actionResultID: 74
   itemID: 1
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
@@ -13680,6 +13693,7 @@ MonoBehaviour:
   actionType: 5
   actionResult: Margarete has discovered a hidden note. Press E to open the note
     inventory.
+  actionResultID: 74
   itemID: 3
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
@@ -19093,6 +19107,7 @@ MonoBehaviour:
   TriggerEventID: 20
   actionType: 0
   actionResult: Margarete has picked up the acorn.
+  actionResultID: 72
   itemID: 2
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
@@ -19518,6 +19533,7 @@ MonoBehaviour:
   TriggerEventID: 21
   actionType: 1
   actionResult: Margarete has used the acorn.
+  actionResultID: 73
   itemID: 2
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
   actionClips: {fileID: 8300000, guid: 2010330198c45e24cb25c0c28a99242f, type: 3}
@@ -20211,6 +20227,7 @@ MonoBehaviour:
   actionType: 5
   actionResult: Margarete has discovered a hidden note. Press E to open the note
     inventory.
+  actionResultID: 74
   itemID: 2
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
@@ -21842,6 +21859,7 @@ MonoBehaviour:
   TriggerEventID: 502
   actionType: 3
   actionResult: 
+  actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
   actionClips: {fileID: 0}
@@ -22691,6 +22709,140 @@ MonoBehaviour:
   timeline: {fileID: 1230147302}
   uiManagerObject: {fileID: 1836602389}
   playerEnable: 1
+--- !u!1 &1235959082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1235959083}
+  - component: {fileID: 1235959085}
+  - component: {fileID: 1235959084}
+  m_Layer: 5
+  m_Name: tutorial_detail
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1235959083
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235959082}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1335304291}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -310}
+  m_SizeDelta: {x: 1250, y: 120}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1235959084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235959082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 32172498bbcd4834c962e4f079bdbdd4, type: 2}
+  m_sharedMaterial: {fileID: 2639937945252411571, guid: 32172498bbcd4834c962e4f079bdbdd4, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4285492203
+  m_fontColor: {r: 0.92156863, g: 0.41960785, b: 0.43529412, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 30
+  m_fontSizeBase: 30
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 24
+  m_fontSizeMax: 30
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 12
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1235959085
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235959082}
+  m_CullTransparentMesh: 1
 --- !u!1 &1242502415
 GameObject:
   m_ObjectHideFlags: 0
@@ -23899,6 +24051,11 @@ Transform:
   - {fileID: 2066118283}
   m_Father: {fileID: 1154994986}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &1335304291 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 995684434567123527, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+  m_PrefabInstance: {fileID: 8130364126947767467}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1346279513
 GameObject:
   m_ObjectHideFlags: 0
@@ -28407,7 +28564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01392e550702a5647b9463f981f089b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkInterval: 2.5
+  checkInterval: 1.5
   eventObjects:
   - {fileID: 2121341234}
   - {fileID: 911727134}
@@ -30414,7 +30571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventID: 16
   TriggerEventID: 17
-  objectiveName: 'Objective: Safely guide Margarete out of the forest'
+  objectiveID: 61
   objectiveText: {fileID: 764737102}
   uiManager: {fileID: 1836602389}
   isEnable: 1
@@ -30841,7 +30998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventID: 29
   TriggerEventID: 30
-  objectiveName: 'Objective: Lead Margarete to pick flowers'
+  objectiveID: 62
   objectiveText: {fileID: 764737102}
   uiManager: {fileID: 1836602389}
   isEnable: 1
@@ -30970,6 +31127,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1807983880 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2354486421063973804, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+  m_PrefabInstance: {fileID: 8130364126947767467}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1818252386
 GameObject:
   m_ObjectHideFlags: 0
@@ -31049,6 +31217,7 @@ MonoBehaviour:
   TriggerEventID: 501
   actionType: 3
   actionResult: 
+  actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
   actionClips: {fileID: 0}
@@ -31758,6 +31927,7 @@ MonoBehaviour:
   TriggerEventID: 32
   actionType: 4
   actionResult: 
+  actionResultID: 0
   itemID: 2
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: e4001740e3aa71145a936b212f1ae703, type: 3}
@@ -32217,7 +32387,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff9937a936809854cbed61daa026f881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newFont: {fileID: 11400000, guid: 4e425989c8935224eb89af64f684a4e9, type: 2}
+  thFont: {fileID: 0}
+  enFont: {fileID: 0}
 --- !u!4 &1915822441
 Transform:
   m_ObjectHideFlags: 0
@@ -33797,7 +33968,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 30
+  m_fontSizeMin: 22
   m_fontSizeMax: 36
   m_fontStyle: 1
   m_HorizontalAlignment: 2
@@ -36710,6 +36881,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2688967664182215081, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763995337222459360, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763995337222459360, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 6e65ef0447c7846468b56ddc3b97c664, type: 2}
+    - target: {fileID: 7763995337222459360, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7763995337222459360, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
       propertyPath: m_fontColor.b
       value: 0.2
@@ -36723,8 +36910,24 @@ PrefabInstance:
       value: 0.29803923
       objectReference: {fileID: 0}
     - target: {fileID: 7763995337222459360, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763995337222459360, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -5009971732904435071, guid: 6e65ef0447c7846468b56ddc3b97c664, type: 2}
+    - target: {fileID: 7763995337222459360, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763995337222459360, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 3352140
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763995337222459360, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -36732,6 +36935,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1239043751401136283, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
       insertIndex: -1
       addedObject: {fileID: 443371254}
+    - targetCorrespondingSourceObject: {fileID: 995684434567123527, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1235959083}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
 --- !u!1 &8130364126947767468 stripped
@@ -36747,6 +36953,50 @@ RectTransform:
 --- !u!114 &8130364126947767470 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5894756991702108911, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+  m_PrefabInstance: {fileID: 8130364126947767467}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8130364126947767471 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4377187839294595093, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+  m_PrefabInstance: {fileID: 8130364126947767467}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8130364126947767472 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8260597857214386584, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+  m_PrefabInstance: {fileID: 8130364126947767467}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8130364126947767473 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3793796625090196178, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+  m_PrefabInstance: {fileID: 8130364126947767467}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8130364126947767474 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1253737306368951320, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
   m_PrefabInstance: {fileID: 8130364126947767467}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

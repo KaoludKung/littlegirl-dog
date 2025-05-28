@@ -38,14 +38,16 @@ public class DialogueManager : EventObject
             speed = PlayerPrefs.GetFloat("speedText");
         }
 
-        if(speed == 0.05)
+        if (speed == 0.05)
         {
-            dialogueUI.speedText.text = "Speed up";
+            dialogueUI.speedText.text = LocalizationManager.Instance.GetText(25, PlayerDataManager.Instance.GetLanguage());
         }
         else
         {
-            dialogueUI.speedText.text = "Slow down";
+            dialogueUI.speedText.text = LocalizationManager.Instance.GetText(26, PlayerDataManager.Instance.GetLanguage());
         }
+
+        dialogueUI.ResizeText();
     }
 
 
@@ -77,14 +79,14 @@ public class DialogueManager : EventObject
                     speed = 0.015f;
                     PlayerPrefs.SetFloat("speedText", speed);
                     //speed = PlayerPrefs.GetFloat("speedText");
-                    dialogueUI.speedText.text = "Slow down";
+                    dialogueUI.speedText.text = LocalizationManager.Instance.GetText(26, PlayerDataManager.Instance.GetLanguage());
                 }
                 else
                 {
                     speed = 0.05f;
                     PlayerPrefs.SetFloat("speedText", speed);
                     //speed = PlayerPrefs.GetFloat("speedText");
-                    dialogueUI.speedText.text = "Speed up";
+                    dialogueUI.speedText.text = LocalizationManager.Instance.GetText(25, PlayerDataManager.Instance.GetLanguage());
                 }
 
                 //Debug.Log("Speed:" + speed);
@@ -124,8 +126,11 @@ public class DialogueManager : EventObject
         isWriting = true;
         isSkipping = false;
 
+        //use english'name before 
         string currentName = conversation.lines[i].character.fullname;
         string currentText = conversation.lines[i].text;
+
+
         Sprite currentSprite = conversation.lines[i].character.portrait;
 
         SetActiveItem(i);
@@ -145,7 +150,9 @@ public class DialogueManager : EventObject
         {
             Debug.Log("No Animation");
         }
-       
+
+        //check character's name after played animation
+        currentName = PlayerDataManager.Instance.GetLanguage() == 0 ? conversation.lines[i].character.fullname : conversation.lines[i].character.translationsName[PlayerDataManager.Instance.GetLanguage() - 1];
 
         dialogueUI.ShowDialogue(currentName, currentText, currentSprite, dialogueOption);
         StartCoroutine(Writing());
@@ -153,7 +160,7 @@ public class DialogueManager : EventObject
 
     void SetActiveItem(int i)
     {
-        if(itemActives.Count > 0)
+        if (itemActives.Count > 0)
         {
             for (int j = 0; j < itemActives.Count; j++)
             {
@@ -171,15 +178,27 @@ public class DialogueManager : EventObject
     {
         dialogueUI.PlaySound(conversation.lines[index].character);
 
-        while (charIndex < conversation.lines[index].text.Length)
+        string lineLanguage = "";
+
+        switch (PlayerDataManager.Instance.GetLanguage())
+        {
+            case 0:
+                lineLanguage = conversation.lines[index].text;
+                break;
+            case 1:
+                lineLanguage = conversation.lines[index].textTH;
+                break;
+        }
+
+        while (charIndex < lineLanguage.Length)
         {
             if (isSkipping)
             {
-                dialogueUI.DialogueText.text = conversation.lines[index].text;
+                dialogueUI.DialogueText.text = lineLanguage;
                 break;
             }
 
-            dialogueUI.DialogueText.text += conversation.lines[index].text[charIndex];
+            dialogueUI.DialogueText.text += lineLanguage[charIndex];
             charIndex++;
 
             yield return new WaitForSecondsRealtime(speed);
@@ -204,7 +223,6 @@ public class DialogueManager : EventObject
         StartCoroutine(UnlockAndContinue());
     }
 
-    
     private IEnumerator UnlockAndContinue()
     {
         yield return new WaitForSecondsRealtime(durationUnlock);
@@ -222,17 +240,16 @@ public class DialogueManager : EventObject
         if (playerEnable)
         {
             yield return new WaitForSecondsRealtime(1.0f);
-            
+
             if (uiManagerObject != null)
                 uiManagerObject.SetActive(true);
 
             CharacterManager.Instance.SetIsActive(true);
             CharacterManager.Instance.SetActiveUIPlayer(true);
         }
-       
+
     }
 }
-
 
 public enum DialogueOption
 {

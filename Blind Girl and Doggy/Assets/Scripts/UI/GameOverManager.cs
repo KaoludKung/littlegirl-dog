@@ -19,7 +19,7 @@ public class GameOverManager : MonoBehaviour
 
     [Header("Hint Settings")]
     [SerializeField] private TextMeshProUGUI hintText;
-    [SerializeField] private string[] hintsList;
+    //[SerializeField] private string[] hintsList;
 
     public static GameOverManager instance;
     private DogController dogController;
@@ -57,12 +57,12 @@ public class GameOverManager : MonoBehaviour
 
         if (PlayerDataManager.Instance.GetHearts() == 0)
         {
-            gameoverOptions[0].gameoverText.text = "Retry";
+            gameoverOptions[0].gameoverText.text = LocalizationManager.Instance.GetText(43, PlayerDataManager.Instance.GetLanguage());
             gameOverTitle.sprite = gameoverSprite[3];
         }
         else
         {
-            gameoverOptions[0].gameoverText.text = "Respawn";
+            gameoverOptions[0].gameoverText.text = LocalizationManager.Instance.GetText(44, PlayerDataManager.Instance.GetLanguage());
             gameOverTitle.sprite = gameoverSprite[4];
         }
 
@@ -242,8 +242,8 @@ public class GameOverManager : MonoBehaviour
 
         if(random == 4)
         {
-            int hints = Random.Range(0, hintsList.Length);
-            hintText.text = hintsList[hints];
+            int hints = Random.Range(0, 2);
+            hintText.text = hints == 0 ? LocalizationManager.Instance.GetText(45, PlayerDataManager.Instance.GetLanguage()) : LocalizationManager.Instance.GetText(46, PlayerDataManager.Instance.GetLanguage());
         }
 
     }
@@ -257,6 +257,13 @@ public class GameOverManager : MonoBehaviour
 
     public void OpenPanel()
     {
+        for(int i=0; i< gameoverOptions.Count; i++)
+        {
+            gameoverOptions[i].gameoverText.fontSizeMax = PlayerDataManager.Instance.GetLanguage() == 1 ? 50 : 60;
+        }
+
+        hintText.fontSizeMax = PlayerDataManager.Instance.GetLanguage() == 1 ? 25 : 30;
+
         if (!gameOverPanel.activeSelf)
         {
             CharacterManager.Instance.SetIsActive(false);

@@ -190,7 +190,7 @@ public class LockPuzzle : MonoBehaviour, Interactable
             SoundFXManager.instance.PlaySoundFXClip(clips[2], transform, false, 1.0f);
             yield return new WaitForSeconds(clips[2].length);
             InventoryManager.Instance.AddItem(13);
-            actionText.ActionDisplay("Margarete has gotten the flower coin.");
+            actionText.ActionDisplay(LocalizationManager.Instance.GetText(88, PlayerDataManager.Instance.GetLanguage()));
             StartCoroutine(Delay(false));
 
             girlController.SetIcon(false);

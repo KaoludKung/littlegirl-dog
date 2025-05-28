@@ -1275,7 +1275,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11, y: 0}
+  m_AnchoredPosition: {x: 13, y: 0}
   m_SizeDelta: {x: 69, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &70298705
@@ -1559,6 +1559,7 @@ MonoBehaviour:
   TriggerEventID: 80
   actionType: 0
   actionResult: Margarete has picked up the ladder.
+  actionResultID: 93
   itemID: 6
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
@@ -1791,6 +1792,7 @@ MonoBehaviour:
   TriggerEventID: 83
   actionType: 4
   actionResult: 
+  actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
   actionClips: {fileID: 0}
@@ -3334,6 +3336,7 @@ MonoBehaviour:
   TriggerEventID: 71
   actionType: 3
   actionResult: 
+  actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
   actionClips: {fileID: 0}
@@ -3724,6 +3727,7 @@ MonoBehaviour:
   actionType: 1
   actionResult: Margarete gave the mouse some cheese and received the clock hands
     in return.
+  actionResultID: 86
   itemID: 7
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
   actionClips: {fileID: 8300000, guid: 4a231b0643641fe4e9b90258468e0ad2, type: 3}
@@ -4730,6 +4734,7 @@ MonoBehaviour:
   TriggerEventID: 82
   actionType: 2
   actionResult: Margarete used the crowbar.
+  actionResultID: 85
   itemID: 11
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
   actionClips: {fileID: 8300000, guid: 4a20201dda58efd41af87e3e6d6ddfe0, type: 3}
@@ -6176,6 +6181,7 @@ MonoBehaviour:
   TriggerEventID: 68
   actionType: 3
   actionResult: 
+  actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
   actionClips: {fileID: 0}
@@ -6413,7 +6419,7 @@ GameObject:
   - component: {fileID: 426040244}
   - component: {fileID: 426040243}
   m_Layer: 5
-  m_Name: button_text
+  m_Name: Cbutton_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6435,7 +6441,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: 0}
+  m_AnchoredPosition: {x: 150, y: 2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &426040243
@@ -6488,9 +6494,9 @@ MonoBehaviour:
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 30
+  m_fontSizeMax: 36
   m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -6820,6 +6826,7 @@ MonoBehaviour:
   TriggerEventID: 0
   actionType: 2
   actionResult: Margarete has used the plunger and then picked up the flower coin.
+  actionResultID: 81
   itemID: 9
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
   actionClips: {fileID: 8300000, guid: a91979a590233fc45be67238ba5202ce, type: 3}
@@ -7021,6 +7028,7 @@ MonoBehaviour:
   TriggerEventID: 72
   actionType: 3
   actionResult: 
+  actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
   actionClips: {fileID: 0}
@@ -8213,6 +8221,7 @@ MonoBehaviour:
   TriggerEventID: 78
   actionType: 0
   actionResult: Margarete has picked up the oil.
+  actionResultID: 82
   itemID: 8
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
@@ -10255,6 +10264,7 @@ MonoBehaviour:
   TriggerEventID: 70
   actionType: 3
   actionResult: 
+  actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
   actionClips: {fileID: 0}
@@ -10351,12 +10361,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
+  m_fontSize: 26
   m_fontSizeBase: 30
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 26
+  m_fontSizeMax: 30
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -11230,6 +11240,71 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &766154950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 766154951}
+  - component: {fileID: 766154952}
+  m_Layer: 5
+  m_Name: TranslateOnly
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &766154951
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766154950}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1529395067}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &766154952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766154950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bcf9cb2701255146a60f28062966055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizeElements:
+  - localizeText: {fileID: 1972324409}
+    localID: 5
+  - localizeText: {fileID: 1909175178}
+    localID: 48
+  - localizeText: {fileID: 1436209126}
+    localID: 49
+  - localizeText: {fileID: 717937381}
+    localID: 50
+  - localizeText: {fileID: 426040243}
+    localID: 5
+  - localizeText: {fileID: 1698635480}
+    localID: 51
+  - localizeText: {fileID: 1408589215}
+    localID: 52
+  - localizeText: {fileID: 856984429}
+    localID: 0
 --- !u!1 &767778438
 GameObject:
   m_ObjectHideFlags: 0
@@ -11599,7 +11674,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -78, y: 0}
   m_SizeDelta: {x: 69, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &782761544
@@ -12875,8 +12950,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6e65ef0447c7846468b56ddc3b97c664, type: 2}
-  m_sharedMaterial: {fileID: -5009971732904435071, guid: 6e65ef0447c7846468b56ddc3b97c664, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 32172498bbcd4834c962e4f079bdbdd4, type: 2}
+  m_sharedMaterial: {fileID: 2639937945252411571, guid: 32172498bbcd4834c962e4f079bdbdd4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12904,7 +12979,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 30
+  m_fontSizeMin: 22
   m_fontSizeMax: 36
   m_fontStyle: 1
   m_HorizontalAlignment: 2
@@ -14522,6 +14597,7 @@ MonoBehaviour:
   TriggerEventID: 66
   actionType: 4
   actionResult: 
+  actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
   actionClips: {fileID: 0}
@@ -14728,6 +14804,7 @@ MonoBehaviour:
   TriggerEventID: 0
   actionType: 5
   actionResult: Margarete has discovered a hidden note.
+  actionResultID: 75
   itemID: 9
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
@@ -15314,6 +15391,7 @@ MonoBehaviour:
   TriggerEventID: 73
   actionType: 0
   actionResult: Margarete has picked up the stairway key.
+  actionResultID: 92
   itemID: 5
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
@@ -19138,6 +19216,7 @@ MonoBehaviour:
   TriggerEventID: 81
   actionType: 0
   actionResult: Margarete has picked up the crowbar.
+  actionResultID: 84
   itemID: 11
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
@@ -19681,6 +19760,7 @@ MonoBehaviour:
   TriggerEventID: 89
   actionType: 1
   actionResult: Margarete has used the exit key.
+  actionResultID: 87
   itemID: 15
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
   actionClips: {fileID: 8300000, guid: 1b1f9c26f9eed4949a83b6a166c313b6, type: 3}
@@ -19786,7 +19866,7 @@ GameObject:
   - component: {fileID: 1408589216}
   - component: {fileID: 1408589215}
   m_Layer: 5
-  m_Name: button_text
+  m_Name: Cbutton_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19808,7 +19888,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: 15}
+  m_AnchoredPosition: {x: 150, y: 5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1408589215
@@ -19831,7 +19911,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Rotate the long hand
+  m_text: "Rotate \nthe long hand"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6e65ef0447c7846468b56ddc3b97c664, type: 2}
   m_sharedMaterial: {fileID: -5009971732904435071, guid: 6e65ef0447c7846468b56ddc3b97c664, type: 2}
@@ -19858,15 +19938,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 30
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 30
+  m_fontSizeMax: 36
   m_fontStyle: 1
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -20407,7 +20487,7 @@ GameObject:
   - component: {fileID: 1436209127}
   - component: {fileID: 1436209126}
   m_Layer: 5
-  m_Name: button_text
+  m_Name: LCbutton_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20429,7 +20509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: 14}
+  m_AnchoredPosition: {x: 145, y: 1}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1436209126
@@ -20452,7 +20532,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Change code position
+  m_text: Change digit place
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6e65ef0447c7846468b56ddc3b97c664, type: 2}
   m_sharedMaterial: {fileID: -5009971732904435071, guid: 6e65ef0447c7846468b56ddc3b97c664, type: 2}
@@ -20482,9 +20562,9 @@ MonoBehaviour:
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 30
+  m_fontSizeMax: 36
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
@@ -20515,7 +20595,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -36.514404, w: 0}
+  m_margin: {x: 0, y: 0, z: -162.52309, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -21097,7 +21177,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20, y: 0}
+  m_AnchoredPosition: {x: -83, y: 2}
   m_SizeDelta: {x: 69, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1500837732
@@ -21838,6 +21918,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1239043751401136283, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1414081541}
+    - targetCorrespondingSourceObject: {fileID: 1239043751401136283, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 766154951}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
 --- !u!114 &1529395065 stripped
@@ -22319,6 +22402,7 @@ MonoBehaviour:
   TriggerEventID: 69
   actionType: 3
   actionResult: 
+  actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
   actionClips: {fileID: 0}
@@ -24047,6 +24131,7 @@ MonoBehaviour:
   TriggerEventID: 0
   actionType: 5
   actionResult: Margarete has discovered a hidden note.
+  actionResultID: 75
   itemID: 7
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
@@ -24294,6 +24379,7 @@ MonoBehaviour:
   TriggerEventID: 79
   actionType: 1
   actionResult: Margarete used the oil with the doll. The doll is now functional.
+  actionResultID: 83
   itemID: 8
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
   actionClips: {fileID: 8300000, guid: 310495e0f5ef89e43846179fc015211c, type: 3}
@@ -24666,7 +24752,7 @@ GameObject:
   - component: {fileID: 1698635481}
   - component: {fileID: 1698635480}
   m_Layer: 5
-  m_Name: button_text
+  m_Name: Cbutton_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24688,8 +24774,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: 15}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 120, y: 5}
+  m_SizeDelta: {x: 180, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1698635480
 MonoBehaviour:
@@ -24711,7 +24797,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Rotate the short hand
+  m_text: "Rotate \nthe short hand"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6e65ef0447c7846468b56ddc3b97c664, type: 2}
   m_sharedMaterial: {fileID: -5009971732904435071, guid: 6e65ef0447c7846468b56ddc3b97c664, type: 2}
@@ -24738,15 +24824,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 30
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 30
+  m_fontSizeMax: 36
   m_fontStyle: 1
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -26691,6 +26777,7 @@ MonoBehaviour:
   TriggerEventID: 74
   actionType: 1
   actionResult: Margarete used the stairway key. The second floor is now unlocked.
+  actionResultID: 79
   itemID: 5
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
   actionClips: {fileID: 8300000, guid: 1b1f9c26f9eed4949a83b6a166c313b6, type: 3}
@@ -27030,6 +27117,7 @@ MonoBehaviour:
   TriggerEventID: 84
   actionType: 0
   actionResult: Margarete has picked up the cheese.
+  actionResultID: 94
   itemID: 7
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
@@ -27543,6 +27631,7 @@ MonoBehaviour:
   TriggerEventID: 0
   actionType: 5
   actionResult: Margarete has discovered a hidden note.
+  actionResultID: 75
   itemID: 8
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
   actionClips: {fileID: 8300000, guid: 0df2691281d3bb348be6512957eec6fe, type: 3}
@@ -27701,6 +27790,7 @@ MonoBehaviour:
   TriggerEventID: 67
   actionType: 3
   actionResult: 
+  actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
   actionClips: {fileID: 0}
@@ -28457,7 +28547,7 @@ GameObject:
   - component: {fileID: 1909175179}
   - component: {fileID: 1909175178}
   m_Layer: 5
-  m_Name: button_text
+  m_Name: LCbutton_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28479,7 +28569,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: 0}
+  m_AnchoredPosition: {x: 144, y: 2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1909175178
@@ -28532,11 +28622,11 @@ MonoBehaviour:
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 30
+  m_fontSizeMax: 36
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -29470,7 +29560,7 @@ GameObject:
   - component: {fileID: 1972324410}
   - component: {fileID: 1972324409}
   m_Layer: 5
-  m_Name: button_text
+  m_Name: LCbutton_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29492,7 +29582,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: 0}
+  m_AnchoredPosition: {x: 150, y: 2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1972324409
@@ -29545,9 +29635,9 @@ MonoBehaviour:
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 30
+  m_fontSizeMax: 36
   m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -29627,7 +29717,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 40, y: 0}
   m_SizeDelta: {x: 69, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1981016388
@@ -30084,6 +30174,7 @@ MonoBehaviour:
   TriggerEventID: 76
   actionType: 0
   actionResult: Margarete has picked up the plunger.
+  actionResultID: 80
   itemID: 9
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
   actionClips: {fileID: 8300000, guid: 580c8869ca7e2cd49af16908eec6e392, type: 3}
@@ -30834,6 +30925,7 @@ MonoBehaviour:
   TriggerEventID: 90
   actionType: 6
   actionResult: 0
+  actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: 1236c2a08ce1e264c9735e092837c6de, type: 3}
   actionClips: {fileID: 8300000, guid: 847410fa1dbf0334699f6b26ec992a92, type: 3}

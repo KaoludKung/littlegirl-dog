@@ -15,8 +15,9 @@ public class PlayerData
     public bool secrets;
     public int hearts;
     public int deathCount;
+    public int language;
 
-    public PlayerData(Vector3 girlPosition, Vector3 dogPosition, string sceneName,bool isNewGame, bool isSpined, bool secret, int hearts, int deathCount)
+    public PlayerData(Vector3 girlPosition, Vector3 dogPosition, string sceneName,bool isNewGame, bool isSpined, bool secret, int hearts, int deathCount, int language)
     {
         this.girlPosition = girlPosition;
         this.dogPosition = dogPosition;
@@ -26,6 +27,7 @@ public class PlayerData
         this.secrets = secret;
         this.hearts = hearts;
         this.deathCount = deathCount;
+        this.language = language;
     }
 }
 
@@ -59,6 +61,7 @@ public class PlayerDataManager : JsonManager<PlayerData>
                 if (playerData != null)
                 {
                     playerData.deathCount = 0;
+                    playerData.language = 0;
                     SavePlayerData();
                 }
             }
@@ -169,6 +172,11 @@ public class PlayerDataManager : JsonManager<PlayerData>
         return playerData != null ? playerData.deathCount : 0;
     }
 
+    public int GetLanguage()
+    {
+        return playerData != null ? playerData.language : 0;
+    }
+
     public void UpdateGirlPosition(Vector3 newPosition)
     {
         if (playerData != null)
@@ -245,6 +253,16 @@ public class PlayerDataManager : JsonManager<PlayerData>
         {
             playerData.deathCount = death;
             Debug.Log($"Updated deathCount to: {death}");
+            //SavePlayerData();
+        }
+    }
+
+    public void UpdateLanguage(int language)
+    {
+        if (playerData != null)
+        {
+            playerData.language = language;
+            Debug.Log($"Updated Language to: {language}");
             //SavePlayerData();
         }
     }

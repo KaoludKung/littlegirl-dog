@@ -16,3 +16,5 @@ MonoBehaviour:
   lines:
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: It's too high.
+    textTH: "\u0E21\u0E31\u0E19\u0E2A\u0E39\u0E07\u0E40\u0E01\u0E34\u0E19\u0E44\u0E1B
+      \u0E40\u0E2D\u0E37\u0E49\u0E2D\u0E21\u0E44\u0E21\u0E48\u0E16\u0E36\u0E07"

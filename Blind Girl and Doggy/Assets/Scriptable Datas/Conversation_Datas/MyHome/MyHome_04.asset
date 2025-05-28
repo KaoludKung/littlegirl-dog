@@ -16,25 +16,46 @@ MonoBehaviour:
   lines:
   - character: {fileID: 11400000, guid: f0ebaf5b173e2be4996ddf9f14201427, type: 2}
     text: All done, Mommy.
+    textTH: "\u0E40\u0E23\u0E35\u0E22\u0E1A\u0E23\u0E49\u0E2D\u0E22\u0E40\u0E40\u0E25\u0E49\u0E27\u0E04\u0E48\u0E30
+      \u0E04\u0E38\u0E13\u0E40\u0E40\u0E21\u0E48"
   - character: {fileID: 11400000, guid: 618b9c0c975a3b845bb2022b59147aea, type: 2}
     text: Alright, you're all set to go. Just remember, you'll have to go through
       the forest to reach her house.
+    textTH: "\u0E40\u0E22\u0E35\u0E48\u0E22\u0E21\u0E21\u0E32\u0E01\u0E08\u0E4A\u0E30
+      \u0E07\u0E31\u0E49\u0E19\u0E25\u0E39\u0E01\u0E01\u0E47\u0E1E\u0E23\u0E49\u0E2D\u0E21\u0E2D\u0E2D\u0E01\u0E40\u0E14\u0E34\u0E19\u0E17\u0E32\u0E07\u0E40\u0E40\u0E25\u0E49\u0E27
+      \u0E40\u0E40\u0E15\u0E48\u0E08\u0E33\u0E44\u0E27\u0E49\u0E19\u0E30\u0E27\u0E48\u0E32
+      \u0E01\u0E32\u0E23\u0E44\u0E1B\u0E1A\u0E49\u0E32\u0E19\u0E02\u0E2D\u0E07\u0E40\u0E27\u0E42\u0E23\u0E19\u0E34\u0E01\u0E49\u0E32
+      \u0E21\u0E31\u0E19\u0E15\u0E49\u0E2D\u0E07\u0E40\u0E14\u0E34\u0E19\u0E17\u0E32\u0E07\u0E1C\u0E48\u0E32\u0E19\u0E1B\u0E48\u0E32\u0E14\u0E49\u0E27\u0E22 "
   - character: {fileID: 11400000, guid: 618b9c0c975a3b845bb2022b59147aea, type: 2}
     text: "It won\u2019t take too long, but please be careful along the way, okay?\r"
+    textTH: "\u0E16\u0E36\u0E07\u0E40\u0E40\u0E21\u0E49\u0E08\u0E30\u0E43\u0E0A\u0E49\u0E40\u0E27\u0E25\u0E32\u0E40\u0E14\u0E34\u0E19\u0E17\u0E32\u0E07\u0E44\u0E21\u0E48\u0E19\u0E32\u0E19
+      \u0E40\u0E40\u0E15\u0E48\u0E01\u0E47\u0E23\u0E30\u0E27\u0E31\u0E07\u0E15\u0E31\u0E27\u0E40\u0E2D\u0E07\u0E14\u0E49\u0E27\u0E22\u0E25\u0E30"
   - character: {fileID: 11400000, guid: f0ebaf5b173e2be4996ddf9f14201427, type: 2}
     text: "No need to worry, I\u2019ve got Freund by my side."
+    textTH: "\u0E44\u0E21\u0E48\u0E15\u0E49\u0E2D\u0E07\u0E2B\u0E48\u0E27\u0E07 \u0E40\u0E1E\u0E23\u0E32\u0E30
+      \u0E2B\u0E19\u0E39\u0E21\u0E35\u0E1E\u0E25\u0E31\u0E07\u0E21\u0E34\u0E15\u0E23\u0E20\u0E32\u0E1E\u0E2D\u0E22\u0E39\u0E48\u0E22\u0E31\u0E07\u0E44\u0E07\u0E25\u0E30"
   - character: {fileID: 11400000, guid: a178a33e62adcc14d9408084c0c0ca0e, type: 2}
     text: "By the way, what\u2019s in the basket?"
+    textTH: "\u0E27\u0E48\u0E32\u0E40\u0E40\u0E15\u0E48 \u0E43\u0E19\u0E15\u0E30\u0E01\u0E23\u0E49\u0E32\u0E21\u0E35\u0E2D\u0E30\u0E44\u0E23\u0E40\u0E2B\u0E23\u0E2D\u0E04\u0E30"
   - character: {fileID: 11400000, guid: 618b9c0c975a3b845bb2022b59147aea, type: 2}
     text: Apple pie.
+    textTH: "\u0E1E\u0E32\u0E22\u0E40\u0E40\u0E2D\u0E1B\u0E40\u0E1B\u0E34\u0E49\u0E25"
   - character: {fileID: 11400000, guid: f0ebaf5b173e2be4996ddf9f14201427, type: 2}
     text: Wow, that looks so yummy!
+    textTH: "\u0E27\u0E49\u0E32\u0E27 \u0E21\u0E31\u0E19\u0E14\u0E39\u0E19\u0E48\u0E32\u0E2D\u0E23\u0E48\u0E2D\u0E22\u0E21\u0E32\u0E01...."
   - character: {fileID: 11400000, guid: 07db9fa52606dfa4ab40855d2cfb5783, type: 2}
     text: "No, sweetheart. You mustn\u2019t eat the snacks in the basket at all because
       she should be the first one to enjoy this delicious treat. "
+    textTH: "\u0E44\u0E21\u0E48\u0E44\u0E14\u0E49\u0E19\u0E30\u0E08\u0E4A\u0E30 \u0E25\u0E39\u0E01\u0E2B\u0E49\u0E32\u0E21\u0E01\u0E34\u0E19\u0E02\u0E19\u0E21\u0E43\u0E19\u0E15\u0E30\u0E01\u0E23\u0E49\u0E32\u0E42\u0E14\u0E22\u0E40\u0E14\u0E47\u0E14\u0E02\u0E32\u0E14
+      \u0E40\u0E1E\u0E23\u0E32\u0E30\u0E40\u0E27\u0E42\u0E23\u0E19\u0E34\u0E01\u0E49\u0E32
+      \u0E04\u0E27\u0E23\u0E40\u0E1B\u0E47\u0E19\u0E04\u0E19\u0E40\u0E40\u0E23\u0E01\u0E17\u0E35\u0E48\u0E44\u0E14\u0E49\u0E01\u0E34\u0E19\u0E02\u0E19\u0E21\u0E40\u0E40\u0E2A\u0E19\u0E2D\u0E23\u0E48\u0E2D\u0E22\u0E19\u0E35\u0E49 "
   - character: {fileID: 11400000, guid: 07db9fa52606dfa4ab40855d2cfb5783, type: 2}
     text: Do you understand?
+    textTH: "\u0E40\u0E02\u0E49\u0E32\u0E43\u0E08\u0E21\u0E31\u0E49\u0E22\r"
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: Aww, I understand, Mommy.
+    textTH: "\u0E42\u0E18\u0E48 \u0E40\u0E02\u0E49\u0E32\u0E43\u0E08\u0E40\u0E40\u0E25\u0E49\u0E27\u0E04\u0E48\u0E30
+      \u0E04\u0E38\u0E13\u0E40\u0E40\u0E21\u0E48"
   - character: {fileID: 11400000, guid: 618b9c0c975a3b845bb2022b59147aea, type: 2}
     text: Good. Safe travels.
+    textTH: "\u0E14\u0E35\u0E21\u0E32\u0E01 \u0E07\u0E31\u0E49\u0E19\u0E02\u0E2D\u0E43\u0E2B\u0E49\u0E40\u0E14\u0E34\u0E19\u0E17\u0E32\u0E07\u0E1B\u0E25\u0E2D\u0E14\u0E20\u0E31\u0E22\u0E08\u0E4A\u0E30"

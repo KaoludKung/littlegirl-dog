@@ -1,13 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TutorialManager : EventObject
 {
+    
     [SerializeField] private GameObject tutorialPanel;
+    [SerializeField] private TextMeshProUGUI tutorialText;
+
     // 0: next 1: previous 2: exit
     [SerializeField] private GameObject[] tutorialIcon;
+    [SerializeField] private int[] tutorialDataID;
     [SerializeField] private Sprite[] tutorialImage;
     [SerializeField] private AudioClip[] clips;
     [SerializeField] private GameObject uiManagerObject;
@@ -16,6 +22,7 @@ public class TutorialManager : EventObject
     private int currentIndex = 0;
     private DogController dogController;
     private float localLastMoveTime = 0f;
+
 
     void Start()
     {
@@ -79,6 +86,9 @@ public class TutorialManager : EventObject
             if (uiManagerObject != null)
                 uiManagerObject.SetActive(true);
         }
+
+        yield return null;
+        Destroy(gameObject);
     }
 
     public void UpdateMenu()
@@ -88,6 +98,7 @@ public class TutorialManager : EventObject
             if(i == currentIndex)
             {
                 tutorialPanel.GetComponent<Image>().sprite = tutorialImage[i];
+                tutorialText.text = LocalizationManager.Instance.GetText(tutorialDataID[i], PlayerDataManager.Instance.GetLanguage()).Replace("\\n", "\n");
             }
         }
 
@@ -118,3 +129,13 @@ public class TutorialManager : EventObject
     }
 
 }
+
+
+[System.Serializable]
+public class ControllerUI
+{
+    public string keyboardButton;
+    public string ps4Button;
+    public string xBoxButton;
+}
+

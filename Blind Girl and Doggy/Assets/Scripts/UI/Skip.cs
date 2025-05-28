@@ -1,17 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Skip : MonoBehaviour
 {
-    [SerializeField] GameObject skipObject;
-    [SerializeField] string sceneName;
+    [SerializeField] private GameObject skipObject;
+    [SerializeField] private TextMeshProUGUI skipText;
+    [SerializeField] private string sceneName;
     private InventoryItem applePieItem;
 
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(SkipAppear());
+        skipText.fontSizeMax = PlayerDataManager.Instance.GetLanguage() == 1 ? 22 : 26;
         applePieItem = InventoryManager.Instance.GetItemByID(1);
     }
 

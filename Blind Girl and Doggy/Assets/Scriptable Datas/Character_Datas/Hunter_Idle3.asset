@@ -17,3 +17,5 @@ MonoBehaviour:
   typing: {fileID: 8300000, guid: 12636dd988a761448a602e5ddd84ee43, type: 3}
   animationCondition: IdleVariant
   conditionID: 2
+  translationsName:
+  - "\u0E27\u0E2D\u0E23\u0E4C\u0E21\u0E27\u0E39\u0E14"
