@@ -143,8 +143,9 @@ public class DogController : MonoBehaviour
     {
         while (staminaFill.fillAmount < 1.0f)
         {
-            yield return new WaitForSeconds(0.75f);
-            staminaFill.fillAmount += 0.0090f;
+            float waitTime = staminaFill.fillAmount < 0.30f ? 1.0f : 0.75f;
+            yield return new WaitForSeconds(waitTime);
+            staminaFill.fillAmount += 0.01075f;
         }
         isRegeneratingStamina = false;
     }

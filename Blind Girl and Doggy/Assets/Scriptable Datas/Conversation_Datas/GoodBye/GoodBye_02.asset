@@ -17,10 +17,14 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 7cd0ec2e31dabf24490e3de20e8b309d, type: 2}
     text: ....
     textTH: ....
+    textTR: "\u2026."
   - character: {fileID: 11400000, guid: 7cd0ec2e31dabf24490e3de20e8b309d, type: 2}
     text: Hi, troublemaker.
     textTH: "\u0E44\u0E07 \u0E40\u0E08\u0E49\u0E32\u0E15\u0E31\u0E27\u0E1B\u0E31\u0E0D\u0E2B\u0E32"
+    textTR: "O aptal elmal\u0131 turta m\xFCkemmel oyunumu mahvetti."
   - character: {fileID: 11400000, guid: 7cd0ec2e31dabf24490e3de20e8b309d, type: 2}
     text: You're probably wondering where you are and who I am, right?
     textTH: "\u0E04\u0E07\u0E2A\u0E07\u0E2A\u0E31\u0E22\u0E2A\u0E34\u0E19\u0E30\u0E27\u0E48\u0E32\u0E15\u0E2D\u0E19\u0E19\u0E35\u0E49\u0E19\u0E32\u0E22\u0E2D\u0E22\u0E39\u0E48\u0E17\u0E35\u0E48\u0E44\u0E2B\u0E19
       \u0E41\u0E25\u0E30\u0E09\u0E31\u0E19\u0E40\u0E1B\u0E47\u0E19\u0E43\u0E04\u0E23"
+    textTR: "\u015Eimdi tekrar hatalar\u0131 d\xFCzeltmem gerekiyor. Neyse ki bu
+      sefer hi\xE7bir \u015Feyi yeniden \xE7izmek zorunda de\u011Filim.\r\n"

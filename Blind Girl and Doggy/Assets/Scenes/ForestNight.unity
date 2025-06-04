@@ -1613,7 +1613,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 833857341}
-  offset: {x: 0, y: 0, z: 0}
   smoothTime: 0.2
 --- !u!1 &81442079
 GameObject:
@@ -9177,7 +9176,6 @@ MonoBehaviour:
   eventID: 46
   TriggerEventID: 47
   actionType: 0
-  actionResult: Margarete has picked up the acorn.
   actionResultID: 72
   itemID: 2
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
@@ -14553,7 +14551,6 @@ MonoBehaviour:
   eventID: 43
   TriggerEventID: 44
   actionType: 0
-  actionResult: Margarete has picked up the acorn.
   actionResultID: 72
   itemID: 2
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
@@ -16036,6 +16033,10 @@ PrefabInstance:
       propertyPath: girlPlayer
       value: 
       objectReference: {fileID: 33744269}
+    - target: {fileID: 7797659019870503456, guid: 8114984f125016448b59c99b062eb12e, type: 3}
+      propertyPath: alertSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e250603b91ad5ef4683774445b42497c, type: 3}
     - target: {fileID: 8621026491017519933, guid: 8114984f125016448b59c99b062eb12e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 145.55
@@ -16542,6 +16543,10 @@ PrefabInstance:
       propertyPath: girlPlayer
       value: 
       objectReference: {fileID: 33744269}
+    - target: {fileID: 7797659019870503456, guid: 8114984f125016448b59c99b062eb12e, type: 3}
+      propertyPath: alertSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e250603b91ad5ef4683774445b42497c, type: 3}
     - target: {fileID: 8621026491017519933, guid: 8114984f125016448b59c99b062eb12e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 256.11
@@ -19622,6 +19627,10 @@ PrefabInstance:
       propertyPath: girlPlayer
       value: 
       objectReference: {fileID: 33744269}
+    - target: {fileID: 7797659019870503456, guid: 8114984f125016448b59c99b062eb12e, type: 3}
+      propertyPath: alertSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e250603b91ad5ef4683774445b42497c, type: 3}
     - target: {fileID: 8621026491017519933, guid: 8114984f125016448b59c99b062eb12e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 163.35
@@ -19949,7 +19958,6 @@ MonoBehaviour:
   eventID: 47
   TriggerEventID: 48
   actionType: 1
-  actionResult: Margarete has used the acorn.
   actionResultID: 73
   itemID: 2
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
@@ -24964,7 +24972,6 @@ MonoBehaviour:
   eventID: 204
   TriggerEventID: 0
   actionType: 5
-  actionResult: Margarete has discovered a hidden note.
   actionResultID: 75
   itemID: 4
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
@@ -27960,7 +27967,6 @@ MonoBehaviour:
   eventID: 205
   TriggerEventID: 0
   actionType: 5
-  actionResult: Margarete has discovered a hidden note.
   actionResultID: 75
   itemID: 5
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
@@ -29363,7 +29369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87148acf61c36764ab04cebdd364b5bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4.85
+  speed: 5.05
   endOfmonster: {fileID: 1829631235}
   playerTarget: {fileID: 33744276}
   patrolPoint:
@@ -32103,7 +32109,6 @@ MonoBehaviour:
   eventID: 44
   TriggerEventID: 45
   actionType: 1
-  actionResult: Margarete has used the acorn.
   actionResultID: 73
   itemID: 2
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
@@ -33873,6 +33878,10 @@ PrefabInstance:
       propertyPath: girlPlayer
       value: 
       objectReference: {fileID: 33744269}
+    - target: {fileID: 7797659019870503456, guid: 8114984f125016448b59c99b062eb12e, type: 3}
+      propertyPath: alertSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e250603b91ad5ef4683774445b42497c, type: 3}
     - target: {fileID: 8621026491017519933, guid: 8114984f125016448b59c99b062eb12e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 300.52

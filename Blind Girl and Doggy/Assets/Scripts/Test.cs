@@ -8,17 +8,16 @@ public class Test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (SteamManager.Initialized)
+        int a = 20;
+
+        switch (a)
         {
-            //string name = SteamFriends.GetPersonaName();
-            //Debug.Log(name);
-
-            //SteamUserStats.ClearAchievement("achievement_01");
-            //SteamUserStats.StoreStats();
-
-            //SteamUserStats.SetAchievement("achievement_01");
-            //SteamUserStats.StoreStats();
-            //Debug.Log("Achievement Unlock");
+            case 4 or 5 or 6:
+                Debug.Log("This works!");
+                break;
+            default:
+                Debug.Log("Something else");
+                break;
         }
     }
 }

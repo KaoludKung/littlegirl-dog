@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class TutorialManager : EventObject
 {
-    
     [SerializeField] private GameObject tutorialPanel;
     [SerializeField] private TextMeshProUGUI tutorialText;
 
@@ -87,7 +86,7 @@ public class TutorialManager : EventObject
                 uiManagerObject.SetActive(true);
         }
 
-        yield return null;
+        yield return new WaitForSeconds(0.15f);
         Destroy(gameObject);
     }
 
@@ -123,19 +122,36 @@ public class TutorialManager : EventObject
 
     }
 
+    /*
     public void SetTutorialImage(int index, Sprite s)
     {
         tutorialImage[index] = s;
+    }*/
+
+    public void SetTutorialDetail(string detail)
+    {
+        tutorialText.text = detail;
+    }
+
+    public int GetCurrentIndex()
+    {
+        return currentIndex;
+    }
+
+    public int GetTutorialIndex()
+    {
+        if(currentIndex >= 0 && currentIndex < tutorialDataID.Length)
+        {
+            return tutorialDataID[currentIndex];
+        }
+        else
+        {
+            return 0;
+        }
     }
 
 }
 
 
-[System.Serializable]
-public class ControllerUI
-{
-    public string keyboardButton;
-    public string ps4Button;
-    public string xBoxButton;
-}
+
 

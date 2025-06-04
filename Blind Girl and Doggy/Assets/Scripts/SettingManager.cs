@@ -15,6 +15,8 @@ public class SettingManager : MonoBehaviour
     [SerializeField] private AudioClip selectedClip;
     [SerializeField] private AudioClip pressedClip;
 
+    private const int defaultLanguageID = 114;
+
     private int currentIndexM = 0;
     private int currentIndexD = 0;
     private int currentIndexTab = 0;
@@ -26,20 +28,7 @@ public class SettingManager : MonoBehaviour
     void InitializecurrentLanguage()
     {
         currentLanguage = PlayerDataManager.Instance.GetLanguage();
-        Debug.Log("Current L: " + currentLanguage);
-
-        switch (currentLanguage)
-        {
-            case 0:
-                language = LocalizationManager.Instance.GetText(100, PlayerDataManager.Instance.GetLanguage());
-                break;
-            case 1:
-                language = LocalizationManager.Instance.GetText(101, PlayerDataManager.Instance.GetLanguage());
-                break;
-            case 2:
-                language = LocalizationManager.Instance.GetText(102, PlayerDataManager.Instance.GetLanguage());
-                break;
-        }
+        language = LocalizationManager.Instance.GetText(defaultLanguageID + currentLanguage, PlayerDataManager.Instance.GetLanguage());
     }
 
 
@@ -225,20 +214,8 @@ public class SettingManager : MonoBehaviour
         PlayerDataManager.Instance.UpdateLanguage(currentLanguage);
         PlayerDataManager.Instance.SavePlayerData();
 
-        switch (currentLanguage)
-        {
-            case 0:
-                language = LocalizationManager.Instance.GetText(100, PlayerDataManager.Instance.GetLanguage());
-                break;
-            case 1:
-                language = LocalizationManager.Instance.GetText(101, PlayerDataManager.Instance.GetLanguage());
-                break;
-            case 2:
-                language = LocalizationManager.Instance.GetText(102, PlayerDataManager.Instance.GetLanguage());
-                break;
-        }
-
         //FontChanger.Instance.ChangeSpecificFont(displayOptions[0].optionText, currentLanguage);
+        language = LocalizationManager.Instance.GetText(defaultLanguageID + currentLanguage, PlayerDataManager.Instance.GetLanguage());
         displayOptions[0].optionText.text = language;
 
         Translate[] objects = FindObjectsOfType<Translate>();

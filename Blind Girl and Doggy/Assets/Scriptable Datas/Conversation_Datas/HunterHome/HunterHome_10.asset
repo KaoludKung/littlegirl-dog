@@ -16,15 +16,19 @@ MonoBehaviour:
   lines:
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: I'm tired of playing games with you, young lady...
-    textTH: " \u0E09\u0E31\u0E19\u0E40\u0E1A\u0E37\u0E48\u0E2D\u0E17\u0E35\u0E48\u0E08\u0E30\u0E40\u0E25\u0E48\u0E19\u0E40\u0E01\u0E21\u0E01\u0E31\u0E1A\u0E40\u0E18\u0E2D\u0E40\u0E40\u0E25\u0E49\u0E27
+    textTH: "\u0E09\u0E31\u0E19\u0E40\u0E1A\u0E37\u0E48\u0E2D\u0E17\u0E35\u0E48\u0E08\u0E30\u0E40\u0E25\u0E48\u0E19\u0E40\u0E01\u0E21\u0E01\u0E31\u0E1A\u0E40\u0E18\u0E2D\u0E40\u0E40\u0E25\u0E49\u0E27
       \u0E2A\u0E32\u0E27\u0E19\u0E49\u0E2D\u0E22"
+    textTR: "Seninle oyalanmaktan yoruldum, gen\xE7 han\u0131m\u2026"
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: I'll be waiting for you near the exit.
-    textTH: "\u0E09\u0E31\u0E19\u0E08\u0E30\u0E14\u0E31\u0E01\u0E23\u0E2D\u0E40\u0E18\u0E2D\u0E40\u0E40\u0E16\u0E27\u0E17\u0E32\u0E07\u0E2D\u0E2D\u0E01\u0E19\u0E35\u0E48\u0E25\u0E30"
+    textTH: "\u0E09\u0E31\u0E19\u0E08\u0E30\u0E14\u0E31\u0E01\u0E23\u0E2D\u0E40\u0E18\u0E2D\u0E40\u0E40\u0E16\u0E27\u0E17\u0E32\u0E07\u0E2D\u0E2D\u0E01\u0E19\u0E35\u0E48\u0E40\u0E40\u0E2B\u0E25\u0E30"
+    textTR: "\xC7\u0131k\u0131\u015F\u0131n yak\u0131n\u0131nda seni bekliyor olaca\u011F\u0131m.\r\n"
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: If you think you can escape me, go ahead and try.
-    textTH: "\u0E16\u0E49\u0E32\u0E40\u0E18\u0E2D\u0E21\u0E35\u0E1B\u0E31\u0E0D\u0E0D\u0E32\u0E17\u0E35\u0E48\u0E08\u0E30\u0E2B\u0E19\u0E35\u0E08\u0E32\u0E01\u0E09\u0E31\u0E19\u0E44\u0E14\u0E49
+    textTH: "\u0E16\u0E49\u0E32\u0E40\u0E18\u0E2D\u0E21\u0E35\u0E1B\u0E31\u0E0D\u0E0D\u0E32\u0E17\u0E35\u0E48\u0E08\u0E30\u0E2B\u0E19\u0E35\u0E44\u0E1B\u0E08\u0E32\u0E01\u0E09\u0E31\u0E19\u0E44\u0E14\u0E49
       \u0E01\u0E47\u0E25\u0E2D\u0E07\u0E14\u0E39"
+    textTR: "Benden ka\xE7abilece\u011Fini d\xFC\u015F\xFCn\xFCyorsan hodri meydan.\r\n"
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: Ha Ha
     textTH: "\u0E2E\u0E32\u0E2E\u0E48\u0E32"
+    textTR: Ha ha

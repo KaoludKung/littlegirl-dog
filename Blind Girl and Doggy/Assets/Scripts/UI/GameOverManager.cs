@@ -238,7 +238,7 @@ public class GameOverManager : MonoBehaviour
 
     void SpawnHints()
     {
-        int random = Random.Range(1, 6);
+        int random = Random.Range(1, 7);
 
         if(random == 4)
         {

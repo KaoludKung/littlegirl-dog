@@ -17,19 +17,25 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: "Ha ha\u2026"
     textTH: "\u0E2E\u0E32.. \u0E2E\u0E48\u0E32..."
+    textTR: "Ha ha\u2026"
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: In the end, you chose that girl over me.
     textTH: "\u0E2A\u0E38\u0E14\u0E17\u0E49\u0E32\u0E22\u0E40\u0E40\u0E01\u0E01\u0E47\u0E40\u0E25\u0E37\u0E2D\u0E01\u0E40\u0E14\u0E47\u0E01\u0E04\u0E19\u0E19\u0E31\u0E49\u0E19\u0E40\u0E40\u0E17\u0E19\u0E17\u0E35\u0E48\u0E08\u0E30\u0E40\u0E1B\u0E47\u0E19\u0E09\u0E31\u0E19"
+    textTR: "Benim yerime o k\u0131z\u0131 se\xE7tin."
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: I knew from the start that you never loved us.
     textTH: "\u0E09\u0E31\u0E19\u0E01\u0E30\u0E2D\u0E22\u0E39\u0E48\u0E40\u0E40\u0E25\u0E49\u0E27\u0E27\u0E48\u0E32
       \u0E40\u0E40\u0E01\u0E44\u0E21\u0E48\u0E40\u0E04\u0E22\u0E23\u0E31\u0E01\u0E1E\u0E27\u0E01\u0E40\u0E23\u0E32\u0E40\u0E25\u0E22
-      \u0E44\u0E21\u0E48\u0E07\u0E31\u0E49\u0E19\u0E40\u0E40\u0E01\u0E04\u0E07\u0E44\u0E21\u0E48\u0E17\u0E34\u0E49\u0E07\u0E40\u0E23\u0E32\u0E44\u0E1B\u0E15\u0E31\u0E49\u0E49\u0E07\u0E40\u0E40\u0E15\u0E48\u0E40\u0E40\u0E23\u0E01\r\n"
+      \u0E44\u0E21\u0E48\u0E07\u0E31\u0E49\u0E19\u0E40\u0E40\u0E01\u0E04\u0E07\u0E44\u0E21\u0E48\u0E17\u0E34\u0E49\u0E07\u0E40\u0E23\u0E32\u0E44\u0E1B\u0E15\u0E31\u0E49\u0E07\u0E40\u0E40\u0E15\u0E48\u0E40\u0E40\u0E23\u0E01"
+    textTR: "En ba\u015F\u0131ndan beri bizi hi\xE7 sevmedi\u011Fini biliyordum."
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: "You\u2019ll have to pay for what you did."
     textTH: "\u0E40\u0E40\u0E01\u0E08\u0E30\u0E15\u0E49\u0E2D\u0E07\u0E44\u0E14\u0E49\u0E23\u0E31\u0E1A\u0E1C\u0E25\u0E01\u0E23\u0E23\u0E21\u0E17\u0E35\u0E48\u0E40\u0E40\u0E01\u0E17\u0E33\u0E44\u0E27\u0E49\u0E40\u0E40\u0E19\u0E48"
+    textTR: "Yapt\u0131klar\u0131n\u0131n bedelini \xF6deyeceksin.\r\n"
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: "Heh, at least I\u2019ll die by something more valuable than your fake
       concern."
     textTH: "\u0E2B\u0E36 \u0E40\u0E40\u0E15\u0E48\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E19\u0E49\u0E2D\u0E22\u0E09\u0E31\u0E19\u0E01\u0E47\u0E15\u0E32\u0E22\u0E14\u0E49\u0E27\u0E22\u0E2A\u0E34\u0E48\u0E07\u0E17\u0E35\u0E48\u0E40\u0E40\u0E1E\u0E07\u0E21\u0E32\u0E01\u0E01\u0E27\u0E48\u0E32\u0E04\u0E27\u0E32\u0E21\u0E2B\u0E48\u0E27\u0E07\u0E43\u0E22\u0E1B\u0E25\u0E2D\u0E21\u0E46
       \u0E02\u0E2D\u0E07\u0E40\u0E40\u0E01\r\n"
+    textTR: "Heh, en az\u0131ndan sahte merhametinden daha de\u011Ferli bir \u015Feyle
+      \xF6lece\u011Fim."

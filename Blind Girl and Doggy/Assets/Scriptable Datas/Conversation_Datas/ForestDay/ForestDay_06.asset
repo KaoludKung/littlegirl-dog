@@ -17,68 +17,97 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 116f88c1bca8ea447a81aa1c193093c4, type: 2}
     text: Yikes!!!
     textTH: "\u0E27\u0E49\u0E32\u0E22!!!"
+    textTR: Aaaa!!!
   - character: {fileID: 11400000, guid: cd8ffe11b7660a5499675dd39c43cb74, type: 2}
     text: Hey there, little one.
     textTH: "\u0E44\u0E07 \u0E40\u0E08\u0E49\u0E32\u0E15\u0E31\u0E27\u0E40\u0E25\u0E47\u0E01"
+    textTR: "Merhaba, k\xFC\xE7\xFCk han\u0131m."
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: Who are you?
     textTH: "\u0E04\u0E38\u0E13\u0E40\u0E1B\u0E47\u0E19\u0E43\u0E04\u0E23\u0E19\u0E48\u0E30"
+    textTR: Sen de kimsin?
   - character: {fileID: 11400000, guid: cd8ffe11b7660a5499675dd39c43cb74, type: 2}
     text: Before you ask my name, you should introduce yourself first.
-    textTH: "\u0E01\u0E48\u0E2D\u0E19\u0E17\u0E35\u0E48\u0E40\u0E18\u0E2D\u0E08\u0E30\u0E16\u0E32\u0E21\u0E0A\u0E37\u0E48\u0E2D\u0E09\u0E31\u0E19
+    textTH: "\u0E01\u0E48\u0E2D\u0E19\u0E17\u0E35\u0E48\u0E40\u0E18\u0E2D\u0E08\u0E30\u0E16\u0E32\u0E21\u0E0A\u0E37\u0E48\u0E2D\u0E43\u0E04\u0E23
       \u0E40\u0E18\u0E2D\u0E04\u0E27\u0E23\u0E40\u0E40\u0E19\u0E30\u0E19\u0E33\u0E15\u0E31\u0E27\u0E40\u0E2D\u0E07\u0E01\u0E48\u0E2D\u0E19\u0E19\u0E30"
+    textTR: "Ad\u0131m\u0131 sormadan \xF6nce kendini tan\u0131tmal\u0131s\u0131n."
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: "I\u2019m so sorry, my name is Mar...."
-    textTH: "\u0E09\u0E31\u0E19\u0E40\u0E2A\u0E35\u0E22\u0E21\u0E32\u0E23\u0E22\u0E32\u0E17\u0E08\u0E23\u0E34\u0E07\u0E46
-      \u0E09\u0E31\u0E19\u0E0A\u0E37\u0E48\u0E2D \u0E21\u0E32\u0E23\u0E4C..."
+    textTH: "\u0E42\u0E2D\u0E49! \u0E2B\u0E19\u0E39\u0E40\u0E2A\u0E35\u0E22\u0E21\u0E32\u0E23\u0E22\u0E32\u0E17\u0E08\u0E23\u0E34\u0E07\u0E46
+      \u0E2B\u0E19\u0E39\u0E0A\u0E37\u0E48\u0E2D \u0E21\u0E32\u0E23\u0E4C..."
+    textTR: "\xC7ok \xF6z\xFCr dilerim, benim ad\u0131m Mar..."
   - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
     text: "I\u2019m Mr. Schlemmer, the gourmet wolf."
-    textTH: "\u0E09\u0E31\u0E19\u0E04\u0E37\u0E2D \u0E21\u0E34\u0E2A\u0E40\u0E15\u0E2D\u0E23\u0E4C\u0E0A\u0E40\u0E25\u0E21\u0E40\u0E21\u0E2D\u0E23\u0E4C
-      \u0E2B\u0E21\u0E32\u0E1B\u0E49\u0E48\u0E32\u0E22\u0E2D\u0E14\u0E19\u0E31\u0E01\u0E0A\u0E34\u0E21"
+    textTH: "\u0E02\u0E49\u0E32\u0E1E\u0E40\u0E08\u0E49\u0E32\u0E21\u0E35\u0E19\u0E32\u0E21\u0E27\u0E48\u0E32
+      \u0E04\u0E38\u0E13\u0E0A\u0E40\u0E25\u0E21\u0E40\u0E21\u0E2D\u0E23\u0E4C \u0E2B\u0E21\u0E32\u0E1B\u0E48\u0E32\u0E22\u0E2D\u0E14\u0E19\u0E31\u0E01\u0E0A\u0E34\u0E21"
+    textTR: 'Ben Bay Schlemmer, gurme bir kurdum.
+
+'
   - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
     text: But others like to say I resemble a fox more.
     textTH: "\u0E40\u0E40\u0E15\u0E48\u0E04\u0E19\u0E2D\u0E37\u0E48\u0E19\u0E0A\u0E2D\u0E1A\u0E1A\u0E2D\u0E01\u0E27\u0E48\u0E32
-      \u0E09\u0E31\u0E19\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E2B\u0E21\u0E32\u0E08\u0E34\u0E49\u0E07\u0E08\u0E2D\u0E01\u0E21\u0E32\u0E01\u0E01\u0E27\u0E48\u0E32"
+      \u0E02\u0E49\u0E32\u0E1E\u0E40\u0E08\u0E49\u0E32\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E2B\u0E21\u0E32\u0E08\u0E34\u0E49\u0E07\u0E08\u0E2D\u0E01\u0E21\u0E32\u0E01\u0E01\u0E27\u0E48\u0E32"
+    textTR: "Ama ba\u015Fkalar\u0131 daha \xE7ok tilkiye benzedi\u011Fimi s\xF6yler."
   - character: {fileID: 11400000, guid: 116f88c1bca8ea447a81aa1c193093c4, type: 2}
     text: Hey! You introduced yourself before I could!
-    textTH: "\u0E2D\u0E49\u0E32\u0E27\u0E19\u0E35\u0E48 \u0E04\u0E38\u0E13\u0E21\u0E32\u0E40\u0E40\u0E22\u0E48\u0E07\u0E09\u0E31\u0E19\u0E40\u0E40\u0E19\u0E30\u0E19\u0E33\u0E15\u0E31\u0E27"
+    textTH: "\u0E2D\u0E49\u0E32\u0E27\u0E19\u0E35\u0E48 \u0E04\u0E38\u0E13\u0E21\u0E32\u0E40\u0E40\u0E22\u0E48\u0E07\u0E2B\u0E19\u0E39\u0E40\u0E40\u0E19\u0E30\u0E19\u0E33\u0E15\u0E31\u0E27"
+    textTR: "Hey! Ben ad\u0131m\u0131 s\xF6yleyemeden sen kendini tan\u0131tt\u0131n!"
   - character: {fileID: 11400000, guid: 116f88c1bca8ea447a81aa1c193093c4, type: 2}
     text: Wait a second... you're a wolf?
     textTH: "\u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E01\u0E48\u0E2D\u0E19\u0E19\u0E30...
       \u0E2B\u0E21\u0E32\u0E1B\u0E48\u0E32\u0E40\u0E2B\u0E23\u0E2D"
+    textTR: "Bir saniye... kurt oldu\u011Funu mu s\xF6yledin?"
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: "Don\u2019t tell me you\u2019re going to eat me?"
     textTH: "\u0E2D\u0E22\u0E48\u0E32\u0E21\u0E32\u0E1A\u0E2D\u0E01\u0E19\u0E30\u0E27\u0E48\u0E32
-      \u0E04\u0E38\u0E13\u0E08\u0E30\u0E21\u0E32\u0E01\u0E34\u0E19\u0E09\u0E31\u0E19\u0E40\u0E40\u0E1A\u0E1A\u0E43\u0E19\u0E19\u0E34\u0E17\u0E32\u0E19"
+      \u0E04\u0E38\u0E13\u0E08\u0E30\u0E21\u0E32\u0E01\u0E34\u0E19\u0E2B\u0E19\u0E39\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E43\u0E19\u0E19\u0E34\u0E17\u0E32\u0E19"
+    textTR: Yoksa beni yiyecek misin?
   - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
     text: "Oh no, don\u2019t worry. Human meat would make me sick."
-    textTH: "\u0E42\u0E2D\u0E49\u0E44\u0E21\u0E48 \u0E44\u0E21\u0E48\u0E15\u0E49\u0E2D\u0E07\u0E01\u0E31\u0E07\u0E27\u0E25\u0E44\u0E1B
-      \u0E40\u0E19\u0E37\u0E49\u0E2D\u0E21\u0E19\u0E38\u0E29\u0E22\u0E4C\u0E16\u0E49\u0E32\u0E01\u0E34\u0E19\u0E40\u0E02\u0E49\u0E32\u0E44\u0E1B\u0E09\u0E31\u0E19\u0E08\u0E30\u0E1B\u0E48\u0E27\u0E22\u0E44\u0E14\u0E49"
+    textTH: "\u0E48\u0E44\u0E21\u0E48\u0E15\u0E49\u0E2D\u0E07\u0E01\u0E31\u0E07\u0E27\u0E25\u0E44\u0E1B
+      \u0E40\u0E08\u0E49\u0E32\u0E15\u0E31\u0E27\u0E40\u0E25\u0E47\u0E01 \u0E40\u0E19\u0E37\u0E49\u0E2D\u0E21\u0E19\u0E38\u0E29\u0E22\u0E4C\u0E19\u0E48\u0E30
+      \u0E16\u0E49\u0E32\u0E01\u0E34\u0E19\u0E40\u0E02\u0E49\u0E32\u0E44\u0E1B\u0E08\u0E30\u0E17\u0E33\u0E43\u0E2B\u0E49\u0E02\u0E49\u0E32\u0E1E\u0E40\u0E08\u0E49\u0E32\u0E1B\u0E48\u0E27\u0E22\u0E44\u0E14\u0E49"
+    textTR: "Ah hay\u0131r, merak etme. \u0130nsan eti bana dokunur."
   - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
     text: "But that\u2019s not important."
     textTH: "\u0E40\u0E40\u0E15\u0E48\u0E19\u0E31\u0E49\u0E19\u0E44\u0E21\u0E48\u0E2A\u0E33\u0E04\u0E31\u0E0D"
+    textTR: "Ama bu \xF6nemli de\u011Fil."
   - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
     text: "You\u2019ve gone off the path, little one. Why aren\u2019t you hurrying
       to leave the forest?\r\n"
     textTH: "\u0E40\u0E18\u0E2D\u0E40\u0E14\u0E34\u0E19\u0E2D\u0E2D\u0E01\u0E19\u0E2D\u0E01\u0E40\u0E2A\u0E49\u0E19\u0E17\u0E32\u0E07\u0E44\u0E1B\u0E41\u0E25\u0E49\u0E27\u0E19\u0E30
-      \u0E17\u0E33\u0E44\u0E21\u0E44\u0E21\u0E48\u0E23\u0E35\u0E1A\u0E2D\u0E2D\u0E01\u0E08\u0E32\u0E01\u0E1B\u0E48\u0E32\u0E44\u0E1B\u0E25\u0E30?"
+      \u0E17\u0E33\u0E44\u0E21\u0E44\u0E21\u0E48\u0E23\u0E35\u0E1A\u0E2D\u0E2D\u0E01\u0E08\u0E32\u0E01\u0E1B\u0E48\u0E32\u0E44\u0E1B\u0E25\u0E48\u0E30?"
+    textTR: "Yolundan sapm\u0131\u015Fs\u0131n k\xFC\xE7\xFCk han\u0131m. Neden h\xE2l\xE2
+      ormandan \xE7\u0131kmad\u0131n?\r"
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: "I wanted to pick some flowers for my neighbor. I was looking for a flower
       field around here. Once I\u2019m done, I\u2019ll leave right away."
-    textTH: "\u0E2B\u0E19\u0E39\u0E2D\u0E22\u0E32\u0E01\u0E40\u0E01\u0E47\u0E1A\u0E14\u0E2D\u0E01\u0E44\u0E21\u0E49\u0E44\u0E1B\u0E43\u0E2B\u0E49\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E19\u0E1A\u0E49\u0E32\u0E19\u0E02\u0E2D\u0E07\u0E2B\u0E19\u0E39\u0E19\u0E30\u0E04\u0E30
+    textTH: "\u0E2B\u0E19\u0E39\u0E2D\u0E22\u0E32\u0E01\u0E40\u0E01\u0E47\u0E1A\u0E14\u0E2D\u0E01\u0E44\u0E21\u0E49\u0E44\u0E1B\u0E43\u0E2B\u0E49\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E19\u0E1A\u0E49\u0E32\u0E19\u0E02\u0E2D\u0E07\u0E2B\u0E19\u0E39\u0E04\u0E48\u0E30
       \u0E40\u0E25\u0E22\u0E2B\u0E32\u0E21\u0E32\u0E17\u0E38\u0E48\u0E07\u0E14\u0E2D\u0E01\u0E44\u0E21\u0E49\u0E41\u0E16\u0E27\u0E19\u0E35\u0E49
       \u0E40\u0E2A\u0E23\u0E47\u0E08\u0E41\u0E25\u0E49\u0E27\u0E01\u0E47\u0E08\u0E30\u0E23\u0E35\u0E1A\u0E2D\u0E2D\u0E01\u0E44\u0E1B\u0E40\u0E25\u0E22\u0E04\u0E48\u0E30"
+    textTR: "Kom\u015Fum i\xE7in biraz \xE7i\xE7ek toplamak istedim. Buralarda bir
+      \xE7i\xE7ek tarlas\u0131 ar\u0131yordum. \u0130\u015Fim biter bitmez hemen
+      \xE7\u0131kaca\u011F\u0131m.\r"
   - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
     text: Hm... this is crazy, but if you say so...
     textTH: "\u0E2E\u0E37\u0E21.. \u0E19\u0E35\u0E48\u0E21\u0E31\u0E19\u0E1A\u0E49\u0E32\u0E0A\u0E31\u0E14\u0E46
       \u0E40\u0E40\u0E15\u0E48\u0E16\u0E49\u0E32\u0E40\u0E18\u0E2D\u0E1E\u0E39\u0E14\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E07\u0E31\u0E49\u0E19..."
+    textTR: "Hm... kula\u011Fa \xE7\u0131lg\u0131nca geliyor ama madem \xF6yle diyorsun...\r"
   - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
     text: "You\u2019ve picked the flowers, right?"
     textTH: "\u0E40\u0E18\u0E2D\u0E40\u0E01\u0E47\u0E1A\u0E14\u0E2D\u0E01\u0E44\u0E21\u0E49\u0E40\u0E2A\u0E23\u0E47\u0E08\u0E41\u0E25\u0E49\u0E27\u0E43\u0E0A\u0E48\u0E21\u0E31\u0E49\u0E22?"
+    textTR: "\xC7i\xE7ekleri toplad\u0131n m\u0131 bari?"
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: All done!
     textTH: "\u0E40\u0E23\u0E35\u0E22\u0E1A\u0E23\u0E49\u0E2D\u0E22\u0E40\u0E40\u0E25\u0E49\u0E27\u0E04\u0E48\u0E30"
+    textTR: "Hepsi haz\u0131r!"
   - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
     text: "Good. Then hurry to your neighbor\u2019s house. It\u2019s getting late."
-    textTH: "\u0E07\u0E31\u0E49\u0E19\u0E01\u0E47\u0E14\u0E35 \u0E23\u0E35\u0E1A\u0E44\u0E1B\u0E1A\u0E49\u0E32\u0E19\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E19\u0E1A\u0E49\u0E32\u0E19\u0E02\u0E2D\u0E07\u0E40\u0E18\u0E2D
+    textTH: "\u0E07\u0E31\u0E49\u0E19\u0E01\u0E47\u0E14\u0E35 \u0E23\u0E35\u0E1A\u0E44\u0E1B\u0E1A\u0E49\u0E32\u0E19\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E19\u0E1A\u0E49\u0E32\u0E19\u0E02\u0E2D\u0E07\u0E40\u0E18\u0E2D\u0E0B\u0E30
       \u0E15\u0E2D\u0E19\u0E19\u0E35\u0E49\u0E43\u0E01\u0E25\u0E49\u0E08\u0E30\u0E40\u0E22\u0E47\u0E19\u0E41\u0E25\u0E49\u0E27"
+    textTR: "G\xFCzel. Biraz acele etmen laz\u0131m. Hava karar\u0131yor."
+  - character: {fileID: 11400000, guid: 6b74c949874ca9d4b953bf23a7d61849, type: 2}
+    text: Good luck, little one.
+    textTH: "\u0E02\u0E49\u0E32\u0E1E\u0E40\u0E08\u0E49\u0E32\u0E02\u0E2D\u0E43\u0E2B\u0E49\u0E42\u0E0A\u0E04\u0E04\u0E38\u0E49\u0E21\u0E04\u0E23\u0E2D\u0E07
+      \u0E40\u0E08\u0E49\u0E32\u0E15\u0E31\u0E27\u0E40\u0E25\u0E47\u0E01"
+    textTR: "Bol \u015Fans, k\xFC\xE7\xFCk han\u0131m."

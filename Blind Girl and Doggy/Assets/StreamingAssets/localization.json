@@ -1,16 +1,1048 @@
 {
-  "items": {
-    "1": {
-      "en": "Hello, World!",
-      "th": "สวัสดีโลก!",
-      "fr": "Bonjour, Monde!",
-      "tr": "Merhaba, Dünya!"
+  "items": [
+    {
+      "key": 0,
+      "value": {
+        "en": "",
+        "th": "",
+        "tr": "",
+        "fr": ""
+      }
     },
-    "2": {
-      "en": "Goodbye!",
-      "th": "ลาก่อน!",
-      "fr": "Au revoir!",
-      "tr": "Hoşça kal!"
+    {
+      "key": 1,
+      "value": {
+        "en": "WARNING!!!",
+        "th": "คำเตือน!!!",
+        "tr": "UYARI!!!",
+        "fr": ""
+      }
+    },
+    {
+      "key": 2,
+      "value": {
+        "en": "Although this game features a cute art style. \n Please be aware that it contains loud sounds, jump scares, and content that may not be suitable for all players. Player discretion and caution are advised.",
+        "th": "แม้ว่าเกมนี้จะมีภาพที่ดูน่ารักๆ ใสๆ แต่โปรดทราบว่าเกมมีเสียงดัง ฉากที่ทำให้ตกใจ และเนื้อหาที่อาจไม่เหมาะกับผู้เล่นทุกคน ผู้เล่นควรใช้วิจารณญาณและระมัดระวัง",
+        "tr": "Bu oyun sevimli bir görsel stile sahip olsa da, \n Yüksek sesler, ani korkutmalar ve her oyuncuya uygun olmayabilecek içerikler içerebilir. Oyuncuların dikkatli olması ve bilinçli şekilde oynamaları tavsiye edilir.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 3,
+      "value": {
+        "en": "Player Tips!!!",
+        "th": "คำเเนะนำ!!!",
+        "tr": "Oyuncu İpuçları!!!",
+        "fr": ""
+      }
+    },
+    {
+      "key": 4,
+      "value": {
+        "en": "Put on headphones to enjoy immersive sound and enhance your gameplay experience. This game supports controllers, \n and for optimal performance, we recommend connecting \n via USB for greater stability.",
+        "th": "สวมหูฟังเพื่อเพลิดเพลินกับเสียงที่สมจริงและยกระดับ \n ประสบการณ์การเล่นเกมของคุณ เกมนี้รองรับคอนโทรลเลอร์ และเราขอแนะนำให้ใช้คอนโทรลเลอร์เเบบเชื่อมต่อผ่าน USB \n เพื่อความเสถียรยิ่งขึ้น",
+        "tr": "Kapsamlı ses deneyimi ve oyun keyfini artırmak için kulaklık takın. Bu oyun kontrolcüleri destekler,\n en iyi performans ve daha yüksek kararlılık adına USB ile bağlantı yapmanızı öneririz.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 5,
+      "value": {
+        "en": "Back",
+        "th": "กลับ",
+        "tr": "Geri",
+        "fr": ""
+      }
+    },
+    {
+      "key": 6,
+      "value": {
+        "en": "New Game",
+        "th": "เริ่มเกมใหม่",
+        "tr": "Yeni Oyun",
+        "fr": ""
+      }
+    },
+    {
+      "key": 7,
+      "value": {
+        "en": "Continue",
+        "th": "เล่นเกมต่อ",
+        "tr": "Devam Et",
+        "fr": ""
+      }
+    },
+    {
+      "key": 8,
+      "value": {
+        "en": "Controls",
+        "th": "การควบคุม",
+        "tr": "Kontroller",
+        "fr": ""
+      }
+    },
+    {
+      "key": 9,
+      "value": {
+        "en": "Settings",
+        "th": "การตั้งค่า",
+        "tr": "Ayarlar",
+        "fr": ""
+      }
+    },
+    {
+      "key": 10,
+      "value": {
+        "en": "Quit",
+        "th": "ออกเกม",
+        "tr": "Çıkış",
+        "fr": ""
+      }
+    },
+    {
+      "key": 11,
+      "value": {
+        "en": "Version 1.1",
+        "th": "เวอร์ชัน 1.1",
+        "tr": "Sürüm 1.1",
+        "fr": ""
+      }
+    },
+    {
+      "key": 12,
+      "value": {
+        "en": "Master Volume",
+        "th": "เสียงโดยรวม",
+        "tr": "Ses Düzeyi",
+        "fr": ""
+      }
+    },
+    {
+      "key": 13,
+      "value": {
+        "en": "Music",
+        "th": "เสียงเพลง",
+        "tr": "Müzik",
+        "fr": ""
+      }
+    },
+    {
+      "key": 14,
+      "value": {
+        "en": "Sound Effect",
+        "th": "เอฟเฟกต์เสียง",
+        "tr": "Ses efekti",
+        "fr": ""
+      }
+    },
+    {
+      "key": 15,
+      "value": {
+        "en": "Language",
+        "th": "เปลี่ยนภาษา",
+        "tr": "Dil",
+        "fr": ""
+      }
+    },
+    {
+      "key": 16,
+      "value": {
+        "en": "FPS Limit",
+        "th": "กำหนดค่า FPS สูงสุด",
+        "tr": "FPS Sınırı",
+        "fr": ""
+      }
+    },
+    {
+      "key": 17,
+      "value": {
+        "en": "Select Option",
+        "th": "เลือกตัวเลือก",
+        "tr": "Seçenek Seç",
+        "fr": ""
+      }
+    },
+    {
+      "key": 18,
+      "value": {
+        "en": "Adjust Option",
+        "th": "ปรับค่าที่เลือก",
+        "tr": "Seçenek Ayarla",
+        "fr": ""
+      }
+    },
+    {
+      "key": 19,
+      "value": {
+        "en": "Switch Tab",
+        "th": "สลับเเท็บ",
+        "tr": "Sekme Değiştir",
+        "fr": ""
+      }
+    },
+    {
+      "key": 20,
+      "value": {
+        "en": "You have a saved game. Starting a new game will erase your saved progress permanently. Are you sure you want to continue?",
+        "th": "คุณมีไฟล์เกมที่บันทึกไว้ การเริ่มเกมใหม่จะทำให้ความคืบหน้าที่บันทึกไว้ของคุณถูกลบอย่างถาวร คุณแน่ใจหรือไม่ว่าต้องการดำเนินการต่อ",
+        "tr": "Kayıtlı bir oyununuz var. Yeni bir oyuna başlamak, mevcut ilerlemenizi kalıcı olarak silecektir. Devam etmek istediğinizden emin misiniz?",
+        "fr": ""
+      }
+    },
+    {
+      "key": 21,
+      "value": {
+        "en": "Bye, Save File!",
+        "th": "บ๊ายบาย ไฟล์เซฟ",
+        "tr": "Güle güle, Kayıtlı Dosya",
+        "fr": ""
+      }
+    },
+    {
+      "key": 22,
+      "value": {
+        "en": "Just Kidding!",
+        "th": "เเหม ล้อเล่นน่า",
+        "tr": "Şaka Yaptım!",
+        "fr": ""
+      }
+    },
+    {
+      "key": 23,
+      "value": {
+        "en": "Curious about what each button does? Haha... Not telling! That would ruin the fun!",
+        "th": "อยากรู้เหรอว่าปุ่มแต่ละปุ่มทำอะไร? ฮ่าๆ... ไม่บอกหรอก! บอกไปก็หมดสนุกน่ะสิ!",
+        "tr": "Butonların ne işe yaradığını mı merak ediyorsun? Haha... Söylemeyeceğim ki! \n Eğlenceyi bozmak istemem!",
+        "fr": ""
+      }
+    },
+    {
+      "key": 24,
+      "value": {
+        "en": "Loading",
+        "th": "กำลังโหลด",
+        "tr": "Yükleniyor",
+        "fr": ""
+      }
+    },
+    {
+      "key": 25,
+      "value": {
+        "en": "Speed up",
+        "th": "เร่งความเร็ว",
+        "tr": "Hızlandır",
+        "fr": ""
+      }
+    },
+    {
+      "key": 26,
+      "value": {
+        "en": "Speed down",
+        "th": "ลดความเร็ว",
+        "tr": "Yavaşlat",
+        "fr": ""
+      }
+    },
+    {
+      "key": 27,
+      "value": {
+        "en": "Skip",
+        "th": "ข้าม",
+        "tr": "Atla",
+        "fr": ""
+      }
+    },
+    {
+      "key": 28,
+      "value": {
+        "en": "How To Play",
+        "th": "สอนเล่นนะจ๊ะ",
+        "tr": "Nasıl Oynanır",
+        "fr": ""
+      }
+    },
+    {
+      "key": 29,
+      "value": {
+        "en": "Previous",
+        "th": "ก่อนหน้า",
+        "tr": "Önceki",
+        "fr": ""
+      }
+    },
+    {
+      "key": 30,
+      "value": {
+        "en": "Next",
+        "th": "ถัดไป",
+        "tr": "Sonraki",
+        "fr": ""
+      }
+    },
+    {
+      "key": 31,
+      "value": {
+        "en": "Exit",
+        "th": "ออก",
+        "tr": "Çıkış",
+        "fr": ""
+      }
+    },
+    {
+      "key": 32,
+      "value": {
+        "en": "It's time to relax!!!",
+        "th": "ได้เวลาพักผ่อนหย่อนใจ!!!",
+        "tr": "Rahatlama zamanı!!!",
+        "fr": ""
+      }
+    },
+    {
+      "key": 33,
+      "value": {
+        "en": "Resume",
+        "th": "เล่นเกมต่อ",
+        "tr": "Devam Et",
+        "fr": ""
+      }
+    },
+    {
+      "key": 34,
+      "value": {
+        "en": "Exit to Title",
+        "th": "กลับไปที่หน้าหลัก",
+        "tr": "Ana Menüye Dön",
+        "fr": ""
+      }
+    },
+    {
+      "key": 35,
+      "value": {
+        "en": "Select",
+        "th": "เลือก",
+        "tr": "Seç",
+        "fr": ""
+      }
+    },
+    {
+      "key": 36,
+      "value": {
+        "en": "Enter",
+        "th": "ตกลง",
+        "tr": "Tamam",
+        "fr": ""
+      }
+    },
+    {
+      "key": 37,
+      "value": {
+        "en": "This game has an auto-save system that saves your progress periodically. If you exit before it saves, you will lose any unsaved progress. When you return, the game will start from the latest save point. Are you sure you want to go back to the title?",
+        "th": "เกมนี้มีระบบบันทึกอัตโนมัติที่จะบันทึกความคืบหน้าของคุณเป็นระยะๆ หากคุณออกจากเกมก่อนที่จะบันทึก ความคืบหน้าที่ไม่ได้บันทึกจะหายไป เมื่อกลับมาเล่นอีกครั้ง เกมจะเริ่มจากจุดบันทึกล่าสุด คุณแน่ใจหรือไม่ว่าต้องการกลับไปที่หน้าเมนูหลัก",
+        "tr": "Bu oyun, ilerlemenizi belirli aralıklarla otomatik olarak kaydeden bir otomatik kayıt sistemine sahiptir. Kayıt yapılmadan çıkarsanız, kaydedilmemiş ilerlemenizi kaybedersiniz. Geri döndüğünüzde, oyun en son kayıt noktasından başlayacaktır. Ana menüye dönmek istediğinizden emin misiniz?",
+        "fr": ""
+      }
+    },
+    {
+      "key": 38,
+      "value": {
+        "en": "Of Course!",
+        "th": "เเน่นอนอยู่เเล้ว",
+        "tr": "Elbette!",
+        "fr": ""
+      }
+    },
+    {
+      "key": 39,
+      "value": {
+        "en": "Inventory",
+        "th": "ช่องเก็บของ",
+        "tr": "Envanter",
+        "fr": ""
+      }
+    },
+    {
+      "key": 40,
+      "value": {
+        "en": "Game Saved",
+        "th": "บันทึกเกมเเล้ว",
+        "tr": "Oyun Kaydedildi",
+        "fr": ""
+      }
+    },
+    {
+      "key": 41,
+      "value": {
+        "en": "Date Unknown",
+        "th": "วันที่ไม่สามารถระบุได้",
+        "tr": "Tarih Bilinmiyor",
+        "fr": ""
+      }
+    },
+    {
+      "key": 42,
+      "value": {
+        "en": "This note has not been found yet, but there's likely something hidden inside. Take a look around... Maybe the answer you've been seeking is inside.",
+        "th": "ยังไม่มีใครพบโน้ตนี้ แต่ดูเหมือนว่ามีบางอย่างซ่อนอยู่ข้างในนั้น ลองไปสำรวจรอบๆ ดูสิ... บางทีคุณอาจจะเจอคำตอบที่คุณตามหาอยู่ก็ได้",
+        "tr": "Bu not henüz bulunamadı, ancak içinde muhtemelen gizli bir şey var. Etrafa bir göz at... Belki de aradığın cevap onun içinde.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 43,
+      "value": {
+        "en": "Retry",
+        "th": "เริ่มด่านนี้ใหม่",
+        "tr": "Yeniden Dene",
+        "fr": ""
+      }
+    },
+    {
+      "key": 44,
+      "value": {
+        "en": "Respawn",
+        "th": "เกิดใหม่",
+        "tr": "Yeniden Doğ",
+        "fr": ""
+      }
+    },
+    {
+      "key": 45,
+      "value": {
+        "en": "Something is hidden... outside the world of this game.",
+        "th": "มีบางอย่างถูกเก็บซ่อนที่ข้างนอกเกมนี้",
+        "tr": "Bu oyun dünyasının dışında... bir şey gizli.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 46,
+      "value": {
+        "en": "When you collect all the symbols, you will uncover a hidden secret code.",
+        "th": "เมื่อคุณเจอสัญลักษณ์ครบทั้งหมด ลองเอาเรียงกันดูสิ คุณจะได้รหัสลับ",
+        "tr": "Tüm sembolleri topladığında, gizli bir şifreyi ortaya çıkaracaksın.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 47,
+      "value": {
+        "en": "It seems like there's a sound coming from behind you. Why not check it out?",
+        "th": "ดูเหมือนว่าจะมีเสียงมาจากด้านหลังคุณ ลองไปตรวจสอบดูสิ",
+        "tr": "Sanki arkandan ses geliyor gibi. Neden gidip bir bakmıyorsun?",
+        "fr": ""
+      }
+    },
+    {
+      "key": 48,
+      "value": {
+        "en": "Change number",
+        "th": "เปลี่ยนตัวเลข",
+        "tr": "Numarayı değiştir",
+        "fr": ""
+      }
+    },
+    {
+      "key": 49,
+      "value": {
+        "en": "Change digit place",
+        "th": "เปลี่ยนหลักของตัวเลข",
+        "tr": "Basamak yerini değiştir",
+        "fr": ""
+      }
+    },
+    {
+      "key": 50,
+      "value": {
+        "en": "Exit the game and make the apple pie disappear from the basket with your own hands (True > False).",
+        "th": "ออกจากเกม \n เเล้วไปทำให้พายเเอปเปิ้ลหายไปจากตะกร้าด้วยมือของคุณ (True > False)",
+        "tr": "Oyundan çık ve elinle sepetteki elmalı turtayı yok et (True > False).",
+        "fr": ""
+      }
+    },
+    {
+      "key": 51,
+      "value": {
+        "en": "Rotate \n the short hand",
+        "th": "หมุนเข็มสั้น",
+        "tr": "Döndür \n akrep",
+        "fr": ""
+      }
+    },
+    {
+      "key": 52,
+      "value": {
+        "en": "Rotate \n the long hand",
+        "th": "หมุนเข็มยาว",
+        "tr": "Döndür \n yelkovan",
+        "fr": ""
+      }
+    },
+    {
+      "key": 53,
+      "value": {
+        "en": "Not enough stamina T_T",
+        "th": "สเตมิน่าไม่เพียงพอ T_T",
+        "tr": "Yeterli enerji yok T_T",
+        "fr": ""
+      }
+    },
+    {
+      "key": 54,
+      "value": {
+        "en": "Too far :(",
+        "th": "ไกลเกินไป :(",
+        "tr": "Çok uzaktasın :(",
+        "fr": ""
+      }
+    },
+    {
+      "key": 55,
+      "value": {
+        "en": "No barking while moving!",
+        "th": "เราไม่เห่าขณะเคลื่อนที่อยู่",
+        "tr": "Hareket halindeyken havlamak yok!",
+        "fr": ""
+      }
+    },
+    {
+      "key": 56,
+      "value": {
+        "en": "Nothing for Margarete to do here",
+        "th": "ไม่มีอะไรให้มาร์กาเร็ตทำตรงนี้",
+        "tr": "Margarete'nin burada yapacak bir şeyi yok.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 57,
+      "value": {
+        "en": "Objective: ",
+        "th": "ภารกิจ: ",
+        "tr": "Görev: ",
+        "fr": ""
+      }
+    },
+    {
+      "key": 58,
+      "value": {
+        "en": "Help Margarete get the snack basket",
+        "th": "ช่วยพามาร์กาเร็ตไปหยิบตะกร้าขนม",
+        "tr": "Margarete'nin atıştırmalık sepetini almasına yardım et",
+        "fr": ""
+      }
+    },
+    {
+      "key": 59,
+      "value": {
+        "en": "Go back and talk to Mommy",
+        "th": "กลับไปคุยกับคุณเเม่",
+        "tr": "Geri dön ve Anne ile konuş",
+        "fr": ""
+      }
+    },
+    {
+      "key": 60,
+      "value": {
+        "en": "Leave the house",
+        "th": "ออกจากบ้าน",
+        "tr": "Evden ayrıl",
+        "fr": ""
+      }
+    },
+    {
+      "key": 61,
+      "value": {
+        "en": "Safely guide Margarete out of the forest",
+        "th": "นำทางให้มาร์กาเร็ตออกจากป่าอย่างปลอดภัย",
+        "tr": "Margarete'yi ormandan güvenli bir şekilde çıkar.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 62,
+      "value": {
+        "en": "Lead Margarete to pick flowers",
+        "th": "พามาร์กาเร็ตไปเก็บดอกไม้",
+        "tr": "Margarete'yi çiçek toplaması için yönlendir",
+        "fr": ""
+      }
+    },
+    {
+      "key": 63,
+      "value": {
+        "en": "Lead Margarete out of here",
+        "th": "พามาร์กาเร็ตออกไปจากที่นี่",
+        "tr": "Margarete'yi buradan çıkar",
+        "fr": ""
+      }
+    },
+    {
+      "key": 64,
+      "value": {
+        "en": "Press <color=#7C3F58>←/→</color> to move the dog (player).",
+        "th": "กดปุ่ม <color=#7C3F58>←/→</color> เพื่อควบคุมน้องหมา (ตัวคุณ)",
+        "tr": "Köpeği hareket ettirmek için <color=#7C3F58>←/→</color> tuşuna bas (oyuncu) ",
+        "fr": ""
+      }
+    },
+    {
+      "key": 65,
+      "value": {
+        "en": "Margarete is blind. Help her find you by barking! \n Press <color=#7C3F58>Z</color> to call her here!",
+        "th": "มากาเร็ตตัวน้อยนั้นตาบอด ใช้การเห่าเพื่อพาเธอเดินให้ถูกทาง \n กดปุ่ม <color=#7C3F58>Z</color> เพื่อเรียกเธอไปยังจุดที่คุณต้องการ",
+        "tr": "Margarete kör. Havlayarak seni bulmasını sağla \n Onu buraya çağırmak için <color=#7C3F58>Z</color> tuşuna bas",
+        "fr": ""
+      }
+    },
+    {
+      "key": 66,
+      "value": {
+        "en": "If you spot a symbol above Margarete's head, it indicates that she can perform an action there. Press <color=#7C3F58>X</color> to bark twice and signal her!",
+        "th": "หากคุณเห็นสัญลักษณ์เหนือหัวของมาร์กาเร็ต แสดงว่าตรงนั้นเธอสามารถทำอะไรบางอย่างได้ \n กดปุ่ม <color=#7C3F58>X</color> เป็นการเห่าสองครั้งเพื่อให้สัญญาณกับเธอ",
+        "tr": "Eğer Margarete'nin başının üzerinde bir sembol görürsen bu onun orada bir eylem gerçekleştirebileceğini belirtir. İki kez havlayıp onu uyarmak için <color=#7C3F58>X</color> tuşuna bas!",
+        "fr": ""
+      }
+    },
+    {
+      "key": 67,
+      "value": {
+        "en": "One last tip before your journey begins: <color=#7C3F58>The dog has stamina.</color> Barking drains it. If it's empty, you can't signal Margarete until it recovers. Stamina refills over time. \n <color=#7C3F58>Bark wisely.</color> Enjoy the game!",
+        "th": "คำเเนะนำสุดท้ายก่อนที่คุณจะเริ่มการผจญภัย: <color=#7C3F58>น้องหมามีสเตมิน่า</color> การเห่าจะใช้สเตมิน่าจำนวนหนึ่ง ถ้าหากสเตมิน่าหมด คุณจะไม่สามารถเห่าให้สัญญาณกับมาร์กาเร็ตได้ ซึ่งสเตมิน่าจะค่อยๆใช้เวลาฟื้นฟู <color=#7C3F58>ดังนั้นจงเห่าอย่างฉลาด</color> ขอให้สนุกกับเกมจ้า",
+        "tr": "Yolculuğun başlamadan önce son bir ipucu: <color=#7C3F58>Köpeğin enerjisi vardır.</color> Havlamak bu enerjiyi tüketir. Enerji kalmazsa Margarete'e sinyal veremezsin ve tekrar dolmasını beklemen gerekir. \n <color=#7C3F58> Akıllıca havla.</color> İyi oyunlar!",
+        "fr": ""
+      }
+    },
+    {
+      "key": 68,
+      "value": {
+        "en": "Wow! It seems like we've discovered <color=#7C3F58>a mysterious spot!</color>",
+        "th": "ว้าว! ดูเหมือนพวกเราจะค้นพบ<color=#7C3F58>จุดปริศนา</color>",
+        "tr": "Vay canına! Görünüşe göre <color=#7C3F58>a gizemli bir yer</color> keşfettik!",
+        "fr": ""
+      }
+    },
+    {
+      "key": 69,
+      "value": {
+        "en": "Press <color=#7C3F58>Q</color> to dig up the mysterious spot. \n You might uncover something interesting!",
+        "th": "กดปุ่ม <color=#7C3F58>Q</color> เพื่อขุดจุดปริศนา คุณอาจจะเจออะไรที่น่าสนใจก็ได้นะ",
+        "tr": "Gizemli yeri kazmak için <color=#7C3F58>Q</color> tuşuna basın. \n İlginç bir şey ortaya çıkarabilirsin!",
+        "fr": ""
+      }
+    },
+    {
+      "key": 70,
+      "value": {
+        "en": "You can now find mysterious spots across the map. <color=#7C3F58>Keep an eye out!</color>",
+        "th": "ตอนนี้คุณสามารถค้นพบจุดปริศนา ตามที่ต่างๆได้แล้ว <color=#7C3F58>คอยสังเกตด้วยละ</color>",
+        "tr": "Artık harita genelinde gizemli yerleri bulabilirsin. <color=#7C3F58>Gözünü dört aç!</color>",
+        "fr": ""
+      }
+    },
+    {
+      "key": 71,
+      "value": {
+        "en": "Margarete has picked up the basket. Press Shift to open the inventory.",
+        "th": "มาร์กาเร็ตหยิบตะกร้าขึ้นมาแล้ว กดปุ่ม Shift เพื่อเปิดช่องเก็บของ",
+        "tr": "Margarete sepeti aldı. Envanteri açmak için Shift tuşuna bas.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 72,
+      "value": {
+        "en": "Margarete has picked up the acorn.",
+        "th": "มาร์กาเร็ตได้เก็บลูกโอ๊กขึ้นมา",
+        "tr": "Margarete meşe palamudunu aldı.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 73,
+      "value": {
+        "en": "Margarete has used the acorn.",
+        "th": "มาร์กาเร็ตได้ขว้างลูกโอ๊กสุดเเรงเกิด",
+        "tr": "Margarete meşe palamudunu kullandı.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 74,
+      "value": {
+        "en": "Margarete has discovered a hidden note. Press E to open the note inventory.",
+        "th": "มาร์กาเร็ตค้นพบบันทึกลับ กดปุ่ม E เพื่อเปิดอ่านบันทึกที่เก็บมาได้",
+        "tr": "Margarete gizli bir not keşfetti. Notu envanterde açmak için E tuşuna bas.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 75,
+      "value": {
+        "en": "Margarete has discovered a hidden note.",
+        "th": "มาร์กาเร็ตค้นพบบันทึกลับ ",
+        "tr": "Margarete gizli bir not keşfetti.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 76,
+      "value": {
+        "en": "Margarete has picked up the gloves.",
+        "th": "มาร์กาเร็ตได้เก็บถุงมือขึ้นมา",
+        "tr": "Margarete eldivenleri aldı.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 77,
+      "value": {
+        "en": "Margarete has used the gloves and then picked up the screwdriver.",
+        "th": "มาร์กาเร็ตได้ใช้ถุงมือคุ้ยเศษเนื้อ เเละเก็บไขควงมา",
+        "tr": "Margarete eldivenleri kullandı ve ardından tornavidayı aldı.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 78,
+      "value": {
+        "en": "Margarete has used the screwdriver.",
+        "th": "มาร์กาเร็ตได้ใช้ไขควงพังประตู",
+        "tr": "Margarete tornavidayı kullandı.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 79,
+      "value": {
+        "en": "Margarete used the stairway key. The second floor is now unlocked.",
+        "th": "มาร์กาเร็ตใช้กุญเเจบันได ตอนนี้สามารถขึ้นไปชั้น 2 ได้เเล้ว",
+        "tr": "Margarete merdiven anahtarını kullandı. İkinci kat açıldı.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 80,
+      "value": {
+        "en": "Margarete has picked up the plunger.",
+        "th": "มาร์การเร็ตได้เก็บที่ปั๊มส้วมมา",
+        "tr": "Margarete tuvalet pompasını aldı.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 81,
+      "value": {
+        "en": "Margarete has used the plunger and then picked up the flower coin.",
+        "th": "มาร์กาเร็ตได้ใช้ที่ปั๊มส้วม เเละได้เหรียญดอกไม้สุดสกปรกมา",
+        "tr": "Margarete tuvalet pompasını kullandı ve ardından çiçek parasını aldı. ",
+        "fr": ""
+      }
+    },
+    {
+      "key": 82,
+      "value": {
+        "en": "Margarete has picked up the oil.",
+        "th": "มาร์กาเร็ตได้เก็บนำ้มันมา",
+        "tr": "Margarete yağı aldı.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 83,
+      "value": {
+        "en": "Margarete used the oil with the doll. The doll is now functional.",
+        "th": "มาร์กาเร็ตใช้นำ้มันกับตุ๊กตา ตอนนี้ตุ๊กตาสามารถทำงานได้เเล้ว",
+        "tr": "Margarete yağı bebek üzerinde kullandı. Bebek artık çalışıyor.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 84,
+      "value": {
+        "en": "Margarete has picked up the crowbar.",
+        "th": "มาร์กาเร็ตได้เก็บชะเเลงมา",
+        "tr": "Margarete levyeyi aldı.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 85,
+      "value": {
+        "en": "Margarete used the crowbar.",
+        "th": "มาร์กาเร็ตได้ใช้ชะเเลง",
+        "tr": "Margarete levyeyi kullandı.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 86,
+      "value": {
+        "en": "Margarete gave the mouse some cheese and received the clock hands in return.",
+        "th": "มาร์กาเร็ตได้ให้ชีสกับเจ้าจี๊ดๆ เเละได้เข็มนาฬิกาจากการเเลกเปลี่ยน",
+        "tr": "Margarete fareye biraz peynir verdi ve karşılığında saat ibrelerini aldı.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 87,
+      "value": {
+        "en": "Margarete has used the exit key.",
+        "th": "มาร์กาเร็ตได้ใช้กุญเเจทางออก",
+        "tr": "Margarete çıkış anahtarını kullandı.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 88,
+      "value": {
+        "en": "Margarete has gotten the flower coin.",
+        "th": "มาร์กาเร็ตได้รับเหรียญดอกไม้ หลังจากเเก้ปริศนาได้",
+        "tr": "Margarete çiçek parasını aldı.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 89,
+      "value": {
+        "en": "Margarete has put the flower coin.",
+        "th": "มาร์กาเร็ตได้ใส่เหรียญดอกไม้เข้าไป",
+        "tr": "Margarete çiçek parasını koydu.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 90,
+      "value": {
+        "en": "You need to find something to put in it.",
+        "th": "ต้องหาอะไรบางอย่างมาใส่ในช่องนี้",
+        "tr": "İçine koymak için bir şey bulman gerekiyor.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 91,
+      "value": {
+        "en": "Margarete has put all the flower coins in and then gotten the exit key.",
+        "th": "มาร์กาเร็ตได้ใส่เหรียญดอกไม้ทั้งหมดเเล้ว เเละได้รับกุญเเจทางออก",
+        "tr": "Margarete tüm çiçek paralarını koydu ve ardından çıkış anahtarını aldı.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 92,
+      "value": {
+        "en": "Margarete has picked up the stairway key.",
+        "th": "มาร์กาเร็ตได้เก็บกุญเเจบันไดมา",
+        "tr": "Margarete merviden anahtarını aldı.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 93,
+      "value": {
+        "en": "Margarete has picked up the ladder.",
+        "th": "มาร์กาเร็ตได้เก็บบันไดงูมา",
+        "tr": "Margarete merdiveni aldı.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 94,
+      "value": {
+        "en": "Margarete has picked up the cheese.",
+        "th": "มาร์กาเร็ตได้เก็บชีสสุดอร่อยมา",
+        "tr": "Margarete peyniri aldı.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 95,
+      "value": {
+        "en": "Oops, Your inventory is full.",
+        "th": "อุ๊บ ช่องเก็บของเต็มเเล้ว",
+        "tr": "Eyvah, envanterin dolu.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 96,
+      "value": {
+        "en": "Since I met you, everything has changed.",
+        "th": "ตั้งเเต่ที่ฉันเจอกับเธอ ทุกอย่างก็เปลี่ยนไป",
+        "tr": "Seninle tanıştıktan sonra her şey değişti.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 97,
+      "value": {
+        "en": "I've gotten to eat delicious food.",
+        "th": "ฉันได้กินอาหารอร่อยๆ เยอะเลย",
+        "tr": "Lezzetli yiyecekler yeme fırsatı buldum.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 98,
+      "value": {
+        "en": "and I've met new friends",
+        "th": "เเละฉันก็ได้เจอกับเพื่อนใหม่",
+        "tr": "ve yeni arkadaşlar edindim",
+        "fr": ""
+      }
+    },
+    {
+      "key": 99,
+      "value": {
+        "en": "I really wish this moment could last forever.",
+        "th": "อยากให้ช่วงเวลานี้อยู่ตลอดไปจัง",
+        "tr": "Keşke bu an sonsuza dek sürse.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 100,
+      "value": {
+        "en": "The answer will appear when the hexagon, circle, and nonagon are aligned.",
+        "th": "คำตอบที่ตามหาจะปรากฏ เมื่อหกเหลี่ยม วงกลม เเละเก้าเหลี่ยมมารวมตัวกัน",
+        "tr": "Altıgen, daire ve dokuzgen hizalandığında cevap görünecek.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 101,
+      "value": {
+        "en": "Ask Veronika to eat",
+        "th": "ขอร้องให้เวโรนิก้ากิน",
+        "tr": "Veronika'dan yemesini iste",
+        "fr": ""
+      }
+    },
+    {
+      "key": 102,
+      "value": {
+        "en": "Eat it yourself",
+        "th": "กินเองก็ได้",
+        "tr": "Kendin ye",
+        "fr": ""
+      }
+    },
+    {
+      "key": 103,
+      "value": {
+        "en": "PRESS Z BUTTON TO START",
+        "th": "กดปุ่ม Z เพื่อเริ่มต้นการผจญภัย",
+        "tr": "BAŞLAMAK İÇİN Z \n TUŞUNA BASIN",
+        "fr": ""
+      }
+    },
+    {
+      "key": 104,
+      "value": {
+        "en": "Critical Error",
+        "th": "เกิดข้อผิดพลาดขั้นวิกฤต",
+        "tr": "Kritik Hata",
+        "fr": ""
+      }
+    },
+    {
+      "key": 105,
+      "value": {
+        "en": "Error 314 \n item no.1 not found",
+        "th": "ข้อผิดพลาดที่ 314 \n ไม่พบไอเทมหมายเลข 1",
+        "tr": "Hata 314 \n item no.1 bulunamadı",
+        "fr": ""
+      }
+    },
+    {
+      "key": 106,
+      "value": {
+        "en": "Error Error",
+        "th": "เกิดข้อผิดพลาด เกิดข้อผิดพลาด",
+        "tr": "Hata Hata",
+        "fr": ""
+      }
+    },
+    {
+      "key": 107,
+      "value": {
+        "en": "Help Me!!",
+        "th": "ช่วยหนูด้วย!!",
+        "tr": "Yardım Et!!",
+        "fr": ""
+      }
+    },
+    {
+      "key": 108,
+      "value": {
+        "en": "The predetermined storyline cannot proceed",
+        "th": "ไม่สามารถดำเนินเรื่องราวที่กำหนดไว้ต่อได้",
+        "tr": "Önceden belirlenmiş hikaye ilerleyemiyor.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 109,
+      "value": {
+        "en": "It's too late",
+        "th": "มันสายเกินไปเเล้ว",
+        "tr": "Çok geç",
+        "fr": ""
+      }
+    },
+    {
+      "key": 110,
+      "value": {
+        "en": "Fatal Error",
+        "th": "ข้อผิดพลาดร้ายเเรง",
+        "tr": "Ölümcül Hata",
+        "fr": ""
+      }
+    },
+    {
+      "key": 111,
+      "value": {
+        "en": "Fix it up!!",
+        "th": "เเก้ไขโดยด่วน!!",
+        "tr": "Düzelt şunu!!",
+        "fr": ""
+      }
+    },
+    {
+      "key": 112,
+      "value": {
+        "en": "You really think that old hag loves you? Haha, don't fool yourself. \n She’s just drowning in guilt for all the horrible things she’s done.",
+        "th": "เเกคิดจริงๆเหรอว่า ยัยเเก่นั้นรักเเกนะ ฮาฮ่า อย่าหลอกตัวเองเลย \n ที่มันดีกับเเกก็เเค่เพราะ มันรู้สึกผิดกับสิ่งเลวร้ายที่มันทำลงไปเเค่นั้นเเหละ",
+        "tr": "O yaşlı cadının seni sevdiğini mi sanıyorsun? Haha, kendini kandırma. \n Yaptığı tüm korkunç şeyler yüzünden suçluluk içinde boğuluyor.",
+        "fr": ""
+      }
+    },
+    {
+      "key": 113,
+      "value": {
+        "en": "English",
+        "th": "อังกฤษ",
+        "tr": "İngilizce",
+        "fr": ""
+      }
+    },
+    {
+      "key": 114,
+      "value": {
+        "en": "Thai",
+        "th": "ไทย",
+        "tr": "Tayca",
+        "fr": ""
+      }
+    },
+    {
+      "key": 115,
+      "value": {
+        "en": "Turkish",
+        "th": "ตุรกี",
+        "tr": "Türkçe",
+        "fr": ""
+      }
     }
-  }
+  ]
 }

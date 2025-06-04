@@ -14,7 +14,7 @@ public class Potions : MonoBehaviour, Interactable
     [SerializeField] private AudioClip drinkClip;
 
     private bool isAdd = false;
-    private int effectDurationInFrames = 25;
+    private int effectDurationInFrames = 30;
     private BoxCollider2D potionCollider;
     private GirlController girlController;
     private DogController dogController;
@@ -57,11 +57,11 @@ public class Potions : MonoBehaviour, Interactable
 
     void ApplyRandomEffect()
     {
-        int effectId = Random.Range(1, 7);
+        int effectId = Random.Range(1, 9);
 
         switch (effectId)
         {
-            case 1:
+            case 1 or 7 or 8:
                 dogController.AdjustStamina(0.5f);
                 break;
             case 2:

@@ -17,14 +17,18 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: "Look at this little one. She\u2019s adorable."
     textTH: "\u0E14\u0E39\u0E2A\u0E34 \u0E40\u0E14\u0E47\u0E01\u0E04\u0E19\u0E19\u0E35\u0E49\u0E19\u0E48\u0E32\u0E23\u0E31\u0E01\u0E08\u0E31\u0E07\u0E40\u0E25\u0E22"
+    textTR: "\u015Eu k\xFC\xE7\xFCk k\u0131za bak. Ne kadar da sevimli."
   - character: {fileID: 11400000, guid: 50d990fd5d67a144ea03bf1afcf087c1, type: 2}
     text: So, what should we name her, dear?
     textTH: "\u0E27\u0E48\u0E32\u0E41\u0E15\u0E48\u2026 \u0E25\u0E39\u0E01\u0E08\u0E30\u0E15\u0E31\u0E49\u0E07\u0E0A\u0E37\u0E48\u0E2D\u0E2B\u0E19\u0E39\u0E19\u0E49\u0E2D\u0E22\u0E04\u0E19\u0E19\u0E35\u0E49\u0E27\u0E48\u0E32\u0E2D\u0E30\u0E44\u0E23\u0E14\u0E35\u0E08\u0E4A\u0E30 "
+    textTR: "Peki, ona ne isim verelim, hayat\u0131m?\r\n"
   - character: {fileID: 11400000, guid: ec71ebebb4b79ab41837437dd12ecaa6, type: 2}
     text: ....
     textTH: ....
+    textTR: ....
   - character: {fileID: 11400000, guid: ec71ebebb4b79ab41837437dd12ecaa6, type: 2}
     text: "I\u2019ll name her Margarete, Mom.\r"
-    textTH: "\u0E08\u0E30\u0E15\u0E31\u0E49\u0E07\u0E0A\u0E37\u0E48\u0E2D\u0E40\u0E18\u0E2D\u0E27\u0E48\u0E32
+    textTH: "\u0E2B\u0E19\u0E39\u0E08\u0E30\u0E15\u0E31\u0E49\u0E07\u0E0A\u0E37\u0E48\u0E2D\u0E40\u0E18\u0E2D\u0E27\u0E48\u0E32
       \u0E21\u0E32\u0E23\u0E4C\u0E01\u0E32\u0E40\u0E23\u0E47\u0E15\u0E04\u0E48\u0E30
       \u0E04\u0E38\u0E13\u0E40\u0E40\u0E21\u0E48"
+    textTR: "Ona Margarete ad\u0131n\u0131 verece\u011Fim, anne."

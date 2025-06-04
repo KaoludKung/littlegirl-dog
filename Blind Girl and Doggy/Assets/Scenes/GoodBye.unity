@@ -1302,8 +1302,7 @@ MonoBehaviour:
   dialogueOption: 1
   dialogueUI: {fileID: 1794931840}
   uiManagerObject: {fileID: 250107824}
-  animators:
-  - {fileID: 1858089134}
+  animators: []
   itemActives: []
   resetAnimation: 0
   playerEnable: 0
@@ -3160,7 +3159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventID: 612
-  TriggerEventID: 613
+  TriggerEventID: 0
 --- !u!114 &1713874416
 MonoBehaviour:
   m_ObjectHideFlags: 0

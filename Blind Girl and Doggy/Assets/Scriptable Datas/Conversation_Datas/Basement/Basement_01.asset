@@ -16,14 +16,18 @@ MonoBehaviour:
   lines:
   - character: {fileID: 11400000, guid: f0ebaf5b173e2be4996ddf9f14201427, type: 2}
     text: Oh, my buddy, I'm glad you're safe.
-    textTH: "\u0E42\u0E2D\u0E49\u0E1E\u0E23\u0E30\u0E40\u0E08\u0E49\u0E48\u0E32 \u0E04\u0E39\u0E48\u0E2B\u0E39
-      \u0E04\u0E48\u0E2D\u0E22\u0E22\u0E31\u0E07\u0E0A\u0E31\u0E48\u0E27\u0E19\u0E32\u0E22\u0E1B\u0E25\u0E2D\u0E14\u0E20\u0E31\u0E22"
+    textTH: "\u0E42\u0E2D\u0E49 \u0E1E\u0E23\u0E30\u0E40\u0E08\u0E49\u0E48\u0E32\u0E01\u0E25\u0E49\u0E27\u0E22\u0E1B\u0E34\u0E49\u0E07!
+      \u0E04\u0E39\u0E48\u0E2B\u0E39 \u0E04\u0E48\u0E2D\u0E22\u0E22\u0E31\u0E07\u0E0A\u0E31\u0E48\u0E27\u0E17\u0E35\u0E48\u0E19\u0E32\u0E22\u0E1B\u0E25\u0E2D\u0E14\u0E20\u0E31\u0E22"
+    textTR: "Ah, dostum, g\xFCvende oldu\u011Fun i\xE7in \xE7ok sevindim."
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: By the way, where are we?
     textTH: "\u0E27\u0E48\u0E32\u0E40\u0E40\u0E15\u0E48 \u0E1E\u0E27\u0E01\u0E40\u0E23\u0E32\u0E2D\u0E22\u0E39\u0E48\u0E17\u0E35\u0E48\u0E44\u0E2B\u0E19\u0E40\u0E19\u0E35\u0E48\u0E22"
+    textTR: "Bu arada, buras\u0131 neresi?"
   - character: {fileID: 11400000, guid: ca3f9e3f27e2c7c41a736713d52a8941, type: 2}
     text: Woof!
     textTH: "\u0E42\u0E2E\u0E48\u0E07 :("
+    textTR: Hav!
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: Hmm, let's hurry and find a way out of here.
     textTH: "\u0E2D\u0E37\u0E21 \u0E40\u0E23\u0E32\u0E23\u0E35\u0E1A\u0E2B\u0E32\u0E17\u0E32\u0E07\u0E2D\u0E2D\u0E01\u0E08\u0E32\u0E01\u0E17\u0E35\u0E48\u0E19\u0E35\u0E48\u0E01\u0E31\u0E19\u0E40\u0E16\u0E2D\u0E30"
+    textTR: "Hmm, hadi acele edelim ve buradan \xE7\u0131k\u0131\u015F yolu bulal\u0131m.\r"

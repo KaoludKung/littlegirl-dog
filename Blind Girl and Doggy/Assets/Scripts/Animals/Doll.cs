@@ -58,7 +58,7 @@ public class Doll : MonoBehaviour, Interactable
         girlController.InteractionIcon.SetActive(false);
         CharacterManager.Instance.SetIsActive(false);
         d_Animator.SetBool("isSaying", true);
-        actionText.ActionDisplay("The answer will appear when the hexagon, circle, and nonagon are aligned.");
+        actionText.ActionDisplay(LocalizationManager.Instance.GetText(100, PlayerDataManager.Instance.GetLanguage()));
 
         yield return new WaitForSeconds(3.0f);
 

@@ -17172,7 +17172,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 473871882}
-  offset: {x: 0, y: 0, z: 0}
   smoothTime: 0.2
 --- !u!114 &1388478060
 MonoBehaviour:
@@ -22403,6 +22402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1844335844}
   - component: {fileID: 1844335843}
+  - component: {fileID: 1844335845}
   m_Layer: 0
   m_Name: skipManager
   m_TagString: Untagged
@@ -22440,6 +22440,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1844335845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844335842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bcf9cb2701255146a60f28062966055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localizeElements:
+  - localizeText: {fileID: 2128574016}
+    localID: 27
 --- !u!1 &1851366011
 GameObject:
   m_ObjectHideFlags: 0
@@ -23846,7 +23861,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1293685873}
-  offset: {x: 0, y: 0, z: 0}
   smoothTime: 0.2
 --- !u!114 &1972407842
 MonoBehaviour:
@@ -26040,12 +26054,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 26
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512

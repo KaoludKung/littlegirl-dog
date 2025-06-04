@@ -1647,8 +1647,8 @@ Transform:
   m_GameObject: {fileID: 168513475}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5399971, y: -0.34000015, z: 0.10002832}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.5399971, y: -0.2967, z: 0.10002832}
+  m_LocalScale: {x: 1, y: 1.0207, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 866434417}
@@ -2106,7 +2106,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1738906956}
-  offset: {x: 0, y: 0, z: 0}
   smoothTime: 0.2
 --- !u!114 &206131279
 MonoBehaviour:
@@ -4642,7 +4641,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: 0}
+  m_AnchoredPosition: {x: 150, y: 5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &419323288
@@ -10379,6 +10378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1033109910}
   - component: {fileID: 1033109911}
+  - component: {fileID: 1033109912}
   m_Layer: 0
   m_Name: tt1
   m_TagString: Untagged
@@ -10432,6 +10432,32 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 06b84a4d4ccd7e74ebc825b95fdb7a19, type: 3}
   uiManagerObject: {fileID: 451269379}
   playerEnable: 0
+--- !u!114 &1033109912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033109909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c31f07cda09944ea9fb95fbaf8114f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorialManager: {fileID: 1033109911}
+  tutorialTargets:
+  - tutorialIndex: 1
+    Pattern: Z|A|X
+    controllerIcon:
+    - Z
+    - A
+    - X
+  - tutorialIndex: 2
+    Pattern: X|B|O
+    controllerIcon:
+    - X
+    - B
+    - O
 --- !u!1 &1033280810
 GameObject:
   m_ObjectHideFlags: 0
@@ -14456,7 +14482,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1738906956}
-  offset: {x: 0, y: 0, z: 0}
   smoothTime: 0.2
 --- !u!114 &1333762158
 MonoBehaviour:
@@ -23519,7 +23544,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -6}
   m_SizeDelta: {x: 65, y: 66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2073411517

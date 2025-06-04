@@ -16,38 +16,55 @@ MonoBehaviour:
   lines:
   - character: {fileID: 11400000, guid: d7db8367b70c8e64ca8702eef020d88f, type: 2}
     text: Stop right there! Move away from her, or I'll shoot for real!
-    textTH: "\u0E2B\u0E22\u0E38\u0E14\u0E2D\u0E22\u0E39\u0E48\u0E15\u0E23\u0E07\u0E19\u0E31\u0E49\u0E19\u0E40\u0E25\u0E22\u0E19\u0E30
-      \u0E16\u0E2D\u0E22\u0E2D\u0E2D\u0E01\u0E44\u0E1B\u0E08\u0E32\u0E01\u0E40\u0E18\u0E2D\u0E0B\u0E30
-      \u0E44\u0E21\u0E48\u0E07\u0E31\u0E49\u0E19\u0E09\u0E31\u0E19\u0E22\u0E34\u0E07\u0E08\u0E23\u0E34\u0E07\u0E41\u0E19\u0E48\r\n"
+    textTH: "\u0E2B\u0E22\u0E38\u0E14\u0E2D\u0E22\u0E39\u0E48\u0E15\u0E23\u0E07\u0E19\u0E31\u0E49\u0E19!
+      \u0E16\u0E2D\u0E22\u0E2D\u0E2D\u0E01\u0E44\u0E1B\u0E08\u0E32\u0E01\u0E40\u0E18\u0E2D\u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E19\u0E35\u0E49
+      \u0E44\u0E21\u0E48\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E19\u0E31\u0E49\u0E19\u0E09\u0E31\u0E19\u0E08\u0E30\u0E22\u0E34\u0E07\u0E08\u0E23\u0E34\u0E07\u0E40\u0E40\u0E19\u0E48"
+    textTR: "Oldu\u011Fun yerde dur! Ondan uzakla\u015F yoksa ger\xE7ekten ate\u015F
+      ederim!\r"
   - character: {fileID: 11400000, guid: 9007ba49d2b35a84c853d46e3b50aacd, type: 2}
     text: '!!!'
     textTH: '!!!'
+    textTR: '!!!'
   - character: {fileID: 11400000, guid: 9007ba49d2b35a84c853d46e3b50aacd, type: 2}
     text: Wermut, is it?
-    textTH: "\u0E40\u0E27\u0E2D\u0E23\u0E4C\u0E21\u0E38\u0E18 \u0E19\u0E31\u0E49\u0E19\u0E40\u0E18\u0E2D\u0E40\u0E2B\u0E23\u0E2D"
+    textTH: "\u0E40\u0E27\u0E2D\u0E23\u0E4C\u0E21\u0E38\u0E18 \u0E19\u0E31\u0E48\u0E19\u0E40\u0E18\u0E2D\u0E40\u0E2B\u0E23\u0E2D"
+    textTR: "Ad\u0131n Wermut de\u011Fil mi?"
   - character: {fileID: 11400000, guid: e08d1d2217b3d38419e4e528ba3459c8, type: 2}
     text: Huh, long time no see.
     textTH: "\u0E2B\u0E36 \u0E44\u0E21\u0E48\u0E44\u0E14\u0E49\u0E40\u0E08\u0E2D\u0E01\u0E31\u0E19\u0E19\u0E32\u0E19\u0E40\u0E25\u0E22\u0E19\u0E30"
+    textTR: "Hah, uzun zaman oldu g\xF6r\xFC\u015Fmeyeli."
   - character: {fileID: 11400000, guid: e08d1d2217b3d38419e4e528ba3459c8, type: 2}
     text: Mother...
     textTH: "\u0E04\u0E38\u0E13\u0E40\u0E40\u0E21\u0E48..."
+    textTR: "Anneci\u011Fim..."
   - character: {fileID: 11400000, guid: 9007ba49d2b35a84c853d46e3b50aacd, type: 2}
     text: "I never thought I\u2019d meet you again... But why are you doing this?"
     textTH: "\u0E44\u0E21\u0E48\u0E04\u0E34\u0E14\u0E40\u0E25\u0E22\u0E27\u0E48\u0E32\u0E08\u0E30\u0E40\u0E08\u0E2D\u0E01\u0E31\u0E1A\u0E40\u0E18\u0E2D\u0E2D\u0E35\u0E01...
       \u0E41\u0E15\u0E48\u0E17\u0E33\u0E44\u0E21\u0E40\u0E18\u0E2D\u0E15\u0E49\u0E2D\u0E07\u0E17\u0E33\u0E41\u0E1A\u0E1A\u0E19\u0E35\u0E49\u0E14\u0E49\u0E27\u0E22"
+    textTR: "Seni bir daha g\xF6rece\u011Fimi hi\xE7 d\xFC\u015F\xFCnmemi\u015Ftim...
+      Ama neden b\xF6yle yap\u0131yorsun?\r\n"
   - character: {fileID: 11400000, guid: e08d1d2217b3d38419e4e528ba3459c8, type: 2}
     text: I just want you to feel the pain like you made us feel when we were kids.
-    textTH: "\u0E40\u0E2B\u0E15\u0E38\u0E1C\u0E25\u0E07\u0E48\u0E32\u0E22\u0E46 \u0E09\u0E31\u0E19\u0E01\u0E47\u0E41\u0E04\u0E48\u0E2D\u0E22\u0E32\u0E01\u0E43\u0E2B\u0E49\u0E41\u0E01\u0E40\u0E08\u0E47\u0E1A\u0E1B\u0E27\u0E14\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E17\u0E35\u0E48\u0E41\u0E01\u0E40\u0E04\u0E22\u0E17\u0E33\u0E01\u0E31\u0E1A\u0E40\u0E23\u0E32\u0E15\u0E2D\u0E19\u0E40\u0E14\u0E47\u0E01\u0E46\r\n"
+    textTH: "\u0E40\u0E2B\u0E15\u0E38\u0E1C\u0E25\u0E21\u0E31\u0E19\u0E07\u0E48\u0E32\u0E22\u0E21\u0E32\u0E01\u2026
+      \u0E09\u0E31\u0E19\u0E41\u0E04\u0E48\u0E2D\u0E22\u0E32\u0E01\u0E43\u0E2B\u0E49\u0E41\u0E01\u0E40\u0E08\u0E47\u0E1A\u0E1B\u0E27\u0E14
+      \u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E17\u0E35\u0E48\u0E41\u0E01\u0E40\u0E04\u0E22\u0E17\u0E33\u0E01\u0E31\u0E1A\u0E1E\u0E27\u0E01\u0E40\u0E23\u0E32\u0E15\u0E2D\u0E19\u0E22\u0E31\u0E07\u0E40\u0E14\u0E47\u0E01"
+    textTR: "Sadece, \xE7ocukken bize ya\u015Fatt\u0131\u011F\u0131n ac\u0131y\u0131
+      senin de hissetmeni istiyorum."
   - character: {fileID: 11400000, guid: e08d1d2217b3d38419e4e528ba3459c8, type: 2}
     text: "So you\u2019ll know what pain feels like."
-    textTH: "\u0E08\u0E30\u0E44\u0E14\u0E49\u0E23\u0E39\u0E49\u0E27\u0E48\u0E32 \u0E04\u0E27\u0E32\u0E21\u0E40\u0E08\u0E47\u0E1A\u0E1B\u0E27\u0E14\u0E21\u0E31\u0E19\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E22\u0E31\u0E07\u0E44\u0E07"
+    textTH: "\u0E08\u0E30\u0E44\u0E14\u0E49\u0E23\u0E39\u0E49\u0E27\u0E48\u0E32\u0E04\u0E27\u0E32\u0E21\u0E40\u0E08\u0E47\u0E1A\u0E1B\u0E27\u0E14\u0E19\u0E48\u0E30
+      \u0E21\u0E31\u0E19\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E22\u0E31\u0E07\u0E44\u0E07"
+    textTR: "Ac\u0131n\u0131n ne demek oldu\u011Funu anlayas\u0131n diye."
   - character: {fileID: 11400000, guid: 9007ba49d2b35a84c853d46e3b50aacd, type: 2}
     text: Please stop, don't hurt her.
-    textTH: "\u0E44\u0E14\u0E49\u0E42\u0E1B\u0E23\u0E14 \u0E2D\u0E22\u0E48\u0E32\u0E17\u0E33\u0E2D\u0E30\u0E44\u0E23\u0E01\u0E31\u0E1A\u0E40\u0E18\u0E2D\u0E19\u0E30\r\n"
+    textTH: "\u0E44\u0E14\u0E49\u0E42\u0E1B\u0E23\u0E14 \u0E2D\u0E22\u0E48\u0E32\u0E17\u0E33\u0E2D\u0E30\u0E44\u0E23\u0E01\u0E31\u0E1A\u0E40\u0E14\u0E47\u0E01\u0E04\u0E19\u0E19\u0E31\u0E48\u0E19\u0E19\u0E30"
+    textTR: "L\xFCtfen dur, ona zarar verme."
   - character: {fileID: 11400000, guid: 9007ba49d2b35a84c853d46e3b50aacd, type: 2}
     text: I swear, I'll shoot!
-    textTH: "\u0E09\u0E31\u0E19\u0E2A\u0E32\u0E1A\u0E32\u0E19 \u0E09\u0E31\u0E19\u0E22\u0E34\u0E07\u0E08\u0E23\u0E34\u0E07\u0E40\u0E40\u0E19\u0E48"
+    textTH: "\u0E09\u0E31\u0E19\u0E2A\u0E32\u0E1A\u0E32\u0E19 \u0E09\u0E31\u0E19\u0E22\u0E34\u0E07\u0E08\u0E23\u0E34\u0E07\u0E40\u0E40\u0E19\u0E48!"
+    textTR: "Yemin ederim, ate\u015F ederim!"
   - character: {fileID: 11400000, guid: e08d1d2217b3d38419e4e528ba3459c8, type: 2}
     text: Heh, let's find out who's more important to you.
     textTH: "\u0E07\u0E31\u0E49\u0E19\u0E21\u0E32\u0E14\u0E39\u0E01\u0E31\u0E19 \u0E27\u0E48\u0E32\u0E40\u0E40\u0E01\u0E08\u0E30\u0E40\u0E25\u0E37\u0E2D\u0E01\u0E43\u0E04\u0E23
       \r\n"
+    textTR: "Heh, bakal\u0131m senin i\xE7in hangimiz daha \xF6nemliymi\u015F."

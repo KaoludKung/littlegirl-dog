@@ -1558,7 +1558,6 @@ MonoBehaviour:
   eventID: 65
   TriggerEventID: 80
   actionType: 0
-  actionResult: Margarete has picked up the ladder.
   actionResultID: 93
   itemID: 6
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
@@ -1791,7 +1790,6 @@ MonoBehaviour:
   eventID: 82
   TriggerEventID: 83
   actionType: 4
-  actionResult: 
   actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
@@ -3335,7 +3333,6 @@ MonoBehaviour:
   eventID: 65
   TriggerEventID: 71
   actionType: 3
-  actionResult: 
   actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
@@ -3725,8 +3722,6 @@ MonoBehaviour:
   eventID: 84
   TriggerEventID: 85
   actionType: 1
-  actionResult: Margarete gave the mouse some cheese and received the clock hands
-    in return.
   actionResultID: 86
   itemID: 7
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
@@ -4156,7 +4151,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 344553468}
-  offset: {x: 0, y: 0, z: -10}
   smoothTime: 0.2
 --- !u!114 &286524495
 MonoBehaviour:
@@ -4733,7 +4727,6 @@ MonoBehaviour:
   eventID: 81
   TriggerEventID: 82
   actionType: 2
-  actionResult: Margarete used the crowbar.
   actionResultID: 85
   itemID: 11
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
@@ -6180,7 +6173,6 @@ MonoBehaviour:
   eventID: 65
   TriggerEventID: 68
   actionType: 3
-  actionResult: 
   actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
@@ -6825,7 +6817,6 @@ MonoBehaviour:
   eventID: 76
   TriggerEventID: 0
   actionType: 2
-  actionResult: Margarete has used the plunger and then picked up the flower coin.
   actionResultID: 81
   itemID: 9
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
@@ -7027,7 +7018,6 @@ MonoBehaviour:
   eventID: 65
   TriggerEventID: 72
   actionType: 3
-  actionResult: 
   actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
@@ -8220,7 +8210,6 @@ MonoBehaviour:
   eventID: 77
   TriggerEventID: 78
   actionType: 0
-  actionResult: Margarete has picked up the oil.
   actionResultID: 82
   itemID: 8
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
@@ -8562,6 +8551,10 @@ PrefabInstance:
       propertyPath: girlPlayer
       value: 
       objectReference: {fileID: 1189841122}
+    - target: {fileID: 7797659019870503456, guid: 8114984f125016448b59c99b062eb12e, type: 3}
+      propertyPath: alertSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e250603b91ad5ef4683774445b42497c, type: 3}
     - target: {fileID: 8621026491017519933, guid: 8114984f125016448b59c99b062eb12e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.08
@@ -10263,7 +10256,6 @@ MonoBehaviour:
   eventID: 65
   TriggerEventID: 70
   actionType: 3
-  actionResult: 
   actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
@@ -10883,7 +10875,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 344553468}
-  offset: {x: 0, y: 0, z: -10}
   smoothTime: 0.2
 --- !u!114 &746656178
 MonoBehaviour:
@@ -11531,7 +11522,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 344553468}
-  offset: {x: 0, y: 0, z: -10}
   smoothTime: 0.2
 --- !u!1 &781204193
 GameObject:
@@ -14130,8 +14120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f717660df6a6f94eb53695a2846b224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  berserkSpeed: 4
+  speed: 2.5
+  berserkSpeed: 4.2
   sleepPoint: {fileID: 1476814708}
   patrolPoint:
   - {fileID: 1892005734}
@@ -14596,7 +14586,6 @@ MonoBehaviour:
   eventID: 65
   TriggerEventID: 66
   actionType: 4
-  actionResult: 
   actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
@@ -14803,7 +14792,6 @@ MonoBehaviour:
   eventID: 209
   TriggerEventID: 0
   actionType: 5
-  actionResult: Margarete has discovered a hidden note.
   actionResultID: 75
   itemID: 9
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
@@ -15390,7 +15378,6 @@ MonoBehaviour:
   eventID: 65
   TriggerEventID: 73
   actionType: 0
-  actionResult: Margarete has picked up the stairway key.
   actionResultID: 92
   itemID: 5
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
@@ -17996,6 +17983,10 @@ PrefabInstance:
       propertyPath: girlPlayer
       value: 
       objectReference: {fileID: 1189841122}
+    - target: {fileID: 7797659019870503456, guid: 8114984f125016448b59c99b062eb12e, type: 3}
+      propertyPath: alertSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e250603b91ad5ef4683774445b42497c, type: 3}
     - target: {fileID: 8621026491017519933, guid: 8114984f125016448b59c99b062eb12e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.91
@@ -19215,7 +19206,6 @@ MonoBehaviour:
   eventID: 80
   TriggerEventID: 81
   actionType: 0
-  actionResult: Margarete has picked up the crowbar.
   actionResultID: 84
   itemID: 11
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
@@ -19759,7 +19749,6 @@ MonoBehaviour:
   eventID: 88
   TriggerEventID: 89
   actionType: 1
-  actionResult: Margarete has used the exit key.
   actionResultID: 87
   itemID: 15
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
@@ -19796,6 +19785,10 @@ PrefabInstance:
       propertyPath: girlPlayer
       value: 
       objectReference: {fileID: 1189841122}
+    - target: {fileID: 7797659019870503456, guid: 8114984f125016448b59c99b062eb12e, type: 3}
+      propertyPath: alertSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e250603b91ad5ef4683774445b42497c, type: 3}
     - target: {fileID: 8621026491017519933, guid: 8114984f125016448b59c99b062eb12e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.72
@@ -21554,7 +21547,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 344553468}
-  offset: {x: 0, y: 0, z: -10}
   smoothTime: 0.2
 --- !u!114 &1514654205
 MonoBehaviour:
@@ -22401,7 +22393,6 @@ MonoBehaviour:
   eventID: 65
   TriggerEventID: 69
   actionType: 3
-  actionResult: 
   actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
@@ -24130,7 +24121,6 @@ MonoBehaviour:
   eventID: 207
   TriggerEventID: 0
   actionType: 5
-  actionResult: Margarete has discovered a hidden note.
   actionResultID: 75
   itemID: 7
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
@@ -24378,7 +24368,6 @@ MonoBehaviour:
   eventID: 78
   TriggerEventID: 79
   actionType: 1
-  actionResult: Margarete used the oil with the doll. The doll is now functional.
   actionResultID: 83
   itemID: 8
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
@@ -26534,6 +26523,10 @@ PrefabInstance:
       propertyPath: girlPlayer
       value: 
       objectReference: {fileID: 1189841122}
+    - target: {fileID: 7797659019870503456, guid: 8114984f125016448b59c99b062eb12e, type: 3}
+      propertyPath: alertSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e250603b91ad5ef4683774445b42497c, type: 3}
     - target: {fileID: 8621026491017519933, guid: 8114984f125016448b59c99b062eb12e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.73
@@ -26776,7 +26769,6 @@ MonoBehaviour:
   eventID: 73
   TriggerEventID: 74
   actionType: 1
-  actionResult: Margarete used the stairway key. The second floor is now unlocked.
   actionResultID: 79
   itemID: 5
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
@@ -27116,7 +27108,6 @@ MonoBehaviour:
   eventID: 65
   TriggerEventID: 84
   actionType: 0
-  actionResult: Margarete has picked up the cheese.
   actionResultID: 94
   itemID: 7
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
@@ -27630,7 +27621,6 @@ MonoBehaviour:
   eventID: 208
   TriggerEventID: 0
   actionType: 5
-  actionResult: Margarete has discovered a hidden note.
   actionResultID: 75
   itemID: 8
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
@@ -27789,7 +27779,6 @@ MonoBehaviour:
   eventID: 65
   TriggerEventID: 67
   actionType: 3
-  actionResult: 
   actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
@@ -27850,7 +27839,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 344553468}
-  offset: {x: 0, y: 0, z: -10}
   smoothTime: 0.2
 --- !u!114 &1841771303
 MonoBehaviour:
@@ -30173,7 +30161,6 @@ MonoBehaviour:
   eventID: 75
   TriggerEventID: 76
   actionType: 0
-  actionResult: Margarete has picked up the plunger.
   actionResultID: 80
   itemID: 9
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
@@ -30924,7 +30911,6 @@ MonoBehaviour:
   eventID: 89
   TriggerEventID: 90
   actionType: 6
-  actionResult: 0
   actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: 1236c2a08ce1e264c9735e092837c6de, type: 3}

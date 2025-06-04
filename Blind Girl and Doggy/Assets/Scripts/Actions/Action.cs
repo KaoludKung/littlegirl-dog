@@ -27,6 +27,7 @@ public class Action : EventObject, Interactable
     [SerializeField] private int itemGetID = 0;
 
     private bool isAdd = false;
+    private bool isChangeUI = false;
     private GirlController girlController;
     private NoteItem noteItem;
     private InventoryItem inventoryItem;
@@ -342,7 +343,10 @@ public class Action : EventObject, Interactable
     IEnumerator FinalizeAction()
     {
         EventManager.Instance.UpdateEventDataTrigger(TriggerEventID, true);
-        actionResult = LocalizationManager.Instance.GetText(actionResultID, PlayerDataManager.Instance.GetLanguage());
+        
+        if(!isChangeUI)
+            actionResult = LocalizationManager.Instance.GetText(actionResultID, PlayerDataManager.Instance.GetLanguage());
+        
         actionText.ActionDisplay(actionResult);
 
         yield return new WaitForSeconds(0.15f);
@@ -399,6 +403,7 @@ public class Action : EventObject, Interactable
 
     public void SetActionText(string newText)
     {
+        isChangeUI = true;
         actionResult = newText;
     }
 

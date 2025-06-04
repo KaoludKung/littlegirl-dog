@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class JumpScare : MonoBehaviour
 {
-    [SerializeField] int maxJumpscare;
-    [SerializeField] Image deathVisual;
+    [SerializeField] private int maxJumpscare;
+    [SerializeField] private Image deathVisual;
+    [SerializeField] private GameObject wermutWord;
     //0: many faces 1: corpse 2: hunter
     [SerializeField] Sprite[] visuals;
     //0: many faces 1: corpse 2: hunter
@@ -68,10 +69,13 @@ public class JumpScare : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         deathVisual.sprite = visuals[4];
+        wermutWord.SetActive(true);
         deathVisual.gameObject.SetActive(true);
         SoundFXManager.instance.PlaySoundFXClip(clips[2], transform, false, 0.6f);
         yield return new WaitForSeconds(clips[2].length + 1.0f);
         GameOverManager.instance.OpenPanel();
 
+        yield return new WaitForSecondsRealtime(1.5f);
+        wermutWord.SetActive(false);
     }
 }

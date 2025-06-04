@@ -17,25 +17,33 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 122a44f26ae24a2479c0b9417e2d0574, type: 2}
     text: Dear Margarete
     textTH: "\u0E16\u0E36\u0E07 \u0E2B\u0E19\u0E39\u0E21\u0E32\u0E23\u0E4C\u0E01\u0E32\u0E40\u0E23\u0E47\u0E15\u0E17\u0E35\u0E48\u0E19\u0E48\u0E32\u0E23\u0E31\u0E01"
+    textTR: Sevgili Margarete
   - character: {fileID: 11400000, guid: 122a44f26ae24a2479c0b9417e2d0574, type: 2}
     text: Greetings, it's Veronika. I hope you're doing well.
-    textTH: "\u0E2A\u0E27\u0E31\u0E2A\u0E14\u0E35\u0E08\u0E4A\u0E30, \u0E19\u0E35\u0E48\u0E40\u0E27\u0E42\u0E23\u0E19\u0E34\u0E01\u0E49\u0E32\u0E40\u0E2D\u0E07\u0E19\u0E30
+    textTH: "\u0E2A\u0E27\u0E31\u0E2A\u0E14\u0E35 \u0E19\u0E35\u0E48\u0E40\u0E27\u0E42\u0E23\u0E19\u0E34\u0E01\u0E49\u0E32\u0E40\u0E2D\u0E07\u0E19\u0E30
       \u0E09\u0E31\u0E19\u0E2B\u0E27\u0E31\u0E07\u0E27\u0E48\u0E32 \u0E2B\u0E19\u0E39\u0E04\u0E07\u0E2A\u0E1A\u0E32\u0E22\u0E14\u0E35"
+    textTR: "Selamlar, ben Veronika. Umar\u0131m iyisindir."
   - character: {fileID: 11400000, guid: 122a44f26ae24a2479c0b9417e2d0574, type: 2}
     text: "Lately, I've been feeling a little unwell and exhausted, though I\u2019m
       not entirely sure why. It\u2019s been making me miss you even more than usual."
     textTH: "\u0E0A\u0E48\u0E27\u0E07\u0E19\u0E35\u0E49\u0E09\u0E31\u0E19\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E44\u0E21\u0E48\u0E04\u0E48\u0E2D\u0E22\u0E2A\u0E1A\u0E32\u0E22\u0E40\u0E40\u0E25\u0E30\u0E40\u0E1E\u0E25\u0E35\u0E22\u0E46
       \u0E22\u0E31\u0E07\u0E44\u0E07\u0E01\u0E47\u0E44\u0E21\u0E48\u0E23\u0E39\u0E49
-      \u0E40\u0E25\u0E22\u0E17\u0E33\u0E43\u0E2B\u0E49\u0E09\u0E31\u0E19\u0E04\u0E34\u0E14\u0E16\u0E36\u0E07\u0E2B\u0E19\u0E39\u0E21\u0E32\u0E01\u0E46 "
+      \u0E40\u0E25\u0E22\u0E17\u0E33\u0E43\u0E2B\u0E49\u0E09\u0E31\u0E19\u0E04\u0E34\u0E14\u0E16\u0E36\u0E07\u0E2B\u0E19\u0E39\u0E21\u0E32\u0E01\u0E46"
+    textTR: "on zamanlarda biraz hasta ve yorgun hissediyorum, ama nedenini tam olarak
+      bilmiyorum. Bu da seni her zamankinden daha \xE7ok \xF6zlememe neden oluyor."
   - character: {fileID: 11400000, guid: 122a44f26ae24a2479c0b9417e2d0574, type: 2}
     text: If you have a moment, I would love for you to visit. Seeing your face would
       certainly lift my spirits.
     textTH: "\u0E16\u0E49\u0E32\u0E2B\u0E19\u0E39\u0E1E\u0E2D\u0E21\u0E35\u0E40\u0E27\u0E25\u0E32
       \u0E44\u0E14\u0E49\u0E42\u0E1B\u0E23\u0E14\u0E21\u0E32\u0E40\u0E22\u0E35\u0E48\u0E22\u0E21\u0E09\u0E31\u0E19\u0E2B\u0E19\u0E48\u0E2D\u0E22\u0E19\u0E30
       \u0E16\u0E49\u0E32\u0E44\u0E14\u0E49\u0E40\u0E2B\u0E47\u0E19\u0E2B\u0E19\u0E49\u0E32\u0E2B\u0E19\u0E39\u0E04\u0E07\u0E08\u0E30\u0E17\u0E33\u0E43\u0E2B\u0E49\u0E09\u0E31\u0E19\u0E23\u0E39\u0E49\u0E2A\u0E36\u0E01\u0E14\u0E35\u0E02\u0E36\u0E49\u0E19\u0E40\u0E22\u0E2D\u0E30\u0E40\u0E25\u0E22"
+    textTR: "E\u011Fer zaman\u0131n varsa beni ziyarete gelmeni \xE7ok isterim. Y\xFCz\xFCn\xFC
+      g\xF6rmek beni \xE7ok sevindirir."
   - character: {fileID: 11400000, guid: 122a44f26ae24a2479c0b9417e2d0574, type: 2}
     text: "I miss you so much and can\u2019t wait to see you soon."
     textTH: "\u0E04\u0E34\u0E14\u0E16\u0E36\u0E07\u0E21\u0E32\u0E01\u0E46 \u0E09\u0E31\u0E19\u0E23\u0E2D\u0E2B\u0E19\u0E39\u0E2D\u0E22\u0E39\u0E48\u0E19\u0E30"
+    textTR: "Seni \xE7ok \xF6zl\xFCyorum ve seni g\xF6rmek i\xE7in sab\u0131rs\u0131zlan\u0131yorum."
   - character: {fileID: 11400000, guid: 122a44f26ae24a2479c0b9417e2d0574, type: 2}
     text: With love, Veronika
     textTH: "\u0E14\u0E49\u0E27\u0E22\u0E23\u0E31\u0E01 \u0E08\u0E32\u0E01\u0E40\u0E27\u0E42\u0E23\u0E19\u0E34\u0E01\u0E49\u0E32"
+    textTR: Sevgilerimle, Veronika

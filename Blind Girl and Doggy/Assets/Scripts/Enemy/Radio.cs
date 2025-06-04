@@ -17,7 +17,6 @@ public class Radio : MonoBehaviour
         radioAnimator = GetComponent<Animator>();
         radioSource = GetComponent<AudioSource>();
         radioAnimator.speed = 0f;
-
     }
 
     // Update is called once per frame
@@ -51,7 +50,7 @@ public class Radio : MonoBehaviour
             radioSource.Play();
         }
 
-        int r = Random.Range(60, 130);
+        int r = Random.Range(60, 115);
 
         yield return new WaitForSeconds(r);
 

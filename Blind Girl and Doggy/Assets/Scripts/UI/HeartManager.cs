@@ -34,7 +34,7 @@ public class HeartManager : MonoBehaviour
         {
             //int random = Random.Range(1, 5);
 
-            if(PlayerDataManager.Instance.GetDeathCount() > 13)
+            if(PlayerDataManager.Instance.GetDeathCount() > 12)
             {
                 heartImage[3].gameObject.SetActive(true);
                 PlayerDataManager.Instance.UpdateHearts(4);

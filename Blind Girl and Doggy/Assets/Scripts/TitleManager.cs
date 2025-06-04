@@ -29,6 +29,7 @@ public class TitleManager : MonoBehaviour
     private Color32 defaultColor = new Color32(102, 46, 72, 255);
     private Color32 selectedColor = new Color32(249, 168, 117, 255);
     private int currentIndex = 0;
+    private int currentLanguage = 0;
     private bool isPressed = false;
     private bool isAlert = false;
 
@@ -136,11 +137,15 @@ public class TitleManager : MonoBehaviour
                 backgroundNight[1].SetActive(true);
                 musicSource.clip = clips[2];
                 musicSource.Play();
+
+                currentLanguage = PlayerDataManager.Instance.GetLanguage();
                 PlayerDataManager.Instance.DeletePlayerData();
                 InventoryManager.Instance.DeleteInventory();
                 NoteManager.Instance.DeleteNote();
+               
                 StartCoroutine(MoveOn("Prologue", 2.0f));
                 PlayerDataManager.Instance.UpdateNewGame(false);
+                PlayerDataManager.Instance.UpdateLanguage(currentLanguage);
             }
             else if (InputManager.Instance.IsXPressed())
             {
@@ -292,7 +297,10 @@ public class TitleManager : MonoBehaviour
             backgroundNight[1].SetActive(true);
             musicSource.clip = clips[2];
             musicSource.Play();
+            
             StartCoroutine(MoveOn("Prologue", 1.5f));
+            currentLanguage = PlayerDataManager.Instance.GetLanguage();
+            PlayerDataManager.Instance.UpdateLanguage(currentLanguage);
             PlayerDataManager.Instance.UpdateNewGame(false);          
         }
         else

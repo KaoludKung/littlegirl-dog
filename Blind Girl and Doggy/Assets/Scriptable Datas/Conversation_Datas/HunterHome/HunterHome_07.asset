@@ -18,6 +18,8 @@ MonoBehaviour:
     text: There's something in the toilet... but I can't reach it.
     textTH: "\u0E21\u0E35\u0E2D\u0E30\u0E44\u0E23\u0E1A\u0E32\u0E07\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E2D\u0E22\u0E39\u0E48\u0E43\u0E19\u0E16\u0E49\u0E27\u0E21\u0E2A\u0E49\u0E27\u0E21
       \u0E40\u0E40\u0E15\u0E48\u0E09\u0E31\u0E19\u0E2B\u0E22\u0E34\u0E1A\u0E21\u0E31\u0E19\u0E44\u0E21\u0E48\u0E16\u0E36\u0E07"
+    textTR: "Tuvalette bir \u015Fey var... ama ona ula\u015Fam\u0131yorum."
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: I need to find something to pump it out.
     textTH: "\u0E15\u0E49\u0E2D\u0E07\u0E2B\u0E32\u0E2D\u0E30\u0E44\u0E23\u0E2A\u0E31\u0E01\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E21\u0E32\u0E43\u0E0A\u0E49\u0E43\u0E19\u0E01\u0E32\u0E23\u0E1B\u0E31\u0E4A\u0E21\u0E21\u0E31\u0E19\u0E2D\u0E2D\u0E01\u0E21\u0E32"
+    textTR: "\xC7ekip \xE7\u0131karmam i\xE7in bir \u015Fey bulmam laz\u0131m."

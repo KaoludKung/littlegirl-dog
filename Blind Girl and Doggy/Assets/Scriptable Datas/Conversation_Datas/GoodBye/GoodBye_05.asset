@@ -16,34 +16,45 @@ MonoBehaviour:
   lines:
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: ...
-    textTH: 
+    textTH: ...
+    textTR: ...
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: Are you really sure about leaving the decision to me?
     textTH: "\u0E04\u0E38\u0E13\u0E40\u0E40\u0E19\u0E48\u0E43\u0E08\u0E40\u0E2B\u0E23\u0E2D\u0E04\u0E30
-      \u0E27\u0E48\u0E32\u0E08\u0E30\u0E43\u0E2B\u0E49\u0E09\u0E31\u0E19\u0E40\u0E1B\u0E47\u0E19\u0E04\u0E19\u0E40\u0E25\u0E37\u0E2D\u0E01\u0E19\u0E30"
+      \u0E27\u0E48\u0E32\u0E08\u0E30\u0E43\u0E2B\u0E49\u0E2B\u0E19\u0E39\u0E40\u0E1B\u0E47\u0E19\u0E04\u0E19\u0E40\u0E25\u0E37\u0E2D\u0E01"
+    textTR: "Karar\u0131 bana b\u0131rakmak istedi\u011Finden emin misin?"
   - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
     text: "Well, you\u2019ve been manipulated enough by the Player, who has been
       barking orders at you, and even by me, as I have been steering the story as
       I please."
     textTH: "\u0E01\u0E47\u0E40\u0E18\u0E2D\u0E16\u0E39\u0E01\u0E0A\u0E31\u0E01\u0E43\u0E22\u0E21\u0E32\u0E01\u0E40\u0E40\u0E25\u0E49\u0E27
       \u0E42\u0E14\u0E22\u0E40\u0E09\u0E1E\u0E32\u0E30\u0E1C\u0E39\u0E49\u0E40\u0E25\u0E48\u0E19\u0E17\u0E35\u0E48\u0E40\u0E2D\u0E32\u0E40\u0E40\u0E15\u0E48\u0E40\u0E2B\u0E48\u0E32\u0E2A\u0E31\u0E48\u0E07\u0E43\u0E2B\u0E49\u0E40\u0E18\u0E2D\u0E44\u0E1B\u0E19\u0E39\u0E49\u0E19\u0E19\u0E35\u0E48
-      \u0E2B\u0E23\u0E37\u0E2D \u0E40\u0E40\u0E21\u0E49\u0E40\u0E40\u0E15\u0E48\u0E09\u0E31\u0E19\u0E04\u0E2D\u0E22\u0E01\u0E33\u0E01\u0E31\u0E1A\u0E43\u0E2B\u0E49\u0E40\u0E19\u0E37\u0E49\u0E2D\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E40\u0E1B\u0E47\u0E19\u0E44\u0E1B\u0E15\u0E32\u0E21\u0E15\u0E49\u0E2D\u0E07\u0E01\u0E32\u0E23"
+      \u0E2B\u0E23\u0E37\u0E2D \u0E40\u0E40\u0E21\u0E49\u0E40\u0E40\u0E15\u0E48\u0E09\u0E31\u0E19\u0E17\u0E35\u0E48\u0E04\u0E2D\u0E22\u0E01\u0E33\u0E01\u0E31\u0E1A\u0E43\u0E2B\u0E49\u0E40\u0E19\u0E37\u0E49\u0E2D\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E40\u0E1B\u0E47\u0E19\u0E44\u0E1B\u0E15\u0E32\u0E21\u0E15\u0E49\u0E2D\u0E07\u0E01\u0E32\u0E23"
+    textTR: "Eh, sonu\xE7ta \u015Fimdiye kadar sana s\xFCrekli emir ya\u011Fd\u0131ran
+      Oyuncu taraf\u0131ndan yeterince y\xF6nlendirildin, bir de hik\xE2yeyi kafama
+      g\xF6re \u015Fekillendiren ben vard\u0131m.\r\n"
   - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
     text: This time, the choice is yours.
     textTH: "\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E19\u0E35\u0E49 \u0E09\u0E31\u0E19\u0E43\u0E2B\u0E49\u0E40\u0E18\u0E2D\u0E40\u0E1B\u0E47\u0E19\u0E04\u0E19\u0E15\u0E31\u0E14\u0E2A\u0E34\u0E19\u0E43\u0E08\u0E25\u0E30\u0E01\u0E31\u0E19\r\n"
+    textTR: "Bu sefer, se\xE7im senin."
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: ...
     textTH: ...
+    textTR: ...
   - character: {fileID: 11400000, guid: a178a33e62adcc14d9408084c0c0ca0e, type: 2}
     text: "I choose to reset.\r"
-    textTH: "\u0E2B\u0E19\u0E39\u0E40\u0E25\u0E37\u0E2D\u0E01\u0E43\u0E2B\u0E49\u0E23\u0E35\u0E49\u0E40\u0E0B\u0E47\u0E15\u0E04\u0E48\u0E30"
+    textTH: "\u0E2B\u0E19\u0E39\u0E40\u0E25\u0E37\u0E2D\u0E01\u0E43\u0E2B\u0E49\u0E23\u0E35\u0E40\u0E0B\u0E47\u0E15\u0E04\u0E48\u0E30"
+    textTR: "S\u0131f\u0131rlamay\u0131 se\xE7iyorum."
   - character: {fileID: 11400000, guid: f0ebaf5b173e2be4996ddf9f14201427, type: 2}
     text: "I want Veronika and everyone to be happy. Even if I won\u2019t exist...
       I believe I\u2019ll be reborn."
     textTH: "\u0E2B\u0E19\u0E39\u0E2D\u0E22\u0E32\u0E01\u0E43\u0E2B\u0E49\u0E40\u0E27\u0E42\u0E23\u0E19\u0E34\u0E01\u0E49\u0E32\u0E41\u0E25\u0E30\u0E17\u0E38\u0E01\u0E04\u0E19\u0E21\u0E35\u0E04\u0E27\u0E32\u0E21\u0E2A\u0E38\u0E02
       \u0E16\u0E36\u0E07\u0E41\u0E21\u0E49\u0E27\u0E48\u0E32\u0E2B\u0E19\u0E39\u0E2D\u0E32\u0E08\u0E44\u0E21\u0E48\u0E21\u0E35\u0E15\u0E31\u0E27\u0E15\u0E19\u2026\u0E41\u0E15\u0E48\u0E2B\u0E19\u0E39\u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E27\u0E48\u0E32
       \u0E08\u0E30\u0E44\u0E14\u0E49\u0E40\u0E01\u0E34\u0E14\u0E43\u0E2B\u0E21\u0E48"
+    textTR: "Veronika\u2019n\u0131n ve herkesin mutlu olmas\u0131n\u0131 istiyorum.
+      Ben var olmasam bile... yeniden do\u011Faca\u011F\u0131ma inan\u0131yorum."
   - character: {fileID: 11400000, guid: a178a33e62adcc14d9408084c0c0ca0e, type: 2}
     text: "If you don\u2019t do anything weird, KaoludKung.\r\n"
     textTH: "\u0E16\u0E49\u0E32\u0E04\u0E38\u0E13\u0E44\u0E21\u0E48\u0E17\u0E33\u0E2D\u0E30\u0E44\u0E23\u0E41\u0E1B\u0E25\u0E01
       \u0E46 \u0E19\u0E30 \u0E04\u0E38\u0E13\u0E40\u0E01\u0E32\u0E25\u0E31\u0E14"
+    textTR: "Tabii sen garip bir \u015Fey yapmazsan, KaoludKung."

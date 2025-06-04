@@ -17,9 +17,12 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: ec71ebebb4b79ab41837437dd12ecaa6, type: 2}
     text: ...
     textTH: ...
+    textTR: "\u2026"
   - character: {fileID: 11400000, guid: ec71ebebb4b79ab41837437dd12ecaa6, type: 2}
     text: Looks like she's dead.
     textTH: "\u0E14\u0E39\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E40\u0E18\u0E2D\u0E08\u0E30\u0E15\u0E32\u0E22\u0E40\u0E40\u0E25\u0E49\u0E27\u0E2A\u0E34\u0E19\u0E30"
+    textTR: "G\xF6r\xFCn\xFC\u015Fe g\xF6re \xF6lm\xFC\u015F"
   - character: {fileID: 11400000, guid: c46732e208fba9340a2810fe98dc8d9f, type: 2}
     text: Mother.
     textTH: "\u0E40\u0E40\u0E21\u0E48"
+    textTR: Anne.

@@ -17,10 +17,14 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: The doll seems to be malfunctioning...
     textTH: "\u0E15\u0E38\u0E4A\u0E01\u0E15\u0E32\u0E15\u0E31\u0E27\u0E19\u0E35\u0E49\u0E14\u0E39\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E08\u0E30\u0E40\u0E2A\u0E35\u0E22\u0E41\u0E25\u0E49\u0E27..."
+    textTR: "Bebek ar\u0131zalanm\u0131\u015F gibi g\xF6r\xFCn\xFCyor\u2026"
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: The gears are all jammed.
     textTH: "\u0E1F\u0E31\u0E19\u0E40\u0E1F\u0E37\u0E2D\u0E07\u0E21\u0E31\u0E19\u0E1D\u0E37\u0E14\u0E44\u0E1B\u0E2B\u0E21\u0E14\u0E40\u0E25\u0E22"
+    textTR: "Di\u015Flileri tamamen s\u0131k\u0131\u015Fm\u0131\u015F."
   - character: {fileID: 11400000, guid: f0ebaf5b173e2be4996ddf9f14201427, type: 2}
     text: Maybe it needs some oil... to make it work again.
     textTH: "\u0E1A\u0E32\u0E07\u0E17\u0E35\u0E21\u0E31\u0E19\u0E2D\u0E32\u0E08\u0E15\u0E49\u0E2D\u0E07\u0E01\u0E32\u0E23\u0E19\u0E49\u0E33\u0E21\u0E31\u0E19\u0E2B\u0E22\u0E2D\u0E14\u0E2A\u0E31\u0E01\u0E2B\u0E19\u0E48\u0E2D\u0E22\u0E19\u0E30...
-      \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E17\u0E33\u0E43\u0E2B\u0E49\u0E21\u0E31\u0E19\u0E17\u0E33\u0E07\u0E32\u0E19\u0E44\u0E14\u0E49\u0E2D\u0E35\u0E01\u0E04\u0E23\u0E31\u0E49\u0E07\r\n"
+      \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E17\u0E33\u0E43\u0E2B\u0E49\u0E21\u0E31\u0E19\u0E17\u0E33\u0E07\u0E32\u0E19\u0E44\u0E14\u0E49\u0E2D\u0E35\u0E01\u0E04\u0E23\u0E31\u0E49\u0E07\u0E2B\u0E19\u0E36\u0E48\u0E07\r\n"
+    textTR: "Belki \xE7al\u0131\u015Fmas\u0131 i\xE7in biraz ya\u011Flamaya ihtiyac\u0131
+      vard\u0131r...\r\n"

@@ -17,20 +17,27 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 116f88c1bca8ea447a81aa1c193093c4, type: 2}
     text: Is that music...?
     textTH: "\u0E40\u0E2A\u0E35\u0E22\u0E07\u0E40\u0E1E\u0E25\u0E07\u0E40\u0E2B\u0E23\u0E2D"
+    textTR: "Bu m\xFCzik mi..."
   - character: {fileID: 11400000, guid: 116f88c1bca8ea447a81aa1c193093c4, type: 2}
     text: That means... he must be somewhere nearby.
-    textTH: "\u0E40\u0E40\u0E1B\u0E25\u0E27\u0E48\u0E32\u0E40\u0E02\u0E32\u0E15\u0E49\u0E2D\u0E07\u0E2D\u0E22\u0E39\u0E48\u0E17\u0E35\u0E48\u0E44\u0E2B\u0E19\u0E2A\u0E31\u0E01\u0E41\u0E2B\u0E48\u0E07\u0E43\u0E01\u0E25\u0E49\u0E46
-      \u0E19\u0E35\u0E49"
+    textTH: "\u0E19\u0E31\u0E48\u0E19\u0E2B\u0E21\u0E32\u0E22\u0E04\u0E27\u0E32\u0E21\u0E27\u0E48\u0E32...
+      \u0E40\u0E02\u0E32\u0E15\u0E49\u0E2D\u0E07\u0E2D\u0E22\u0E39\u0E48\u0E17\u0E35\u0E48\u0E44\u0E2B\u0E19\u0E2A\u0E31\u0E01\u0E41\u0E2B\u0E48\u0E07\u0E43\u0E01\u0E25\u0E49
+      \u0E46 \u0E19\u0E35\u0E49\u0E41\u0E19\u0E48"
+    textTR: "Demek ki... o yak\u0131nlarda bir yerde."
   - character: {fileID: 11400000, guid: a178a33e62adcc14d9408084c0c0ca0e, type: 2}
     text: From now on, we need to be extra careful.
     textTH: "\u0E08\u0E32\u0E01\u0E19\u0E35\u0E49\u0E44\u0E1B \u0E1E\u0E27\u0E01\u0E40\u0E23\u0E32\u0E08\u0E33\u0E40\u0E1B\u0E47\u0E19\u0E15\u0E49\u0E2D\u0E07\u0E23\u0E30\u0E27\u0E31\u0E07\u0E15\u0E31\u0E27\u0E21\u0E32\u0E01\u0E46"
+    textTR: "Bundan sonra \xE7ok daha dikkatli olmal\u0131y\u0131z."
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: And no barking loudly like you did in the forest, okay?
     textTH: "\u0E40\u0E40\u0E25\u0E30\u0E2D\u0E22\u0E48\u0E32\u0E40\u0E2B\u0E48\u0E32\u0E40\u0E2A\u0E35\u0E22\u0E07\u0E14\u0E31\u0E07\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E15\u0E2D\u0E19\u0E2D\u0E22\u0E39\u0E48\u0E43\u0E19\u0E1B\u0E48\u0E32\u0E19\u0E30
       \u0E40\u0E02\u0E49\u0E32\u0E43\u0E08\u0E21\u0E31\u0E49\u0E22"
+    textTR: "Ve ormandaki gibi y\xFCksek sesle havlamamal\u0131s\u0131n, tamam m\u0131?"
   - character: {fileID: 11400000, guid: f4576e04d5b97664b922c59d74f0efd9, type: 2}
     text: Woof!!!
     textTH: "\u0E42\u0E2E\u0E48\u0E07!!!"
+    textTR: Hav!!!
   - character: {fileID: 11400000, guid: 116f88c1bca8ea447a81aa1c193093c4, type: 2}
     text: 'Shhh... '
     textTH: "\u0E0A\u0E39\u0E48\u0E27\u0E4C...."
+    textTR: "\u015E\u015F\u015F... "

@@ -18,33 +18,43 @@ MonoBehaviour:
     text: But you know what? If fixing the present is too difficult...
     textTH: "\u0E41\u0E15\u0E48\u0E23\u0E39\u0E49\u0E2D\u0E30\u0E44\u0E23\u0E21\u0E30
       \u0E16\u0E49\u0E32\u0E01\u0E32\u0E23\u0E41\u0E01\u0E49\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E23\u0E32\u0E27\u0E43\u0E19\u0E1B\u0E31\u0E08\u0E08\u0E38\u0E1A\u0E31\u0E19\u0E21\u0E31\u0E19\u0E22\u0E32\u0E01\u0E40\u0E01\u0E34\u0E19\u0E44\u0E1B"
+    textTR: "Ama biliyor musun? E\u011Fer bug\xFCn\xFC d\xFCzeltmek \xE7ok zorsa\u2026"
   - character: {fileID: 11400000, guid: 6c58cf5fb5b520d40a02282e5d005bcb, type: 2}
     text: Why not go back and fix the root cause?
-    textTH: "\u0E17\u0E33\u0E44\u0E21\u0E40\u0E23\u0E32\u0E44\u0E21\u0E48\u0E22\u0E49\u0E2D\u0E19\u0E01\u0E25\u0E31\u0E1A\u0E44\u0E1B\u0E41\u0E01\u0E49\u0E15\u0E31\u0E49\u0E07\u0E41\u0E15\u0E48\u0E15\u0E49\u0E19\u0E40\u0E2B\u0E15\u0E25\u0E30\u0E38\r\n"
+    textTH: "\u0E17\u0E33\u0E44\u0E21\u0E40\u0E23\u0E32\u0E44\u0E21\u0E48\u0E22\u0E49\u0E2D\u0E19\u0E01\u0E25\u0E31\u0E1A\u0E44\u0E1B\u0E41\u0E01\u0E49\u0E17\u0E35\u0E48\u0E15\u0E49\u0E19\u0E40\u0E2B\u0E15\u0E38\u0E25\u0E48\u0E30"
+    textTR: "Neden en ba\u015Fa d\xF6n\xFCp sorunun k\xF6k\xFCn\xFC d\xFCzeltmiyorsun?"
   - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
     text: "Yes, I\u2019ll reset the universe of this game where Veronika chooses
       not to abandon her family."
     textTH: "\u0E43\u0E0A\u0E48\u0E40\u0E40\u0E25\u0E49\u0E27 \u0E09\u0E31\u0E19\u0E08\u0E30\u0E23\u0E35\u0E40\u0E0B\u0E47\u0E15\u0E08\u0E31\u0E01\u0E23\u0E27\u0E32\u0E25\u0E02\u0E2D\u0E07\u0E40\u0E01\u0E21\u0E43\u0E2B\u0E21\u0E48
       \u0E17\u0E35\u0E48\u0E40\u0E27\u0E42\u0E23\u0E19\u0E34\u0E01\u0E49\u0E32\u0E40\u0E25\u0E37\u0E2D\u0E01\u0E17\u0E35\u0E48\u0E08\u0E30\u0E44\u0E21\u0E48\u0E17\u0E34\u0E49\u0E07\u0E04\u0E23\u0E2D\u0E1A\u0E04\u0E23\u0E31\u0E27\u0E02\u0E2D\u0E07\u0E15\u0E31\u0E27\u0E40\u0E2D\u0E07\u0E44\u0E1B
       \r\n"
+    textTR: "Evet, bu oyunun evrenini, Veronika\u2019n\u0131n ailesini terk etmemeyi
+      se\xE7ti\u011Fi noktadan itibaren s\u0131f\u0131rlayaca\u011F\u0131m."
   - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
     text: But doing that might come with heavy consequences.
     textTH: "\u0E41\u0E15\u0E48\u0E01\u0E32\u0E23\u0E17\u0E33\u0E40\u0E40\u0E1A\u0E1A\u0E19\u0E31\u0E49\u0E19\u0E21\u0E31\u0E19\u0E2D\u0E32\u0E08\u0E17\u0E33\u0E43\u0E2B\u0E49\u0E40\u0E01\u0E34\u0E14\u0E1C\u0E25\u0E01\u0E23\u0E30\u0E17\u0E1A\u0E43\u0E2B\u0E0D\u0E48\u0E2B\u0E25\u0E27\u0E07\r\n"
+    textTR: "Ama bunu yapmak a\u011F\u0131r sonu\xE7lar do\u011Furabilir."
   - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
     text: Yes... little Margarete might not even exist in that new world.
     textTH: "\u0E43\u0E0A\u0E48\u2026 \u0E21\u0E32\u0E23\u0E4C\u0E01\u0E32\u0E40\u0E23\u0E47\u0E15\u0E15\u0E31\u0E27\u0E19\u0E49\u0E2D\u0E22
       \u0E2D\u0E32\u0E08\u0E44\u0E21\u0E48\u0E21\u0E35\u0E15\u0E31\u0E27\u0E15\u0E19\u0E2D\u0E22\u0E39\u0E48\u0E43\u0E19\u0E42\u0E25\u0E01\u0E43\u0E2B\u0E21\u0E48\u0E19\u0E31\u0E48\u0E19\u0E40\u0E25\u0E22"
+    textTR: "Evet\u2026 k\xFC\xE7\xFCk Margarete o yeni d\xFCnyada hi\xE7 var olmayabilir."
   - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
     text: It seems like a favorable choice, but it comes with risks.
     textTH: "\u0E21\u0E31\u0E19\u0E14\u0E39\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E17\u0E32\u0E07\u0E40\u0E25\u0E37\u0E2D\u0E01\u0E17\u0E35\u0E48\u0E14\u0E35
       \u0E40\u0E40\u0E15\u0E48\u0E01\u0E47\u0E21\u0E35\u0E04\u0E27\u0E32\u0E21\u0E40\u0E2A\u0E35\u0E48\u0E22\u0E07\u0E2D\u0E22\u0E39\u0E48"
+    textTR: "\u0130lk bak\u0131\u015Fta avantajl\u0131 bir se\xE7im gibi g\xF6r\xFCn\xFCyor,
+      ama riskleri var."
   - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
     text: "Still, this decision isn\u2019t yours, Player."
-    textTH: "\u0E40\u0E15\u0E48\u0E27\u0E48\u0E32\u0E04\u0E19\u0E15\u0E31\u0E14\u0E2A\u0E34\u0E19\u0E43\u0E08\u0E08\u0E30\u0E44\u0E21\u0E48\u0E43\u0E0A\u0E48\u0E19\u0E32\u0E22
+    textTH: "\u0E40\u0E40\u0E15\u0E48\u0E27\u0E48\u0E32\u0E04\u0E19\u0E15\u0E31\u0E14\u0E2A\u0E34\u0E19\u0E43\u0E08\u0E08\u0E30\u0E44\u0E21\u0E48\u0E43\u0E0A\u0E48\u0E19\u0E32\u0E22
       \u0E1C\u0E39\u0E49\u0E40\u0E25\u0E48\u0E19"
+    textTR: "Yine de bu karar sana ait de\u011Fil, Oyuncu."
   - character: {fileID: 11400000, guid: 189ed4e97cf9365439fed7c98ac70043, type: 2}
     text: 'It''s you who is there, little one.
 
 '
     textTH: "\u0E40\u0E40\u0E15\u0E48\u0E40\u0E1B\u0E47\u0E19\u0E40\u0E18\u0E2D\u0E17\u0E35\u0E48\u0E2D\u0E22\u0E39\u0E48\u0E15\u0E23\u0E07\u0E19\u0E31\u0E49\u0E19\u0E15\u0E48\u0E32\u0E07\u0E2B\u0E32\u0E01
       \u0E2B\u0E19\u0E39\u0E19\u0E49\u0E2D\u0E22"
+    textTR: "Bu karar, bu k\xFC\xE7\xFCk han\u0131ma ait.\r"

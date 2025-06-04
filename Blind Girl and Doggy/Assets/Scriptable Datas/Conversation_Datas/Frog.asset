@@ -17,6 +17,8 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 510c68b045a777d41ba87eda28a20406, type: 2}
     text: Hello, little one.
     textTH: "\u0E2A\u0E27\u0E31\u0E2A\u0E14\u0E35 \u0E2B\u0E19\u0E39\u0E19\u0E49\u0E2D\u0E22"
+    textTR: "Merhaba, k\xFC\xE7\xFCk han\u0131m."
   - character: {fileID: 11400000, guid: 510c68b045a777d41ba87eda28a20406, type: 2}
     text: Have a nice day.
     textTH: "\u0E02\u0E2D\u0E43\u0E2B\u0E49\u0E21\u0E35\u0E27\u0E31\u0E19\u0E17\u0E35\u0E48\u0E14\u0E35\u0E08\u0E49\u0E32"
+    textTR: "\u0130yi g\xFCnler dilerim."

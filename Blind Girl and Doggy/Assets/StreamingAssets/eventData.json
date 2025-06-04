@@ -845,7 +845,66 @@
       "nameEvent": "To The End",
       "type": "SceneManager",
       "trigger": false
+    },
+    {
+      "id": 603,
+      "nameEvent": "Kaolud Appears",
+      "type": "Timeline",
+      "trigger": false
+    },
+    {
+      "id": 604,
+      "nameEvent": "GoodBye_01",
+      "type": "Dialogue",
+      "trigger": false
+    },
+    {
+      "id": 605,
+      "nameEvent": "Kaolud Looks at you + GoodBye_02",
+      "type": "Animation + Dialogue",
+      "trigger": false
+    },
+    {
+      "id": 606,
+      "nameEvent": "GoodBye_03",
+      "type": "Dialogue",
+      "trigger": false
+    },
+    {
+      "id": 607,
+      "nameEvent": "GoodBye_04",
+      "type": "Dialogue",
+      "trigger": false
+    },
+    {
+      "id": 608,
+      "nameEvent": "GoodBye_05",
+      "type": "Dialogue",
+      "trigger": false
+    },
+    {
+      "id": 609,
+      "nameEvent": "GoodBye_06",
+      "type": "Dialogue",
+      "trigger": false
+    },
+    {
+      "id": 610,
+      "nameEvent": "End To Reborn",
+      "type": "Timeline",
+      "trigger": false
+    },
+    {
+      "id": 611,
+      "nameEvent": "GoodBye_07",
+      "type": "Dialogue",
+      "trigger": false
+    },
+    {
+      "id": 612,
+      "nameEvent": "The Last Bloom",
+      "type": "Logo",
+      "trigger": false
     }
-
   ]
 }

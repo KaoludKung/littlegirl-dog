@@ -1276,7 +1276,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 545043435}
-  offset: {x: 0, y: 0, z: 0}
   smoothTime: 0.2
 --- !u!114 &65226991
 MonoBehaviour:
@@ -3847,6 +3846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 165310925}
   - component: {fileID: 165310926}
+  - component: {fileID: 165310927}
   m_Layer: 0
   m_Name: tt1
   m_TagString: Untagged
@@ -3899,6 +3899,26 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 06b84a4d4ccd7e74ebc825b95fdb7a19, type: 3}
   uiManagerObject: {fileID: 1836602389}
   playerEnable: 1
+--- !u!114 &165310927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165310924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c31f07cda09944ea9fb95fbaf8114f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorialManager: {fileID: 165310926}
+  tutorialTargets:
+  - tutorialIndex: 1
+    Pattern: Q|LB|L1
+    controllerIcon:
+    - Q
+    - LB
+    - L1
 --- !u!1 &171490517
 GameObject:
   m_ObjectHideFlags: 0
@@ -6749,6 +6769,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &294735485 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7763995337222459360, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+  m_PrefabInstance: {fileID: 8130364126947767467}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &299342713
 GameObject:
   m_ObjectHideFlags: 0
@@ -8739,6 +8770,134 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.3276215, y: 3.0883713}
   m_EdgeRadius: 0
+--- !u!1 &436421498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 436421500}
+  - component: {fileID: 436421499}
+  m_Layer: 0
+  m_Name: ya ma jub nuu na
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!82 &436421499
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436421498}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -6608615458130458199, guid: 9416f50642d9c7a44b9ac219a6244c1c, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 386041d9508f99e45a835bee4e75d73c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &436421500
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436421498}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 504158475}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &443371253
 GameObject:
   m_ObjectHideFlags: 0
@@ -8819,12 +8978,12 @@ MonoBehaviour:
     localID: 30
   - localizeText: {fileID: 8130364126947767471}
     localID: 31
-  - localizeText: {fileID: 1807983880}
-    localID: 47
   - localizeText: {fileID: 2013727589}
     localID: 0
   - localizeText: {fileID: 1235959084}
     localID: 0
+  - localizeText: {fileID: 294735485}
+    localID: 47
 --- !u!1 &452390131
 GameObject:
   m_ObjectHideFlags: 0
@@ -9403,7 +9562,9 @@ MonoBehaviour:
   dialogueUI: {fileID: 1098851708}
   uiManagerObject: {fileID: 1836602389}
   animators: []
-  itemActives: []
+  itemActives:
+  - gameObjectActive: {fileID: 436421498}
+    targetIndex: 1
   resetAnimation: 0
   playerEnable: 1
 --- !u!4 &504158475
@@ -9418,7 +9579,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 436421500}
   m_Father: {fileID: 1646247419}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &512940094
@@ -9601,8 +9763,6 @@ MonoBehaviour:
   eventID: 201
   TriggerEventID: 0
   actionType: 5
-  actionResult: Margarete has discovered a hidden note. Press E to open the note
-    inventory.
   actionResultID: 74
   itemID: 1
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
@@ -13691,8 +13851,6 @@ MonoBehaviour:
   eventID: 203
   TriggerEventID: 0
   actionType: 5
-  actionResult: Margarete has discovered a hidden note. Press E to open the note
-    inventory.
   actionResultID: 74
   itemID: 3
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
@@ -19106,7 +19264,6 @@ MonoBehaviour:
   eventID: 19
   TriggerEventID: 20
   actionType: 0
-  actionResult: Margarete has picked up the acorn.
   actionResultID: 72
   itemID: 2
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
@@ -19532,7 +19689,6 @@ MonoBehaviour:
   eventID: 20
   TriggerEventID: 21
   actionType: 1
-  actionResult: Margarete has used the acorn.
   actionResultID: 73
   itemID: 2
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
@@ -20225,8 +20381,6 @@ MonoBehaviour:
   eventID: 202
   TriggerEventID: 0
   actionType: 5
-  actionResult: Margarete has discovered a hidden note. Press E to open the note
-    inventory.
   actionResultID: 74
   itemID: 2
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
@@ -21858,7 +22012,6 @@ MonoBehaviour:
   eventID: 0
   TriggerEventID: 502
   actionType: 3
-  actionResult: 
   actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
@@ -31127,17 +31280,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1807983880 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2354486421063973804, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
-  m_PrefabInstance: {fileID: 8130364126947767467}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1818252386
 GameObject:
   m_ObjectHideFlags: 0
@@ -31216,7 +31358,6 @@ MonoBehaviour:
   eventID: 0
   TriggerEventID: 501
   actionType: 3
-  actionResult: 
   actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
@@ -31926,7 +32067,6 @@ MonoBehaviour:
   eventID: 31
   TriggerEventID: 32
   actionType: 4
-  actionResult: 
   actionResultID: 0
   itemID: 2
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
@@ -36885,6 +37025,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3088918221370791751, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7763995337222459360, guid: 83e8067ba53806446b4f2ce3b38bb499, type: 3}
       propertyPath: m_fontSize
       value: 32
@@ -37025,6 +37169,10 @@ PrefabInstance:
       propertyPath: girlPlayer
       value: 
       objectReference: {fileID: 912300478}
+    - target: {fileID: 7797659019870503456, guid: 8114984f125016448b59c99b062eb12e, type: 3}
+      propertyPath: alertSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e250603b91ad5ef4683774445b42497c, type: 3}
     - target: {fileID: 8621026491017519933, guid: 8114984f125016448b59c99b062eb12e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 208.82

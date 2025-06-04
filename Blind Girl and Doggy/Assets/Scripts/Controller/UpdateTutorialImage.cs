@@ -1,21 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class UpdateTutorialImage : MonoBehaviour
 {
-    private float checkInterval = 2.5f;
+    private float checkInterval = 1.0f;
     private float timeSinceLastCheck = 0f;
 
     [SerializeField] private TutorialManager tutorialManager;
-    [SerializeField] private int maximum;
-    [SerializeField] private int[] tutorialIndex;
-    [SerializeField] private int[] controllerIndex;
-    
-    [SerializeField] private UISprite keyboardSprites;
-    [SerializeField] private UISprite ps4Sprites;
-    [SerializeField] private UISprite xboxSprites;
+    [SerializeField] private List<TutorialController> tutorialTargets;
+
 
     void Update()
     {
@@ -43,54 +38,47 @@ public class UpdateTutorialImage : MonoBehaviour
             {
                 if (activeJoystickName.Contains("wireless controller") || activeJoystickName.Contains("sony") || activeJoystickName.Contains("playstation"))
                 {
-                    UpdateUI(2);
-                    //Debug.Log("PS4 Controller connected.");
+                    UpdateTutorialDetail(2);
                 }
                 else if (activeJoystickName.Contains("xbox") || activeJoystickName.Contains("microsoft"))
                 {
-                    UpdateUI(3);
-                    //Debug.Log("Xbox Controller connected.");
+                    UpdateTutorialDetail(1);
                 }
                 else
                 {
-                    UpdateUI(3);
+                    UpdateTutorialDetail(1);
                 }
             }
             else
             {
-                UpdateUI(1);
-                //Debug.Log("No controller connected.");
+                UpdateTutorialDetail(0);
             }
         }
     }
 
-    void UpdateUI(int controller)
+    void UpdateTutorialDetail(int controller)
     {
-        UISprite selectedSprite = null;
-
-        switch (controller)
+        for (int i = 0; i < tutorialTargets.Count; i++)
         {
-            case 1:
-                selectedSprite = keyboardSprites;
-                break;
-            case 2:
-                selectedSprite = ps4Sprites;
-                break;
-            case 3:
-                selectedSprite = xboxSprites;
-                break;
-        }
-
-        if (selectedSprite != null)
-        {
-            for (int i = 0; i < maximum; i++)
+            if (tutorialTargets[i].tutorialIndex == tutorialManager.GetCurrentIndex())
             {
-                int tIndex = tutorialIndex[i];
-                int cIndex = controllerIndex[i];
-                tutorialManager.SetTutorialImage(tIndex, selectedSprite.imageController[cIndex]);
+                //Get Current Tutorial Detail
+                string originalText = LocalizationManager.Instance.GetText(tutorialManager.GetTutorialIndex(), PlayerDataManager.Instance.GetLanguage());
+                string updatedText = Regex.Replace(originalText, tutorialTargets[i].Pattern, tutorialTargets[i].controllerIcon[controller]);
+                
+                //Update Button in Detail According current controller
+                tutorialManager.SetTutorialDetail(updatedText);
             }
         }
-
-        tutorialManager.UpdateMenu();
     }
+}
+
+
+[System.Serializable]
+public class TutorialController
+{
+    public int tutorialIndex;
+    public string Pattern;
+    //0: keyborad 1: xbox 2:ps4
+    public string[] controllerIcon;
 }

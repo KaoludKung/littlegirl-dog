@@ -217,7 +217,6 @@ MonoBehaviour:
   eventID: 60
   TriggerEventID: 61
   actionType: 2
-  actionResult: Margarete has picked up the gloves.
   actionResultID: 76
   itemID: 3
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
@@ -390,8 +389,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireFlyLight: {fileID: 1084082548}
   maxOutages: 3
-  minTime: 75
-  maxTime: 120
+  minTime: 60
+  maxTime: 90
 --- !u!1 &127154211
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,6 +1232,10 @@ PrefabInstance:
       propertyPath: girlPlayer
       value: 
       objectReference: {fileID: 1608686690}
+    - target: {fileID: 7797659019870503456, guid: 8114984f125016448b59c99b062eb12e, type: 3}
+      propertyPath: alertSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e250603b91ad5ef4683774445b42497c, type: 3}
     - target: {fileID: 8621026491017519933, guid: 8114984f125016448b59c99b062eb12e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.64
@@ -2617,7 +2620,6 @@ MonoBehaviour:
   eventID: 60
   TriggerEventID: 61
   actionType: 2
-  actionResult: Margarete has picked up the gloves.
   actionResultID: 76
   itemID: 3
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
@@ -2928,7 +2930,6 @@ MonoBehaviour:
   eventID: 61
   TriggerEventID: 62
   actionType: 2
-  actionResult: Margarete has used the gloves and then picked up the screwdriver.
   actionResultID: 77
   itemID: 3
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
@@ -4433,7 +4434,6 @@ MonoBehaviour:
   eventID: 0
   TriggerEventID: 59
   actionType: 3
-  actionResult: 
   actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
@@ -4541,7 +4541,6 @@ MonoBehaviour:
   eventID: 62
   TriggerEventID: 63
   actionType: 1
-  actionResult: Margarete has used the screwdriver.
   actionResultID: 78
   itemID: 4
   alertSprite: {fileID: 21300000, guid: feae21c5f53570b429b5564b975a6a80, type: 3}
@@ -5448,7 +5447,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1129866229}
-  offset: {x: 0, y: 0, z: 0}
   smoothTime: 0.2
 --- !u!1 &1084044897
 GameObject:
@@ -8661,7 +8659,6 @@ MonoBehaviour:
   eventID: 0
   TriggerEventID: 58
   actionType: 3
-  actionResult: 
   actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
@@ -9014,7 +9011,6 @@ MonoBehaviour:
   eventID: 60
   TriggerEventID: 61
   actionType: 2
-  actionResult: Margarete has picked up the gloves.
   actionResultID: 76
   itemID: 3
   alertSprite: {fileID: 21300000, guid: cc4943aed8c903541aa8a649fa4e6dfc, type: 3}
@@ -9205,7 +9201,6 @@ MonoBehaviour:
   eventID: 63
   TriggerEventID: 64
   actionType: 6
-  actionResult: 
   actionResultID: 0
   itemID: 0
   alertSprite: {fileID: 21300000, guid: 1236c2a08ce1e264c9735e092837c6de, type: 3}
@@ -9489,7 +9484,6 @@ MonoBehaviour:
   eventID: 206
   TriggerEventID: 0
   actionType: 5
-  actionResult: Margarete has discovered a hidden note.
   actionResultID: 75
   itemID: 6
   alertSprite: {fileID: 21300000, guid: 5de75cd649625184ea830d112ffd7bb2, type: 3}
@@ -9662,6 +9656,10 @@ PrefabInstance:
       propertyPath: girlPlayer
       value: 
       objectReference: {fileID: 1608686690}
+    - target: {fileID: 7797659019870503456, guid: 8114984f125016448b59c99b062eb12e, type: 3}
+      propertyPath: alertSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e250603b91ad5ef4683774445b42497c, type: 3}
     - target: {fileID: 8621026491017519933, guid: 8114984f125016448b59c99b062eb12e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.76
@@ -10300,7 +10298,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1129866229}
-  offset: {x: 0, y: 0, z: 0}
   smoothTime: 0.2
 --- !u!1 &2031964976
 GameObject:

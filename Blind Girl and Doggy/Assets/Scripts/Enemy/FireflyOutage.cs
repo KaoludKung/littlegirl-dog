@@ -11,7 +11,7 @@ public class FireflyOutage : MonoBehaviour
     [SerializeField] private int maxTime = 20;
 
     private const int OutageTriggerValue = 2;
-    private const int OutageChanceRange = 4;
+    private const int OutageChanceRange = 5;
     private const float FlickerDuration = 0.4f;
     private const float OutageDuration = 15f;
 
