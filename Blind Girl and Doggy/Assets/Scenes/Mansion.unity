@@ -820,7 +820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setType: 0
   targetObject: {fileID: 1802984204}
-  duration: 0.5
+  duration: 0.3
   cameraID: 0
 --- !u!114 &163535746
 MonoBehaviour:
@@ -2878,8 +2878,8 @@ MonoBehaviour:
   m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 49
-  m_fontSizeMax: 50
+  m_fontSizeMin: 42
+  m_fontSizeMax: 46
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -4549,7 +4549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01392e550702a5647b9463f981f089b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkInterval: 2
+  checkInterval: 1.5
   eventObjects:
   - {fileID: 1940367347}
   - {fileID: 1145297911}
@@ -4563,6 +4563,7 @@ MonoBehaviour:
   - {fileID: 2080587908}
   - {fileID: 303933713}
   - {fileID: 1806611687}
+  activationDelay: 0.2
 --- !u!1 &1446047566
 GameObject:
   m_ObjectHideFlags: 0
@@ -4744,7 +4745,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 42
-  m_fontSizeMax: 50
+  m_fontSizeMax: 46
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -5516,7 +5517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setType: 0
   targetObject: {fileID: 1802984204}
-  duration: 1.5
+  duration: 1
   cameraID: 0
 --- !u!1 &1806611687
 GameObject:
@@ -6411,7 +6412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01392e550702a5647b9463f981f089b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkInterval: 2
+  checkInterval: 1.5
   eventObjects:
   - {fileID: 956460482}
   - {fileID: 658541398}
@@ -6419,6 +6420,7 @@ MonoBehaviour:
   - {fileID: 1446047566}
   - {fileID: 993338244}
   - {fileID: 1124288087}
+  activationDelay: 0.2
 --- !u!4 &2017988285
 Transform:
   m_ObjectHideFlags: 0

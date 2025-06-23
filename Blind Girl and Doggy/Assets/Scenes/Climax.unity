@@ -3521,7 +3521,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 36.1, y: 0}
+  m_AnchoredPosition: {x: 38.5, y: 0}
   m_SizeDelta: {x: 32, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &332593234
@@ -15392,7 +15392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01392e550702a5647b9463f981f089b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkInterval: 1.5
+  checkInterval: 1.2
   eventObjects:
   - {fileID: 1752705493}
   - {fileID: 2016636068}
@@ -15405,6 +15405,7 @@ MonoBehaviour:
   - {fileID: 2043712538}
   - {fileID: 1447158436}
   - {fileID: 1156662724}
+  activationDelay: 0.2
 --- !u!4 &1289673436
 Transform:
   m_ObjectHideFlags: 0
@@ -26054,12 +26055,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26
+  m_fontSize: 23.5
   m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 26
+  m_fontSizeMax: 23.5
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512

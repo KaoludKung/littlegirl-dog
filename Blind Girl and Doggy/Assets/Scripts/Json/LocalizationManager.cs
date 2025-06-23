@@ -22,7 +22,7 @@ public class LanguageData
     public string en;
     public string th;
     public string tr;
-    public string fr;
+    public string id;
 }
 
 public class LocalizationManager : JsonManager<LocalizationData>
@@ -44,6 +44,15 @@ public class LocalizationManager : JsonManager<LocalizationData>
 
         if (File.Exists(persistentPath))
         {
+            string persistentVersion = GetGameVersionFromJson(persistentPath);
+            string streamingVersion = GetGameVersionFromJson(streamingAssetsPath);
+
+            if (persistentVersion != streamingVersion && !string.IsNullOrEmpty(streamingVersion))
+            {
+                File.Copy(streamingAssetsPath, persistentPath, true);
+                Debug.LogWarning("Updated localization data to the latest version.");
+            }
+
             LoadLocalizationData(persistentPath);
         }
         else
@@ -62,6 +71,20 @@ public class LocalizationManager : JsonManager<LocalizationData>
 
         // Test
         //Debug.Log(GetText(2, "th"));
+    }
+
+    private string GetGameVersionFromJson(string path)
+    {
+        if (File.Exists(path))
+        {
+            string jsonData = LoadJson(path);
+            if (!string.IsNullOrEmpty(jsonData))
+            {
+                var temp = JsonUtility.FromJson<LocalizationData>(jsonData);
+                return temp.items.Find(item => item.key == 11)?.value.en; // Assuming key 11 is for version
+            }
+        }
+        return null;
     }
 
     public void LoadLocalizationData(string path)
@@ -115,7 +138,7 @@ public class LocalizationManager : JsonManager<LocalizationData>
                 0 => languageData.en,
                 1 => languageData.th,
                 2 => languageData.tr,
-                3 => languageData.fr,
+                3 => languageData.id,
                 _ => $"[Unknown Language: {languageCode}]"
             };
         }

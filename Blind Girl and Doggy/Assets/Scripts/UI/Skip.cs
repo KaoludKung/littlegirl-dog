@@ -14,7 +14,7 @@ public class Skip : MonoBehaviour
     void Start()
     {
         StartCoroutine(SkipAppear());
-        skipText.fontSizeMax = PlayerDataManager.Instance.GetLanguage() == 1 ? 22 : 26;
+        skipText.fontSizeMax = PlayerDataManager.Instance.GetLanguage() == 1 ? 22 : 23.5f;
         applePieItem = InventoryManager.Instance.GetItemByID(1);
     }
 

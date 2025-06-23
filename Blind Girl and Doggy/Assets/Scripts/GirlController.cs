@@ -7,7 +7,7 @@ using TMPro;
 
 public class GirlController : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
+    [SerializeField] private float speed = 4f;
     [SerializeField] private float distance = 2.0f;
     [SerializeField] private float detectRange = 30.0f;
     [SerializeField] private float volume = 1.0f;
@@ -347,6 +347,11 @@ public class GirlController : MonoBehaviour
             interactionSprite.Clear();
             StartCoroutine(UpdateInteractionIcon());
         }        
+    }
+
+    public float GetSpeed()
+    {
+        return speed;
     }
 
     public void AdjustSpeed(float value)

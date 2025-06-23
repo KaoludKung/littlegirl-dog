@@ -44,16 +44,16 @@ public class FixingText : MonoBehaviour
             for (int i = 0; i <= baseText[currentIndex].Length; i++)
             {
                 fixingText.text = baseText[currentIndex].Substring(0, i);
-                yield return new WaitForSeconds(0.25f);
+                yield return new WaitForSeconds(0.15f);
             }
 
             for (int i = 0; i < 7; i++)
             {
                 fixingText.text += ".";
-                yield return new WaitForSeconds(0.25f);
+                yield return new WaitForSeconds(0.15f);
             }
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.3f);
             currentIndex++;
             fixingText.text = "";
         }

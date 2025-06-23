@@ -144,7 +144,7 @@ public class InputManager : MonoBehaviour
 
     public bool IsEnterPressed()
     {
-        return Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(buttonMapping["Enter"]);
+        return Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(buttonMapping["Enter"]);
     }
 
     public bool IsShiftPressed()

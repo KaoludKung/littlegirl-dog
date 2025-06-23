@@ -7559,7 +7559,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2063162385}
+  m_Father: {fileID: 2021688960}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &631226704
 MonoBehaviour:
@@ -10447,13 +10447,13 @@ MonoBehaviour:
   tutorialManager: {fileID: 1033109911}
   tutorialTargets:
   - tutorialIndex: 1
-    Pattern: Z|A|X
+    Pattern: \b(Z|A|X)\b
     controllerIcon:
     - Z
     - A
     - X
   - tutorialIndex: 2
-    Pattern: X|B|O
+    Pattern: \b(X|B|O)\b
     controllerIcon:
     - X
     - B
@@ -17589,7 +17589,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1821660635
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 0a42dde59119fb7408e01491369f41d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -17610,7 +17610,7 @@ Transform:
   m_GameObject: {fileID: 1559323040}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.449997, y: 1.0800018, z: 0.10002832}
+  m_LocalPosition: {x: 1.36, y: 1.0800018, z: 0.10002832}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22754,7 +22754,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 631226703}
   m_Father: {fileID: 2063162385}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2021688961
@@ -23457,7 +23458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01392e550702a5647b9463f981f089b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkInterval: 1.5
+  checkInterval: 1.2
   eventObjects:
   - {fileID: 570732446}
   - {fileID: 29631643}
@@ -23474,6 +23475,7 @@ MonoBehaviour:
   - {fileID: 631226702}
   - {fileID: 2021688959}
   - {fileID: 228051874}
+  activationDelay: 0.2
 --- !u!4 &2063162385
 Transform:
   m_ObjectHideFlags: 0
@@ -23504,7 +23506,6 @@ Transform:
   - {fileID: 730106339}
   - {fileID: 592020770}
   - {fileID: 290475192}
-  - {fileID: 631226703}
   - {fileID: 1594728690}
   - {fileID: 2021688960}
   m_Father: {fileID: 0}

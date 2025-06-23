@@ -17,6 +17,8 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: f0ebaf5b173e2be4996ddf9f14201427, type: 2}
     text: "Please try it, My mommy made it just for you, and I want you to have the
       first taste.\r"
+    textID: Kumohon, cobalah. Ibu membuat ini khusus untukmu. Aku ingin kamulah yang
+      pertama kali mencicipinya.
     textTH: "\u0E25\u0E2D\u0E07\u0E01\u0E34\u0E19\u0E40\u0E16\u0E2D\u0E30\u0E04\u0E48\u0E30
       \u0E04\u0E38\u0E13\u0E40\u0E40\u0E21\u0E48\u0E02\u0E2D\u0E07\u0E2B\u0E19\u0E39\u0E15\u0E31\u0E49\u0E07\u0E43\u0E08\u0E17\u0E33\u0E21\u0E32\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E04\u0E38\u0E13\u0E40\u0E25\u0E22\u0E19\u0E30
       \u0E40\u0E40\u0E25\u0E30\u0E2B\u0E19\u0E39\u0E01\u0E47\u0E2D\u0E22\u0E32\u0E01\u0E43\u0E2B\u0E49\u0E04\u0E38\u0E13\u0E44\u0E14\u0E49\u0E01\u0E34\u0E19\u0E01\u0E48\u0E2D\u0E19\r\n"
@@ -24,6 +26,7 @@ MonoBehaviour:
       ilk tad\u0131na bakan ki\u015Finin sen olmas\u0131n\u0131 istiyorum."
   - character: {fileID: 11400000, guid: 55297d43d7c736043bee3cd72e15d91b, type: 2}
     text: "Well, if you're insisting, I\u2019ll try a bite."
+    textID: Baiklah, kalau kamu memaksa. Aku coba sepotong.
     textTH: "\u0E40\u0E40\u0E2B\u0E21 \u0E16\u0E49\u0E32\u0E1E\u0E39\u0E14\u0E02\u0E19\u0E32\u0E14\u0E19\u0E35\u0E49
       \u0E09\u0E31\u0E19\u0E08\u0E30\u0E25\u0E2D\u0E07\u0E01\u0E34\u0E19\u0E2A\u0E31\u0E01\u0E04\u0E33\u0E01\u0E47\u0E44\u0E14\u0E49\r\n"
     textTR: "Eh, madem \u0131srar ediyorsun, bir \u0131s\u0131r\u0131k alaca\u011F\u0131m."

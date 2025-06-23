@@ -16,102 +16,132 @@ MonoBehaviour:
   - nameTranslation:
     - "\u0E1E\u0E32\u0E22\u0E40\u0E40\u0E2D\u0E1B\u0E40\u0E1B\u0E34\u0E49\u0E25"
     - "Elmal\u0131 turta"
+    - Pai Apel
     descriptionTranslation:
     - "\u0E21\u0E31\u0E19\u0E14\u0E39\u0E19\u0E48\u0E32\u0E2D\u0E23\u0E48\u0E2D\u0E22\u0E21\u0E32\u0E01\u0E46
       \u0E08\u0E19\u0E09\u0E31\u0E19\u0E2D\u0E22\u0E32\u0E01\u0E08\u0E30\u0E40\u0E40\u0E2D\u0E1A\u0E01\u0E34\u0E19\u0E40\u0E25\u0E22\r"
     - "\rO kadar lezzetli g\xF6r\xFCn\xFCyor ki bir \u0131s\u0131r\u0131k almak istiyorum!"
+    - Kelihatan enak banget, \n jadi ingin mencicipi!
   - nameTranslation:
     - "\u0E25\u0E39\u0E01\u0E42\u0E2D\u0E4A\u0E01"
     - "Me\u015Fe Palamudu"
+    - Kacang Ek
     descriptionTranslation:
     - "\u0E21\u0E31\u0E19\u0E44\u0E21\u0E48\u0E44\u0E14\u0E49\u0E40\u0E1B\u0E47\u0E19\u0E40\u0E40\u0E04\u0E48\u0E02\u0E2D\u0E07\u0E27\u0E48\u0E32\u0E07\u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A\u0E01\u0E23\u0E30\u0E23\u0E2D\u0E01\u0E40\u0E17\u0E48\u0E32\u0E19\u0E31\u0E49\u0E19
       \u0E41\u0E15\u0E48\u0E22\u0E31\u0E07\u0E40\u0E1B\u0E47\u0E19\u0E2D\u0E32\u0E27\u0E38\u0E18
       \u0E1B\u0E32\u0E2B\u0E31\u0E27\u0E04\u0E19\u0E40\u0E40\u0E15\u0E01\u0E44\u0E14\u0E49\u0E14\u0E49\u0E27\u0E22"
     - "Sincaplar i\xE7in at\u0131\u015Ft\u0131rmal\u0131k de\u011Fil, asl\u0131nda
       gizli bir silah."
+    - Bukan cuma camilan tupai, \n tapi juga senjata terselubung.
   - nameTranslation:
     - "\u0E16\u0E38\u0E07\u0E21\u0E37\u0E2D"
     - Eldivenler
+    - Sarung Tangan
     descriptionTranslation:
     - "\u0E43\u0E0A\u0E49\u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A\u0E40\u0E21\u0E37\u0E48\u0E2D\u0E04\u0E38\u0E13\u0E44\u0E21\u0E48\u0E2D\u0E22\u0E32\u0E01\u0E2A\u0E31\u0E21\u0E1C\u0E31\u0E2A
       \\n \u0E2A\u0E34\u0E48\u0E07\u0E17\u0E35\u0E48\u0E2A\u0E01\u0E1B\u0E23\u0E01\u0E14\u0E49\u0E27\u0E22\u0E21\u0E37\u0E2D\u0E40\u0E1B\u0E25\u0E48\u0E32"
     - "Ellerinle pis \u015Feylere dokunmak istemedi\u011Finde kullan\u0131l\u0131r."
+    - Kalau tidak mau pegang benda menjijikkan, bisa pakai sarung tangan.
   - nameTranslation:
     - "\u0E44\u0E02\u0E04\u0E27\u0E07"
     - Tornavida
+    - Obeng
     descriptionTranslation:
     - "\u0E21\u0E31\u0E19\u0E19\u0E48\u0E32\u0E08\u0E30\u0E40\u0E2D\u0E32\u0E44\u0E1B\u0E43\u0E0A\u0E49\u0E40\u0E1B\u0E34\u0E14\u0E1B\u0E23\u0E30\u0E15\u0E39\u0E44\u0E14\u0E49\u0E19\u0E30"
     - "Kap\u0131lar\u0131 a\xE7mak i\xE7in mi kullan\u0131l\u0131yor acaba?"
+    - Untuk membuka pintu ... mungkin?
   - nameTranslation:
     - "\u0E01\u0E38\u0E0D\u0E40\u0E40\u0E08\u0E1A\u0E31\u0E19\u0E44\u0E14"
     - "Merdiven Anahtar\u0131"
+    - Kunci Tangga
     descriptionTranslation:
     - "\u0E1A\u0E31\u0E15\u0E23 VIP \u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A\u0E02\u0E36\u0E49\u0E19\u0E44\u0E1B\u0E0A\u0E31\u0E49\u0E19
       2"
     - "\u0130kinci kata ge\xE7i\u015F i\xE7in VIP ge\xE7i\u015F kart\u0131."
+    - Tiket VIP menuju lantai dua.
   - nameTranslation:
     - "\u0E1A\u0E31\u0E19\u0E44\u0E14\u0E07\u0E39"
     - Merdiven
+    - Tangga Lipat
     descriptionTranslation:
     - "\u0E16\u0E49\u0E32\u0E40\u0E1B\u0E49\u0E32\u0E2B\u0E21\u0E32\u0E22\u0E2A\u0E39\u0E07\u0E40\u0E01\u0E34\u0E19\u0E40\u0E2D\u0E37\u0E49\u0E2D\u0E21
       \u0E43\u0E0A\u0E49\u0E40\u0E08\u0E49\u0E32\u0E19\u0E35\u0E48\u0E2A\u0E34"
     - "Ula\u015Fmak istedi\u011Fin yer \xE7ok yukar\u0131daysa t\u0131rmanmay\u0131
       bu merdivene b\u0131rak."
+    - Kalau butuh naik ke tempat yang tinggi, bisa pakai tangga ini.
   - nameTranslation:
     - "\u0E0A\u0E35\u0E2A"
     - 'Peynir '
+    - Keju
     descriptionTranslation:
     - "\u0E27\u0E48\u0E32\u0E01\u0E31\u0E19\u0E27\u0E48\u0E32 \u0E19\u0E35\u0E48\u0E40\u0E1B\u0E47\u0E19\u0E2A\u0E34\u0E48\u0E07\u0E17\u0E35\u0E48\u0E2B\u0E19\u0E39\u0E0A\u0E37\u0E48\u0E19\u0E0A\u0E2D\u0E1A\u0E21\u0E32\u0E01"
     - "Farelerin en sevdi\u011Fi at\u0131\u015Ft\u0131rmal\u0131k oldu\u011Fu s\xF6ylenir."
+    - Katanya ini camilan favorit tikus.
   - nameTranslation:
     - "\u0E19\u0E33\u0E49\u0E21\u0E31\u0E19"
     - "Ya\u011F"
+    - Minyak
     descriptionTranslation:
     - "\u0E40\u0E2B\u0E21\u0E32\u0E30\u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A\u0E43\u0E0A\u0E49\u0E1B\u0E23\u0E38\u0E07\u0E2D\u0E32\u0E2B\u0E32\u0E23
       \u0E40\u0E40\u0E15\u0E48\u0E21\u0E31\u0E19\u0E01\u0E47\u0E19\u0E48\u0E32\u0E08\u0E30\u0E40\u0E2D\u0E32\u0E44\u0E1B\u0E17\u0E33\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E2D\u0E37\u0E48\u0E19\u0E44\u0E14\u0E49\u0E19\u0E30\r\n"
     - "Yemek pi\u015Firmek i\xE7in ideal, ama belki ba\u015Fka i\u015Flerde de i\u015Fe
       yarar?"
+    - Cocok untuk memasak, tapi mungkin ada kegunaan lain juga?
   - nameTranslation:
     - "\u0E17\u0E35\u0E48\u0E1B\u0E31\u0E4A\u0E21\u0E2A\u0E49\u0E27\u0E21"
     - "Tuvalet pompas\u0131"
+    - Penyedot WC
     descriptionTranslation:
     - "\u0E44\u0E27\u0E49\u0E43\u0E0A\u0E49\u0E40\u0E27\u0E25\u0E32\u0E2A\u0E49\u0E27\u0E21\u0E15\u0E31\u0E19"
     - "Tuvalet \xE7al\u0131\u015Fmak istemedi\u011Finde kullan\u0131l\u0131r."
+    - Solusi saat toilet mampet.
   - nameTranslation:
     - "\u0E40\u0E02\u0E47\u0E21\u0E19\u0E32\u0E2C\u0E34\u0E01\u0E32"
     - Saat ibreleri
+    - Jarum Jam
     descriptionTranslation:
     - "\u0E40\u0E21\u0E37\u0E48\u0E2D\u0E40\u0E02\u0E47\u0E21\u0E2A\u0E31\u0E49\u0E19\u0E40\u0E40\u0E25\u0E30\u0E40\u0E02\u0E47\u0E21\u0E22\u0E32\u0E27\u0E23\u0E27\u0E21\u0E01\u0E31\u0E19
       \u0E19\u0E32\u0E2C\u0E34\u0E01\u0E32\u0E08\u0E30\u0E17\u0E33\u0E07\u0E32\u0E19\u0E44\u0E14\u0E49\u0E2A\u0E21\u0E1A\u0E39\u0E23\u0E13\u0E4C\u0E40\u0E40\u0E1A\u0E1A"
     - "Akrep ve yelkovan birle\u015Fince saat m\xFCkemmel \xE7al\u0131\u015F\u0131r."
+    - Saat jarum panjang dan pendek bertemu, jam akan bisa bekerja.
   - nameTranslation:
     - "\u0E0A\u0E30\u0E40\u0E40\u0E25\u0E07"
     - Levye
+    - Linggis
     descriptionTranslation:
     - "\u0E02\u0E2D\u0E07\u0E2A\u0E33\u0E04\u0E31\u0E0D\u0E17\u0E35\u0E48\u0E17\u0E38\u0E01\u0E1A\u0E49\u0E32\u0E19\u0E15\u0E49\u0E2D\u0E07\u0E21\u0E35"
     - "Evrensel sorun \xE7\xF6z\xFCc\xFC. Her evde bulunmal\u0131."
+    - Solusi semua masalah. \n Wajib punya di rumah.
   - nameTranslation:
     - "\u0E40\u0E2B\u0E23\u0E35\u0E22\u0E0D\u0E14\u0E2D\u0E01\u0E44\u0E21\u0E49 1"
     - "\xC7i\xE7ek paras\u0131 1"
+    - Koin Bunga 1
     descriptionTranslation:
     - "\u0E21\u0E31\u0E19\u0E04\u0E37\u0E2D\u0E01\u0E38\u0E0D\u0E41\u0E08\u0E2A\u0E33\u0E04\u0E31\u0E0D\u0E02\u0E2D\u0E07\u0E1A\u0E32\u0E07\u0E2A\u0E34\u0E48\u0E07\u0E17\u0E35\u0E48\u0E22\u0E34\u0E48\u0E07\u0E43\u0E2B\u0E0D\u0E48\u0E40\u0E40\u0E19\u0E48\u0E46"
     - "Kesinlikle b\xFCy\xFCk bir \u015Feyin anahtar\u0131."
+    - Kunci untuk sesuatu yang penting.
   - nameTranslation:
     - "\u0E40\u0E2B\u0E23\u0E35\u0E22\u0E0D\u0E14\u0E2D\u0E01\u0E44\u0E21\u0E49 2"
     - "\xC7i\xE7ek paras\u0131 2"
+    - Koin Bunga 2
     descriptionTranslation:
     - "\u0E21\u0E31\u0E19\u0E04\u0E37\u0E2D\u0E01\u0E38\u0E0D\u0E41\u0E08\u0E2A\u0E33\u0E04\u0E31\u0E0D\u0E02\u0E2D\u0E07\u0E1A\u0E32\u0E07\u0E2A\u0E34\u0E48\u0E07\u0E17\u0E35\u0E48\u0E22\u0E34\u0E48\u0E07\u0E43\u0E2B\u0E0D\u0E48\u0E40\u0E40\u0E19\u0E48\u0E46"
     - "Kesinlikle b\xFCy\xFCk bir \u015Feyin anahtar\u0131."
+    - Kunci untuk sesuatu yang penting.
   - nameTranslation:
     - "\u0E40\u0E2B\u0E23\u0E35\u0E22\u0E0D\u0E14\u0E2D\u0E01\u0E44\u0E21\u0E49 3"
     - "\xC7i\xE7ek paras\u0131 3"
+    - Koin Bunga 3
     descriptionTranslation:
     - "\u0E21\u0E31\u0E19\u0E04\u0E37\u0E2D\u0E01\u0E38\u0E0D\u0E41\u0E08\u0E2A\u0E33\u0E04\u0E31\u0E0D\u0E02\u0E2D\u0E07\u0E1A\u0E32\u0E07\u0E2A\u0E34\u0E48\u0E07\u0E17\u0E35\u0E48\u0E22\u0E34\u0E48\u0E07\u0E43\u0E2B\u0E0D\u0E48\u0E40\u0E40\u0E19\u0E48\u0E46"
     - "Kesinlikle b\xFCy\xFCk bir \u015Feyin anahtar\u0131."
+    - Kunci untuk sesuatu yang penting.
   - nameTranslation:
     - "\u0E01\u0E38\u0E0D\u0E40\u0E40\u0E08\u0E17\u0E32\u0E07\u0E2D\u0E2D\u0E01"
     - "\xC7\u0131k\u0131\u015F anahtar\u0131"
+    - Kunci Keluar
     descriptionTranslation:
     - "\u0E15\u0E31\u0E4B\u0E27\u0E17\u0E35\u0E48\u0E08\u0E30\u0E1E\u0E32\u0E2D\u0E2D\u0E01\u0E44\u0E1B\u0E08\u0E32\u0E01\u0E17\u0E35\u0E48\u0E19\u0E35\u0E48
       \u0E2D\u0E22\u0E48\u0E32\u0E17\u0E33\u0E2B\u0E32\u0E22\u0E25\u0E30"
     - "Buradan \xE7\u0131k\u0131\u015F biletin \u2014 sak\u0131n kaybetme!"
+    - "Tiket pulangmu dari tempat ini\u2014jangan sampai hilang!"

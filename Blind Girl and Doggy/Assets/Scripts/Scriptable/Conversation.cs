@@ -16,6 +16,8 @@ public struct Line
     [TextArea(2,5)]
     public string text;
     [TextArea(2, 5)]
+    public string textID;
+    [TextArea(2, 5)]
     public string textTH;
     [TextArea(2, 5)]
     public string textTR;

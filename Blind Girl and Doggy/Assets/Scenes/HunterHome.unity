@@ -15963,6 +15963,7 @@ MonoBehaviour:
   - {fileID: 1382620200}
   - {fileID: 1510512778}
   - {fileID: 1963018107}
+  activationDelay: 0.2
 --- !u!4 &1163871849
 Transform:
   m_ObjectHideFlags: 0

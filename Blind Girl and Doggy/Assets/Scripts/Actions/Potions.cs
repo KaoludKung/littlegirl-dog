@@ -86,6 +86,14 @@ public class Potions : MonoBehaviour, Interactable
     {
         var sprite = isDog ? dogPlayer.GetComponent<SpriteRenderer>() : girlPlayer.GetComponent<SpriteRenderer>();
 
+        // Check if speed is not in default state
+        if ((isDog && Mathf.Abs(dogController.GetSpeed() - 5) > Mathf.Epsilon) || (!isDog && Mathf.Abs(girlController.GetSpeed() - 5) > Mathf.Epsilon))
+        {
+            dogController.AdjustStamina(0.5f);
+            yield return new WaitForSeconds(0.5f);
+            yield break;
+        }
+
         if (isDog)
         {
             dogController.AdjustSpeed(speedAdjustment);

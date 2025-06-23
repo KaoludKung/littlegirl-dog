@@ -16,45 +16,57 @@ MonoBehaviour:
   lines:
   - character: {fileID: 11400000, guid: 116f88c1bca8ea447a81aa1c193093c4, type: 2}
     text: "(That sound of footsteps\u2026)"
+    textID: "(Suara langkah kaki itu \u2026) "
     textTH: "(\u0E40\u0E2A\u0E35\u0E22\u0E07\u0E1D\u0E35\u0E40\u0E17\u0E49\u0E32\u0E19\u0E31\u0E48\u0E19\u0E21\u0E31\u0E19...) "
     textTR: "(Ad\u0131m sesleri\u2026)"
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: Is that Mr.Wermut?
+    textID: 'Apa itu Tuan Wermut?!
+
+'
     textTH: "\u0E19\u0E31\u0E48\u0E19\u0E04\u0E38\u0E13\u0E40\u0E27\u0E2D\u0E23\u0E4C\u0E21\u0E38\u0E18\u0E40\u0E2B\u0E23\u0E2D\u0E04\u0E30\r\n"
     textTR: 'Acaba bu Bay Wermut mu?
 
 '
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: Ha ha, you can recognize me just by the sound of my steps?
+    textID: Ha ha ha, ternyata kamu langsung tahu langkah kakiku, ya?
     textTH: "\u0E2E\u0E32\u0E2E\u0E48\u0E32 \u0E40\u0E40\u0E04\u0E48\u0E1F\u0E31\u0E07\u0E40\u0E2A\u0E35\u0E22\u0E07\u0E1D\u0E35\u0E40\u0E17\u0E49\u0E32
       \u0E01\u0E47\u0E23\u0E39\u0E49\u0E40\u0E25\u0E22\u0E40\u0E2B\u0E23\u0E2D\u0E27\u0E48\u0E32\u0E40\u0E1B\u0E47\u0E19\u0E09\u0E31\u0E19\r\n"
     textTR: "Ha ha, sadece ad\u0131m sesimden beni tan\u0131yabiliyor musun?"
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: "I\u2019m impressed."
+    textID: Hebat juga.
     textTH: "\u0E19\u0E48\u0E32\u0E1B\u0E23\u0E30\u0E17\u0E31\u0E1A\u0E43\u0E08\u0E08\u0E23\u0E34\u0E07\u0E46"
     textTR: "Etkilendim do\u011Frusu."
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: Yes, but what are you doing around here?
+    textID: Eh, iya. T-tapi, apa yang Tuan lakukan di sekitar sini?
     textTH: "\u0E48\u0E04\u0E48\u0E30 \u0E27\u0E48\u0E32\u0E41\u0E15\u0E48\u0E04\u0E38\u0E13\u0E21\u0E32\u0E17\u0E33\u0E2D\u0E30\u0E44\u0E23\u0E41\u0E16\u0E27\u0E19\u0E35\u0E49\u0E04\u0E30
       \u0E04\u0E38\u0E13\u0E44\u0E21\u0E48\u0E04\u0E27\u0E23\u0E2D\u0E22\u0E39\u0E48\u0E17\u0E35\u0E48\u0E19\u0E35\u0E48\u0E19\u0E30"
     textTR: "Evet, ama sen burada ne yap\u0131yorsun?"
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: "\u2026"
+    textID: ...
     textTH: ...
     textTR: ...
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: "I\u2019ve been waiting for you."
+    textID: Aku menunggumu sejak tadi.
     textTH: "\u0E09\u0E31\u0E19\u0E01\u0E47\u0E21\u0E32\u0E23\u0E2D\u0E2B\u0E19\u0E39\u0E19\u0E48\u0E30\u0E2A\u0E34\r\n"
     textTR: 'Seni bekliyordum.
 
 '
   - character: {fileID: 11400000, guid: 116f88c1bca8ea447a81aa1c193093c4, type: 2}
     text: Waiting for me? Why?
+    textID: Menungguku? K-kenapa?
     textTH: "\u0E21\u0E32\u0E23\u0E2D\u0E2B\u0E19\u0E39 \u0E17\u0E33\u0E44\u0E21\u0E16\u0E36\u0E07\u0E21\u0E32\u0E23\u0E2D\u0E25\u0E48\u0E30\u0E04\u0E30"
     textTR: Beni mi bekliyordun? Neden?
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: You somehow survived that thing, even though I thought it would be your
       end...
+    textID: "Kamu ternyata bisa selamat darinya \u2026 padahal kupikir kamu sudah
+      tamat."
     textTH: "\u0E01\u0E47\u0E40\u0E18\u0E2D\u0E14\u0E31\u0E19\u0E23\u0E2D\u0E14\u0E08\u0E32\u0E01\u0E40\u0E08\u0E49\u0E32\u0E19\u0E31\u0E48\u0E19\u0E21\u0E32\u0E44\u0E14\u0E49
       \u0E17\u0E31\u0E49\u0E07\u0E17\u0E35\u0E48\u0E09\u0E31\u0E19\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E21\u0E31\u0E19\u0E04\u0E27\u0E23\u0E08\u0E30\u0E40\u0E1B\u0E47\u0E19\u0E17\u0E35\u0E48\u0E15\u0E32\u0E22\u0E02\u0E2D\u0E07\u0E40\u0E18\u0E2D\u0E40\u0E40\u0E17\u0E49\u0E46 "
     textTR: "O \u015Feyin seni yok edece\u011Fini san\u0131yordum ama bir \u015Fekilde
@@ -62,6 +74,8 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: "Now I had to use my backup plan, even though I\u2019m afraid of that thing
       too. So frustrating."
+    textID: Sekarang aku harus pakai rencana cadangan. Padahal aku juga takut dengan
+      makhluk itu. Menyebalkan.
     textTH: "\u0E17\u0E33\u0E43\u0E2B\u0E49\u0E09\u0E31\u0E19\u0E15\u0E49\u0E2D\u0E07\u0E21\u0E32\u0E43\u0E0A\u0E49\u0E40\u0E40\u0E1C\u0E19\u0E2A\u0E2D\u0E07
       \u0E17\u0E31\u0E49\u0E07\u0E17\u0E35\u0E48\u0E09\u0E31\u0E19\u0E01\u0E47\u0E01\u0E25\u0E31\u0E27\u0E40\u0E08\u0E49\u0E32\u0E19\u0E31\u0E48\u0E19\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E01\u0E31\u0E19
       \u0E19\u0E48\u0E32\u0E2B\u0E07\u0E38\u0E14\u0E2B\u0E07\u0E34\u0E14\u0E0A\u0E30\u0E21\u0E31\u0E14\r"
@@ -69,17 +83,21 @@ MonoBehaviour:
       \u015Feyden ben de korkuyorum. Ne kadar sinir bozucu."
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: Why are you doing this? Did I do something wrong?
+    textID: Kenapa Tuan melakukan ini? Apa salahku?
     textTH: "\u0E17\u0E33\u0E44\u0E21\u0E04\u0E38\u0E13\u0E15\u0E49\u0E2D\u0E07\u0E17\u0E33\u0E40\u0E40\u0E1A\u0E1A\u0E19\u0E35\u0E49\u0E14\u0E49\u0E27\u0E22
       \u0E2B\u0E19\u0E39\u0E17\u0E33\u0E2D\u0E30\u0E44\u0E23\u0E1C\u0E34\u0E14\u0E40\u0E2B\u0E23\u0E2D\u0E04\u0E30\r"
     textTR: "Neden bunu yap\u0131yorsun? Sana yanl\u0131\u015F bir \u015Fey mi yapt\u0131m?"
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: "It\u2019s not your fault, young lady..."
+    textID: Bukan salahmu, Nak ...
     textTH: "\u0E44\u0E21\u0E48\u0E43\u0E0A\u0E48\u0E04\u0E27\u0E32\u0E21\u0E1C\u0E34\u0E14\u0E02\u0E2D\u0E07\u0E2B\u0E19\u0E39\u0E2B\u0E23\u0E2D\u0E01
       \u0E2A\u0E32\u0E27\u0E19\u0E49\u0E2D\u0E22..."
     textTR: "Su\xE7 senin de\u011Fil, k\xFC\xE7\xFCk han\u0131m...\r\n"
   - character: {fileID: 11400000, guid: e08d1d2217b3d38419e4e528ba3459c8, type: 2}
     text: "But if anyone is to blame, it\u2019s that old hag! Everything\u2019s her
       fault!"
+    textID: "Tapi kalau ada yang pantas disalahkan, ya si nenek tua itu! Semua ini
+      salah dia!\r"
     textTH: "\u0E41\u0E15\u0E48\u0E16\u0E49\u0E32\u0E08\u0E30\u0E42\u0E17\u0E29\u0E43\u0E04\u0E23
       \u0E01\u0E47\u0E44\u0E1B\u0E42\u0E17\u0E29\u0E22\u0E31\u0E22\u0E41\u0E01\u0E48\u0E19\u0E31\u0E48\u0E19\u0E40\u0E16\u0E2D\u0E30
       \u0E17\u0E38\u0E01\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E40\u0E1B\u0E47\u0E19\u0E40\u0E1E\u0E23\u0E32\u0E30\u0E04\u0E27\u0E32\u0E21\u0E1C\u0E34\u0E14\u0E02\u0E2D\u0E07\u0E21\u0E31\u0E19\r\n"
@@ -87,13 +105,16 @@ MonoBehaviour:
       onun y\xFCz\xFCnden!"
   - character: {fileID: 11400000, guid: 116f88c1bca8ea447a81aa1c193093c4, type: 2}
     text: What do you mean?
+    textID: Maksudnya?
     textTH: "\u0E40\u0E2D\u0E4B? \u0E04\u0E38\u0E13\u0E2B\u0E21\u0E32\u0E22\u0E04\u0E27\u0E32\u0E21\u0E27\u0E48\u0E32\u0E22\u0E31\u0E07\u0E44\u0E07\u0E01\u0E31\u0E19"
     textTR: Ne demek istiyorsun?
   - character: {fileID: 11400000, guid: e08d1d2217b3d38419e4e528ba3459c8, type: 2}
     text: "I won\u2019t let you meet her, no matter what."
+    textID: Aku tidak akan biarkan kamu bertemu dia, apapun yang terjadi.
     textTH: "\u0E09\u0E31\u0E19\u0E08\u0E30\u0E44\u0E21\u0E48\u0E22\u0E2D\u0E21\u0E43\u0E2B\u0E49\u0E40\u0E18\u0E2D\u0E44\u0E1B\u0E40\u0E08\u0E2D\u0E22\u0E31\u0E22\u0E40\u0E40\u0E01\u0E48\u0E19\u0E31\u0E48\u0E19\u0E44\u0E14\u0E49\u0E2B\u0E23\u0E2D\u0E01 "
     textTR: "Onunla g\xF6r\xFC\u015Fmene asla izin vermeyece\u011Fim, ne olursa olsun.\r\n"
   - character: {fileID: 11400000, guid: e9df17b3bb5c76248bc0d8a210d5ca15, type: 2}
     text: "Please, don\u2019t!"
+    textID: Tidak ... jangan!!!
     textTH: "\u0E2D\u0E22\u0E48\u0E32\u0E19\u0E30! \u0E44\u0E14\u0E49\u0E42\u0E1B\u0E23\u0E14"
     textTR: "L\xFCtfen, yapma!"

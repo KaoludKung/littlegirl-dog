@@ -191,6 +191,9 @@ public class DialogueManager : EventObject
             case 2:
                 lineLanguage = conversation.lines[index].textTR;
                 break;
+            case 3:
+                lineLanguage = conversation.lines[index].textID;
+                break;
         }
 
         while (charIndex < lineLanguage.Length)

@@ -16,16 +16,19 @@ MonoBehaviour:
   lines:
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: "Ha ha, Looks like you\u2019re cornered, young lady."
+    textID: Ha ha ha, kamu terpojok ya, Nak?
     textTH: "\u0E2E\u0E32\u0E2E\u0E48\u0E32 \u0E14\u0E39\u0E40\u0E2B\u0E21\u0E37\u0E2D\u0E19\u0E40\u0E18\u0E2D\u0E08\u0E30\u0E08\u0E19\u0E21\u0E38\u0E21\u0E40\u0E40\u0E25\u0E49\u0E27\u0E19\u0E30
       \u0E2A\u0E32\u0E27\u0E19\u0E49\u0E2D\u0E22"
     textTR: "Ha ha, g\xF6r\xFCn\xFC\u015Fe g\xF6re k\xF6\u015Feye s\u0131k\u0131\u015Ft\u0131n,
       gen\xE7 han\u0131m.\r\n"
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: "This time... I won\u2019t let you escape."
+    textID: "Kali ini \u2026 kamu tak akan bisa kabur lagi."
     textTH: "\u0E09\u0E31\u0E19\u0E08\u0E30\u0E44\u0E21\u0E48\u0E22\u0E2D\u0E21\u0E43\u0E2B\u0E49\u0E40\u0E18\u0E2D\u0E2B\u0E19\u0E35\u0E44\u0E1B\u0E44\u0E14\u0E49\u0E2D\u0E35\u0E01\r"
     textTR: "Bu sefer... ka\xE7mana izin vermeyece\u011Fim."
   - character: {fileID: 11400000, guid: c248ce0cd04cb3d4dac6e7a37de3c8d7, type: 2}
     text: "But before anything else\u2026 let\u2019s begin with you, little dog."
+    textID: Tapi sebelum itu ... kita mulai dari anjing kecilmu dulu.
     textTH: "\u0E40\u0E40\u0E15\u0E48\u0E01\u0E48\u0E2D\u0E19\u0E2D\u0E37\u0E48\u0E19
       \u0E02\u0E2D\u0E40\u0E23\u0E34\u0E48\u0E21\u0E08\u0E32\u0E01\u0E40\u0E40\u0E01\u0E01\u0E48\u0E2D\u0E19\u0E40\u0E40\u0E25\u0E49\u0E27\u0E01\u0E31\u0E19
       \u0E40\u0E08\u0E49\u0E32\u0E15\u0E39\u0E1A\r\n"

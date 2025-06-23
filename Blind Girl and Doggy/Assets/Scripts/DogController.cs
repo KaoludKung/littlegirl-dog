@@ -143,9 +143,9 @@ public class DogController : MonoBehaviour
     {
         while (staminaFill.fillAmount < 1.0f)
         {
-            float waitTime = staminaFill.fillAmount < 0.30f ? 1.0f : 0.75f;
+            float waitTime = staminaFill.fillAmount < 0.30f ? 1.15f : 0.75f;
             yield return new WaitForSeconds(waitTime);
-            staminaFill.fillAmount += 0.01075f;
+            staminaFill.fillAmount += 0.01025f;
         }
         isRegeneratingStamina = false;
     }
@@ -234,6 +234,11 @@ public class DogController : MonoBehaviour
         {
             walkSource.Stop();
         }
+    }
+
+    public float GetSpeed()
+    {
+        return speed;
     }
 
     public void AdjustSpeed(float value)

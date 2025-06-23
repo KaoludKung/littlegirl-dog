@@ -208,7 +208,7 @@ public class SettingManager : MonoBehaviour
 
     void ChangeLanguage(int value)
     {
-        currentLanguage = Mathf.Clamp(currentLanguage += value, 0, 2);
+        currentLanguage = Mathf.Clamp(currentLanguage += value, 0, 3);
 
         SoundFXManager.instance.PlaySoundFXClip(pressedClip, transform, false, 1);
         PlayerDataManager.Instance.UpdateLanguage(currentLanguage);
