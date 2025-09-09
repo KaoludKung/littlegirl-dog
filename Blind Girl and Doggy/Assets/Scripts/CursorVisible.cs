@@ -6,8 +6,16 @@ public class CursorVisible : MonoBehaviour
 {
     void Start()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        if(PlayerPrefs.GetInt("FullScreen") == 0)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }  
     }
 
     /*

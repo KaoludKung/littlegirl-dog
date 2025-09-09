@@ -15,7 +15,7 @@ public class SettingManager : MonoBehaviour
     [SerializeField] private AudioClip selectedClip;
     [SerializeField] private AudioClip pressedClip;
 
-    private const int defaultLanguageID = 114;
+    private const int defaultLanguageID = 117;
 
     private int currentIndexM = 0;
     private int currentIndexD = 0;
@@ -39,6 +39,11 @@ public class SettingManager : MonoBehaviour
             PlayerPrefs.SetInt("FPS", 120);
         }
 
+        if (!PlayerPrefs.HasKey("FullScreen"))
+        {
+            PlayerPrefs.SetInt("FullScreen", 0);
+        }
+
         InitializecurrentLanguage();
 
         soundMixerManager.InitializeVolumeSettings();
@@ -48,7 +53,8 @@ public class SettingManager : MonoBehaviour
 
         displayOptions[0].optionText.text = language;
         displayOptions[1].optionText.text = PlayerPrefs.GetInt("FPS").ToString();
-
+        SetOnOffText();  
+        
         UpdateTab();
         UpdateMenuSound();
         UpdateMenuDisplay();
@@ -56,6 +62,7 @@ public class SettingManager : MonoBehaviour
 
     void Update()
     {
+        //Switch Tab Sound and Tab Display
         if (InputManager.Instance.IsQPressed())
         {
             currentIndexTab = (currentIndexTab - 1 + tabOptions.Count) % tabOptions.Count;
@@ -69,7 +76,7 @@ public class SettingManager : MonoBehaviour
             UpdateTab();
         }
 
-
+        //Select Options in Tab (Up and Down)
         if (InputManager.Instance.IsUpPressed(ref localLastMoveTime))
         {
             if (!displayPanel.activeSelf)
@@ -107,6 +114,10 @@ public class SettingManager : MonoBehaviour
             {
                 AdjustVolume(-volumeStep);
             }
+            else if(displayPanel.activeSelf && currentIndexD == 2)
+            {
+                FullScreenToggle(-1);
+            }
             else if (displayPanel.activeSelf && currentIndexD == 1)
             {
                 AdjustFPS(-30);
@@ -123,7 +134,12 @@ public class SettingManager : MonoBehaviour
             if (!displayPanel.activeSelf)
             {
                 AdjustVolume(volumeStep);
-            }else if(displayPanel.activeSelf && currentIndexD == 1)
+            }
+            else if (displayPanel.activeSelf && currentIndexD == 2)
+            {
+                FullScreenToggle(1);
+            }
+            else if(displayPanel.activeSelf && currentIndexD == 1)
             {
                 AdjustFPS(30);
             }
@@ -217,6 +233,7 @@ public class SettingManager : MonoBehaviour
         //FontChanger.Instance.ChangeSpecificFont(displayOptions[0].optionText, currentLanguage);
         language = LocalizationManager.Instance.GetText(defaultLanguageID + currentLanguage, PlayerDataManager.Instance.GetLanguage());
         displayOptions[0].optionText.text = language;
+        SetOnOffText();
 
         Translate[] objects = FindObjectsOfType<Translate>();
 
@@ -265,7 +282,34 @@ public class SettingManager : MonoBehaviour
         SoundFXManager.instance.PlaySoundFXClip(pressedClip, transform, false, 1);
     }
 
-    
+    void FullScreenToggle(int value)
+    {
+        int currentMode = PlayerPrefs.GetInt("FullScreen");
+        currentMode = Mathf.Clamp(currentMode += value, 0, 1);
+
+        //currentMode = 0 : FullScreen, 1 : Windowed
+
+        SoundFXManager.instance.PlaySoundFXClip(pressedClip, transform, false, 1);
+        Screen.fullScreen = currentMode == 0 ? true : false;
+        Cursor.visible = currentMode == 0 ? false : true;
+        Cursor.lockState = currentMode == 0 ? CursorLockMode.Locked : CursorLockMode.None;
+
+        PlayerPrefs.SetInt("FullScreen", currentMode);
+        SetOnOffText();
+    }
+
+    void SetOnOffText()
+    {
+        if (PlayerPrefs.GetInt("FullScreen") == 0)
+        {
+            displayOptions[2].optionText.text = LocalizationManager.Instance.GetText(115, PlayerDataManager.Instance.GetLanguage());
+        }
+        else
+        {
+            displayOptions[2].optionText.text = LocalizationManager.Instance.GetText(116, PlayerDataManager.Instance.GetLanguage());
+        }
+    }
+
 }
 
 [System.Serializable]

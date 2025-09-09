@@ -6,6 +6,7 @@ public class FramerRate : MonoBehaviour
 {
     void Start()
     {
+        SetFullScreenMode();
         SetTargetFrameRate();
     }
 
@@ -19,5 +20,15 @@ public class FramerRate : MonoBehaviour
         Application.targetFrameRate = PlayerPrefs.GetInt("FPS");
         Debug.Log("Setting FPS to " + PlayerPrefs.GetInt("FPS"));
       
+    }
+
+    void SetFullScreenMode()
+    {
+        if (!PlayerPrefs.HasKey("FullScreen"))
+        {
+            PlayerPrefs.SetInt("FullScreen", 0);
+        }
+
+        Screen.fullScreen = PlayerPrefs.GetInt("FullScreen") == 0 ? true : false;
     }
 }

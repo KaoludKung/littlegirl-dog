@@ -6,6 +6,7 @@ using UnityEngine.Rendering.Universal;
 public class FireflyOutage : MonoBehaviour
 {
     [SerializeField] private Light2D fireFlyLight;
+    [SerializeField] private AudioClip fireflySound;
     [SerializeField] private int maxOutages;
     [SerializeField] private int minTime = 10;
     [SerializeField] private int maxTime = 20;
@@ -38,6 +39,7 @@ public class FireflyOutage : MonoBehaviour
 
     private IEnumerator HandleOutage()
     {
+        Debug.Log("Outage is starting");
         yield return StartCoroutine(FlickerLight());
         yield return new WaitForSeconds(OutageDuration);
         fireFlyLight.intensity = 1;
@@ -49,6 +51,12 @@ public class FireflyOutage : MonoBehaviour
         for (int i = 0; i < 6; i++)
         {
             fireFlyLight.intensity = i % 2 == 0 ? 1 : 0;
+
+            if (i == 5)
+            {
+                SoundFXManager.instance.PlaySoundFXClip(fireflySound, transform, false, 1.0f);
+            }
+                
             yield return new WaitForSeconds(FlickerDuration);
         }
     }

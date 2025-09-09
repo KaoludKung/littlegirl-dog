@@ -388,7 +388,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireFlyLight: {fileID: 1084082548}
-  maxOutages: 3
+  fireflySound: {fileID: 8300000, guid: 03ce23dea9a292a4c87466c96d5312ce, type: 3}
+  maxOutages: 2
   minTime: 60
   maxTime: 90
 --- !u!1 &127154211

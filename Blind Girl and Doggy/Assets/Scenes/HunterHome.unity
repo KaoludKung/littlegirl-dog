@@ -18601,9 +18601,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireFlyLight: {fileID: 351235920}
-  maxOutages: 3
-  minTime: 150
-  maxTime: 240
+  fireflySound: {fileID: 8300000, guid: 03ce23dea9a292a4c87466c96d5312ce, type: 3}
+  maxOutages: 2
+  minTime: 120
+  maxTime: 210
 --- !u!1 &1325042266
 GameObject:
   m_ObjectHideFlags: 0

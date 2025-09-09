@@ -54,10 +54,12 @@ public class Choice : EventObject
             if (i == currentIndex)
             {
                 option.buttonImage.sprite = chioceSprites[1];
+                option.buttonImage.transform.localScale = new Vector3(1.12f, 1.12f, 1f);
             }
             else
             {
                 option.buttonImage.sprite = chioceSprites[0];
+                option.buttonImage.transform.localScale = Vector3.one;
             }
         }
     }

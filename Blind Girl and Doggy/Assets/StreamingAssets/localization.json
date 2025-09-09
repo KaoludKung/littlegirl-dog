@@ -102,10 +102,10 @@
     {
       "key": 11,
       "value": {
-        "en": "Version 1.1.1",
-        "th": "เวอร์ชัน 1.1.1",
-        "tr": "Sürüm 1.1.1",
-        "id": "Versi 1.1.1"
+        "en": "Version 1.1.2",
+        "th": "เวอร์ชัน 1.1.2",
+        "tr": "Sürüm 1.1.2",
+        "id": "Versi 1.1.2"
       }
     },
     {
@@ -1029,6 +1029,33 @@
     {
       "key": 114,
       "value": {
+        "en": "Full Screen",
+        "th": "โหมดเต็มจอ",
+        "tr": "Tam ekran",
+        "id": "Layar penuh"
+      }
+    },
+    {
+      "key": 115,
+      "value": {
+        "en": "On",
+        "th": "เปิด",
+        "tr": "Açık",
+        "id": "Aktif"
+      }
+    },
+    {
+      "key": 116,
+      "value": {
+        "en": "Off",
+        "th": "ปิด",
+        "tr": "Kapalı",
+        "id": "Nonaktif"
+      }
+    },
+    {
+      "key": 117,
+      "value": {
         "en": "English",
         "th": "อังกฤษ",
         "tr": "İngilizce",
@@ -1036,7 +1063,7 @@
       }
     },
     {
-      "key": 115,
+      "key": 118,
       "value": {
         "en": "Thai",
         "th": "ไทย",
@@ -1045,7 +1072,7 @@
       }
     },
     {
-      "key": 116,
+      "key": 119,
       "value": {
         "en": "Turkish",
         "th": "ตุรกี",
@@ -1054,7 +1081,7 @@
       }
     },
     {
-      "key": 117,
+      "key": 120,
       "value": {
         "en": "Indonesian",
         "th": "อินโดนีเซีย",

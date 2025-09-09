@@ -23,6 +23,7 @@ public class TitleManager : MonoBehaviour
     [SerializeField] private Sprite[] selectedIcon;
 
     [Header("Sound Settings")]
+    [SerializeField] private SoundMixerManager soundMixerManager;
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioClip[] clips; // [0] select, [1] pressed, [2] glitch
 
@@ -72,6 +73,7 @@ public class TitleManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        soundMixerManager.InitializeVolumeSettings();
         ShowSprite();
 
         if (PlayerDataManager.Instance.GetIsSecret())
@@ -175,8 +177,6 @@ public class TitleManager : MonoBehaviour
     IEnumerator PressToStart()
     {
         cutsceneObject[1].SetActive(false);
-        //cutsceneObject[4].SetActive(false);
-        //cutsceneObject[5].SetActive(false);
         SoundFXManager.instance.PlaySoundFXClip(clips[1], transform, false, 1);
         yield return new WaitForSeconds(clips[1].length);
         cutsceneObject[2].SetActive(true);
